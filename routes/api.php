@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Models\Opa;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,10 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+
+
+Route::get("/data", function(Request $request){
+  return response(Opa::select("latitud_inicial", "longitud_inicial", "cve_ppi")->get())
+    ->header('Access-Control-Allow-Origin', '*');
+});
