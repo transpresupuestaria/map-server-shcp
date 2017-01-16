@@ -21,6 +21,22 @@ Route::get('/user', function (Request $request) {
 
 
 Route::get("/data", function(Request $request){
-  return response(Opa::select("latitud_inicial", "longitud_inicial", "cve_ppi")->get())
+  return response(Opa::select(
+    "latitud_inicial as lat", 
+    "longitud_inicial as lng", 
+    "cve_entfed as state",
+    "avance_fisico as advance",
+    "cve_ppi as key", "ciclo","ramo")->get())
+    ->header('Access-Control-Allow-Origin', '*');
+});
+
+Route::get("/data/ramo", function(Request $request){
+  return response(Opa::select("ramo", "desc_ramo")->groupBy("ramo", "desc_ramo")->get())
+    ->header('Access-Control-Allow-Origin', '*');
+});
+
+
+Route::get("/data/estado", function(Request $request){
+  return response(Opa::select("ent_fed", "cve_entfed")->groupBy("ent_fed", "cve_entfed")->get())
     ->header('Access-Control-Allow-Origin', '*');
 });
