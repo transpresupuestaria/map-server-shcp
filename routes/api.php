@@ -40,3 +40,8 @@ Route::get("/data/estado", function(Request $request){
   return response(Opa::select("ent_fed", "cve_entfed")->groupBy("ent_fed", "cve_entfed")->get())
     ->header('Access-Control-Allow-Origin', '*');
 });
+
+Route::get("/test", function(Request $request){
+  return response(Opa::first())
+    ->header('Access-Control-Allow-Origin', '*');
+});
