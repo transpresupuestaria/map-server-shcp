@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('map');
 });
+
+Route::get('/ficha', function () {
+    return view('ficha');
+});
