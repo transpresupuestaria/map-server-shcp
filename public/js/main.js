@@ -9,7 +9,7 @@ var GFSHCPMap =  function(){
     maxZoom     : 18,
     baseURL     : 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     attribution : 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-    data        : "http://localhost:8000/api/data"
+    data        : "api/data"
   },
 
   STYLE = {
