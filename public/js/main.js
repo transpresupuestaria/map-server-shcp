@@ -101,17 +101,24 @@ var GFSHCPMap =  function(){
     //
     //
     initialize : function(data, map, style, states){
-      this.settings     = Object.create(MAP);
-      this.brew         = null;
-      this.selected     = null;
-      this.current      = null;
-      this.legend       = null;
-      this.base_map     = null;
-      this.map          = null;
-      this.states       = null;
-      this._points      = null;
-      this.points       = null;
-      this.style        = Object.create(STYLE);
+      this.settings = Object.create(MAP);
+      this.brew     = null;
+      this.selected = null;
+      this.data     = null;
+      this.current  = null;
+      this.legend   = null;
+      this.base_map = null;
+      this.map      = null;
+      this.states   = null;
+      this._points  = null;
+      this.points   = null;
+      this.style    = Object.create(STYLE);
+
+      // UGLY HARD CODE, update later
+      this.yearSelector = document.getElementById("GF-SHCP-year-selector");
+      this.yearSelector.addEventListener("change", function(e){
+        console.log(this);
+      });
 
       /*
       this.collection   = new Backbone.Collection(data);
@@ -140,10 +147,20 @@ var GFSHCPMap =  function(){
     getData : function(){
       var that = this;
       d3.json(this.settings.data, function(error, d){
+        that.data    = d.slice(0);
+        that.current = d.slice(0);
         that._points = that.makeGeojson(d);
-        that.drawPoints();
-        console.log(that.points);
+        that.drawPoints(that._points);
       });
+    },
+
+    filterByYear : function(year){
+      if(year){
+
+      }
+      else{
+        
+      }
     },
 
     //
@@ -168,9 +185,9 @@ var GFSHCPMap =  function(){
     // [ comentar otro día n_____n ]
     //
     //
-    drawPoints : function(){
+    drawPoints : function(d){
       var that = this;
-      this.points = L.geoJson(this._points, {
+      this.points = L.geoJson(d, {
         pointToLayer : function(feature, latlng){
           var p = L.circleMarker(latlng, that.style.points),
               content = {

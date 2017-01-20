@@ -32,10 +32,13 @@
     <div class="col-sm-10 filter_container">
       <!--year-->
       <h3>Año</h3>
-      <select>
+      <select id="GF-SHCP-year-selector">
+        <option>Todos</option>
         <option>2016</option>
         <option>2015</option>
         <option>2014</option>
+        <option>2013</option>
+        <option>2012</option>
       </select>
       <!--state-->
       <h3>Entidad Federativa</h3>
