@@ -1,0 +1,26 @@
+{
+  "name": "maps app",
+  "homepage": "https://github.com/GobiernoFacil/map-server-shcp",
+  "authors": [
+    "elcoruco <el.coruco@gmail.com>"
+  ],
+  "description": "maps",
+  "main": "main.js",
+  "keywords": [
+    "maps"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^4.4.1",
+    "leaflet": "^1.0.2",
+    "vue": "^2.1.10"
+  }
+}
