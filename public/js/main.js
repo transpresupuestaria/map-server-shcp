@@ -19,7 +19,7 @@ var GFSHCPMap =  function(){
       fillColor   : "#334D5C", //1cb68d
       color       : "white",
       weight      : 1,
-      opacity     : 0.5,
+      opacity     : 0.3,
       fillOpacity : 0.9
     },
 
