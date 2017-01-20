@@ -1319,7 +1319,8 @@ h1 {
 #map {
   height: 100%;
   width: 100%;
-  position: absolute; }
+  position: absolute;
+  z-index: 0; }
 
 .sidebar {
   background: rgba(28, 28, 28, 0.6);
