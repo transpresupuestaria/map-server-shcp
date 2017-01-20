@@ -24,7 +24,7 @@
   <div class="clearfix"></div>
 <div class="container">
   <!--content-->
-  <section id="GF-card">
+  <section class="GF-card">
     <!--titles -->
     <div class="row">
       <div class="col-sm-10">
@@ -163,7 +163,7 @@
   </section>
   
   <!--calendario fiscal-->
-  <section> 
+  <section class="GF-card"> 
     <div class="row">
       <div class="col-sm-12">
         <h2>Calendario Fiscal
@@ -238,7 +238,7 @@
   </section>
   
   <!--otras fuentes-->
-  <section>
+  <section class="GF-card">
     <div class="row">
       <div class="col-sm-12">
         <h2>Otras fuentes de financiamiento</h2>
@@ -248,7 +248,7 @@
   </section>
   
   <!--operación-->
-  <section>
+  <section class="GF-card">
     <div class="row">
       <div class="col-sm-12">
         <h2>Datos sobre la etapa de operación</h2>
@@ -285,7 +285,7 @@
   </section>
   
   <!--metas -->
-  <section>
+  <section class="GF-card">
     <div class="row">
       <div class="col-sm-12">
         <h2>Metas</h2>
@@ -321,7 +321,7 @@
   </section>
     
   <!--responsable---------->
-  <section>
+  <section class="GF-card">
     <div class="row">
       <div class="col-sm-12">
         <h2>Responsable</h2>
@@ -336,7 +336,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>Carlos              </td>
+              <td>@{{nombre_admin}}              </td>
               <td>Salavarria            </td>
               <td>Zapata              </td>
               <td>Gerente             </td>
@@ -350,7 +350,7 @@
   </section>
   
   <!--documentos adjuntos---------->
-  <section>
+  <section class="GF-card">
     <div class="row">
       <div class="col-sm-12">
         <h2>Documentos Adjuntos</h2>
@@ -373,7 +373,7 @@
   </section>
     
   <!-- reportar-->
-  <section>
+  <section class="GF-card">
     <div class="row">
       <div class="col-sm-12">
         <p class="update right">Información actualizada al primer trimestre de 2016</p>

@@ -101,11 +101,13 @@ var GFSHCPMap =  function(){
     //
     //
     initialize : function(data, map, style, states){
+      var that = this;
+
       this.settings = Object.create(MAP);
       this.brew     = null;
       this.selected = null;
       this.data     = null;
-      this.current  = null;
+      this.current  = {};
       this.legend   = null;
       this.base_map = null;
       this.map      = null;
@@ -117,7 +119,9 @@ var GFSHCPMap =  function(){
       // UGLY HARD CODE, update later
       this.yearSelector = document.getElementById("GF-SHCP-year-selector");
       this.yearSelector.addEventListener("change", function(e){
-        console.log(this);
+        that.current.year = this.value;
+        //that.filterData();
+        that.redrawPoints( that.filterData() );
       });
 
       /*
@@ -148,19 +152,22 @@ var GFSHCPMap =  function(){
       var that = this;
       d3.json(this.settings.data, function(error, d){
         that.data    = d.slice(0);
-        that.current = d.slice(0);
+        //that.current = d.slice(0);
         that._points = that.makeGeojson(d);
         that.drawPoints(that._points);
       });
     },
 
-    filterByYear : function(year){
-      if(year){
+    filterData : function(){
+      var that = this,
+          data = this.data.slice(0);
+      if(Number(this.current.year)){
+        data = data.filter(function(d){
+          return +d.ciclo == +that.current.year;
+        });
+      }
 
-      }
-      else{
-        
-      }
+      return data;
     },
 
     //
@@ -186,6 +193,7 @@ var GFSHCPMap =  function(){
     //
     //
     drawPoints : function(d){
+      console.log(d);
       var that = this;
       this.points = L.geoJson(d, {
         pointToLayer : function(feature, latlng){
@@ -196,6 +204,12 @@ var GFSHCPMap =  function(){
                 //municipio : feature.properties["Municipio"],
                 //destino : feature.properties["Destino 1"]
               };
+
+              p.on("click", function(e){
+                //alert(feature.properties.cvePPI);
+                window.open('/ficha#' + feature.properties.cvePPI, '_blank');
+                // window.location.href = "";
+              });
 
               /*
               p.on("mouseover", function(e){
@@ -209,6 +223,12 @@ var GFSHCPMap =  function(){
           return p;
         }
       }).addTo(this.map);
+    },
+
+    redrawPoints : function(d){
+      var that = this;
+      this.map.removeLayer(this.points);
+      this.drawPoints(this.makeGeojson(d));
     },
 
     //
