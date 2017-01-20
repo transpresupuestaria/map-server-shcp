@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('map');
+    return view('home');
 });
 
 Route::get('/ficha', function () {
