@@ -16,11 +16,11 @@ var GFSHCPMap =  function(){
     // el estilo para las comercializadoras
     points : {
       radius      : 2,
-      fillColor   : "blue",
-      color       : "#000",
+      fillColor   : "#334D5C", //1cb68d
+      color       : "white",
       weight      : 1,
-      opacity     : 0,
-      fillOpacity : 0.7
+      opacity     : 0.3,
+      fillOpacity : 0.9
     },
 
     // la posición del panel de opciones
