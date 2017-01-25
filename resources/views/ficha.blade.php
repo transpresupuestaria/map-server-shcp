@@ -19,7 +19,7 @@
   <div class="col-sm-9 zero">
     <header class="top title_side">
       <a href="index.html" class="link_back">&lt; Ir a Mapa de Obra Pública</a>
-    </header>   
+    </header>
   </div>
   <div class="clearfix"></div>
 <div class="container">
@@ -30,7 +30,7 @@
       <div class="col-sm-10">
         <div class="row">
           <div class="col-sm-6">
-            <h3>Programa o Proyecto de Inversión 
+            <h3>Programa o Proyecto de Inversión
               <!--tooltip-->
               <span class="tooltip">
                 <span class="tooltip-item">(PPI) <b>?</b></span>
@@ -48,7 +48,7 @@
         <h1>@{{nombre}}</h1>
         <div class="row">
           <div class="col-sm-10">
-            <p>Construcción de la nueva Terminal de Almacenamiento y Reparto Tapachula, Chiapas; con capacidad de 115 MB nominales, abastecida por Buque tanque</p> 
+            <p>Construcción de la nueva Terminal de Almacenamiento y Reparto Tapachula, Chiapas; con capacidad de 115 MB nominales, abastecida por Buque tanque</p>
           </div>
           <div class="col-sm-2">
             <h3 class="right">Fase: <span class="active">Vigente</span></h3>
@@ -59,7 +59,7 @@
         <h3>Avance Físico</h3>
       </div>
     </div>
-    
+
     <!--mapa y montos-->
     <div class="row">
       <div class="col-sm-9">
@@ -74,8 +74,8 @@
                   <span class="tooltip-text"><strong>Ramo</strong>. Categoría administrativa a la que pertenece el programa presupuestario, de acuerdo con la estructura programática del PEF vigente</span>
                 </span>
               </span>
-              
-              
+
+
             </h3>
             <p class="fichas_ramo"><b class="pemex"></b>52 - Petróleos Mexicanos</p>
           </div>
@@ -98,10 +98,10 @@
             <p>Proyecto de Inversión de Infraestructura Económica</p>
           </div>
         </div>
-        
+
         <!--mapa-->
         <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="http://www.openstreetmap.org/export/embed.html?bbox=-92.52016067504884%2C14.692704201867015%2C-92.25494384765626%2C14.845248917350904&amp;layer=mapnik"></iframe>
-        
+
         <div class="info location">
           <div class="row">
             <div class="col-sm-4">
@@ -118,8 +118,8 @@
               <h3 class="title">Coordenadas Geográficas</h3>
               <p>Latitud: 14.727778 <br> Longitud: -92.396659</p>
             </div>
-            
-            
+
+
           </div>
         </div>
       </div>
@@ -135,19 +135,19 @@
           </span>
         </h3>
         <p class="amount big right">$<strong>1,057,675,759</strong> <span>MXN</span></p>
-        <div class="bar"> 
+        <div class="bar">
           <span class="bar inside total" style="width: 100%"></span>
         </div>
         <!-- pef-->
         <h3>Presupuesto aprobado en el PEF 2016</h3>
         <p class="amount right">$<strong>103,664,299</strong> <span>MXN</span></p>
-        <div class="bar"> 
+        <div class="bar">
           <span class="bar inside pef" style="width: 9.80%"></span>
         </div>
         <!-- ejercido-->
         <h3>Monto ejercido 2016</h3>
         <p class="amount right">$<strong>12,601,190</strong> <span>MXN</span></p>
-        <div class="bar"> 
+        <div class="bar">
           <span class="bar inside ejercido" style="width: 1.91%"></span>
         </div>
         <!-- modificado-->
@@ -161,14 +161,14 @@
       </div>
     </div>
   </section>
-  
+
   <!--calendario fiscal-->
-  <section class="GF-card"> 
+  <section class="GF-card">
     <div class="row">
       <div class="col-sm-12">
         <h2>Calendario Fiscal
           <!--tooltip-->
-          <span class="tooltip"> 
+          <span class="tooltip">
             <span class="tooltip-item"> <b>?</b> <span class="h2title">Calendario Fiscal</span></span>
             <span class="tooltip-content clearfix">
               <span class="tooltip-text">Monto máximo de recursos programados por la dependencia para ejercer durante el año. Se diferencia del aprobado porque no depende de sus capacidades de pago sino de estimaciones propias de la dependencia.</span>
@@ -192,9 +192,9 @@
         <p>$1,057,675,759</p>
       </div>
       <!--gráfica-->
-      <div class="col-sm-9">    
+      <div class="col-sm-9">
         <div id="graph" class="graph">
-        </div>    
+        </div>
       </div>
       <!--tabla-->
       <div class="col-sm-3 side">
@@ -206,29 +206,29 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>2017</td> 
+            <tr><td>2017</td>
             <td class="right"><strong>$109,814,311</strong></td></tr>
-            <tr><td>2016</td> 
+            <tr><td>2016</td>
             <td class="right"><strong>$101,313,120</strong></td></tr>
-            <tr><td>2015</td> 
+            <tr><td>2015</td>
             <td class="right"><strong>$208,539,823</strong> </td></tr>
-            <tr><td>2014</td> 
+            <tr><td>2014</td>
             <td class="right"><strong>$54,564,412 </strong>  </td></tr>
-            <tr><td>2013</td> 
+            <tr><td>2013</td>
             <td class="right"><strong>$300,157,683</strong> </td></tr>
-            <tr><td>2012</td> 
+            <tr><td>2012</td>
             <td class="right"><strong>$215,044,846</strong> </td></tr>
-            <tr><td>2011</td> 
+            <tr><td>2011</td>
             <td class="right"><strong>$25,873,394 </strong>  </td></tr>
-            <tr><td>2010</td> 
+            <tr><td>2010</td>
             <td class="right"><strong>$25,741,318 </strong>  </td></tr>
-            <tr><td>2009</td> 
+            <tr><td>2009</td>
             <td class="right"><strong>$12,287,059 </strong>  </td></tr>
-            <tr><td>2008</td> 
+            <tr><td>2008</td>
             <td class="right"><strong>$4,337,408  </strong>  </td></tr>
-            <tr><td>2007</td> 
+            <tr><td>2007</td>
             <td class="right"><strong>$0      </strong>  </td></tr>
-            <tr><td>2006</td> 
+            <tr><td>2006</td>
             <td class="right"><strong>$2,385    </strong>  </td></tr>
 
           </tbody>
@@ -236,7 +236,7 @@
       </div>
     </div>
   </section>
-  
+
   <!--otras fuentes-->
   <section class="GF-card">
     <div class="row">
@@ -244,9 +244,9 @@
         <h2>Otras fuentes de financiamiento</h2>
         <p>No se ha reportado información sobre otras fuentes de financiamiento de este PPI.</p>
       </div>
-    </div>    
+    </div>
   </section>
-  
+
   <!--operación-->
   <section class="GF-card">
     <div class="row">
@@ -258,7 +258,7 @@
         <p class="amount"><strong>20</strong> años</p>
         <p class="lead">Número estimado de años de operación en el horizonte de evaluación
           <!--tooltip-->
-          <span class="tooltip"> 
+          <span class="tooltip">
             <span class="tooltip-item"><b>?</b></span>
             <span class="tooltip-content clearfix">
               <span class="tooltip-text">Período que comprende tanto la etapa de ejecución como de operación de un programa o proyecto de inversión</span>
@@ -283,7 +283,7 @@
       </div>
     </div>
   </section>
-  
+
   <!--metas -->
   <section class="GF-card">
     <div class="row">
@@ -294,7 +294,7 @@
       <div class="col-sm-6">
         <h3 class="title">
           <!--tooltip-->
-          <span class="tooltip"> 
+          <span class="tooltip">
             <span class="tooltip-item">Meta Física <b>?</b></span>
             <span class="tooltip-content clearfix">
               <span class="tooltip-text">La producción de bienes y servicios que se pretenden alcanzar con el programa o proyecto de inversión</span>
@@ -306,9 +306,9 @@
       <!--física-->
       <div class="col-sm-6">
         <h3 class="title">
-          
+
           <!--tooltip-->
-          <span class="tooltip"> 
+          <span class="tooltip">
             <span class="tooltip-item">Beneficios esperados del PPI <b>?</b></span>
             <span class="tooltip-content clearfix">
               <span class="tooltip-text">Efectos favorables que se generarían sobre la población o para el país como resultado del programa o proyecto de inversión</span>
@@ -319,7 +319,7 @@
       </div>
     </div>
   </section>
-    
+
   <!--responsable---------->
   <section class="GF-card">
     <div class="row">
@@ -348,7 +348,7 @@
       </div>
     </div>
   </section>
-  
+
   <!--documentos adjuntos---------->
   <section class="GF-card">
     <div class="row">
@@ -371,7 +371,7 @@
       </div>
     </div>
   </section>
-    
+
   <!-- reportar-->
   <section class="GF-card">
     <div class="row">
@@ -385,7 +385,7 @@
   </section>
 
 </div><!--ends container-->
-  
+
   <!--footer------->
   <footer>
     <div class="container">
@@ -394,11 +394,11 @@
           <div class="col-sm-4">
             <h3>Contacto</h3>
              <p class="data">Palacio Nacional <br>
-               Plaza de la Constitución s/n<br> 
-               Colonia Centro, Delegación Cuauhtémoc<br> 
+               Plaza de la Constitución s/n<br>
+               Colonia Centro, Delegación Cuauhtémoc<br>
                México, Ciudad de México</p>
           </div>
-        
+
           <div class="col-sm-4">
             <ul>
               <li><a class="linksfoot" href="/es/PTP/Glosario">Glosario</a></li>
@@ -415,7 +415,7 @@
               <li> <a href="mailto:trans_presupuestaria@hacienda.gob.mx" target="_blank" class="email" title="trans_presupuestaria@hacienda.gob.mx">Email</a></li>
             </ul>
           </div>
-        
+
           <div class="col-sm-4 right">
             <h3>Última actualización:</h3>
              <p class="data">Jueves 1 de diciembre de 2016 a las 14:25 hrs.</p>
@@ -434,7 +434,7 @@
           </div>
           <div class="col-sm-4">
             <p class="data right"><a href="http://www.hacienda.gob.mx" class="shcp">Secretaría de Hacienda y Crédito Público</a><span class="clearfix"></span></p>
-            
+
           </div>
         </div>
       </div>
@@ -469,7 +469,7 @@
           </a>
         </div>
       </div>
-      <h3>Preguntas Frecuentes</h3> 
+      <h3>Preguntas Frecuentes</h3>
       <ul id="toggle-view">
         <li>
           <h4>¿Qué es un reporte ciudadano?</h4>
@@ -507,7 +507,7 @@
       </ul>
       <a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
     </div>
-    
+
   </div>
 </div>
 <!-- scripts -->
@@ -515,8 +515,8 @@
 <script src="js/classie.js"></script>
 <script src="js/dialogFx.js"></script>
 <script src="js/jquery.js"></script>
-    
-    
+
+
 <script>
 var width = 160,
     height = 130,
@@ -527,21 +527,21 @@ var color = d3.scale.ordinal()
 
 var arc = d3.svg.arc()
     //.outerRadius(radius - 10)
-    .outerRadius(function(d,i) { 
+    .outerRadius(function(d,i) {
       if(i==0) {
-        return radius - 10; 
+        return radius - 10;
       }
-      else { 
-       return radius - 20;  
+      else {
+       return radius - 20;
       }
    })
   //.innerRadius(radius - 25);
-    .innerRadius(function(d,i) { 
+    .innerRadius(function(d,i) {
       if(i==0) {
-        return radius - 25; 
+        return radius - 25;
       }
-      else { 
-       return radius - 15;  
+      else {
+       return radius - 15;
       }
    });
 
@@ -556,7 +556,7 @@ var svg = d3.select("#arc_side").append("svg")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var data = [
-    {"amount": 40,},  
+    {"amount": 40,},
     {"amount": 60}
   ];
 
@@ -572,7 +572,7 @@ var g = svg.selectAll(".arc")
   g.append("text")
       .attr("transform",  "translate(-25)")
       .attr("dy", ".35em")
-      .text(function(d, i) { 
+      .text(function(d, i) {
         if(i==0) {
          return d.data.amount + "%";
         }
@@ -670,13 +670,13 @@ var svg = d3.select("#graph").append("svg")
   }
 
   ];
-  
+
 
 
   x.domain(d3.extent(data, function(d) { return d.year; }));
   y.domain([0, d3.max(data, function(d) { return d.amount; })]);
 
- 
+
 
   svg.append("g")
       .attr("class", "x axis")
@@ -686,7 +686,7 @@ var svg = d3.select("#graph").append("svg")
   svg.append("g")
       .attr("class", "y axis")
       .call(yAxis);
-      
+
        svg.append("path")
       .datum(data)
       .attr("class", "line")
@@ -706,26 +706,54 @@ var svg = d3.select("#graph").append("svg")
 
       })();
     </script>
-    
+
     <script>
-$(document).ready(function () { 
+$(document).ready(function () {
   $('#toggle-view li').click(function () {
 
     var text = $(this).children('div.panel');
 
     if (text.is(':hidden')) {
       text.slideDown('200');
-      $(this).children('span').html('-');   
+      $(this).children('span').html('-');
     } else {
       text.slideUp('200');
-      $(this).children('span').html('+');   
+      $(this).children('span').html('+');
     }
-    
+
   });
 });
 </script>
 
   <script src="js/bower_components/vue/dist/vue.min.js"></script>
   <script src="js/card.js"></script>
+  <script>
+  /****** API **********/
+  var appKey = '5825343BB68F29D2A881B2E8D205B98846C95558';
+  $(document).ready(function(){
+   var carteraId = "",
+       ejecutor  = "",
+       programa  = "",
+       entidad   = "";
+
+   //Reporte por inconsistencia en avance físico
+   $('#rpt-advance').click(function(){
+     console.log(res);
+     $.ajax({
+       beforeSend: function(xhrObj){
+                 xhrObj.setRequestHeader("Content-Type","application/json");
+                 xhrObj.setRequestHeader("Accept","application/json");
+                 xhrObj.setRequestHeader("app-key",appKey);
+         },
+       type: "GET",
+       dataType: "json",
+       url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/obtenerPaises",
+       success: function(dataRe){
+           console.log(data);
+         }
+     });
+   });
+  });
+  </script>
 </body>
 </html>
