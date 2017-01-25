@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Terminal de Almacenamiento y Reparto Tapachula</title>
-  <meta name="description" content="Construcción de la nueva Terminal de Almacenamiento y Reparto Tapachula, Chiapas; con capacidad de 115 MB nominales, abastecida por Buque tanque">
+    <title>@{{nombre}}</title>
+  <meta name="description" content="@{{desc_ppi}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/styles.css"/>
   <script src="js/modernizr.custom.js"></script>
@@ -42,13 +42,17 @@
           </div>
           <!--- clave de cartera-->
           <div class="col-sm-6">
-            <h3 class="right">Clave de Cartera: <span> @{{cve_ppi}}</span></h3>
+            <h3 class="right">Clave de Cartera: <span>@{{cve_ppi}}</span></h3>
           </div>
         </div>
         <h1>@{{nombre}}</h1>
+
+
+
+
         <div class="row">
           <div class="col-sm-10">
-            <p>Construcción de la nueva Terminal de Almacenamiento y Reparto Tapachula, Chiapas; con capacidad de 115 MB nominales, abastecida por Buque tanque</p>
+            <p>@{{desc_ppi}}</p>
           </div>
           <div class="col-sm-2">
             <h3 class="right">Fase: <span class="active">Vigente</span></h3>
@@ -77,7 +81,7 @@
 
 
             </h3>
-            <p class="fichas_ramo"><b class="pemex"></b>52 - Petróleos Mexicanos</p>
+            <p class="fichas_ramo"><b class="pemex"></b>@{{id_ramo}} - @{{desc_ramo}}</p>
           </div>
           <!-- Ejecutor-->
           <div class="col-sm-4">
@@ -95,7 +99,7 @@
                 </span>
               </span>
             </h3>
-            <p>Proyecto de Inversión de Infraestructura Económica</p>
+            <p>@{{ tipo_ppi }}</p>
           </div>
         </div>
 
@@ -134,7 +138,7 @@
             </span>
           </span>
         </h3>
-        <p class="amount big right">$<strong>1,057,675,759</strong> <span>MXN</span></p>
+        <p class="amount big right">$<strong>@{{monto_total_inversion}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside total" style="width: 100%"></span>
         </div>
@@ -510,12 +514,12 @@
 
   </div>
 </div>
+
 <!-- scripts -->
 <script src="js/d3.v3.min.js"></script>
 <script src="js/classie.js"></script>
 <script src="js/dialogFx.js"></script>
 <script src="js/jquery.js"></script>
-
 
 <script>
 var width = 160,
@@ -556,8 +560,8 @@ var svg = d3.select("#arc_side").append("svg")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var data = [
-    {"amount": 40,},
-    {"amount": 60}
+    {"amount": @{{avance_fisico}} },
+    {"amount": (100 -  @{{avance_fisico}})}
   ];
 
 var g = svg.selectAll(".arc")
