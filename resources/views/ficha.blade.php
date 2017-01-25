@@ -86,7 +86,7 @@
           <!-- Ejecutor-->
           <div class="col-sm-4">
             <h3 class="title line">Ejecutor del Proyecto</h3>
-            <p>T9M - Pemex Transformación Industrial</p>
+            <p></p>
           </div>
           <!-- Tipo de proyecto-->
           <div class="col-sm-4">
@@ -115,12 +115,12 @@
             <!---entidad-->
             <div class="col-sm-4">
               <h3 class="title">Entidad Federativa</h3>
-              <p>7- Chiapas</p>
+              <p>	@{{ entidad_federativa }}</p>
             </div>
             <!---coordenadas---->
             <div class="col-sm-4">
               <h3 class="title">Coordenadas Geográficas</h3>
-              <p>Latitud: 14.727778 <br> Longitud: -92.396659</p>
+              <p>Latitud: @{{latitud_inicial}} <br> Longitud: @{{longitud_inicial}}</p>
             </div>
             
             
@@ -144,7 +144,7 @@
         </div>
         <!-- pef-->
         <h3>Presupuesto aprobado en el PEF 2016</h3>
-        <p class="amount right">$<strong>103,664,299</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>@{{costo_total_ppi}}</strong> <span>MXN</span></p>
         <div class="bar"> 
           <span class="bar inside pef" style="width: 9.80%"></span>
         </div>
@@ -562,8 +562,8 @@ var svg = d3.select("#arc_side").append("svg")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var data = [
-    {"amount": @{{avance_fisico}} },  
-    {"amount": (100 -  @{{avance_fisico}})}
+    {"amount": 40 },  
+    {"amount": 60}
   ];
 
 var g = svg.selectAll(".arc")
