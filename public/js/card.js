@@ -10,8 +10,8 @@ d3.json(DatosGobMxURL)
   .get(function(e, d){
     var res  = d.results[0],
         data = {
-         
-          
+
+
           _id              : res["_id"],
           anios_he         : res["anios-he"],
           ap_materno_admin : res["ap-materno-admin"],
@@ -52,7 +52,7 @@ d3.json(DatosGobMxURL)
           tipo_ppi : res["tipo-ppi"],
           total_gasto_no_consid : res["total-gasto-no-consid"],
           total_gasto_operacion_he : res["total-gasto-operacion-he"]
-          
+
         };
 
         var fun = [],
@@ -73,5 +73,3 @@ d3.json(DatosGobMxURL)
 
     console.log(res, data.nombre_admin);
   });
-    
-
