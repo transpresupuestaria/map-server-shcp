@@ -51,7 +51,10 @@ d3.json(DatosGobMxURL)
           total_gasto_operacion_he : res["total-gasto-operacion-he"],
 
           // valores extra
+          presupuesto_style : "width:" + ((res["aprobado"] * 100) / res["costo-total-ppi"]) + "%",
           total_ejercido_style : "width:" + ((res["ejercido"] * 100) / res["costo-total-ppi"]) + "%",
+          modificado_style : "width:" + ((res["modificado"] * 100) / res["costo-total-ppi"]) + "%",
+          map_src		  : "http://www.openstreetmap.org/export/embed.html?bbox="+ res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"%2C"+res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"&amp;layer=mapnik",
 
         };
 
