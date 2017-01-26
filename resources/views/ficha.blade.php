@@ -115,7 +115,7 @@
             <!---entidad-->
             <div class="col-sm-4">
               <h3 class="title">Entidad Federativa</h3>
-              <p>	@{{ entidad_federativa }}</p>
+              <p>	@{{entidad_federativa}}</p>
             </div>
             <!---coordenadas---->
             <div class="col-sm-4">
@@ -138,25 +138,25 @@
             </span>
           </span>
         </h3>
-        <p class="amount big right">$<strong>@{{monto_total_inversion}}</strong> <span>MXN</span></p>
+        <p class="amount big right">$<strong>@{{costo_total_ppi}}</strong> <span>MXN</span></p>
         <div class="bar">
-          <span class="bar inside total" style="width: 100%"></span>
+          <span class="bar inside total" style="width:100%"></span>
         </div>
         <!-- pef-->
         <h3>Presupuesto aprobado en el PEF 2016</h3>
-        <p class="amount right">$<strong>@{{costo_total_ppi}}</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>@{{monto_total_inversion}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside pef" style="width: 9.80%"></span>
         </div>
         <!-- ejercido-->
         <h3>Monto ejercido 2016</h3>
-        <p class="amount right">$<strong>12,601,190</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>@{{+ejercido}}</strong> <span>MXN</span></p>
         <div class="bar">
-          <span class="bar inside ejercido" style="width: 1.91%"></span>
+          <span class="bar inside ejercido" style="width: @{{(+ejercido * 100) / +costo_total_ppi}}%"></span>
         </div>
         <!-- modificado-->
         <h3>Presupuesto modificado</h3>
-        <p class="amount right">$<strong>284,154,106</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>@{{modificado}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside modificado" style="width: 26.86%"></span>
         </div>
@@ -735,7 +735,7 @@ $(document).ready(function () {
   /****** API **********/
   var appKey = '5825343BB68F29D2A881B2E8D205B98846C95558';
   $(document).ready(function(){
-    
+
    var carteraId = "",
        ejecutor  = "",
        programa  = "",
