@@ -34,12 +34,7 @@ var GFSHCPMap =  function(){
   //
   //
   point_popup = null;//_.template("key: <%=key%>");
-
-
-
-
-
-
+  
   /*
    * [ D A T A   P A N E L S   C O N S T R U C T O R S ]
    * --------------------------------------------------------------------------------
@@ -150,6 +145,7 @@ var GFSHCPMap =  function(){
 
     getData : function(){
       var that = this;
+
       d3.json(this.settings.data, function(error, d){
         that.data    = d.slice(0);
         //that.current = d.slice(0);

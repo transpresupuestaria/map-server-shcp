@@ -33,36 +33,104 @@
       <!--year-->
       <h3>Año</h3>
       <select id="GF-SHCP-year-selector">
-        <option>Todos</option>
-        <option>2016</option>
-        <option>2015</option>
-        <option>2014</option>
-        <option>2013</option>
-        <option>2012</option>
+        <option value="0">Todos</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+        <option value="2012">2012</option>
       </select>
       <!--state-->
       <h3>Entidad Federativa</h3>
-      <select>
-        <option>Todos</option>
-        <option>Oaxaca</option>
-        <option>Puebla</option>
+      <select id="GF-SHCP-state-selector">
+        <option value="0">Todas</option>
+        <option value="1">Aguascalientes</option>
+        <option value="2">Baja California</option>
+        <option value="3">Baja California Sur</option>
+        <option value="4">Campeche</option>
+        <option value="5">Coahuila de Zaragoza</option>
+        <option value="6">Colima</option>
+        <option value="7">Chiapas</option>
+        <option value="8">Chihuahua</option>
+        <option value="9">Distrito Federal</option>
+        <option value="10">Durango</option>
+        <option value="11">Guanajuato</option>
+        <option value="12">Guerrero</option>
+        <option value="13">Hidalgo</option>
+        <option value="14">Jalisco</option>
+        <option value="15">México</option>
+        <option value="16">Michoacán de Ocampo</option>
+        <option value="17">Morelos</option>
+        <option value="18">Nayarit</option>
+        <option value="19">Nuevo León</option>
+        <option value="20">Oaxaca</option>
+        <option value="21">Puebla</option>
+        <option value="22">Querétaro</option>
+        <option value="23">Quintana Roo</option>
+        <option value="24">San Luis Potosí</option>
+        <option value="25">Sinaloa</option>
+        <option value="26">Sonora</option>
+        <option value="27">Tabasco</option>
+        <option value="28">Tamaulipas</option>
+        <option value="29">Tlaxcala</option>
+        <option value="30">Veracruz de Ignacio de la Llave</option>
+        <option value="31">Yucatán</option>
+        <option value="32">Zacatecas</option>
       </select>
       <!--branch-->
       <h3>Ramo</h3>
-      <select>
-        <option>Selecciona un Ramo</option>
-        
+
+      <select id="GF-SHCP-branch-selector">
+        <option value="all">todos</option>
+        <option value="2">Oficina de la Presidencia de la República</option>
+        <option value="4">Gobernación</option>
+        <option value="5">Relaciones Exteriores</option>
+        <option value="6">Hacienda y Crédito Público</option>
+        <option value="7">Defensa Nacional</option>
+        <option value="8">Agricultura, Ganadería, Desarrollo Rural, Pesca y Alimentación</option>
+        <option value="9">Comunicaciones y Transportes</option>
+        <option value="10">Economía</option>
+        <option value="11">Educación Pública</option>
+        <option value="12">Salud</option>
+        <option value="13">Marina</option>
+        <option value="14">Trabajo y Previsión Social</option>
+        <option value="15">Desarrollo Agrario, Territorial y Urbano</option>
+        <option value="16">Medio Ambiente y Recursos Naturales</option>
+        <option value="17">Procuraduría General de la República</option>
+        <option value="18">Energía</option>
+        <option value="20">Desarrollo Social</option>
+        <option value="21">Turismo</option>
+        <option value="27">Función Pública</option>
+        <option value="31">Tribunales Agrarios</option>
+        <option value="32">Tribunal Federal de Justicia Administrativa</option>
+        <option value="37">Consejería Jurídica del Ejecutivo Federal</option>
+        <option value="38">Consejo Nacional de Ciencia y Tecnología</option>
+        <option value="47">Entidades no Sectorizadas</option>
+        <option value="50">Instituto Mexicano del Seguro Social</option>
+        <option value="51">Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado</option>
+        <option value="52">Petróleos Mexicanos</option>
+        <option value="53">Comisión Federal de Electricidad</option>
       </select>
-      <h3>Ejecutor</h3>
-      <select>
-        <option>Todos los Ejecutores</option>
       
+      <h3>Clasificación</h3>
+      <select id="GF-SHCP-class-selector">
+        <option value="0">Todas</option>
+        <option value="Agricultura, Ganadería, Desarrollo Rural, Pesca y Alimentación">Agricultura, Ganadería, Desarrollo Rural, Pesca y Alimentación</option>
+        <option value="Asociación Público-Privada">Asociación Público-Privada</option>
+        <option value="Comunicaciones y Transportes">Comunicaciones y Transportes</option>
+        <option value="Desarrollo económico">Desarrollo económico</option>
+        <option value="Desarrollo Social">Desarrollo Social</option>
+        <option value="Educación">Educación</option>
+        <option value="Energía">Energía</option>
+        <option value="Gobierno">Gobierno</option>
+        <option value="Medio Ambiente">Medio Ambiente</option>
+        <option value="Salud">Salud</option>
+        <option value="Seguridad">Seguridad</option>
+        <option value="Turismo">Turismo</option>
+        <option value="">Sin clasificación</option>
       </select>
-      <!--pojects
-      <h3>Proyectos</h3>
-      <a href="#" class="agp selected"><b></b> Agricultura, Ganadería y Pesca <span>(22)</span></a>
-      <a href="#" class="asp"><b></b> Asociación público-privada<span>(7)</span></a>
-      -->
+      
     </div>
     <div class="clearfix"></div>
   </div>

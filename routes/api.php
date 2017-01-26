@@ -24,12 +24,26 @@ Route::get("/data", function(Request $request){
     "longitud_inicial as lng", 
     "cve_entfed as state",
     "avance_fisico as advance",
-    "cve_ppi as key", "ciclo","ramo")->get())
+    "cve_ppi as key", 
+    "ciclo",
+    "ramo",
+    "clasificacion_ciudadana as classification")->get())
     ->header('Access-Control-Allow-Origin', '*');
 });
 
 Route::get("/data/ramo", function(Request $request){
   return response(Opa::select("ramo", "desc_ramo")->groupBy("ramo", "desc_ramo")->get())
+    ->header('Access-Control-Allow-Origin', '*');
+});
+
+Route::get("/data/clasificacion", function(Request $request){
+  return response(Opa::select("clasificacion_ciudadana")->groupBy("clasificacion_ciudadana")->get())
+    ->header('Access-Control-Allow-Origin', '*');
+});
+
+
+Route::get("/data/ejecutor", function(Request $request){
+  return response(Opa::select("unidad", "desc_unidad")->groupBy("unidad", "desc_unidad")->get())
     ->header('Access-Control-Allow-Origin', '*');
 });
 
