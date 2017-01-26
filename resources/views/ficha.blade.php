@@ -104,7 +104,7 @@
         </div>
 
         <!--mapa-->
-        <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="http://www.openstreetmap.org/export/embed.html?bbox=-92.52016067504884%2C14.692704201867015%2C-92.25494384765626%2C14.845248917350904&amp;layer=mapnik"></iframe>
+        <iframe width="100%" height="350px" frameborder="0" scrolling="no" v-bind:src="map_src"></iframe>
 
         <div class="info location">
           <div class="row">
@@ -138,21 +138,20 @@
             </span>
           </span>
         </h3>
-        <p class="amount big right">$<strong>@{{costo_total_ppi}}</strong> <span>MXN</span></p>
+        <p class="amount big right">$<strong>@{{monto_total_inversion}}</strong> <span>MXN</span></p>
         <div class="bar">
-          <span class="bar inside total" style="width:100%"></span>
+          <span class="bar inside total"></span>
         </div>
         <!-- pef-->
         <h3>Presupuesto aprobado en el PEF 2016</h3>
-        <p class="amount right">$<strong>@{{monto_total_inversion}}</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>@{{aprobado}}</strong> <span>MXN</span></p>
         <div class="bar"> 
-          <span class="bar inside pef" style="width: 9.80%"></span>
+          <span class="bar inside pef" v-bind:style="presupuesto_style"></span>
         </div>
         <!-- ejercido-->
         <h3>Monto ejercido 2016</h3>
         <p class="amount right">$<strong>@{{+ejercido}}</strong> <span>MXN</span></p>
         <div class="bar">
-        <!--<span class="bar inside ejercido" style="width: @{{(+ejercido * 100) / +costo_total_ppi}}%"></span>-->
         <span class="bar inside ejercido" v-bind:style="total_ejercido_style"></span>
 
         </div>
@@ -160,7 +159,7 @@
         <h3>Presupuesto modificado</h3>
         <p class="amount right">$<strong>@{{modificado}}</strong> <span>MXN</span></p>
         <div class="bar">
-          <span class="bar inside modificado" style="width: 26.86%"></span>
+          <span class="bar inside modificado" v-bind:style="modificado_style"></span>
         </div>
         <!-- reporta obra-->
         <a href="#" data-dialog="somedialog" class="btn report trigger">Reporta esta obra</a>
