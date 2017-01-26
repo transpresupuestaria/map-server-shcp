@@ -458,7 +458,7 @@
         <div class="col-sm-4">
           <a href="#" class="btn_type">
             <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
-            <span class="btn-symbol" id ="rpt-advance">Reportar</span>
+            <span class="btn-symbol">Reportar</span>
           </a>
         </div>
         <div class="col-sm-4">
@@ -515,6 +515,24 @@
 
   </div>
 </div>
+<form>
+  <label>Nombres</label>
+  <input id ="name" type="text" name="name"><br>
+  <label>Paterno</label>
+  <input id ="surname"  type="text" name="surname"><br>
+  <label>Materno</label>
+  <input id ="lastname"  type="text" name="lastname"><br>
+  <label>Género</label>
+  <select id ="gender">
+  <option value="MUJER">Femenino</option>
+  <option value="HOMBRE">Masculino</option>
+</select>
+  <label>Correo</label>
+  <input id ="email" type="text" name="email"><br>
+  <label>Contraseña</label>
+  <input id ="password" type="text" name="password"><br>
+  <input id ="rpt-advance" type="submit" value="Submit">
+</form>
 
 <!-- scripts -->
 <script src="js/d3.v3.min.js"></script>
@@ -739,6 +757,8 @@ $(document).ready(function () {
 
    //Reporte por inconsistencia en avance físico
    $('#rpt-advance').click(function(){
+     event.preventDefault();
+     //informacion de proyecto
      var carteraId = "",
          ejecutor  = "",
          programa  = "",
@@ -747,8 +767,17 @@ $(document).ready(function () {
          dependencia = "asd",
          estadoId ="",
          paisId="";
-    var dataAPI = {"ciudadano":{"anonimo":true,"genero":"HOMBRE"},"dependencia":dependencia,"estado":4,"motivoPeticion":"Prueba","otroPais":null,"pais":2,"queSolicitaron":null,"solictaronDinero":false};
-console.log(dataAPI);
+    //informacion de ciudadano
+    var name    = $("#name").val(),
+        paterno = $("#surname").val(),
+        materno = $("#lastname").val(),
+        email   = $("#email").val(),
+        pass    = $("#password").val(),
+        genero  = $("#gender").val();
+    var ciudadanoAPI = {"anonimo":false,"genero":genero,"nombre":name,"paterno":paterno,"email":email,"contrasenia":pass}
+    console.log(ciudadanoAPI);
+    var dataAPI = {"ciudadano":ciudadanoAPI,"dependencia":dependencia,"estado":4,"motivoPeticion":"Prueba","otroPais":null,"pais":2,"queSolicitaron":null,"solictaronDinero":false};
+    console.log(dataAPI);
      $.ajax({
        beforeSend: function(xhrObj){
                  xhrObj.setRequestHeader("app-key",appKey);
