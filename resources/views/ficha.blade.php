@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>@{{nombre}}</title>
+  <title>@{{nombre}}</title>
   <meta name="description" content="@{{desc_ppi}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/styles.css"/>
@@ -184,17 +184,17 @@
       <!--inicio-->
       <div class="col-sm-4">
         <h3>Fecha de inicio de inversión:</h3>
-        <p>Agosto/2006</p>
+        <p>@{{fecha_ini_cal_fiscal}}</p>
       </div>
       <!--término-->
       <div class="col-sm-4">
         <h3>Fecha de término de inversión:</h3>
-        <p>Diciembre/2017</p>
+        <p>@{{fecha_fin_cal_fiscal}}</p>
       </div>
       <!--total-->
       <div class="col-sm-4">
         <h3>Monto total de inversión:</h3>
-        <p>$1,057,675,759</p>
+        <p>@{{monto_total_inversion}}</p>
       </div>
       <!--gráfica-->
       <div class="col-sm-9">
@@ -203,7 +203,7 @@
       </div>
       <!--tabla-->
       <div class="col-sm-3 side">
-        <table class="table">bar in
+        <table class="table">
           <thead>
             <tr>
               <th>Año de Inversión</th>
@@ -260,7 +260,7 @@
       </div>
       <!--años-->
       <div class="col-sm-3">
-        <p class="amount"><strong>20</strong> años</p>
+        <p class="amount"><strong>@{{anios_he}}</strong> años</p>
         <p class="lead">Número estimado de años de operación en el horizonte de evaluación
           <!--tooltip-->
           <span class="tooltip">
@@ -273,17 +273,17 @@
       </div>
       <!--gastos-->
       <div class="col-sm-3">
-        <p class="amount">$<strong>46,763,198</strong></p>
+        <p class="amount">$<strong>@{{total_gasto_operacion_he}}</strong></p>
         <p class="lead">Gastos estimados totales de mantenimiento y operación del activo en el horizonte de evaluación </p>
       </div>
       <!--otros costos-->
       <div class="col-sm-3">
-        <p class="amount">$0</p>
+        <p class="amount">$@{{total_gasto_no_consid}}</p>
         <p class="lead">Otros costos y gastos asociados al PPI que no forman parte del gasto de inversión ni de los gastos de operación y mantenimiento </p>
       </div>
       <!--costo total-->
       <div class="col-sm-3">
-        <p class="amount">$<strong>1,104,438,957</strong></p>
+        <p class="amount">$<strong>@{{costo_total_ppi}}</strong></p>
         <p class="lead">Costo Total del PPI  </p>
       </div>
     </div>
@@ -306,7 +306,7 @@
             </span>
           </span>
         </h3>
-        <p>Terminal de Almacenamiento y Distribución de 115 MB de capacidad para combustibles, con suministro por Buque tanque desde Salina Cruz.</p>
+        <p>@{{meta_fisica}}</p>
       </div>
       <!--física-->
       <div class="col-sm-6">
@@ -316,7 +316,7 @@
           <span class="tooltip">
             <span class="tooltip-item">Beneficios esperados del PPI <b>?</b></span>
             <span class="tooltip-content clearfix">
-              <span class="tooltip-text">Efectos favorables que se generarían sobre la población o para el país como resultado del programa o proyecto de inversión</span>
+              <span class="tooltip-text">@{{meta_beneficios}}</span>
             </span>
           </span>
         </h3>
@@ -342,11 +342,11 @@
           <tbody>
             <tr>
               <td>@{{nombre_admin}}              </td>
-              <td>Salavarria            </td>
-              <td>Zapata              </td>
-              <td>Gerente             </td>
-              <td><a href="mailto:carlos.alberto.zapata@pemex.co">carlos.alberto.zapata@pemex.com</a></td>
-              <td>012299892600 ext. 22801     </td>
+              <td>@{{ap_paterno_admin}}            </td>
+              <td>@{{ap_materno_admin}}               </td>
+              <td>@{{cargo_admin}}             </td>
+              <td><a v-bind:href="mail_to_admin">@{{mail_admin}}</a></td>
+              <td>@{{telefono_admin}}</td>
             </tr>
           </tbody>
         </table>
@@ -354,7 +354,7 @@
     </div>
   </section>
 
-  <!--documentos adjuntos---------->
+  <!--documentos adjuntos-
   <section class="GF-card">
     <div class="row">
       <div class="col-sm-12">
@@ -376,7 +376,7 @@
       </div>
     </div>
   </section>
-
+--------->
   <!-- reportar-->
   <section class="GF-card">
     <div class="row">
