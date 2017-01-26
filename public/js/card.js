@@ -42,6 +42,7 @@ d3.json(DatosGobMxURL)
           localizacion : res["localizacion"],
           longitud_inicial : res["longitud-inicial"],
           mail_admin : res["mail-admin"],
+          mail_to_admin : "mailto:"+res["mail-admin"],
           meta_beneficios : res["meta-beneficios"],
           meta_fisica : res["meta-fisica"],
           modificado : res["modificado"],
