@@ -145,7 +145,7 @@
         <!-- pef-->
         <h3>Presupuesto aprobado en el PEF 2016</h3>
         <p class="amount right">$<strong>@{{costo_total_ppi}}</strong> <span>MXN</span></p>
-        <div class="bar"> 
+        <div class="bar">
           <span class="bar inside pef" style="width: 9.80%"></span>
         </div>
         <!-- ejercido-->
@@ -560,7 +560,7 @@ var svg = d3.select("#arc_side").append("svg")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var data = [
-    {"amount": 40 },  
+    {"amount": 40 },
     {"amount": 60}
   ];
 
@@ -735,6 +735,7 @@ $(document).ready(function () {
   /****** API **********/
   var appKey = '5825343BB68F29D2A881B2E8D205B98846C95558';
   $(document).ready(function(){
+    
    var carteraId = "",
        ejecutor  = "",
        programa  = "",
