@@ -152,7 +152,9 @@
         <h3>Monto ejercido 2016</h3>
         <p class="amount right">$<strong>@{{+ejercido}}</strong> <span>MXN</span></p>
         <div class="bar">
-          <span class="bar inside ejercido" style="width: @{{(+ejercido * 100) / +costo_total_ppi}}%"></span>
+        <!--<span class="bar inside ejercido" style="width: @{{(+ejercido * 100) / +costo_total_ppi}}%"></span>-->
+        <span class="bar inside ejercido" v-bind:style="total_ejercido_style"></span>
+
         </div>
         <!-- modificado-->
         <h3>Presupuesto modificado</h3>
@@ -202,7 +204,7 @@
       </div>
       <!--tabla-->
       <div class="col-sm-3 side">
-        <table class="table">
+        <table class="table">bar in
           <thead>
             <tr>
               <th>Año de Inversión</th>
