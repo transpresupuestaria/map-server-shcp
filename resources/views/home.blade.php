@@ -33,7 +33,7 @@
       <!--year-->
       <h3>Año</h3>
       <select id="GF-SHCP-year-selector">
-        <option value="0">Todos</option>
+        <option value="all">Todos</option>
         <option value="2017">2017</option>
         <option value="2016">2016</option>
         <option value="2015">2015</option>
@@ -44,7 +44,7 @@
       <!--state-->
       <h3>Entidad Federativa</h3>
       <select id="GF-SHCP-state-selector">
-        <option value="0">Todas</option>
+        <option value="all">Todas</option>
         <option value="1">Aguascalientes</option>
         <option value="2">Baja California</option>
         <option value="3">Baja California Sur</option>
@@ -115,7 +115,7 @@
       
       <h3>Clasificación</h3>
       <select id="GF-SHCP-class-selector">
-        <option value="0">Todas</option>
+        <option value="all">Todas</option>
         <option value="Agricultura, Ganadería, Desarrollo Rural, Pesca y Alimentación">Agricultura, Ganadería, Desarrollo Rural, Pesca y Alimentación</option>
         <option value="Asociación Público-Privada">Asociación Público-Privada</option>
         <option value="Comunicaciones y Transportes">Comunicaciones y Transportes</option>
@@ -128,7 +128,7 @@
         <option value="Salud">Salud</option>
         <option value="Seguridad">Seguridad</option>
         <option value="Turismo">Turismo</option>
-        <option value="">Sin clasificación</option>
+        <!--<option value="">Sin clasificación</option>-->
       </select>
       
     </div>
@@ -144,6 +144,7 @@
   <!-- http://localhost:8000/api/data -->
 <script src="js/bower_components/d3/d3.min.js"></script>
 <script src="js/bower_components/leaflet/dist/leaflet.js"></script>
+<script src="js/bower_components/underscore/underscore.js"></script>
 <script src="js/main.js"></script>
   
 </body>
