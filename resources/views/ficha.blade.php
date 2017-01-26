@@ -86,7 +86,7 @@
           <!-- Ejecutor-->
           <div class="col-sm-4">
             <h3 class="title line">Ejecutor del Proyecto</h3>
-            <p></p>
+            <p>@{{id_ur}} - @{{desc_ur}}</p>
           </div>
           <!-- Tipo de proyecto-->
           <div class="col-sm-4">
@@ -162,7 +162,7 @@
           <span class="bar inside modificado" v-bind:style="modificado_style"></span>
         </div>
         <!-- reporta obra-->
-        <a href="#" data-dialog="somedialog" class="btn report trigger">Reporta esta obra</a>
+        <a data-dialog="somedialog" class="btn report trigger">Reporta esta obra</a>
       </div>
     </div>
   </section>
@@ -718,17 +718,7 @@ var svg = d3.select("#graph").append("svg")
 
 </script>
 
-    <script>
-      (function() {
-
-        var dlgtrigger = document.querySelector( '[data-dialog]' ),
-          somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
-          dlg = new DialogFx( somedialog );
-
-        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
-
-      })();
-    </script>
+    
 
     <script>
 $(document).ready(function () {
@@ -744,7 +734,18 @@ $(document).ready(function () {
       $(this).children('span').html('+');
     }
 
-  });
+  }); 
+  
+  (function() {
+
+        var dlgtrigger = document.querySelector( '[data-dialog]' ),
+          somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+          dlg = new DialogFx( somedialog );
+
+        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+      })();
+  
 });
 </script>
 
