@@ -1,17 +1,14 @@
 //var DatosGobMxURL = "http://localhost:8000/api/test";
 var hash = window.location.hash.replace("#", "");
 var DatosGobMxURL = "http://api.datos.gob.mx/v1/proyectos-opa?" + encodeURIComponent("cve-ppi") + "='" + hash;
-
-
 //console.log(window.location.hash);
-
 
 d3.json(DatosGobMxURL)
   .get(function(e, d){
     var res  = d.results[0],
         data = {
-         
-          
+
+
           _id              : res["_id"],
           anios_he         : res["anios-he"],
           ap_materno_admin : res["ap-materno-admin"],
@@ -42,6 +39,7 @@ d3.json(DatosGobMxURL)
           localizacion : res["localizacion"],
           longitud_inicial : res["longitud-inicial"],
           mail_admin : res["mail-admin"],
+          mail_to_admin : "mailto:"+res["mail-admin"],
           meta_beneficios : res["meta-beneficios"],
           meta_fisica : res["meta-fisica"],
           modificado : res["modificado"],
@@ -52,9 +50,12 @@ d3.json(DatosGobMxURL)
           tipo_ppi : res["tipo-ppi"],
           total_gasto_no_consid : res["total-gasto-no-consid"],
           total_gasto_operacion_he : res["total-gasto-operacion-he"],
-          
+
           // valores extra
+          presupuesto_style : "width:" + ((res["aprobado"] * 100) / res["costo-total-ppi"]) + "%",
           total_ejercido_style : "width:" + ((res["ejercido"] * 100) / res["costo-total-ppi"]) + "%",
+          modificado_style : "width:" + ((res["modificado"] * 100) / res["costo-total-ppi"]) + "%",
+          map_src		  : "http://www.openstreetmap.org/export/embed.html?bbox="+ res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"%2C"+res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"&amp;layer=mapnik",
 
         };
 
@@ -76,5 +77,3 @@ d3.json(DatosGobMxURL)
 
     console.log(res, data.nombre_admin);
   });
-    
-

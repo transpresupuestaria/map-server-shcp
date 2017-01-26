@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>@{{nombre}}</title>
+  <title>@{{nombre}}</title>
   <meta name="description" content="@{{desc_ppi}}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/styles.css"/>
@@ -86,7 +86,7 @@
           <!-- Ejecutor-->
           <div class="col-sm-4">
             <h3 class="title line">Ejecutor del Proyecto</h3>
-            <p></p>
+            <p>@{{id_ur}} - @{{desc_ur}}</p>
           </div>
           <!-- Tipo de proyecto-->
           <div class="col-sm-4">
@@ -104,7 +104,7 @@
         </div>
 
         <!--mapa-->
-        <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="http://www.openstreetmap.org/export/embed.html?bbox=-92.52016067504884%2C14.692704201867015%2C-92.25494384765626%2C14.845248917350904&amp;layer=mapnik"></iframe>
+        <iframe width="100%" height="350px" frameborder="0" scrolling="no" v-bind:src="map_src"></iframe>
 
         <div class="info location">
           <div class="row">
@@ -138,21 +138,20 @@
             </span>
           </span>
         </h3>
-        <p class="amount big right">$<strong>@{{costo_total_ppi}}</strong> <span>MXN</span></p>
+        <p class="amount big right">$<strong>@{{monto_total_inversion}}</strong> <span>MXN</span></p>
         <div class="bar">
-          <span class="bar inside total" style="width:100%"></span>
+          <span class="bar inside total"></span>
         </div>
         <!-- pef-->
         <h3>Presupuesto aprobado en el PEF 2016</h3>
-        <p class="amount right">$<strong>@{{monto_total_inversion}}</strong> <span>MXN</span></p>
-        <div class="bar"> 
-          <span class="bar inside pef" style="width: 9.80%"></span>
+        <p class="amount right">$<strong>@{{aprobado}}</strong> <span>MXN</span></p>
+        <div class="bar">
+          <span class="bar inside pef" v-bind:style="presupuesto_style"></span>
         </div>
         <!-- ejercido-->
         <h3>Monto ejercido 2016</h3>
         <p class="amount right">$<strong>@{{+ejercido}}</strong> <span>MXN</span></p>
         <div class="bar">
-        <!--<span class="bar inside ejercido" style="width: @{{(+ejercido * 100) / +costo_total_ppi}}%"></span>-->
         <span class="bar inside ejercido" v-bind:style="total_ejercido_style"></span>
 
         </div>
@@ -160,10 +159,10 @@
         <h3>Presupuesto modificado</h3>
         <p class="amount right">$<strong>@{{modificado}}</strong> <span>MXN</span></p>
         <div class="bar">
-          <span class="bar inside modificado" style="width: 26.86%"></span>
+          <span class="bar inside modificado" v-bind:style="modificado_style"></span>
         </div>
         <!-- reporta obra-->
-        <a href="#" data-dialog="somedialog" class="btn report trigger">Reporta esta obra</a>
+        <a data-dialog="somedialog" class="btn report trigger">Reporta esta obra</a>
       </div>
     </div>
   </section>
@@ -185,17 +184,17 @@
       <!--inicio-->
       <div class="col-sm-4">
         <h3>Fecha de inicio de inversión:</h3>
-        <p>Agosto/2006</p>
+        <p>@{{fecha_ini_cal_fiscal}}</p>
       </div>
       <!--término-->
       <div class="col-sm-4">
         <h3>Fecha de término de inversión:</h3>
-        <p>Diciembre/2017</p>
+        <p>@{{fecha_fin_cal_fiscal}}</p>
       </div>
       <!--total-->
       <div class="col-sm-4">
         <h3>Monto total de inversión:</h3>
-        <p>$1,057,675,759</p>
+        <p>@{{monto_total_inversion}}</p>
       </div>
       <!--gráfica-->
       <div class="col-sm-9">
@@ -204,7 +203,7 @@
       </div>
       <!--tabla-->
       <div class="col-sm-3 side">
-        <table class="table">bar in
+        <table class="table">
           <thead>
             <tr>
               <th>Año de Inversión</th>
@@ -261,7 +260,7 @@
       </div>
       <!--años-->
       <div class="col-sm-3">
-        <p class="amount"><strong>20</strong> años</p>
+        <p class="amount"><strong>@{{anios_he}}</strong> años</p>
         <p class="lead">Número estimado de años de operación en el horizonte de evaluación
           <!--tooltip-->
           <span class="tooltip">
@@ -274,17 +273,17 @@
       </div>
       <!--gastos-->
       <div class="col-sm-3">
-        <p class="amount">$<strong>46,763,198</strong></p>
+        <p class="amount">$<strong>@{{total_gasto_operacion_he}}</strong></p>
         <p class="lead">Gastos estimados totales de mantenimiento y operación del activo en el horizonte de evaluación </p>
       </div>
       <!--otros costos-->
       <div class="col-sm-3">
-        <p class="amount">$0</p>
+        <p class="amount">$@{{total_gasto_no_consid}}</p>
         <p class="lead">Otros costos y gastos asociados al PPI que no forman parte del gasto de inversión ni de los gastos de operación y mantenimiento </p>
       </div>
       <!--costo total-->
       <div class="col-sm-3">
-        <p class="amount">$<strong>1,104,438,957</strong></p>
+        <p class="amount">$<strong>@{{costo_total_ppi}}</strong></p>
         <p class="lead">Costo Total del PPI  </p>
       </div>
     </div>
@@ -307,7 +306,7 @@
             </span>
           </span>
         </h3>
-        <p>Terminal de Almacenamiento y Distribución de 115 MB de capacidad para combustibles, con suministro por Buque tanque desde Salina Cruz.</p>
+        <p>@{{meta_fisica}}</p>
       </div>
       <!--física-->
       <div class="col-sm-6">
@@ -317,7 +316,7 @@
           <span class="tooltip">
             <span class="tooltip-item">Beneficios esperados del PPI <b>?</b></span>
             <span class="tooltip-content clearfix">
-              <span class="tooltip-text">Efectos favorables que se generarían sobre la población o para el país como resultado del programa o proyecto de inversión</span>
+              <span class="tooltip-text">@{{meta_beneficios}}</span>
             </span>
           </span>
         </h3>
@@ -343,11 +342,11 @@
           <tbody>
             <tr>
               <td>@{{nombre_admin}}              </td>
-              <td>Salavarria            </td>
-              <td>Zapata              </td>
-              <td>Gerente             </td>
-              <td><a href="mailto:carlos.alberto.zapata@pemex.co">carlos.alberto.zapata@pemex.com</a></td>
-              <td>012299892600 ext. 22801     </td>
+              <td>@{{ap_paterno_admin}}            </td>
+              <td>@{{ap_materno_admin}}               </td>
+              <td>@{{cargo_admin}}             </td>
+              <td><a v-bind:href="mail_to_admin">@{{mail_admin}}</a></td>
+              <td>@{{telefono_admin}}</td>
             </tr>
           </tbody>
         </table>
@@ -355,7 +354,7 @@
     </div>
   </section>
 
-  <!--documentos adjuntos---------->
+  <!--documentos adjuntos-
   <section class="GF-card">
     <div class="row">
       <div class="col-sm-12">
@@ -377,7 +376,7 @@
       </div>
     </div>
   </section>
-
+--------->
   <!-- reportar-->
   <section class="GF-card">
     <div class="row">
@@ -459,7 +458,7 @@
         <div class="col-sm-4">
           <a href="#" class="btn_type">
             <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
-            <span class="btn-symbol">Reportar</span>
+            <span class="btn-symbol" id ="rpt-advance">Reportar</span>
           </a>
         </div>
         <div class="col-sm-4">
@@ -562,7 +561,7 @@ var svg = d3.select("#arc_side").append("svg")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var data = [
-    {"amount": 40 },  
+    {"amount": 40 },
     {"amount": 60}
   ];
 
@@ -701,17 +700,7 @@ var svg = d3.select("#graph").append("svg")
 
 </script>
 
-    <script>
-      (function() {
-
-        var dlgtrigger = document.querySelector( '[data-dialog]' ),
-          somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
-          dlg = new DialogFx( somedialog );
-
-        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
-
-      })();
-    </script>
+    
 
     <script>
 $(document).ready(function () {
@@ -727,7 +716,18 @@ $(document).ready(function () {
       $(this).children('span').html('+');
     }
 
-  });
+  }); 
+  
+  (function() {
+
+        var dlgtrigger = document.querySelector( '[data-dialog]' ),
+          somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
+          dlg = new DialogFx( somedialog );
+
+        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+      })();
+  
 });
 </script>
 
@@ -737,25 +737,31 @@ $(document).ready(function () {
   /****** API **********/
   var appKey = '5825343BB68F29D2A881B2E8D205B98846C95558';
   $(document).ready(function(){
-   var carteraId = "",
-       ejecutor  = "",
-       programa  = "",
-       entidad   = "";
 
    //Reporte por inconsistencia en avance físico
    $('#rpt-advance').click(function(){
-     console.log(res);
+     var carteraId = "",
+         ejecutor  = "",
+         programa  = "",
+         entidad   = "",
+         motivo    = "",
+         dependencia = "asd",
+         estadoId ="",
+         paisId="";
+    var dataAPI = {"ciudadano":{"anonimo":true,"genero":"HOMBRE"},"dependencia":dependencia,"estado":4,"motivoPeticion":"Prueba","otroPais":null,"pais":2,"queSolicitaron":null,"solictaronDinero":false};
+console.log(dataAPI);
      $.ajax({
        beforeSend: function(xhrObj){
-                 xhrObj.setRequestHeader("Content-Type","application/json");
-                 xhrObj.setRequestHeader("Accept","application/json");
                  xhrObj.setRequestHeader("app-key",appKey);
          },
-       type: "GET",
-       dataType: "json",
-       url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/obtenerPaises",
+       type: "POST",
+       url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/registrarPeticion",
+       contentType: 'application/json; charset=utf-8',
+       dataType:"json",
+       headers:{"app-key":appKey},
+       data: JSON.stringify(dataAPI),
        success: function(dataRe){
-           console.log(data);
+           console.log(dataRe);
          }
      });
    });
