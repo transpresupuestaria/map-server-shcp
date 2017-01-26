@@ -459,7 +459,7 @@
         <div class="col-sm-4">
           <a href="#" class="btn_type">
             <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
-            <span class="btn-symbol">Reportar</span>
+            <span class="btn-symbol" id ="rpt-advance">Reportar</span>
           </a>
         </div>
         <div class="col-sm-4">
@@ -738,25 +738,30 @@ $(document).ready(function () {
   var appKey = '5825343BB68F29D2A881B2E8D205B98846C95558';
   $(document).ready(function(){
 
-   var carteraId = "",
-       ejecutor  = "",
-       programa  = "",
-       entidad   = "";
-
    //Reporte por inconsistencia en avance físico
    $('#rpt-advance').click(function(){
-     console.log(res);
+     var carteraId = "",
+         ejecutor  = "",
+         programa  = "",
+         entidad   = "",
+         motivo    = "",
+         dependencia = "asd",
+         estadoId ="",
+         paisId="";
+    var dataAPI = {"ciudadano":{"anonimo":true,"genero":"HOMBRE"},"dependencia":dependencia,"estado":4,"motivoPeticion":"Prueba","otroPais":null,"pais":2,"queSolicitaron":null,"solictaronDinero":false};
+console.log(dataAPI);
      $.ajax({
        beforeSend: function(xhrObj){
-                 xhrObj.setRequestHeader("Content-Type","application/json");
-                 xhrObj.setRequestHeader("Accept","application/json");
                  xhrObj.setRequestHeader("app-key",appKey);
          },
-       type: "GET",
-       dataType: "json",
-       url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/obtenerPaises",
+       type: "POST",
+       url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/registrarPeticion",
+       contentType: 'application/json; charset=utf-8',
+       dataType:"json",
+       headers:{"app-key":appKey},
+       data: JSON.stringify(dataAPI),
        success: function(dataRe){
-           console.log(data);
+           console.log(dataRe);
          }
      });
    });
