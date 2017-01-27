@@ -1567,7 +1567,8 @@ section {
   padding: 10px 0;
   text-align: center;
   text-transform: uppercase;
-  transition: background 500ms; }
+  transition: background 500ms;
+  width: 100%; }
   .btn.report:hover {
     background: #462b5f;
     color: white;
