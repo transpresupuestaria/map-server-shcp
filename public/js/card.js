@@ -81,7 +81,16 @@ d3.json(DatosGobMxURL)
 		  		methods: {
 		  		  listfaqs : function(e) {
 			  		e.currentTarget.classList.toggle("active");
-    	  		  }			  
+    	  		  },		
+    	  		  step1	: function(e) {
+	    	  		  console.log("1")
+    	  		  },
+    	  		  step3	: function(e) {
+	    	  		  console.log("1")
+    	  		  },
+    	  		  step2	: function(e) {
+	    	  		  console.log("1")
+    	  		  }	  
     			}
             })
           );
