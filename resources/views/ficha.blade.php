@@ -47,10 +47,6 @@
           </div>
         </div>
         <h1 id ="nameReport">@{{nombre}}</h1>
-
-
-
-
         <div class="row">
           <div class="col-sm-10">
             <p>@{{desc_ppi}}</p>
@@ -146,20 +142,20 @@
         </div>
         <!-- pef-->
         <h3>Presupuesto aprobado en el PEF 2016</h3>
-        <p class="amount right">$<strong>@{{aprobado}}</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>@{{Format(aprobado)}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside pef" v-bind:style="presupuesto_style"></span>
         </div>
         <!-- ejercido-->
         <h3>Monto ejercido 2016</h3>
-        <p class="amount right">$<strong>@{{+ejercido}}</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>@{{Format(ejercido)}}</strong> <span>MXN</span></p>
         <div class="bar">
         <span class="bar inside ejercido" v-bind:style="total_ejercido_style"></span>
 
         </div>
         <!-- modificado-->
         <h3>Presupuesto modificado</h3>
-        <p class="amount right">$<strong>@{{modificado}}</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>@{{Format(modificado)}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside modificado" v-bind:style="modificado_style"></span>
         </div>

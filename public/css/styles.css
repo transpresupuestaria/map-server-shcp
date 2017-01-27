@@ -527,6 +527,9 @@ text {
     top: 0; }
     .record .modal-container .action:hover {
       background: #cc0000; }
+  .record .modal-container textarea,
+  .record .modal-container input {
+    width: 100%; }
 
 .dialog-container {
   margin: 0 auto;
@@ -1525,6 +1528,9 @@ h1 {
       background-image: url("../img/logos_ramo/imss.gif"); }
   .record .update {
     margin-bottom: 40px; }
+
+.hide {
+  display: none; }
 
 .side {
   background: #f9f9f9;
