@@ -494,6 +494,8 @@ text {
   .record .modal-container #toggle-view .panel {
     margin: 5px 0;
     display: none; }
+  .record .modal-container #toggle-view .active .panel {
+    display: block; }
   .record .modal-container a.btn_type {
     background: #462b5f;
     color: white;

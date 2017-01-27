@@ -163,8 +163,6 @@
         </div>
         <!-- reporta obra-->
         <button id="show-modal" @click="showModal = true" class="btn report trigger">Reporta esta obra</button>
-  
-  
       </div>
     </div>
   </section>
@@ -390,7 +388,7 @@
       </div>
     </div>
     
-    <!-- use the modal component, pass in the prop -->
+    <!-- modal -->
 	  <modal v-if="showModal" @close="showModal = false">
 	  <!-- content-->
 	  <h2 slot="header">Reporta esta obra</h2>	  
@@ -416,43 +414,85 @@
         	  </a>
         	</div>
         </div>
-      <h3>Preguntas Frecuentes</h3>
-      <ul id="toggle-view">
-        <li>
+		<h3>Preguntas Frecuentes</h3>      
+		<ul id="toggle-view">
+        <li v-bind:class="{ active: isActive }" @click="listfaqs">
           <h4>¿Qué es un reporte ciudadano?</h4>
           <span>+</span>
           <div class="panel">
           Aviso que realiza cualquier interesado, a través de medios electrónicos, sobre posibles observaciones relacionadas con la ubicación, avances físicos y financieros o condiciones físicas de los programas y proyectos de inversión registrados en la Cartera de Inversión y en proceso de ejecución, susceptibles de ser georreferenciados.</div>
         </li>
-        <li><h4>¿Puedo presentar una queja o denuncia sobre algún funcionario público en particular a través de la plataforma?</h4>
+        <li v-bind:class="{ active: isActive }" @click="listfaqs">
+        	<h4>¿Puedo presentar una queja o denuncia sobre algún funcionario público en particular a través de la plataforma?</h4>
           <span>+</span>
           <div class="panel">Para ello, la Secretaría de la Función Pública pone a disposición de los ciudadanos distintos mecanismos que se pueden consultar a través de la página <a href="http://www.funcionpublica.gob.mx/index.php/temas/quejas-y-denuncias.html">http://www.funcionpublica.gob.mx/index.php/temas/quejas-y-denuncias.html</a></div>
         </li>
-        <li><h4>¿Qué es la Cartera de Inversión?</h4>
+        <li v-bind:class="{ active: isActive }" @click="listfaqs">
+        	<h4>¿Qué es la Cartera de Inversión?</h4>
           <span>+</span>
           <div class="panel">La Cartera es un sistema electrónico que contiene la información de todos los programas y proyectos de inversión que las dependencias y entidades de la Administración Pública Federal registraron y que demostraron tener beneficios para la población (rentables socioeconómicamente).</div>
         </li>
-        <li>
+        <li v-bind:class="{ active: isActive }" @click="listfaqs">
           <h4>¿Cuál es el procedimiento para registrar un proyecto de inversión?</h4>
           <span>+</span>
           <div class="panel">El proceso comienza con la identificación de necesidades de la población por parte de las dependencias y entidades de la Administración Pública Federal, las cuales analizan, evalúan y formulan proyectos o programas de inversión con el fin de satisfacer dichas necesidades. La solicitud de registro, la cual debe cumplir con la normatividad vigente, la realizan las dependencias y entidades mediante los sistemas informáticos de la Secretaría de Hacienda y Crédito Público (SHCP). Posteriormente, la solicitud es revisada por la Unidad de Inversiones de la SHCP y una vez que el proyecto demuestra que tiene beneficios para la población, se le otorga el registro en la Cartera de Inversión.</div>
         </li>
-        <li><h4>¿Por qué no se ha aprobado mi proyecto?</h4>
+        <li v-bind:class="{ active: isActive }" @click="listfaqs">
+        	<h4>¿Por qué no se ha aprobado mi proyecto?</h4>
           <span>+</span>
           <div class="panel">Sólo los programas y proyectos que las dependencias y entidades de la Administración Pública Federal registran en los sistemas informáticos de la SHCP son susceptibles de registro en la Cartera. Para que los proyectos puedan ser aprobados, deben cumplir los requisitos establecidos en la normatividad vigente, por lo que son revisados estrictamente para poder ser autorizados.</div>
         </li>
-        <li>
+        <li v-bind:class="{ active: isActive }" @click="listfaqs">
           <h4>¿Por qué mi proyecto no recibió recursos?</h4>
           <span>+</span>
           <div class="panel">Derivado del hecho que los recursos son limitados, la dependencia o entidad determina, de acuerdo con su planeación, qué proyectos son prioritarios para asignarles recursos durante el ejercicio fiscal, además, dichos recursos son aprobados por la Cámara de Diputados, junto con la totalidad del Presupuesto de Egresos de la Federación, en el mes de noviembre de cada año.</div>
         </li>
-        <li>
+        <li v-bind:class="{ active: isActive }" @click="listfaqs">
           <h4>¿Cuál es la normatividad vigente para registrar un proyecto de inversión?</h4>
           <span>+</span>
           <div class="panel">Para llevar a cabo el registro de un programa o proyecto de inversión se debe cumplir lo establecido en los Lineamientos para el registro en la cartera de programas y proyectos de inversión, los cuales se encuentran disponibles en la página de la SHCP: <a href="http://www.shcp.gob.mx/LASHCP/MarcoJuridico/ProgramasYProyectosDeInversion/Paginas/lineamientos.aspx">http://www.shcp.gob.mx/LASHCP/MarcoJuridico/ProgramasYProyectosDeInversion/Paginas/lineamientos.aspx</a></div>
         </li>
       </ul>
-      <a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
+		<a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
+		
+		<form>
+			<fieldset id="reporte_step1">
+				<h3>Paso 1 de 2</h3>
+				<label><h4>Asunto del reporte</h4></label>
+				<textarea></textarea>
+				<label><h4>Narre el motivo de su reporte</h4></label>
+				<textarea></textarea>
+				<a class="btn more">Continuar &gt;</a>
+			</fieldset>
+			<fieldset id="reporte_step3">
+				<h3>Paso 2 de 2</h3>
+				<p>Para dar seguimiento a tu solicitud necesitamos que nos proporciones tu información de contacto básica.<br>
+				<span class="small"><span class="alert">*</span> Información necesaria </span></p>
+				<label>Nombres</label>
+				  <input id ="name" type="text" name="name"><br>
+				  <label>Paterno</label>
+				  <input id ="surname"  type="text" name="surname"><br>
+				  <label>Materno</label>
+				  <input id ="lastname"  type="text" name="lastname"><br>
+				  <label>Género</label>
+				  <select id ="gender">
+				  	<option value="MUJER">Femenino</option>
+				  	<option value="HOMBRE">Masculino</option>
+				  </select>
+				  <label>Correo</label>
+				  <input id ="email" type="text" name="email"><br>
+				  <label>Contraseña</label>
+				  <input id ="password" type="text" name="password"><br>
+				  <a class="btn more">&lt; Regresar</a>
+				  <input id ="rpt-advance" type="submit" value="Submit">
+			</fieldset>
+		</form>
+		
+		<div id="respuesta_reporte">
+			<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
+			<p>id de reporte</p>
+			<p>contraseña reporte</p>
+		</div>
 	  </div>
 	  </modal>
     
@@ -515,33 +555,8 @@
     </div>
   </footer>
 
-<!-- dialog -->
-<div id="somedialog" class="dialog">
-  <div class="dialog__overlay"></div>
-  <div class="dialog__content">
-    <div class="dialog-container">
-    </div>
-  </div>
-</div>
 
-<form>
-  <label>Nombres</label>
-  <input id ="name" type="text" name="name"><br>
-  <label>Paterno</label>
-  <input id ="surname"  type="text" name="surname"><br>
-  <label>Materno</label>
-  <input id ="lastname"  type="text" name="lastname"><br>
-  <label>Género</label>
-  <select id ="gender">
-  <option value="MUJER">Femenino</option>
-  <option value="HOMBRE">Masculino</option>
-</select>
-  <label>Correo</label>
-  <input id ="email" type="text" name="email"><br>
-  <label>Contraseña</label>
-  <input id ="password" type="text" name="password"><br>
-  <input id ="rpt-advance" type="submit" value="Submit">
-</form>
+
 
 <!-- template for the modal component -->
 <script type="text/x-template" id="modal-template">
@@ -563,21 +578,19 @@
               default body
             </slot>
           </div>
-		  <!--
+          
+		 <!-- 
           <div class="modal-footer">
             <slot name="footer">
-              default footer
-              
+              default footer 
             </slot>
-          </div>-->
+          </div>
+          -->
         </div>
       </div>
     </div>
   </transition>
 </script>
-
-
-  
 
 
 <!-- scripts -->
@@ -769,37 +782,7 @@ var svg = d3.select("#graph").append("svg")
 
     
 
-    <script>
-$(document).ready(function () {
 
-   
-  $('#toggle-view li').click(function () {
-    var text = $(this).children('div.panel');
-
-    if (text.is(':hidden')) {
-      text.slideDown('200');
-      $(this).children('span').html('-');
-    } else {
-      text.slideUp('200');
-      $(this).children('span').html('+');
-    }
-
-  });
-  
-  
-  /*
-  (function() {
-
-        var dlgtrigger = document.querySelector( '[data-dialog]' ),
-          somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
-          dlg = new DialogFx( somedialog );
-        
-        dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
-
-      })();
-  */
-});
-</script>
 
   <script src="js/bower_components/vue/dist/vue.min.js"></script>
   <script src="js/card.js"></script>
