@@ -393,33 +393,31 @@
     <!-- use the modal component, pass in the prop -->
 	  <modal v-if="showModal" @close="showModal = false">
 	  <!-- content-->
-	  <h2 slot="header">Reporta esta obra</h2>
-	  
-  <!--  -->
-    <p slot="header">Realiza tu reporte ciudadano para este proyecto:</p>
-    <div class="dialog-container" slot="body">
-      <div class="row">
-        <div class="col-sm-4">
-          <a href="#" class="btn_type">
-            <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
-            <span class="btn-symbol" id ="rpt-advance">Reportar</span>
-          </a>
+	  <h2 slot="header">Reporta esta obra</h2>	  
+	  <p slot="header">Realiza tu reporte ciudadano para este proyecto:</p>
+	  <div class="dialog-container" slot="body">
+     	<div class="row">
+        	<div class="col-sm-4">
+        	  <a href="#" class="btn_type">
+        	    <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
+        	    <span class="btn-symbol" id ="rpt-advance">Reportar</span>
+        	  </a>
+        	</div>
+        	<div class="col-sm-4">
+        	  <a href="#" class="btn_type">
+        	    <span class="btn-content">La obra ha sido abandonada</span>
+        	    <span class="btn-symbol">Reportar</span>
+        	  </a>
+        	</div>
+        	<div class="col-sm-4">
+        	  <a href="#" class="btn_type">
+        	    <span class="btn-content">Existe un error en la localización</span>
+        	    <span class="btn-symbol">Reportar</span>
+        	  </a>
+        	</div>
         </div>
-        <div class="col-sm-4">
-          <a href="#" class="btn_type">
-            <span class="btn-content">La obra ha sido abandonada</span>
-            <span class="btn-symbol">Reportar</span>
-          </a>
-        </div>
-        <div class="col-sm-4">
-          <a href="#" class="btn_type">
-            <span class="btn-content">Existe un error en la localización</span>
-            <span class="btn-symbol">Reportar</span>
-          </a>
-        </div>
-      </div>
-      <h3 slot="footer">Preguntas Frecuentes</h3>
-      <ul id="toggle-view" slot="footer">
+      <h3>Preguntas Frecuentes</h3>
+      <ul id="toggle-view">
         <li>
           <h4>¿Qué es un reporte ciudadano?</h4>
           <span>+</span>
@@ -455,7 +453,7 @@
         </li>
       </ul>
       <a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
-	  
+	  </div>
 	  </modal>
     
   </section>
@@ -551,11 +549,13 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
-
           <div class="modal-header">
+	          
             <slot name="header">
               default header
+              
             </slot>
+            <button class="modal-default-button action" @click="$emit('close')">X</button>
           </div>
 
           <div class="modal-body">
@@ -563,15 +563,13 @@
               default body
             </slot>
           </div>
-
+		  <!--
           <div class="modal-footer">
             <slot name="footer">
               default footer
-              <button class="modal-default-button" @click="$emit('close')">
-                OK
-              </button>
+              
             </slot>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
