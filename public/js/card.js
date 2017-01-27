@@ -58,8 +58,7 @@ d3.json(DatosGobMxURL)
           map_src		  : "http://www.openstreetmap.org/export/embed.html?bbox="+ res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"%2C"+res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"&amp;layer=mapnik",
           /// modal
           showModal: false,
-          //// faqs list
-          isActive: false,
+        
 
         };
 		
@@ -79,8 +78,8 @@ d3.json(DatosGobMxURL)
           		data : data,
           		// define methods under the `methods` object
 		  		methods: {
-		  		  listfaqs : function() {
-		  		  	this.isActive = !this.isActive;
+		  		  listfaqs : function(e) {
+			  		e.currentTarget.classList.toggle("active");
     	  		  }			  
     			}
             })

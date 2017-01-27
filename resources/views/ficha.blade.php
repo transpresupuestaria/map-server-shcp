@@ -418,38 +418,38 @@
         </div>
 		<h3>Preguntas Frecuentes</h3>
 		<ul id="toggle-view">
-        <li v-bind:class="{ active: isActive }" @click="listfaqs">
+        <li @click="listfaqs">
           <h4>¿Qué es un reporte ciudadano?</h4>
           <span>+</span>
           <div class="panel">
           Aviso que realiza cualquier interesado, a través de medios electrónicos, sobre posibles observaciones relacionadas con la ubicación, avances físicos y financieros o condiciones físicas de los programas y proyectos de inversión registrados en la Cartera de Inversión y en proceso de ejecución, susceptibles de ser georreferenciados.</div>
         </li>
-        <li v-bind:class="{ active: isActive }" @click="listfaqs">
+        <li @click="listfaqs">
         	<h4>¿Puedo presentar una queja o denuncia sobre algún funcionario público en particular a través de la plataforma?</h4>
           <span>+</span>
           <div class="panel">Para ello, la Secretaría de la Función Pública pone a disposición de los ciudadanos distintos mecanismos que se pueden consultar a través de la página <a href="http://www.funcionpublica.gob.mx/index.php/temas/quejas-y-denuncias.html">http://www.funcionpublica.gob.mx/index.php/temas/quejas-y-denuncias.html</a></div>
         </li>
-        <li v-bind:class="{ active: isActive }" @click="listfaqs">
+        <li @click="listfaqs">
         	<h4>¿Qué es la Cartera de Inversión?</h4>
           <span>+</span>
           <div class="panel">La Cartera es un sistema electrónico que contiene la información de todos los programas y proyectos de inversión que las dependencias y entidades de la Administración Pública Federal registraron y que demostraron tener beneficios para la población (rentables socioeconómicamente).</div>
         </li>
-        <li v-bind:class="{ active: isActive }" @click="listfaqs">
+        <li @click="listfaqs">
           <h4>¿Cuál es el procedimiento para registrar un proyecto de inversión?</h4>
           <span>+</span>
           <div class="panel">El proceso comienza con la identificación de necesidades de la población por parte de las dependencias y entidades de la Administración Pública Federal, las cuales analizan, evalúan y formulan proyectos o programas de inversión con el fin de satisfacer dichas necesidades. La solicitud de registro, la cual debe cumplir con la normatividad vigente, la realizan las dependencias y entidades mediante los sistemas informáticos de la Secretaría de Hacienda y Crédito Público (SHCP). Posteriormente, la solicitud es revisada por la Unidad de Inversiones de la SHCP y una vez que el proyecto demuestra que tiene beneficios para la población, se le otorga el registro en la Cartera de Inversión.</div>
         </li>
-        <li v-bind:class="{ active: isActive }" @click="listfaqs">
+        <li @click="listfaqs">
         	<h4>¿Por qué no se ha aprobado mi proyecto?</h4>
           <span>+</span>
           <div class="panel">Sólo los programas y proyectos que las dependencias y entidades de la Administración Pública Federal registran en los sistemas informáticos de la SHCP son susceptibles de registro en la Cartera. Para que los proyectos puedan ser aprobados, deben cumplir los requisitos establecidos en la normatividad vigente, por lo que son revisados estrictamente para poder ser autorizados.</div>
         </li>
-        <li v-bind:class="{ active: isActive }" @click="listfaqs">
+        <li @click="listfaqs">
           <h4>¿Por qué mi proyecto no recibió recursos?</h4>
           <span>+</span>
           <div class="panel">Derivado del hecho que los recursos son limitados, la dependencia o entidad determina, de acuerdo con su planeación, qué proyectos son prioritarios para asignarles recursos durante el ejercicio fiscal, además, dichos recursos son aprobados por la Cámara de Diputados, junto con la totalidad del Presupuesto de Egresos de la Federación, en el mes de noviembre de cada año.</div>
         </li>
-        <li v-bind:class="{ active: isActive }" @click="listfaqs">
+        <li @click="listfaqs">
           <h4>¿Cuál es la normatividad vigente para registrar un proyecto de inversión?</h4>
           <span>+</span>
           <div class="panel">Para llevar a cabo el registro de un programa o proyecto de inversión se debe cumplir lo establecido en los Lineamientos para el registro en la cartera de programas y proyectos de inversión, los cuales se encuentran disponibles en la página de la SHCP: <a href="http://www.shcp.gob.mx/LASHCP/MarcoJuridico/ProgramasYProyectosDeInversion/Paginas/lineamientos.aspx">http://www.shcp.gob.mx/LASHCP/MarcoJuridico/ProgramasYProyectosDeInversion/Paginas/lineamientos.aspx</a></div>
