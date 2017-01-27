@@ -86,17 +86,14 @@ d3.json(DatosGobMxURL)
             })
           );
         }
-        
-        
-      
-        
-        
-        /*
-        GFapp = new Vue({
-          el   : '.GF-card',
-          data : data
-        });
-        */
 
-    console.log(res, data.nombre_admin);
+
+    // GF-SHCP-map
+    var mymap = L.map('GF-SHCP-map').setView([data.latitud_inicial, data.longitud_inicial], 13);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+    }).addTo(mymap);
+
+    var marker = L.marker([data.latitud_inicial, data.longitud_inicial]).addTo(mymap);
   });
