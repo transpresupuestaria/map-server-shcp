@@ -799,17 +799,18 @@ var svg = d3.select("#graph").append("svg")
       }
     });
    //Reporte por inconsistencia en avance físico
-   $('#rpt-advance').click(function(){
+   $(document).on ("click", "#rpt-advance", function () {
      event.preventDefault();
      //informacion de proyecto
      var carteraId = $("#cveReport").val(),
-         dependencia  = $("#ejecutorReport").val(),
+         dependencia  = $("#ejecutorReport").text(),
          programa  = $("#programaReport").val(),
          entidad   = $("#entidadReport").val(),
          nombre    = $("#nameReport").val(),
          motivo    = $("#motivoReporte").val(),
          estadoId ="",
          paisId="";
+    console.log(dependencia);
     //informacion de ciudadano
     var name    = $("#name").val(),
         paterno = $("#surname").val(),
@@ -836,6 +837,7 @@ var svg = d3.select("#graph").append("svg")
        headers:{"app-key":appKey},
        data: JSON.stringify(dataAPI),
        success: function(dataRe){
+           console.log(dataRe);
            if(dataRe.resultado == 'REGISTRO_PETICION_EXITOSO'){
               $("#folio").text(dataRe.folio);
               $("#passfolio").text(dataRe.passFolio);
