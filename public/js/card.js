@@ -56,9 +56,18 @@ d3.json(DatosGobMxURL)
           total_ejercido_style : "width:" + ((res["ejercido"] * 100) / res["costo-total-ppi"]) + "%",
           modificado_style : "width:" + ((res["modificado"] * 100) / res["costo-total-ppi"]) + "%",
           map_src		  : "http://www.openstreetmap.org/export/embed.html?bbox="+ res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"%2C"+res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"&amp;layer=mapnik",
+          
+          showModal: false,
 
         };
-
+		
+		// register modal component
+		Vue.component('modal', {
+		  template: '#modal-template'
+		})
+		
+		avance_GF_donitas(data.avance_fisico);
+		
         var fun = [],
             els = document.querySelectorAll(".GF-card");
         for(let i = 0; i < els.length; i++){
@@ -68,6 +77,9 @@ d3.json(DatosGobMxURL)
             })
           );
         }
+
+        
+        
         /*
         GFapp = new Vue({
           el   : '.GF-card',
