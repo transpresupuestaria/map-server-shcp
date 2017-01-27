@@ -43,10 +43,10 @@
           </div>
           <!--- clave de cartera-->
           <div class="col-sm-6">
-            <h3 class="right">Clave de Cartera: <span>@{{cve_ppi}}</span></h3>
+            <h3 class="right">Clave de Cartera: <span id="cveReport">@{{cve_ppi}}</span></h3>
           </div>
         </div>
-        <h1>@{{nombre}}</h1>
+        <h1 id ="nameReport">@{{nombre}}</h1>
 
 
 
@@ -87,7 +87,7 @@
           <!-- Ejecutor-->
           <div class="col-sm-4">
             <h3 class="title line">Ejecutor del Proyecto</h3>
-            <p>@{{id_ur}} - @{{desc_ur}}</p>
+            <p id = "ejecutorReport">@{{id_ur}} - @{{desc_ur}}</p>
           </div>
           <!-- Tipo de proyecto-->
           <div class="col-sm-4">
@@ -112,12 +112,12 @@
           <div class="row">
             <div class="col-sm-4">
               <h3 class="title">Programa Presupuestario</h3>
-              <p><a href="#" title="Conoce su desempeño">11S243 – Programa Nacional de Petróleo</a></p>
+              <p><a href="#" title="Conoce su desempeño" id ="programaReport">11S243 – Programa Nacional de Petróleo</a></p>
             </div>
             <!---entidad-->
             <div class="col-sm-4">
               <h3 class="title">Entidad Federativa</h3>
-              <p>	@{{entidad_federativa}}</p>
+              <p id="entidadReport">	@{{entidad_federativa}}</p>
             </div>
             <!---coordenadas---->
             <div class="col-sm-4">
@@ -457,13 +457,13 @@
       </ul>
 		<a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
 
-		<form>
+		<form id = "reportForm">
 			<fieldset id="reporte_step1">
 				<h3>Paso 1 de 2</h3>
 				<label><h4>Asunto del reporte</h4></label>
-				<textarea></textarea>
+				<textarea id="asuntoReporte"></textarea>
 				<label><h4>Narre el motivo de su reporte</h4></label>
-				<textarea></textarea>
+				<textarea id="motivoReporte"></textarea>
 				<a class="btn more">Continuar &gt;</a>
 			</fieldset>
 			<fieldset id="reporte_step3">
@@ -788,19 +788,26 @@ var svg = d3.select("#graph").append("svg")
   <script>
   /****** API **********/
   var appKey = '5825343BB68F29D2A881B2E8D205B98846C95558';
+  //Por el momento todos los reportes son anonimos
+  var anonimo = true;
   $(document).ready(function(){
-
-    console.log($('#rpt-advance'));
+    $('#reportForm').on('keyup keypress', function(e) {
+      var keyCode = e.keyCode || e.which;
+      if (keyCode === 13) {
+        e.preventDefault();
+        return false;
+      }
+    });
    //Reporte por inconsistencia en avance físico
    $('#rpt-advance').click(function(){
      event.preventDefault();
      //informacion de proyecto
-     var carteraId = "",
-         ejecutor  = "",
-         programa  = "",
-         entidad   = "",
-         motivo    = "",
-         dependencia = "asd",
+     var carteraId = $("#cveReport").val(),
+         dependencia  = $("#ejecutorReport").val(),
+         programa  = $("#programaReport").val(),
+         entidad   = $("#entidadReport").val(),
+         nombre    = $("#nameReport").val(),
+         motivo    = $("#motivoReporte").val(),
          estadoId ="",
          paisId="";
     //informacion de ciudadano
@@ -810,10 +817,13 @@ var svg = d3.select("#graph").append("svg")
         email   = $("#email").val(),
         pass    = $("#password").val(),
         genero  = $("#gender").val();
-    var ciudadanoAPI = {"anonimo":false,"genero":genero,"nombre":name,"paterno":paterno,"email":email,"contrasenia":pass}
-    console.log(ciudadanoAPI);
+
+    if(!anonimo){
+      var ciudadanoAPI = {"anonimo":false,"genero":genero,"nombre":name,"paterno":paterno,"email":email,"contrasenia":pass};
+    }else{
+      var ciudadanoAPI = {"anonimo":true};
+    }
     var dataAPI = {"ciudadano":ciudadanoAPI,"dependencia":dependencia,"estado":4,"motivoPeticion":"Prueba","otroPais":null,"pais":2,"queSolicitaron":null,"solictaronDinero":false};
-    console.log(dataAPI);
      $.ajax({
        beforeSend: function(xhrObj){
                  xhrObj.setRequestHeader("app-key",appKey);
@@ -826,7 +836,6 @@ var svg = d3.select("#graph").append("svg")
        headers:{"app-key":appKey},
        data: JSON.stringify(dataAPI),
        success: function(dataRe){
-         console.log(dataRe);
            if(dataRe.resultado == 'REGISTRO_PETICION_EXITOSO'){
               $("#folio").text(dataRe.folio);
               $("#passfolio").text(dataRe.passFolio);
