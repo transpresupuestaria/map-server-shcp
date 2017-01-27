@@ -486,14 +486,19 @@
 				  <label>Contraseña</label>
 				  <input id ="password" type="text" name="password"><br>
 				  <a class="btn more">&lt; Regresar</a>
-				  <input id ="rpt-advance" type="submit" value="Submit">
+				  <input class ="rpt-advance" type="submit" value="Submit">
 			</fieldset>
 		</form>
 
 		<div id="respuesta_reporte">
-			<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
-			<p>id de reporte : <span id="folio"></span></p>
-			<p>contraseña reporte: <span id="passfolio"></span></p>
+      <div id ="successReport">
+  			<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
+  			<p>id de reporte : <span id="folio"></span></p>
+  			<p>contraseña reporte: <span id="passfolio"></span></p>
+     </div>
+     <div id ="errorReport" style= "display:none;">
+      <h3>Ocurrió un error al enviar tu reporte, intentálo más tarde</h3>
+    </div>
 		</div>
 	  </div>
 	  </modal>
@@ -800,7 +805,7 @@ var svg = d3.select("#graph").append("svg")
       }
     });
    //Reporte por inconsistencia en avance físico
-   $(document).on ("click", "#rpt-advance", function () {
+   $(document).on ("click", ".rpt-advance", function () {
      estados = estados.responseJSON.estado;
      event.preventDefault();
      //informacion de proyecto
@@ -809,9 +814,10 @@ var svg = d3.select("#graph").append("svg")
          programa  = $("#programaReport").text(),
          entidad   = $("#entidadReport").text(),
          nombre    = $("#nameReport").text(),
-         motivo    = $("#motivoReporte").text(),
+         motivo    = $("#motivoReporte").val(),
          estadoId = "",
          paisId="2";
+         console.log(motivo);
          testado = RemoveAccents(entidad.toLowerCase());
          for (var i = 0; i < estados.length; i++) {
            estado = RemoveAccents(estados[i].nombre.toLowerCase());
@@ -822,6 +828,8 @@ var svg = d3.select("#graph").append("svg")
              estadoID = false;
            }
          }
+    motivo = "El proyecto "+ nombre+", perteneciente al programa "+ programa +", con clave " + carteraId+", ejecutado por " + dependencia+", presenta irregularidades en su proceso.\n " + motivo;
+    console.log(motivo);
     //informacion de ciudadano
     var name    = $("#name").val(),
         paterno = $("#surname").val(),
@@ -835,27 +843,37 @@ var svg = d3.select("#graph").append("svg")
     }else{
       var ciudadanoAPI = {"anonimo":true};
     }
-    var dataAPI = {"ciudadano":ciudadanoAPI,"dependencia":dependencia,"estado":estadoID,"motivoPeticion":"Prueba","otroPais":null,"pais":paisId,"queSolicitaron":null,"solictaronDinero":false};
-     $.ajax({
-       beforeSend: function(xhrObj){
-                 xhrObj.setRequestHeader("app-key",appKey);
-         },
-       type: "POST",
-       url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/registrarPeticion",
-       contentType: 'application/json; charset=utf-8',
-       dataType:"json",
-       processData: false,
-       headers:{"app-key":appKey},
-       data: JSON.stringify(dataAPI),
-       success: function(dataRe){
-           console.log(dataRe);
-           if(dataRe.resultado == 'REGISTRO_PETICION_EXITOSO'){
-              $("#folio").text(dataRe.folio);
-              $("#passfolio").text(dataRe.passFolio);
-           }else{
+    var dataAPI = {"ciudadano":ciudadanoAPI,"dependencia":dependencia,"estado":estadoID,"motivoPeticion":motivo,"otroPais":null,"pais":paisId,"motivoId":7,"queSolicitaron":null,"solictaronDinero":false};
+    if(estadoID){
+       $.ajax({
+         beforeSend: function(xhrObj){
+                   xhrObj.setRequestHeader("app-key",appKey);
+           },
+         type: "POST",
+         url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/registrarPeticion",
+         contentType: 'application/json; charset=utf-8',
+         dataType:"json",
+         processData: false,
+         headers:{"app-key":appKey},
+         data: JSON.stringify(dataAPI),
+         success: function(dataRe){
+             console.log(dataRe);
+             if(dataRe.resultado == 'REGISTRO_PETICION_EXITOSO'){
+                $("#folio").text(dataRe.folio);
+                $("#passfolio").text(dataRe.passFolio);
+                $("#successReport").show();
+                $("#errorReport").hide();
+             }else{
+               $("#successReport").hide();
+               $("#errorReport").show();
+             }
            }
-         }
-     });
+       });
+   }else{
+     //error
+     $("#successReport").hide();
+     $("#errorReport").show();
+   }
    });
    function RemoveAccents(str) {
       var accents    = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
