@@ -1,6 +1,7 @@
 //var DatosGobMxURL = "http://localhost:8000/api/test";
 var hash = window.location.hash.replace("#", "");
 var DatosGobMxURL = "http://api.datos.gob.mx/v1/proyectos-opa?" + encodeURIComponent("cve-ppi") + "='" + hash;
+var Format = d3.format(",");
 //console.log(window.location.hash);
 
 d3.json(DatosGobMxURL)

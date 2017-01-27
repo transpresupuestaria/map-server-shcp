@@ -140,7 +140,7 @@
             </span>
           </span>
         </h3>
-        <p class="amount big right">$<strong>@{{monto_total_inversion}}</strong> <span>MXN</span></p>
+        <p class="amount big right">$<strong>@{{Format(monto_total_inversion)}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside total"></span>
         </div>
@@ -788,12 +788,12 @@ var svg = d3.select("#graph").append("svg")
 
   <script src="js/bower_components/vue/dist/vue.min.js"></script>
   <script src="js/bower_components/leaflet/dist/leaflet.js"></script>
-  <script src="js/card.js"></script>
   <script>
   /****** API **********/
   var appKey = '5825343BB68F29D2A881B2E8D205B98846C95558';
   $(document).ready(function(){
 
+    console.log($('#rpt-advance'));
    //Reporte por inconsistencia en avance físico
    $('#rpt-advance').click(function(){
      event.preventDefault();
@@ -834,5 +834,6 @@ var svg = d3.select("#graph").append("svg")
    });
   });
   </script>
+  <script src="js/card.js"></script>
 </body>
 </html>
