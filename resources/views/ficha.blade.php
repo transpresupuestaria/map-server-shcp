@@ -82,7 +82,7 @@
 
 
             </h3>
-            <p class="fichas_ramo"><b class="pemex"></b>@{{id_ramo}} - @{{desc_ramo}}</p>
+            <p class="fichas_ramo"><b v-bind:class="['ramo' + id_ramo,]"></b>@{{id_ramo}} - @{{desc_ramo}}</p>
           </div>
           <!-- Ejecutor-->
           <div class="col-sm-4">
@@ -400,7 +400,7 @@
         	<div class="col-sm-4">
         	  <a href="#" class="btn_type">
         	    <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
-        	    <span class="btn-symbol" id ="rpt-advance">Reportar</span>
+        	    <span class="btn-symbol" id="rpt-advance">Reportar</span>
         	  </a>
         	</div>
         	<div class="col-sm-4">
