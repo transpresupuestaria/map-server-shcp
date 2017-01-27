@@ -787,9 +787,10 @@ var svg = d3.select("#graph").append("svg")
   <script src="js/bower_components/leaflet/dist/leaflet.js"></script>
   <script>
   /****** API **********/
-  var appKey = '5825343BB68F29D2A881B2E8D205B98846C95558';
+  var appKey  = '5825343BB68F29D2A881B2E8D205B98846C95558';
   //Por el momento todos los reportes son anonimos
   var anonimo = true;
+  var estados = get_stateList();
   $(document).ready(function(){
     $('#reportForm').on('keyup keypress', function(e) {
       var keyCode = e.keyCode || e.which;
@@ -800,17 +801,27 @@ var svg = d3.select("#graph").append("svg")
     });
    //Reporte por inconsistencia en avance físico
    $(document).on ("click", "#rpt-advance", function () {
+     estados = estados.responseJSON.estado;
      event.preventDefault();
      //informacion de proyecto
-     var carteraId = $("#cveReport").val(),
+     var carteraId = $("#cveReport").text(),
          dependencia  = $("#ejecutorReport").text(),
-         programa  = $("#programaReport").val(),
-         entidad   = $("#entidadReport").val(),
-         nombre    = $("#nameReport").val(),
-         motivo    = $("#motivoReporte").val(),
-         estadoId ="",
-         paisId="";
-    console.log(dependencia);
+         programa  = $("#programaReport").text(),
+         entidad   = $("#entidadReport").text(),
+         nombre    = $("#nameReport").text(),
+         motivo    = $("#motivoReporte").text(),
+         estadoId = "",
+         paisId="2";
+         testado = RemoveAccents(entidad.toLowerCase());
+         for (var i = 0; i < estados.length; i++) {
+           estado = RemoveAccents(estados[i].nombre.toLowerCase());
+          if(estado == testado.replace(/\s/g,'')){
+             estadoID = estados[i].estadoId;
+             break;
+           }else{
+             estadoID = false;
+           }
+         }
     //informacion de ciudadano
     var name    = $("#name").val(),
         paterno = $("#surname").val(),
@@ -824,7 +835,7 @@ var svg = d3.select("#graph").append("svg")
     }else{
       var ciudadanoAPI = {"anonimo":true};
     }
-    var dataAPI = {"ciudadano":ciudadanoAPI,"dependencia":dependencia,"estado":4,"motivoPeticion":"Prueba","otroPais":null,"pais":2,"queSolicitaron":null,"solictaronDinero":false};
+    var dataAPI = {"ciudadano":ciudadanoAPI,"dependencia":dependencia,"estado":estadoID,"motivoPeticion":"Prueba","otroPais":null,"pais":paisId,"queSolicitaron":null,"solictaronDinero":false};
      $.ajax({
        beforeSend: function(xhrObj){
                  xhrObj.setRequestHeader("app-key",appKey);
@@ -846,7 +857,37 @@ var svg = d3.select("#graph").append("svg")
          }
      });
    });
+   function RemoveAccents(str) {
+      var accents    = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
+      var accentsOut = "AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz";
+      str = str.split('');
+      var strLen = str.length;
+      var i, x;
+      for (i = 0; i < strLen; i++) {
+        if ((x = accents.indexOf(str[i])) != -1) {
+          str[i] = accentsOut[x];
+        }
+      }
+      return str.join('');
+    }
   });
+
+     function get_stateList(){
+      return $.ajax({
+         beforeSend: function(xhrObj){
+                   xhrObj.setRequestHeader("app-key",appKey);
+           },
+         type: "GET",
+         url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/obtenerEstados/2",
+         contentType: 'application/json; charset=utf-8',
+         dataType:"json",
+         processData: false,
+         headers:{"app-key":appKey},
+         success: function(dataSt){
+           }
+       });
+
+    }
   </script>
   <script src="js/card.js"></script>
 </body>
