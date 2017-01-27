@@ -718,7 +718,7 @@ var svg = d3.select("#graph").append("svg")
 
 </script>
 
-    
+
 
     <script>
 $(document).ready(function () {
@@ -733,18 +733,18 @@ $(document).ready(function () {
       $(this).children('span').html('+');
     }
 
-  }); 
-  
+  });
+
   (function() {
 
         var dlgtrigger = document.querySelector( '[data-dialog]' ),
           somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog' ) ),
           dlg = new DialogFx( somedialog );
-        
+
         dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
 
       })();
-  
+
 });
 </script>
 
@@ -789,7 +789,10 @@ $(document).ready(function () {
        headers:{"app-key":appKey},
        data: JSON.stringify(dataAPI),
        success: function(dataRe){
-           console.log(dataRe);
+         console.log(dateRe);
+           if(dataRe[0]== 'false'){
+           }else{
+           }
          }
      });
    });
