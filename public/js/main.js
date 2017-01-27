@@ -33,7 +33,7 @@ var GFSHCPMap =  function(){
   //[ la maroma que aparece al pasar el mouse sobre un punto]
   //
   //
-  point_popup = null;//_.template("key: <%=key%>");
+  point_popup = _.template("<%=name%>");
   
   /*
    * [ D A T A   P A N E L S   C O N S T R U C T O R S ]
@@ -191,9 +191,10 @@ var GFSHCPMap =  function(){
       this.points = L.geoJson(d, {
         pointToLayer : function(feature, latlng){
           var p = L.circleMarker(latlng, that.style.points),
+
               content = {
                 //nombre : feature.properties["Nombre"],
-                estado : feature.properties["Estado"],
+                name : feature.properties.name//"Hola",//feature.properties["Estado"],
                 //municipio : feature.properties["Municipio"],
                 //destino : feature.properties["Destino 1"]
               };
@@ -204,7 +205,7 @@ var GFSHCPMap =  function(){
                 // window.location.href = "";
               });
 
-              /*
+              
               p.on("mouseover", function(e){
 
                 L.popup()
@@ -212,7 +213,7 @@ var GFSHCPMap =  function(){
                   .setContent(point_popup(content))
                   .openOn(that.map);
               });
-              */
+              
           return p;
         }
       }).addTo(this.map);
@@ -241,11 +242,12 @@ var GFSHCPMap =  function(){
           return {
             type : "Feature",
             properties : {
-              "Municipio" : "Aguascalientes", 
-              "Estado"    : "Aguascalientes", 
+              //"Municipio" : "Aguascalientes", 
+              //"Estado"    : "Aguascalientes", 
               "Long"      : d.lng, 
               "Lat"       : d.lat,
-              "cvePPI" : d.key
+              "cvePPI" : d.key,
+              "name"   : d.name
             },
             geometry : {
               "type": "Point", 
