@@ -789,7 +789,7 @@ $(document).ready(function () {
     }
 
   });
-  
+
   /*
   (function() {
 
@@ -815,6 +815,7 @@ $(document).ready(function () {
 
    //Reporte por inconsistencia en avance físico
    $('#rpt-advance').click(function(){
+     alert("something");
      event.preventDefault();
      //informacion de proyecto
      var carteraId = "",
@@ -844,6 +845,7 @@ $(document).ready(function () {
        url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/registrarPeticion",
        contentType: 'application/json; charset=utf-8',
        dataType:"json",
+       processData: false,
        headers:{"app-key":appKey},
        data: JSON.stringify(dataAPI),
        success: function(dataRe){
