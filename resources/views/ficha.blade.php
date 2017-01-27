@@ -162,7 +162,9 @@
           <span class="bar inside modificado" v-bind:style="modificado_style"></span>
         </div>
         <!-- reporta obra-->
-        <a data-dialog="somedialog" class="btn report trigger">Reporta esta obra</a>
+        <button id="show-modal" @click="showModal = true" class="btn report trigger">Reporta esta obra</button>
+  
+  
       </div>
     </div>
   </section>
@@ -384,11 +386,80 @@
         <p class="update right">Información actualizada al primer trimestre de 2016</p>
       </div>
       <div class="col-sm-12">
-        <a href="#" data-dialog="somedialog" class="btn report large trigger">Reporta esta Obra</a>
+        <a id="red" class="btn report large trigger" data-dialog="somedialog">Reporta esta Obra</a>
       </div>
     </div>
+    
+    <!-- use the modal component, pass in the prop -->
+	  <modal v-if="showModal" @close="showModal = false">
+	  <!-- content-->
+	  <h2 slot="header">Reporta esta obra</h2>
+	  
+  <!--  -->
+    <p slot="header">Realiza tu reporte ciudadano para este proyecto:</p>
+    <div class="dialog-container" slot="body">
+      <div class="row">
+        <div class="col-sm-4">
+          <a href="#" class="btn_type">
+            <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
+            <span class="btn-symbol" id ="rpt-advance">Reportar</span>
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a href="#" class="btn_type">
+            <span class="btn-content">La obra ha sido abandonada</span>
+            <span class="btn-symbol">Reportar</span>
+          </a>
+        </div>
+        <div class="col-sm-4">
+          <a href="#" class="btn_type">
+            <span class="btn-content">Existe un error en la localización</span>
+            <span class="btn-symbol">Reportar</span>
+          </a>
+        </div>
+      </div>
+      <h3 slot="footer">Preguntas Frecuentes</h3>
+      <ul id="toggle-view" slot="footer">
+        <li>
+          <h4>¿Qué es un reporte ciudadano?</h4>
+          <span>+</span>
+          <div class="panel">
+          Aviso que realiza cualquier interesado, a través de medios electrónicos, sobre posibles observaciones relacionadas con la ubicación, avances físicos y financieros o condiciones físicas de los programas y proyectos de inversión registrados en la Cartera de Inversión y en proceso de ejecución, susceptibles de ser georreferenciados.</div>
+        </li>
+        <li><h4>¿Puedo presentar una queja o denuncia sobre algún funcionario público en particular a través de la plataforma?</h4>
+          <span>+</span>
+          <div class="panel">Para ello, la Secretaría de la Función Pública pone a disposición de los ciudadanos distintos mecanismos que se pueden consultar a través de la página <a href="http://www.funcionpublica.gob.mx/index.php/temas/quejas-y-denuncias.html">http://www.funcionpublica.gob.mx/index.php/temas/quejas-y-denuncias.html</a></div>
+        </li>
+        <li><h4>¿Qué es la Cartera de Inversión?</h4>
+          <span>+</span>
+          <div class="panel">La Cartera es un sistema electrónico que contiene la información de todos los programas y proyectos de inversión que las dependencias y entidades de la Administración Pública Federal registraron y que demostraron tener beneficios para la población (rentables socioeconómicamente).</div>
+        </li>
+        <li>
+          <h4>¿Cuál es el procedimiento para registrar un proyecto de inversión?</h4>
+          <span>+</span>
+          <div class="panel">El proceso comienza con la identificación de necesidades de la población por parte de las dependencias y entidades de la Administración Pública Federal, las cuales analizan, evalúan y formulan proyectos o programas de inversión con el fin de satisfacer dichas necesidades. La solicitud de registro, la cual debe cumplir con la normatividad vigente, la realizan las dependencias y entidades mediante los sistemas informáticos de la Secretaría de Hacienda y Crédito Público (SHCP). Posteriormente, la solicitud es revisada por la Unidad de Inversiones de la SHCP y una vez que el proyecto demuestra que tiene beneficios para la población, se le otorga el registro en la Cartera de Inversión.</div>
+        </li>
+        <li><h4>¿Por qué no se ha aprobado mi proyecto?</h4>
+          <span>+</span>
+          <div class="panel">Sólo los programas y proyectos que las dependencias y entidades de la Administración Pública Federal registran en los sistemas informáticos de la SHCP son susceptibles de registro en la Cartera. Para que los proyectos puedan ser aprobados, deben cumplir los requisitos establecidos en la normatividad vigente, por lo que son revisados estrictamente para poder ser autorizados.</div>
+        </li>
+        <li>
+          <h4>¿Por qué mi proyecto no recibió recursos?</h4>
+          <span>+</span>
+          <div class="panel">Derivado del hecho que los recursos son limitados, la dependencia o entidad determina, de acuerdo con su planeación, qué proyectos son prioritarios para asignarles recursos durante el ejercicio fiscal, además, dichos recursos son aprobados por la Cámara de Diputados, junto con la totalidad del Presupuesto de Egresos de la Federación, en el mes de noviembre de cada año.</div>
+        </li>
+        <li>
+          <h4>¿Cuál es la normatividad vigente para registrar un proyecto de inversión?</h4>
+          <span>+</span>
+          <div class="panel">Para llevar a cabo el registro de un programa o proyecto de inversión se debe cumplir lo establecido en los Lineamientos para el registro en la cartera de programas y proyectos de inversión, los cuales se encuentran disponibles en la página de la SHCP: <a href="http://www.shcp.gob.mx/LASHCP/MarcoJuridico/ProgramasYProyectosDeInversion/Paginas/lineamientos.aspx">http://www.shcp.gob.mx/LASHCP/MarcoJuridico/ProgramasYProyectosDeInversion/Paginas/lineamientos.aspx</a></div>
+        </li>
+      </ul>
+      <a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
+	  
+	  </modal>
+    
   </section>
-
+  
 </div><!--ends container-->
 
   <!--footer------->
@@ -450,148 +521,128 @@
 <div id="somedialog" class="dialog">
   <div class="dialog__overlay"></div>
   <div class="dialog__content">
-    <h2>Reporta esta obra</h2>
-    <div><button class="action" data-dialog-close>X</button></div>
-    <p>Realiza tu reporte ciudadano para este proyecto:</p>
-    <div class="dialog-container">
-      <div class="row">
-        <div class="col-sm-4">
-          <a href="#" class="btn_type">
-            <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
-            <span class="btn-symbol" id ="rpt-advance">Reportar</span>
-          </a>
-        </div>
-        <div class="col-sm-4">
-          <a href="#" class="btn_type">
-            <span class="btn-content">La obra ha sido abandonada</span>
-            <span class="btn-symbol">Reportar</span>
-          </a>
-        </div>
-        <div class="col-sm-4">
-          <a href="#" class="btn_type">
-            <span class="btn-content">Existe un error en la localización</span>
-            <span class="btn-symbol">Reportar</span>
-          </a>
-        </div>
-      </div>
-      <h3>Preguntas Frecuentes</h3>
-      <ul id="toggle-view">
-        <li>
-          <h4>¿Qué es un reporte ciudadano?</h4>
-          <span>+</span>
-          <div class="panel">
-          Aviso que realiza cualquier interesado, a través de medios electrónicos, sobre posibles observaciones relacionadas con la ubicación, avances físicos y financieros o condiciones físicas de los programas y proyectos de inversión registrados en la Cartera de Inversión y en proceso de ejecución, susceptibles de ser georreferenciados.</div>
-        </li>
-        <li><h4>¿Puedo presentar una queja o denuncia sobre algún funcionario público en particular a través de la plataforma?</h4>
-          <span>+</span>
-          <div class="panel">Para ello, la Secretaría de la Función Pública pone a disposición de los ciudadanos distintos mecanismos que se pueden consultar a través de la página <a href="http://www.funcionpublica.gob.mx/index.php/temas/quejas-y-denuncias.html">http://www.funcionpublica.gob.mx/index.php/temas/quejas-y-denuncias.html</a></div>
-        </li>
-        <li><h4>¿Qué es la Cartera de Inversión?</h4>
-          <span>+</span>
-          <div class="panel">La Cartera es un sistema electrónico que contiene la información de todos los programas y proyectos de inversión que las dependencias y entidades de la Administración Pública Federal registraron y que demostraron tener beneficios para la población (rentables socioeconómicamente).</div>
-        </li>
-        <li>
-          <h4>¿Cuál es el procedimiento para registrar un proyecto de inversión?</h4>
-          <span>+</span>
-          <div class="panel">El proceso comienza con la identificación de necesidades de la población por parte de las dependencias y entidades de la Administración Pública Federal, las cuales analizan, evalúan y formulan proyectos o programas de inversión con el fin de satisfacer dichas necesidades. La solicitud de registro, la cual debe cumplir con la normatividad vigente, la realizan las dependencias y entidades mediante los sistemas informáticos de la Secretaría de Hacienda y Crédito Público (SHCP). Posteriormente, la solicitud es revisada por la Unidad de Inversiones de la SHCP y una vez que el proyecto demuestra que tiene beneficios para la población, se le otorga el registro en la Cartera de Inversión.</div>
-        </li>
-        <li><h4>¿Por qué no se ha aprobado mi proyecto?</h4>
-          <span>+</span>
-          <div class="panel">Sólo los programas y proyectos que las dependencias y entidades de la Administración Pública Federal registran en los sistemas informáticos de la SHCP son susceptibles de registro en la Cartera. Para que los proyectos puedan ser aprobados, deben cumplir los requisitos establecidos en la normatividad vigente, por lo que son revisados estrictamente para poder ser autorizados.</div>
-        </li>
-        <li>
-          <h4>¿Por qué mi proyecto no recibió recursos?</h4>
-          <span>+</span>
-          <div class="panel">Derivado del hecho que los recursos son limitados, la dependencia o entidad determina, de acuerdo con su planeación, qué proyectos son prioritarios para asignarles recursos durante el ejercicio fiscal, además, dichos recursos son aprobados por la Cámara de Diputados, junto con la totalidad del Presupuesto de Egresos de la Federación, en el mes de noviembre de cada año.</div>
-        </li>
-        <li>
-          <h4>¿Cuál es la normatividad vigente para registrar un proyecto de inversión?</h4>
-          <span>+</span>
-          <div class="panel">Para llevar a cabo el registro de un programa o proyecto de inversión se debe cumplir lo establecido en los Lineamientos para el registro en la cartera de programas y proyectos de inversión, los cuales se encuentran disponibles en la página de la SHCP: <a href="http://www.shcp.gob.mx/LASHCP/MarcoJuridico/ProgramasYProyectosDeInversion/Paginas/lineamientos.aspx">http://www.shcp.gob.mx/LASHCP/MarcoJuridico/ProgramasYProyectosDeInversion/Paginas/lineamientos.aspx</a></div>
-        </li>
-      </ul>
-      <a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
+    
     </div>
 
   </div>
 </div>
 
+<!-- template for the modal component -->
+<script type="text/x-template" id="modal-template">
+  <transition name="modal">
+    <div class="modal-mask">
+      <div class="modal-wrapper">
+        <div class="modal-container">
+
+          <div class="modal-header">
+            <slot name="header">
+              default header
+            </slot>
+          </div>
+
+          <div class="modal-body">
+            <slot name="body">
+              default body
+            </slot>
+          </div>
+
+          <div class="modal-footer">
+            <slot name="footer">
+              default footer
+              <button class="modal-default-button" @click="$emit('close')">
+                OK
+              </button>
+            </slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</script>
+
+
+  
+
+
 <!-- scripts -->
 <script src="js/d3.v3.min.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/dialogFx.js"></script>
-<script src="js/jquery.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
 
+
+<!-- la dona del avance-->
 <script>
-var width = 160,
-    height = 130,
-    radius = Math.min(width, height) / 2;
+	
+function avance_GF_donitas(elvalor){	
+	var width = 160,
+	    height = 130,
+		radius = Math.min(width, height) / 2;
 
-var color = d3.scale.ordinal()
-    .range(["rgb(190,205,81)","rgb(210,210,210)"]);
-
-var arc = d3.svg.arc()
-    //.outerRadius(radius - 10)
-    .outerRadius(function(d,i) {
-      if(i==0) {
-        return radius - 10;
-      }
-      else {
-       return radius - 20;
-      }
-   })
-  //.innerRadius(radius - 25);
-    .innerRadius(function(d,i) {
-      if(i==0) {
-        return radius - 25;
-      }
-      else {
-       return radius - 15;
-      }
-   });
-
-var pie = d3.layout.pie()
-    .sort(null)
-    .value(function(d) { return d.amount; });
-
-var svg = d3.select("#arc_side").append("svg")
-    .attr("width", width)
-    .attr("height", height)
-  .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-var data = [
-    {"amount": 40 },
-    {"amount": 60}
-  ];
-
-var g = svg.selectAll(".arc")
-      .data(pie(data))
-    .enter().append("g")
-      .attr("class", "arc");
-
-  g.append("path")
-      .attr("d", arc)
-      .style("fill", function(d) { return color(d.data.amount); });
-
-  g.append("text")
-      .attr("transform",  "translate(-25)")
-      .attr("dy", ".35em")
-      .text(function(d, i) {
-        if(i==0) {
-         return d.data.amount + "%";
-        }
-      })
-    .attr("class", "text_arc");
-
-
-function type(d) {
-  d.amount = +d.amount;
-  return d;
-}
+		var color = d3.scale.ordinal()
+		    .range(["rgb(190,205,81)","rgb(210,210,210)"]);
+		
+		var arc = d3.svg.arc()
+		    //.outerRadius(radius - 10)
+		    .outerRadius(function(d,i) {
+		      if(i==0) {
+		        return radius - 10;
+		      }
+		      else {
+		       return radius - 20;
+		      }
+		   })
+		  //.innerRadius(radius - 25);
+		    .innerRadius(function(d,i) {
+		      if(i==0) {
+		        return radius - 25;
+		      }
+		      else {
+		       return radius - 15;
+		      }
+		   });
+		
+		var pie = d3.layout.pie()
+		    .sort(null)
+		    .value(function(d) { return d.amount; });
+		
+		var svg = d3.select("#arc_side").append("svg")
+		    .attr("width", width)
+		    .attr("height", height)
+		  .append("g")
+		    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+		
+		var data = [
+		    {"amount": elvalor },
+		    {"amount": 100-elvalor}
+		  ];
+		
+		var g = svg.selectAll(".arc")
+		      .data(pie(data))
+			  .enter().append("g")
+		      .attr("class", "arc");
+		
+		  g.append("path")
+		      .attr("d", arc)
+		      .style("fill", function(d) { return color(d.data.amount); });
+		
+		  g.append("text")
+		      .attr("transform",  "translate(-25)")
+		      .attr("dy", ".35em")
+		      .text(function(d, i) {
+		        if(i==0) {
+		         return d.data.amount + "%";
+		        }
+		      })
+		    .attr("class", "text_arc");
+		
+		
+		function type(d) {
+			d.amount = +d.amount;
+			return d;
+		} 
+}	
 </script>
-<script>
 
+<script>
 var margin = {top: 20, right: 20, bottom: 30, left: 120},
     width = 800 - margin.left - margin.right,
     height = 450 - margin.top - margin.bottom;
@@ -704,6 +755,8 @@ var svg = d3.select("#graph").append("svg")
 
     <script>
 $(document).ready(function () {
+
+   
   $('#toggle-view li').click(function () {
 
     var text = $(this).children('div.panel');
@@ -716,8 +769,10 @@ $(document).ready(function () {
       $(this).children('span').html('+');
     }
 
-  }); 
+  });
   
+  
+  /*
   (function() {
 
         var dlgtrigger = document.querySelector( '[data-dialog]' ),
@@ -727,7 +782,7 @@ $(document).ready(function () {
         dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
 
       })();
-  
+  */
 });
 </script>
 
