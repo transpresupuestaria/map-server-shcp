@@ -793,7 +793,6 @@ var svg = d3.select("#graph").append("svg")
 
    //Reporte por inconsistencia en avance físico
    $('#rpt-advance').click(function(){
-     alert("something");
      event.preventDefault();
      //informacion de proyecto
      var carteraId = "",
