@@ -400,7 +400,7 @@
         	<div class="col-sm-4">
         	  <a href="#" class="btn_type">
         	    <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
-        	    <span class="btn-symbol" id ="rpt-advance">Reportar</span>
+        	    <span class="btn-symbol">Reportar</span>
         	  </a>
         	</div>
         	<div class="col-sm-4">
@@ -492,8 +492,8 @@
 
 		<div id="respuesta_reporte">
 			<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
-			<p>id de reporte</p>
-			<p>contraseña reporte</p>
+			<p>id de reporte : <span id="folio"></span></p>
+			<p>contraseña reporte: <span id="passfolio"></span></p>
 		</div>
 	  </div>
 	  </modal>
@@ -826,8 +826,10 @@ var svg = d3.select("#graph").append("svg")
        headers:{"app-key":appKey},
        data: JSON.stringify(dataAPI),
        success: function(dataRe){
-         console.log(dateRe);
-           if(dataRe[0]== 'false'){
+         console.log(dataRe);
+           if(dataRe.resultado == 'REGISTRO_PETICION_EXITOSO'){
+              $("#folio").text(dataRe.folio);
+              $("#passfolio").text(dataRe.passFolio);
            }else{
            }
          }
