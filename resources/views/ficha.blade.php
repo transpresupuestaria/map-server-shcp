@@ -82,7 +82,7 @@
 
 
             </h3>
-            <p class="fichas_ramo"><b class="pemex"></b>@{{id_ramo}} - @{{desc_ramo}}</p>
+            <p class="fichas_ramo"><b v-bind:class="['ramo' + id_ramo,]"></b>@{{id_ramo}} - @{{desc_ramo}}</p>
           </div>
           <!-- Ejecutor-->
           <div class="col-sm-4">

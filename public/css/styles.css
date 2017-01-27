@@ -1519,6 +1519,10 @@ h1 {
     width: 25px; }
     .record p.fichas_ramo b.pemex {
       background-image: url("../img/logos_ramo/pemex.gif"); }
+    .record p.fichas_ramo b.ramo9 {
+      background-image: url("../img/logos_ramo/sct.gif"); }
+    .record p.fichas_ramo b.ramo50 {
+      background-image: url("../img/logos_ramo/imss.gif"); }
   .record .update {
     margin-bottom: 40px; }
 
