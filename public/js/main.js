@@ -34,12 +34,7 @@ var GFSHCPMap =  function(){
   //
   //
   point_popup = null;//_.template("key: <%=key%>");
-
-
-
-
-
-
+  
   /*
    * [ D A T A   P A N E L S   C O N S T R U C T O R S ]
    * --------------------------------------------------------------------------------
@@ -115,41 +110,32 @@ var GFSHCPMap =  function(){
       this._points  = null;
       this.points   = null;
       this.style    = Object.create(STYLE);
+      this.updateMap = this.updateMap.bind(this);
 
-      // UGLY HARD CODE, update later
+      // SET THE UI FILTERS
       this.yearSelector = document.getElementById("GF-SHCP-year-selector");
-      this.yearSelector.addEventListener("change", function(e){
-        that.current.year = this.value;
-        //that.filterData();
-        that.redrawPoints( that.filterData() );
-      });
+      this.yearSelector.addEventListener("change", this.updateMap);
 
-      /*
-      this.collection   = new Backbone.Collection(data);
-      this.labels       = new Backbone.Collection(Selector);
-      this.cities_layer = this.make_geojson(this.collection.toArray());
-      */
-    
+      this.stateSelector = document.getElementById("GF-SHCP-state-selector");
+      this.stateSelector.addEventListener("change", this.updateMap);
+
+      this.classSelector = document.getElementById("GF-SHCP-class-selector");
+      this.classSelector.addEventListener("change", this.updateMap);
+
+      this.branchSelector = document.getElementById("GF-SHCP-branch-selector");
+      this.branchSelector.addEventListener("change", this.updateMap);
+
       this.drawMap();
       this.getData();
-      /*
-      this.drawCities(this.map, this.cities_layer, style.city);
-      this.drawStates(states, style.state);
+    },
 
-      this.selector = new SelectorPanel(this, Selector, STYLE.selectorPanel);
-      this.selector.addTo(this.map);
-
-      this.data_display = new InfoPanel(this, {});
-      this.data_display.addTo(this.map);
-
-      this.drawPoints();
-      this.drawPoints2();
-      */
-
+    updateMap : function(e){
+      this.redrawPoints( this.filterData() );
     },
 
     getData : function(){
       var that = this;
+
       d3.json(this.settings.data, function(error, d){
         that.data    = d.slice(0);
         //that.current = d.slice(0);
@@ -159,13 +145,21 @@ var GFSHCPMap =  function(){
     },
 
     filterData : function(){
-      var that = this,
-          data = this.data.slice(0);
-      if(Number(this.current.year)){
-        data = data.filter(function(d){
-          return +d.ciclo == +that.current.year;
-        });
-      }
+      var that   = this,
+          data   = this.data.slice(0),
+          year   = document.getElementById("GF-SHCP-year-selector").value,
+          branch = document.getElementById("GF-SHCP-branch-selector").value,
+          state  = document.getElementById("GF-SHCP-state-selector").value,
+          filter = {},
+          classification = document.getElementById("GF-SHCP-class-selector").value;
+
+      if(year !== "all") filter.ciclo = year;
+      if(branch !== "all") filter.ramo = +branch;
+      if(state !== "all") filter.state = +state;
+      if(classification !== "all") filter.classification = classification;
+
+
+      data = _.where(data, filter);
 
       return data;
     },
@@ -193,7 +187,6 @@ var GFSHCPMap =  function(){
     //
     //
     drawPoints : function(d){
-      console.log(d);
       var that = this;
       this.points = L.geoJson(d, {
         pointToLayer : function(feature, latlng){
