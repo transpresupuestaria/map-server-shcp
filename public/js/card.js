@@ -56,8 +56,10 @@ d3.json(DatosGobMxURL)
           total_ejercido_style : "width:" + ((res["ejercido"] * 100) / res["costo-total-ppi"]) + "%",
           modificado_style : "width:" + ((res["modificado"] * 100) / res["costo-total-ppi"]) + "%",
           map_src		  : "http://www.openstreetmap.org/export/embed.html?bbox="+ res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"%2C"+res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"&amp;layer=mapnik",
-          
+          /// modal
           showModal: false,
+          //// faqs list
+          isActive: false,
 
         };
 		
@@ -70,10 +72,17 @@ d3.json(DatosGobMxURL)
 		
         var fun = [],
             els = document.querySelectorAll(".GF-card");
-        for(let i = 0; i < els.length; i++){
+		
+		for(let i = 0; i < els.length; i++){
           fun.push(new Vue({
-               el  : els[i],
-              data : data
+          		el  : els[i],
+          		data : data,
+          		// define methods under the `methods` object
+		  		methods: {
+		  		  listfaqs : function() {
+		  		  	this.isActive = !this.isActive;
+    	  		  }			  
+    			}
             })
           );
         }
