@@ -25,6 +25,8 @@ Route::get("/data", function(Request $request){
     "cve_entfed as state",
     "avance_fisico as advance",
     "cve_ppi as key", 
+    //"ent_fed as state_name",
+    "nombre as name",
     "ciclo",
     "ramo",
     "clasificacion_ciudadana as classification")->get())

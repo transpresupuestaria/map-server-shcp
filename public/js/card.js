@@ -56,9 +56,18 @@ d3.json(DatosGobMxURL)
           total_ejercido_style : "width:" + ((res["ejercido"] * 100) / res["costo-total-ppi"]) + "%",
           modificado_style : "width:" + ((res["modificado"] * 100) / res["costo-total-ppi"]) + "%",
           map_src		  : "http://www.openstreetmap.org/export/embed.html?bbox="+ res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"%2C"+res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"&amp;layer=mapnik",
+          
+          showModal: false,
 
         };
-
+		
+		// register modal component
+		Vue.component('modal', {
+		  template: '#modal-template'
+		})
+		
+		avance_GF_donitas(data.avance_fisico);
+		
         var fun = [],
             els = document.querySelectorAll(".GF-card");
         for(let i = 0; i < els.length; i++){
@@ -68,12 +77,14 @@ d3.json(DatosGobMxURL)
             })
           );
         }
-        /*
-        GFapp = new Vue({
-          el   : '.GF-card',
-          data : data
-        });
-        */
 
-    console.log(res, data.nombre_admin);
+
+    // GF-SHCP-map
+    var mymap = L.map('GF-SHCP-map').setView([data.latitud_inicial, data.longitud_inicial], 13);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+    }).addTo(mymap);
+
+    var marker = L.marker([data.latitud_inicial, data.longitud_inicial]).addTo(mymap);
   });
