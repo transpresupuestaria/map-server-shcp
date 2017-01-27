@@ -43,10 +43,10 @@
           </div>
           <!--- clave de cartera-->
           <div class="col-sm-6">
-            <h3 class="right">Clave de Cartera: <span>@{{cve_ppi}}</span></h3>
+            <h3 class="right">Clave de Cartera: <span id="cveReport">@{{cve_ppi}}</span></h3>
           </div>
         </div>
-        <h1>@{{nombre}}</h1>
+        <h1 id ="nameReport">@{{nombre}}</h1>
 
 
 
@@ -87,7 +87,7 @@
           <!-- Ejecutor-->
           <div class="col-sm-4">
             <h3 class="title line">Ejecutor del Proyecto</h3>
-            <p>@{{id_ur}} - @{{desc_ur}}</p>
+            <p id = "ejecutorReport">@{{id_ur}} - @{{desc_ur}}</p>
           </div>
           <!-- Tipo de proyecto-->
           <div class="col-sm-4">
@@ -112,12 +112,12 @@
           <div class="row">
             <div class="col-sm-4">
               <h3 class="title">Programa Presupuestario</h3>
-              <p><a href="#" title="Conoce su desempeño">11S243 – Programa Nacional de Petróleo</a></p>
+              <p><a href="#" title="Conoce su desempeño" id ="programaReport">11S243 – Programa Nacional de Petróleo</a></p>
             </div>
             <!---entidad-->
             <div class="col-sm-4">
               <h3 class="title">Entidad Federativa</h3>
-              <p>	@{{entidad_federativa}}</p>
+              <p id="entidadReport">	@{{entidad_federativa}}</p>
             </div>
             <!---coordenadas---->
             <div class="col-sm-4">
@@ -140,7 +140,7 @@
             </span>
           </span>
         </h3>
-        <p class="amount big right">$<strong>@{{monto_total_inversion}}</strong> <span>MXN</span></p>
+        <p class="amount big right">$<strong>@{{Format(monto_total_inversion)}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside total"></span>
         </div>
@@ -165,6 +165,7 @@
         </div>
         <!-- reporta obra-->
         <button id="show-modal" @click="showModal = true" class="btn report trigger">Reporta esta obra</button>
+
       </div>
     </div>
   </section>
@@ -389,18 +390,17 @@
         <a id="red" class="btn report large trigger" data-dialog="somedialog">Reporta esta Obra</a>
       </div>
     </div>
-    
     <!-- modal -->
 	  <modal v-if="showModal" @close="showModal = false">
 	  <!-- content-->
-	  <h2 slot="header">Reporta esta obra</h2>	  
+	  <h2 slot="header">Reporta esta obra</h2>
 	  <p slot="header">Realiza tu reporte ciudadano para este proyecto:</p>
 	  <div class="dialog-container" slot="body">
      	<div class="row">
         	<div class="col-sm-4">
         	  <a href="#" class="btn_type">
         	    <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
-        	    <span class="btn-symbol" id="rpt-advance">Reportar</span>
+        	    <span class="btn-symbol">Reportar</span>
         	  </a>
         	</div>
         	<div class="col-sm-4">
@@ -416,7 +416,7 @@
         	  </a>
         	</div>
         </div>
-		<h3>Preguntas Frecuentes</h3>      
+		<h3>Preguntas Frecuentes</h3>
 		<ul id="toggle-view">
         <li @click="listfaqs">
           <h4>¿Qué es un reporte ciudadano?</h4>
@@ -456,14 +456,14 @@
         </li>
       </ul>
 		<a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
-		
-		<form>
+
+		<form id = "reportForm">
 			<fieldset id="reporte_step1">
 				<h3>Paso 1 de 2</h3>
 				<label><h4>Asunto del reporte</h4></label>
-				<textarea></textarea>
+				<textarea id="asuntoReporte"></textarea>
 				<label><h4>Narre el motivo de su reporte</h4></label>
-				<textarea></textarea>
+				<textarea id="motivoReporte"></textarea>
 				<a class="btn more">Continuar &gt;</a>
 			</fieldset>
 			<fieldset id="reporte_step3">
@@ -489,17 +489,17 @@
 				  <input id ="rpt-advance" type="submit" value="Submit">
 			</fieldset>
 		</form>
-		
+
 		<div id="respuesta_reporte">
 			<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
-			<p>id de reporte</p>
-			<p>contraseña reporte</p>
+			<p>id de reporte : <span id="folio"></span></p>
+			<p>contraseña reporte: <span id="passfolio"></span></p>
 		</div>
 	  </div>
 	  </modal>
-    
+
   </section>
-  
+
 </div><!--ends container-->
 
   <!--footer------->
@@ -567,10 +567,10 @@
       <div class="modal-wrapper">
         <div class="modal-container">
           <div class="modal-header">
-	          
+
             <slot name="header">
               default header
-              
+
             </slot>
             <button class="modal-default-button action" @click="$emit('close')">X</button>
           </div>
@@ -580,11 +580,11 @@
               default body
             </slot>
           </div>
-          
-		 <!-- 
+
+		 <!--
           <div class="modal-footer">
             <slot name="footer">
-              default footer 
+              default footer
             </slot>
           </div>
           -->
@@ -602,15 +602,15 @@
 
 <!-- la dona del avance-->
 <script>
-	
-function avance_GF_donitas(elvalor){	
+
+function avance_GF_donitas(elvalor){
 	var width = 160,
 	    height = 130,
 		radius = Math.min(width, height) / 2;
 
 		var color = d3.scale.ordinal()
 		    .range(["rgb(190,205,81)","rgb(210,210,210)"]);
-		
+
 		var arc = d3.svg.arc()
 		    //.outerRadius(radius - 10)
 		    .outerRadius(function(d,i) {
@@ -630,31 +630,31 @@ function avance_GF_donitas(elvalor){
 		       return radius - 15;
 		      }
 		   });
-		
+
 		var pie = d3.layout.pie()
 		    .sort(null)
 		    .value(function(d) { return d.amount; });
-		
+
 		var svg = d3.select("#arc_side").append("svg")
 		    .attr("width", width)
 		    .attr("height", height)
 		  .append("g")
 		    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-		
+
 		var data = [
 		    {"amount": elvalor },
 		    {"amount": 100-elvalor}
 		  ];
-		
+
 		var g = svg.selectAll(".arc")
 		      .data(pie(data))
 			  .enter().append("g")
 		      .attr("class", "arc");
-		
+
 		  g.append("path")
 		      .attr("d", arc)
 		      .style("fill", function(d) { return color(d.data.amount); });
-		
+
 		  g.append("text")
 		      .attr("transform",  "translate(-25)")
 		      .attr("dy", ".35em")
@@ -664,13 +664,13 @@ function avance_GF_donitas(elvalor){
 		        }
 		      })
 		    .attr("class", "text_arc");
-		
-		
+
+
 		function type(d) {
 			d.amount = +d.amount;
 			return d;
-		} 
-}	
+		}
+}
 </script>
 
 <script>
@@ -782,30 +782,35 @@ var svg = d3.select("#graph").append("svg")
 
 </script>
 
-    
-
-
 
   <script src="js/bower_components/vue/dist/vue.min.js"></script>
   <script src="js/bower_components/leaflet/dist/leaflet.js"></script>
-  <script src="js/card.js"></script>
   <script>
   /****** API **********/
   var appKey = '5825343BB68F29D2A881B2E8D205B98846C95558';
+  //Por el momento todos los reportes son anonimos
+  var anonimo = true;
   $(document).ready(function(){
-
+    $('#reportForm').on('keyup keypress', function(e) {
+      var keyCode = e.keyCode || e.which;
+      if (keyCode === 13) {
+        e.preventDefault();
+        return false;
+      }
+    });
    //Reporte por inconsistencia en avance físico
-   $('#rpt-advance').click(function(){
+   $(document).on ("click", "#rpt-advance", function () {
      event.preventDefault();
      //informacion de proyecto
-     var carteraId = "",
-         ejecutor  = "",
-         programa  = "",
-         entidad   = "",
-         motivo    = "",
-         dependencia = "asd",
+     var carteraId = $("#cveReport").val(),
+         dependencia  = $("#ejecutorReport").text(),
+         programa  = $("#programaReport").val(),
+         entidad   = $("#entidadReport").val(),
+         nombre    = $("#nameReport").val(),
+         motivo    = $("#motivoReporte").val(),
          estadoId ="",
          paisId="";
+    console.log(dependencia);
     //informacion de ciudadano
     var name    = $("#name").val(),
         paterno = $("#surname").val(),
@@ -813,10 +818,13 @@ var svg = d3.select("#graph").append("svg")
         email   = $("#email").val(),
         pass    = $("#password").val(),
         genero  = $("#gender").val();
-    var ciudadanoAPI = {"anonimo":false,"genero":genero,"nombre":name,"paterno":paterno,"email":email,"contrasenia":pass}
-    console.log(ciudadanoAPI);
+
+    if(!anonimo){
+      var ciudadanoAPI = {"anonimo":false,"genero":genero,"nombre":name,"paterno":paterno,"email":email,"contrasenia":pass};
+    }else{
+      var ciudadanoAPI = {"anonimo":true};
+    }
     var dataAPI = {"ciudadano":ciudadanoAPI,"dependencia":dependencia,"estado":4,"motivoPeticion":"Prueba","otroPais":null,"pais":2,"queSolicitaron":null,"solictaronDinero":false};
-    console.log(dataAPI);
      $.ajax({
        beforeSend: function(xhrObj){
                  xhrObj.setRequestHeader("app-key",appKey);
@@ -825,14 +833,21 @@ var svg = d3.select("#graph").append("svg")
        url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/registrarPeticion",
        contentType: 'application/json; charset=utf-8',
        dataType:"json",
+       processData: false,
        headers:{"app-key":appKey},
        data: JSON.stringify(dataAPI),
        success: function(dataRe){
            console.log(dataRe);
+           if(dataRe.resultado == 'REGISTRO_PETICION_EXITOSO'){
+              $("#folio").text(dataRe.folio);
+              $("#passfolio").text(dataRe.passFolio);
+           }else{
+           }
          }
      });
    });
   });
   </script>
+  <script src="js/card.js"></script>
 </body>
 </html>
