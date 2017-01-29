@@ -471,46 +471,52 @@
 				<p>Para dar seguimiento a tu solicitud necesitamos que nos proporciones tu información de contacto básica.<br>
 				<span class="small"><span class="alert">*</span> Información necesaria </span></p>
 				<div class="row">
-					<div class="col-sm-5 col-sm-offset-1">
+					<div class="col-sm-5 col-sm-offset-1"> 
 						<label>Nombres</label>
-						<input id ="name" type="text" name="name">
+						<input id="name" type="text" name="name">
 					</div>
 					<div class="col-sm-5">
 						<label>Paterno</label>
-						<input id ="surname"  type="text" name="surname">
+						<input id="surname"  type="text" name="surname">
 					</div>
 					<div class="col-sm-5 col-sm-offset-1">
 						<label>Materno</label>
-						<input id ="lastname"  type="text" name="lastname">
+						<input id="lastname"  type="text" name="lastname">
 					</div>
 					<div class="col-sm-5">
 						<label>Género</label>
-						<select id ="gender">
+						<select id="gender">
 						  <option value="MUJER">Femenino</option>
 						  <option value="HOMBRE">Masculino</option>
 						</select>
 					</div>
 					<div class="col-sm-5 col-sm-offset-1">
 						<label>Correo</label>
-						<input id ="email" type="text" name="email">
+						<input id="email" type="text" name="email">
 					</div>
 					<div class="col-sm-5">
 						<label>Contraseña</label>
-						<input id ="password" type="text" name="password">
+						<input id="password" type="text" name="password">
 					</div>
 					<div class="col-sm-12">
 						<a class="btn more" @click="step1">&lt; Regresar</a>
-						<input id ="rpt-advance" type="submit" value="Submit" @click="step3">
+						<input id="rpt-advance" type="submit" value="Submit" @click="step3">
 					</div>
 				</div>
-				  
 			</fieldset>
 		</form>
 
+							
+
 		<div id="respuesta_reporte" class="hide">
-			<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
-			<p>id de reporte : <span id="folio"></span></p>
-			<p>contraseña reporte: <span id="passfolio"></span></p>
+			<div id ="successReport">
+					<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
+					<p>id de reporte : <span id="folio"></span></p>
+					<p>contraseña reporte: <span id="passfolio"></span></p>
+			</div>
+			<div id ="errorReport" style= "display:none;">
+			  <h3>Ocurrió un error al enviar tu reporte, intentálo más tarde</h3>
+			</div>
 		</div>
 	  </div>
 	  </modal>
@@ -804,9 +810,10 @@ var svg = d3.select("#graph").append("svg")
   <script src="js/bower_components/leaflet/dist/leaflet.js"></script>
   <script>
   /****** API **********/
-  var appKey = '5825343BB68F29D2A881B2E8D205B98846C95558';
+  var appKey  = '5825343BB68F29D2A881B2E8D205B98846C95558';
   //Por el momento todos los reportes son anonimos
   var anonimo = true;
+  var estados = get_stateList();
   $(document).ready(function(){
     $('#reportForm').on('keyup keypress', function(e) {
       var keyCode = e.keyCode || e.which;
@@ -816,18 +823,31 @@ var svg = d3.select("#graph").append("svg")
       }
     });
    //Reporte por inconsistencia en avance físico
-   $(document).on ("click", "#rpt-advance", function () {
+   $(document).on ("click", ".rpt-advance", function () {
+     estados = estados.responseJSON.estado;
      event.preventDefault();
      //informacion de proyecto
-     var carteraId = $("#cveReport").val(),
+     var carteraId = $("#cveReport").text(),
          dependencia  = $("#ejecutorReport").text(),
-         programa  = $("#programaReport").val(),
-         entidad   = $("#entidadReport").val(),
-         nombre    = $("#nameReport").val(),
+         programa  = $("#programaReport").text(),
+         entidad   = $("#entidadReport").text(),
+         nombre    = $("#nameReport").text(),
          motivo    = $("#motivoReporte").val(),
-         estadoId ="",
-         paisId="";
-    console.log(dependencia);
+         estadoId = "",
+         paisId="2";
+         console.log(motivo);
+         testado = RemoveAccents(entidad.toLowerCase());
+         for (var i = 0; i < estados.length; i++) {
+           estado = RemoveAccents(estados[i].nombre.toLowerCase());
+          if(estado == testado.replace(/\s/g,'')){
+             estadoID = estados[i].estadoId;
+             break;
+           }else{
+             estadoID = false;
+           }
+         }
+    motivo = "El proyecto "+ nombre+", perteneciente al programa "+ programa +", con clave " + carteraId+", ejecutado por " + dependencia+", presenta irregularidades en su proceso.\n " + motivo;
+    console.log(motivo);
     //informacion de ciudadano
     var name    = $("#name").val(),
         paterno = $("#surname").val(),
@@ -841,29 +861,69 @@ var svg = d3.select("#graph").append("svg")
     }else{
       var ciudadanoAPI = {"anonimo":true};
     }
-    var dataAPI = {"ciudadano":ciudadanoAPI,"dependencia":dependencia,"estado":4,"motivoPeticion":"Prueba","otroPais":null,"pais":2,"queSolicitaron":null,"solictaronDinero":false};
-     $.ajax({
-       beforeSend: function(xhrObj){
-                 xhrObj.setRequestHeader("app-key",appKey);
-         },
-       type: "POST",
-       url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/registrarPeticion",
-       contentType: 'application/json; charset=utf-8',
-       dataType:"json",
-       processData: false,
-       headers:{"app-key":appKey},
-       data: JSON.stringify(dataAPI),
-       success: function(dataRe){
-           console.log(dataRe);
-           if(dataRe.resultado == 'REGISTRO_PETICION_EXITOSO'){
-              $("#folio").text(dataRe.folio);
-              $("#passfolio").text(dataRe.passFolio);
-           }else{
+    var dataAPI = {"ciudadano":ciudadanoAPI,"dependencia":dependencia,"estado":estadoID,"motivoPeticion":motivo,"otroPais":null,"pais":paisId,"motivoId":7,"queSolicitaron":null,"solictaronDinero":false};
+    if(estadoID){
+       $.ajax({
+         beforeSend: function(xhrObj){
+                   xhrObj.setRequestHeader("app-key",appKey);
+           },
+         type: "POST",
+         url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/registrarPeticion",
+         contentType: 'application/json; charset=utf-8',
+         dataType:"json",
+         processData: false,
+         headers:{"app-key":appKey},
+         data: JSON.stringify(dataAPI),
+         success: function(dataRe){
+             console.log(dataRe);
+             if(dataRe.resultado == 'REGISTRO_PETICION_EXITOSO'){
+                $("#folio").text(dataRe.folio);
+                $("#passfolio").text(dataRe.passFolio);
+                $("#successReport").show();
+                $("#errorReport").hide();
+             }else{
+               $("#successReport").hide();
+               $("#errorReport").show();
+             }
            }
-         }
-     });
+       });
+   }else{
+     //error
+     $("#successReport").hide();
+     $("#errorReport").show();
+   }
    });
+   function RemoveAccents(str) {
+      var accents    = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
+      var accentsOut = "AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz";
+      str = str.split('');
+      var strLen = str.length;
+      var i, x;
+      for (i = 0; i < strLen; i++) {
+        if ((x = accents.indexOf(str[i])) != -1) {
+          str[i] = accentsOut[x];
+        }
+      }
+      return str.join('');
+    }
   });
+
+     function get_stateList(){
+      return $.ajax({
+         beforeSend: function(xhrObj){
+                   xhrObj.setRequestHeader("app-key",appKey);
+           },
+         type: "GET",
+         url: "http://devretociudadano.funcionpublica.gob.mx/SidecWS/resources/quejadenuncia/obtenerEstados/2",
+         contentType: 'application/json; charset=utf-8',
+         dataType:"json",
+         processData: false,
+         headers:{"app-key":appKey},
+         success: function(dataSt){
+           }
+       });
+
+    }
   </script>
   <script src="js/card.js"></script>
 </body>
