@@ -79,18 +79,26 @@ d3.json(DatosGobMxURL)
           		data : data,
           		// define methods under the `methods` object
 		  		methods: {
+    	  		  // lista de faqs en modal 
 		  		  listfaqs : function(e) {
 			  		e.currentTarget.classList.toggle("active");
-    	  		  },		
+    	  		  },	
+    	  		  // modal formulario paso 1
     	  		  step1	: function(e) {
-	    	  		  console.log("1")
+	    	  		  var divstep0 = document.getElementById("reporte_step0");
+	    	  		  var divstep1 = document.getElementById("reporte_step1");
+			  		 
+			  		  divstep0.classList.toggle("hide");	    	  		  
+			  		  divstep1.classList.toggle("hide");
     	  		  },
-    	  		  step3	: function(e) {
-	    	  		  console.log("1")
-    	  		  },
+    	  		  // modal formulario paso 2
     	  		  step2	: function(e) {
-	    	  		  console.log("1")
-    	  		  }	  
+	    	  		  var divstep1 = document.getElementById("reporte_step1");
+	    	  	  	  var divstep2 = document.getElementById("reporte_step2");
+			  		 
+			  		  divstep2.classList.toggle("hide");	    	  		  
+			  		  divstep1.classList.toggle("hide");
+    	  		  }    	  		    
     			}
             })
           );

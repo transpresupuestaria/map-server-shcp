@@ -390,8 +390,11 @@
 	  <modal v-if="showModal" @close="showModal = false">
 	  <!-- content-->
 	  <h2 slot="header">Reporta esta obra</h2>
-	  <p slot="header">Realiza tu reporte ciudadano para este proyecto:</p>
+	  
 	  <div class="dialog-container" slot="body">
+		
+		<div id="reporte_step0">
+		  <p slot="header">Realiza tu reporte ciudadano para este proyecto:</p>
      	<div class="row">
         	<div class="col-sm-4">
         	  <a class="btn_type" @click="step1">
@@ -400,13 +403,13 @@
         	  </a>
         	</div>
         	<div class="col-sm-4">
-        	  <a href="#" class="btn_type">
+        	  <a class="btn_type" @click="step1">
         	    <span class="btn-content">La obra ha sido abandonada</span>
         	    <span class="btn-symbol">Reportar</span>
         	  </a>
         	</div>
         	<div class="col-sm-4">
-        	  <a href="#" class="btn_type">
+        	  <a class="btn_type" @click="step1">
         	    <span class="btn-content">Existe un error en la localización</span>
         	    <span class="btn-symbol">Reportar</span>
         	  </a>
@@ -452,7 +455,8 @@
         </li>
       </ul>
 		<a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
-
+		</div>
+		
 		<form id = "reportForm">
 			<fieldset id="reporte_step1" class="hide">
 				<h3>Paso 1 de 2</h3>
@@ -466,15 +470,15 @@
 						<textarea id="asuntoReporte"></textarea>
 						<label>Narre el motivo de su reporte</label>
 						<textarea id="motivoReporte"></textarea>
-						<button class="btn more" @click="step2">Continuar &gt;</button>
+						<a class="btn more" @click="step2">Continuar &gt;</a>
 					</div>
 				</div>
 			</fieldset>
 			<fieldset id="reporte_step2" class="hide">
 				<h3>Paso 2 de 2</h3>
 				<ul class="step_n">
+					<li><a class="complete"></a></li>
 					<li><a class="active"></a></li>
-					<li><a></a></li>
 				</ul>
 				<p>Para dar seguimiento a tu solicitud necesitamos que nos proporciones tu información de contacto básica.
 				<span class="small"><span class="alert">*</span> Información necesaria </span></p>
@@ -507,10 +511,10 @@
 						<input id="password" type="text" name="password">
 					</div>
 					<div class="col-sm-3 col-sm-offset-1">
-						<a class="btn more back" @click="step1">&lt; Regresar</a>
+						<a class="btn more back" @click="step2">&lt; Regresar</a>
 					</div>
 					<div class="col-sm-4">
-						<input id="rpt-advance" type="submit" value="Enviar Reporte &gt;" @click="step3">
+						<input id="rpt-advance" type="submit" value="Enviar Reporte &gt;">
 					</div>
 				</div>
 			</fieldset>
@@ -891,17 +895,23 @@ var svg = d3.select("#graph").append("svg")
          success: function(dataRe){
              console.log(dataRe);
              if(dataRe.resultado == 'REGISTRO_PETICION_EXITOSO'){
+	            $("#respuesta_reporte").toggleClass("hide");
+	            $("#reporte_step2").toggleClass("hide");
                 $("#folio").text(dataRe.folio);
                 $("#passfolio").text(dataRe.passFolio);
                 $("#successReport").show();
                 $("#errorReport").hide();
              }else{
+	             $("#respuesta_reporte").toggleClass("hide");
+	            $("#reporte_step2").toggleClass("hide");
                $("#successReport").hide();
                $("#errorReport").show();
              }
            }
        });
    }else{
+	   $("#respuesta_reporte").toggleClass("hide");
+	   $("#reporte_step2").toggleClass("hide");
      //error
      $("#successReport").hide();
      $("#errorReport").show();

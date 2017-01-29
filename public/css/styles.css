@@ -535,9 +535,11 @@ text {
     .record .modal-container .action:hover {
       background: #cc0000; }
   .record .modal-container fieldset h3 {
+    border: 0;
     color: #b2b2b2;
     font: 700 16px "soberana_sans", Helvetica, Arial, sans-serif;
-    margin-bottom: 0;
+    margin: 0;
+    padding-top: 10px;
     text-align: center; }
   .record .modal-container fieldset label {
     color: #5d5d5d;
@@ -1582,11 +1584,16 @@ ul.step_n a {
   display: block;
   height: 15px;
   width: 15px; }
+  ul.step_n a.complete {
+    background: rgba(186, 206, 50, 0.3); }
   ul.step_n a.active {
     background: #bace32; }
 
 span.alert {
   color: #f49d51; }
+
+.hide {
+  display: none; }
 
 .side {
   background: #f9f9f9;
