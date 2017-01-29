@@ -456,11 +456,15 @@
 		<form id = "reportForm">
 			<fieldset id="reporte_step1" class="hide">
 				<h3>Paso 1 de 2</h3>
+				<ul class="step_n">
+					<li><a class="active"></a></li>
+					<li><a></a></li>
+				</ul>
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
-						<label><h4>Asunto del reporte</h4></label>
+						<label>Asunto del reporte</label>
 						<textarea id="asuntoReporte"></textarea>
-						<label><h4>Narre el motivo de su reporte</h4></label>
+						<label>Narre el motivo de su reporte</label>
 						<textarea id="motivoReporte"></textarea>
 						<button class="btn more" @click="step2">Continuar &gt;</button>
 					</div>
@@ -468,15 +472,19 @@
 			</fieldset>
 			<fieldset id="reporte_step2" class="hide">
 				<h3>Paso 2 de 2</h3>
-				<p>Para dar seguimiento a tu solicitud necesitamos que nos proporciones tu información de contacto básica.<br>
+				<ul class="step_n">
+					<li><a class="active"></a></li>
+					<li><a></a></li>
+				</ul>
+				<p>Para dar seguimiento a tu solicitud necesitamos que nos proporciones tu información de contacto básica.
 				<span class="small"><span class="alert">*</span> Información necesaria </span></p>
 				<div class="row">
 					<div class="col-sm-5 col-sm-offset-1"> 
-						<label>Nombres</label>
+						<label>Nombre(s) <span class="alert">*</span></label>
 						<input id="name" type="text" name="name">
 					</div>
 					<div class="col-sm-5">
-						<label>Paterno</label>
+						<label>Paterno <span class="alert">*</span></label>
 						<input id="surname"  type="text" name="surname">
 					</div>
 					<div class="col-sm-5 col-sm-offset-1">
@@ -484,23 +492,25 @@
 						<input id="lastname"  type="text" name="lastname">
 					</div>
 					<div class="col-sm-5">
-						<label>Género</label>
+						<label>Género <span class="alert">*</span></label>
 						<select id="gender">
 						  <option value="MUJER">Femenino</option>
 						  <option value="HOMBRE">Masculino</option>
 						</select>
 					</div>
 					<div class="col-sm-5 col-sm-offset-1">
-						<label>Correo</label>
+						<label>Correo <span class="alert">*</span></label>
 						<input id="email" type="text" name="email">
 					</div>
 					<div class="col-sm-5">
-						<label>Contraseña</label>
+						<label>Contraseña <span class="alert">*</span></label>
 						<input id="password" type="text" name="password">
 					</div>
-					<div class="col-sm-12">
-						<a class="btn more" @click="step1">&lt; Regresar</a>
-						<input id="rpt-advance" type="submit" value="Submit" @click="step3">
+					<div class="col-sm-3 col-sm-offset-1">
+						<a class="btn more back" @click="step1">&lt; Regresar</a>
+					</div>
+					<div class="col-sm-4">
+						<input id="rpt-advance" type="submit" value="Enviar Reporte &gt;" @click="step3">
 					</div>
 				</div>
 			</fieldset>
@@ -509,13 +519,17 @@
 							
 
 		<div id="respuesta_reporte" class="hide">
-			<div id ="successReport">
-					<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
-					<p>id de reporte : <span id="folio"></span></p>
-					<p>contraseña reporte: <span id="passfolio"></span></p>
-			</div>
-			<div id ="errorReport" style= "display:none;">
-			  <h3>Ocurrió un error al enviar tu reporte, intentálo más tarde</h3>
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<div id ="successReport">
+							<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
+							<p>id de reporte : <span id="folio"></span></p>
+							<p>contraseña reporte: <span id="passfolio"></span></p>
+					</div>
+					<div id ="errorReport" style= "display:none;">
+					  <h3>Ocurrió un error al enviar tu reporte, intentálo más tarde</h3>
+					</div>
+				</div>
 			</div>
 		</div>
 	  </div>
