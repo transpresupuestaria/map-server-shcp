@@ -831,7 +831,7 @@ var svg = d3.select("#graph").append("svg")
   var appKey  = '5825343BB68F29D2A881B2E8D205B98846C95558';
   //Por el momento todos los reportes son anonimos
   var anonimo = true;
-  var estados = get_stateList();
+  var estadosList = get_stateList();
   $(document).ready(function(){
     $('#reportForm').on('keyup keypress', function(e) {
       var keyCode = e.keyCode || e.which;
@@ -841,9 +841,9 @@ var svg = d3.select("#graph").append("svg")
       }
     });
    //Reporte por inconsistencia en avance físico
-   $(document).on ("click", ".rpt-advance", function () {
-     estados = estados.responseJSON.estado;
+   $(document).on("click", ".rpt-advance", function () {
      event.preventDefault();
+     estados = estadosList.responseJSON.estado;
      //informacion de proyecto
      var carteraId = $("#cveReport").text(),
          dependencia  = $("#ejecutorReport").text(),
@@ -851,6 +851,7 @@ var svg = d3.select("#graph").append("svg")
          entidad   = $("#entidadReport").text(),
          nombre    = $("#nameReport").text(),
          motivo    = $("#motivoReporte").val(),
+         asunto    = $("#asuntoReporte").val(),
          estadoId = "",
          paisId="2";
          testado = RemoveAccents(entidad.toLowerCase());
@@ -863,7 +864,7 @@ var svg = d3.select("#graph").append("svg")
              estadoID = false;
            }
          }
-    motivo = "El proyecto "+ nombre+", perteneciente al programa "+ programa +", con clave " + carteraId+", ejecutado por " + dependencia+", presenta irregularidades en su proceso.\n " + motivo;
+    motivo = "El proyecto "+ nombre+", perteneciente al programa "+ programa +", con clave " + carteraId+", ejecutado por " + dependencia+", presenta irregularidades en su proceso.\n " + asunto + "\n"+ motivo;
     console.log(motivo);
     //informacion de ciudadano
     var name    = $("#name").val(),
@@ -916,6 +917,10 @@ var svg = d3.select("#graph").append("svg")
      $("#errorReport").show();
    }
    });
+   $('.rpt-advance').on('click', function(){
+    // do something here
+    alert("hi");
+});
    function RemoveAccents(str) {
       var accents    = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
       var accentsOut = "AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz";
