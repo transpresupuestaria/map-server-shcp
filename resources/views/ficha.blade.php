@@ -817,7 +817,6 @@ var svg = d3.select("#graph").append("svg")
          motivo    = $("#motivoReporte").val(),
          estadoId = "",
          paisId="2";
-         console.log(motivo);
          testado = RemoveAccents(entidad.toLowerCase());
          for (var i = 0; i < estados.length; i++) {
            estado = RemoveAccents(estados[i].nombre.toLowerCase());
