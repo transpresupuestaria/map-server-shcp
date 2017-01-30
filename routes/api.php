@@ -29,6 +29,8 @@ Route::get("/data", function(Request $request){
     "nombre as name",
     "ciclo",
     "ramo",
+    "monto_total_inversion",
+    "ejercido",
     "clasificacion_ciudadana as classification")->get())
     ->header('Access-Control-Allow-Origin', '*');
 });
