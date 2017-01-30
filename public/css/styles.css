@@ -1661,7 +1661,7 @@ section {
     background: #f49d51;
     font-size: 10px;
     display: block;
-    margin: 10px 0 0;
+    margin: 0;
     padding: 5px;
     text-align: center; }
     .btn.more.info:hover {
@@ -1670,6 +1670,25 @@ section {
     background: #158a6b;
     color: white;
     text-decoration: none; }
+
+.amount_label {
+  background: #f2f2f2;
+  margin-top: 5px;
+  padding: 5px 10px; }
+  .amount_label div {
+    color: black;
+    text-align: right; }
+    .amount_label div strong {
+      display: block;
+      text-align: left; }
+  .amount_label h5 {
+    font: 500 9px "soberana_sans", Helvetica, Arial, sans-serif;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-align: left; }
+
+.leaflet-popup-content {
+  font-family: "soberana_sans", Helvetica, Arial, sans-serif; }
 
 /* =Footer
 -------------------------------------------------------------- */
