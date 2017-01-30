@@ -33,7 +33,7 @@ var GFSHCPMap =  function(){
   //[ la maroma que aparece al pasar el mouse sobre un punto]
   //
   //
-  point_popup = _.template("<%=name%>");
+  point_popup = _.template("<%=name%> <br> <a href='/ficha#<%=cveppi%>' class='btn more info'>Más información</a>");
   
   /*
    * [ D A T A   P A N E L S   C O N S T R U C T O R S ]
@@ -190,13 +190,14 @@ var GFSHCPMap =  function(){
       var that = this;
       this.points = L.geoJson(d, {
         pointToLayer : function(feature, latlng){
-          var p = L.circleMarker(latlng, that.style.points),
 
+          var p = L.circleMarker(latlng, that.style.points),
               content = {
                 //nombre : feature.properties["Nombre"],
-                name : feature.properties.name//"Hola",//feature.properties["Estado"],
+                name : feature.properties.name,//"Hola",//feature.properties["Estado"],
                 //municipio : feature.properties["Municipio"],
                 //destino : feature.properties["Destino 1"]
+                cveppi : feature.properties.cvePPI,
               };
 
               p.on("click", function(e){
