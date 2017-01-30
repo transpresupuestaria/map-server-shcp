@@ -850,7 +850,12 @@ var svg = d3.select("#graph").append("svg")
         return false;
       }
     });
-    //Reporte anonomimo
+    //Motivo reporte
+    $(document).on("click",".btn_type", function(){
+       console.log($(this).find(".btn-content").text());
+       $("#asuntoReporte").text($(this).find(".btn-content").text()+".");
+    });
+    //Reporte anononimo
     $(document).on("change","#anonymous", function(){
       if($("#anonymous").val() == 1){
         $("#noAnonymous").hide();
