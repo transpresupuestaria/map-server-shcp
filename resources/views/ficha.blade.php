@@ -850,9 +850,9 @@ var svg = d3.select("#graph").append("svg")
         return false;
       }
     });
+
     //Motivo reporte
     $(document).on("click",".btn_type", function(){
-       console.log($(this).find(".btn-content").text());
        $("#asuntoReporte").text($(this).find(".btn-content").text()+".");
     });
     //Reporte anononimo
@@ -867,6 +867,7 @@ var svg = d3.select("#graph").append("svg")
    //Reporte general
    $(document).on("click", ".rpt-advance", function () {
      event.preventDefault();
+     anonimo  = $("#anonymous").val();
      estados = estadosList.responseJSON.estado;
      //informacion de proyecto
      var carteraId = $("#cveReport").text(),
@@ -877,7 +878,6 @@ var svg = d3.select("#graph").append("svg")
          motivo    = $("#motivoReporte").val(),
          asunto    = $("#asuntoReporte").val(),
          estadoId = "",
-         anonimo  = $("#anonymous").val(),
          paisId="2";
          testado = RemoveAccents(entidad.toLowerCase());
          for (var i = 0; i < estados.length; i++) {
@@ -890,7 +890,6 @@ var svg = d3.select("#graph").append("svg")
            }
          }
     motivo = "El proyecto "+ nombre+", perteneciente al programa "+ programa +", con clave " + carteraId+", ejecutado por " + dependencia+", presenta irregularidades en su proceso.\n " + asunto + "\n"+ motivo;
-    console.log(motivo);
     //informacion de ciudadano
     var name    = $("#name").val(),
         paterno = $("#surname").val(),
@@ -942,10 +941,7 @@ var svg = d3.select("#graph").append("svg")
      $("#errorReport").show();
    }
    });
-   $('.rpt-advance').on('click', function(){
-    // do something here
-    alert("hi");
-});
+
    function RemoveAccents(str) {
       var accents    = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
       var accentsOut = "AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz";
