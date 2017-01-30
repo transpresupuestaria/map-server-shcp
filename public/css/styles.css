@@ -485,6 +485,13 @@ text {
           display: inline-block;
           color: #1cb68d;
           font-weight: 500; }
+  .record .modal-container .step_n {
+    margin: 0 0 20px;
+    width: 100%;
+    text-align: center; }
+    .record .modal-container .step_n li {
+      display: inline-block;
+      border: 0; }
   .record .modal-container #toggle-view span {
     position: absolute;
     right: 5px;
@@ -527,6 +534,48 @@ text {
     top: 0; }
     .record .modal-container .action:hover {
       background: #cc0000; }
+  .record .modal-container fieldset h3 {
+    border: 0;
+    color: #b2b2b2;
+    font: 700 16px "soberana_sans", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding-top: 10px;
+    text-align: center; }
+  .record .modal-container fieldset label {
+    color: #5d5d5d;
+    display: block;
+    font: 700 16px "soberana_sans", Helvetica, Arial, sans-serif;
+    margin-bottom: 10px; }
+  .record .modal-container fieldset button {
+    border: 0; }
+  .record .modal-container fieldset p {
+    padding-top: 0;
+    color: black; }
+    .record .modal-container fieldset p .small {
+      color: #5d5d5d;
+      display: block;
+      font-size: 15px; }
+  .record .modal-container fieldset .btn.back {
+    background: gray;
+    color: #f2f2f2;
+    display: block; }
+    .record .modal-container fieldset .btn.back:hover {
+      background: #333; }
+  .record .modal-container textarea,
+  .record .modal-container input,
+  .record .modal-container select {
+    background: #f2f2f2;
+    border: 0;
+    height: 40px;
+    margin-bottom: 22px;
+    padding: 10px;
+    width: 100%; }
+  .record .modal-container textarea {
+    min-height: 200px; }
+  .record .modal-container input[type=submit] {
+    background: #1cb68d;
+    color: white;
+    font: 700 14px "soberana_sans", Helvetica, Arial, sans-serif; }
 
 .dialog-container {
   margin: 0 auto;
@@ -1526,6 +1575,26 @@ h1 {
   .record .update {
     margin-bottom: 40px; }
 
+ul.step_n a {
+  background: #f2f2f2;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  height: 15px;
+  width: 15px; }
+  ul.step_n a.complete {
+    background: rgba(186, 206, 50, 0.3); }
+  ul.step_n a.active {
+    background: #bace32; }
+
+span.alert {
+  color: #f49d51; }
+
+.hide {
+  display: none; }
+
 .side {
   background: #f9f9f9;
   margin-bottom: 10px;
@@ -1588,10 +1657,38 @@ section {
   font-weight: 700;
   padding: 10px 20px;
   transition: background 500ms; }
+  .btn.more.info {
+    background: #f49d51;
+    font-size: 10px;
+    display: block;
+    margin: 0;
+    padding: 5px;
+    text-align: center; }
+    .btn.more.info:hover {
+      background: #f18221; }
   .btn.more:hover {
     background: #158a6b;
     color: white;
     text-decoration: none; }
+
+.amount_label {
+  background: #f2f2f2;
+  margin-top: 5px;
+  padding: 5px 10px; }
+  .amount_label div {
+    color: black;
+    text-align: right; }
+    .amount_label div strong {
+      display: block;
+      text-align: left; }
+  .amount_label h5 {
+    font: 500 9px "soberana_sans", Helvetica, Arial, sans-serif;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-align: left; }
+
+.leaflet-popup-content {
+  font-family: "soberana_sans", Helvetica, Arial, sans-serif; }
 
 /* =Footer
 -------------------------------------------------------------- */

@@ -47,10 +47,6 @@
           </div>
         </div>
         <h1 id ="nameReport">@{{nombre}}</h1>
-
-
-
-
         <div class="row">
           <div class="col-sm-10">
             <p>@{{desc_ppi}}</p>
@@ -146,20 +142,20 @@
         </div>
         <!-- pef-->
         <h3>Presupuesto aprobado en el PEF 2016</h3>
-        <p class="amount right">$<strong>@{{aprobado}}</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>@{{Format(aprobado)}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside pef" v-bind:style="presupuesto_style"></span>
         </div>
         <!-- ejercido-->
         <h3>Monto ejercido 2016</h3>
-        <p class="amount right">$<strong>@{{+ejercido}}</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>@{{Format(ejercido)}}</strong> <span>MXN</span></p>
         <div class="bar">
         <span class="bar inside ejercido" v-bind:style="total_ejercido_style"></span>
 
         </div>
         <!-- modificado-->
         <h3>Presupuesto modificado</h3>
-        <p class="amount right">$<strong>@{{modificado}}</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>@{{Format(modificado)}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside modificado" v-bind:style="modificado_style"></span>
         </div>
@@ -276,17 +272,17 @@
       </div>
       <!--gastos-->
       <div class="col-sm-3">
-        <p class="amount">$<strong>@{{total_gasto_operacion_he}}</strong></p>
+        <p class="amount">$<strong>@{{Format(total_gasto_operacion_he)}}</strong></p>
         <p class="lead">Gastos estimados totales de mantenimiento y operación del activo en el horizonte de evaluación </p>
       </div>
       <!--otros costos-->
       <div class="col-sm-3">
-        <p class="amount">$@{{total_gasto_no_consid}}</p>
+        <p class="amount">$@{{Format(total_gasto_no_consid)}}</p>
         <p class="lead">Otros costos y gastos asociados al PPI que no forman parte del gasto de inversión ni de los gastos de operación y mantenimiento </p>
       </div>
       <!--costo total-->
       <div class="col-sm-3">
-        <p class="amount">$<strong>@{{costo_total_ppi}}</strong></p>
+        <p class="amount">$<strong>@{{Format(costo_total_ppi)}}</strong></p>
         <p class="lead">Costo Total del PPI  </p>
       </div>
     </div>
@@ -394,23 +390,26 @@
 	  <modal v-if="showModal" @close="showModal = false">
 	  <!-- content-->
 	  <h2 slot="header">Reporta esta obra</h2>
-	  <p slot="header">Realiza tu reporte ciudadano para este proyecto:</p>
+	  
 	  <div class="dialog-container" slot="body">
+		
+		<div id="reporte_step0">
+		  <p slot="header">Realiza tu reporte ciudadano para este proyecto:</p>
      	<div class="row">
         	<div class="col-sm-4">
-        	  <a href="#" class="btn_type">
+        	  <a class="btn_type" @click="step1">
         	    <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
         	    <span class="btn-symbol">Reportar</span>
         	  </a>
         	</div>
         	<div class="col-sm-4">
-        	  <a href="#" class="btn_type">
+        	  <a class="btn_type" @click="step1">
         	    <span class="btn-content">La obra ha sido abandonada</span>
         	    <span class="btn-symbol">Reportar</span>
         	  </a>
         	</div>
         	<div class="col-sm-4">
-        	  <a href="#" class="btn_type">
+        	  <a class="btn_type" @click="step1">
         	    <span class="btn-content">Existe un error en la localización</span>
         	    <span class="btn-symbol">Reportar</span>
         	  </a>
@@ -456,49 +455,86 @@
         </li>
       </ul>
 		<a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
-
+		</div>
+		
 		<form id = "reportForm">
-			<fieldset id="reporte_step1">
+			<fieldset id="reporte_step1" class="hide">
 				<h3>Paso 1 de 2</h3>
-				<label><h4>Asunto del reporte</h4></label>
-				<textarea id="asuntoReporte"></textarea>
-				<label><h4>Narre el motivo de su reporte</h4></label>
-				<textarea id="motivoReporte"></textarea>
-				<a class="btn more">Continuar &gt;</a>
+				<ul class="step_n">
+					<li><a class="active"></a></li>
+					<li><a></a></li>
+				</ul>
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<label>Asunto del reporte</label>
+						<textarea id="asuntoReporte"></textarea>
+						<label>Narre el motivo de su reporte</label>
+						<textarea id="motivoReporte"></textarea>
+						<a class="btn more" @click="step2">Continuar &gt;</a>
+					</div>
+				</div>
 			</fieldset>
-			<fieldset id="reporte_step3">
+			<fieldset id="reporte_step2" class="hide">
 				<h3>Paso 2 de 2</h3>
-				<p>Para dar seguimiento a tu solicitud necesitamos que nos proporciones tu información de contacto básica.<br>
+				<ul class="step_n">
+					<li><a class="complete"></a></li>
+					<li><a class="active"></a></li>
+				</ul>
+				<p>Para dar seguimiento a tu solicitud necesitamos que nos proporciones tu información de contacto básica.
 				<span class="small"><span class="alert">*</span> Información necesaria </span></p>
-				<label>Nombres</label>
-				  <input id ="name" type="text" name="name"><br>
-				  <label>Paterno</label>
-				  <input id ="surname"  type="text" name="surname"><br>
-				  <label>Materno</label>
-				  <input id ="lastname"  type="text" name="lastname"><br>
-				  <label>Género</label>
-				  <select id ="gender">
-				  	<option value="MUJER">Femenino</option>
-				  	<option value="HOMBRE">Masculino</option>
-				  </select>
-				  <label>Correo</label>
-				  <input id ="email" type="text" name="email"><br>
-				  <label>Contraseña</label>
-				  <input id ="password" type="text" name="password"><br>
-				  <a class="btn more">&lt; Regresar</a>
-				  <input class ="rpt-advance" type="submit" value="Submit">
+				<div class="row">
+					<div class="col-sm-5 col-sm-offset-1"> 
+						<label>Nombre(s) <span class="alert">*</span></label>
+						<input id="name" type="text" name="name">
+					</div>
+					<div class="col-sm-5">
+						<label>Paterno <span class="alert">*</span></label>
+						<input id="surname"  type="text" name="surname">
+					</div>
+					<div class="col-sm-5 col-sm-offset-1">
+						<label>Materno</label>
+						<input id="lastname"  type="text" name="lastname">
+					</div>
+					<div class="col-sm-5">
+						<label>Género <span class="alert">*</span></label>
+						<select id="gender">
+						  <option value="MUJER">Femenino</option>
+						  <option value="HOMBRE">Masculino</option>
+						</select>
+					</div>
+					<div class="col-sm-5 col-sm-offset-1">
+						<label>Correo <span class="alert">*</span></label>
+						<input id="email" type="text" name="email">
+					</div>
+					<div class="col-sm-5">
+						<label>Contraseña <span class="alert">*</span></label>
+						<input id="password" type="text" name="password">
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<a class="btn more back" @click="step2">&lt; Regresar</a>
+					</div>
+					<div class="col-sm-4">
+						<input id="rpt-advance" type="submit" value="Enviar Reporte &gt;">
+					</div>
+				</div>
 			</fieldset>
 		</form>
 
-		<div id="respuesta_reporte">
-      <div id ="successReport">
-  			<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
-  			<p>id de reporte : <span id="folio"></span></p>
-  			<p>contraseña reporte: <span id="passfolio"></span></p>
-     </div>
-     <div id ="errorReport" style= "display:none;">
-      <h3>Ocurrió un error al enviar tu reporte, intentálo más tarde</h3>
-    </div>
+							
+
+		<div id="respuesta_reporte" class="hide">
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<div id ="successReport">
+							<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
+							<p>id de reporte : <span id="folio"></span></p>
+							<p>contraseña reporte: <span id="passfolio"></span></p>
+					</div>
+					<div id ="errorReport" style= "display:none;">
+					  <h3>Ocurrió un error al enviar tu reporte, intentálo más tarde</h3>
+					</div>
+				</div>
+			</div>
 		</div>
 	  </div>
 	  </modal>
@@ -858,17 +894,23 @@ var svg = d3.select("#graph").append("svg")
          success: function(dataRe){
              console.log(dataRe);
              if(dataRe.resultado == 'REGISTRO_PETICION_EXITOSO'){
+	            $("#respuesta_reporte").toggleClass("hide");
+	            $("#reporte_step2").toggleClass("hide");
                 $("#folio").text(dataRe.folio);
                 $("#passfolio").text(dataRe.passFolio);
                 $("#successReport").show();
                 $("#errorReport").hide();
              }else{
+	             $("#respuesta_reporte").toggleClass("hide");
+	            $("#reporte_step2").toggleClass("hide");
                $("#successReport").hide();
                $("#errorReport").show();
              }
            }
        });
    }else{
+	   $("#respuesta_reporte").toggleClass("hide");
+	   $("#reporte_step2").toggleClass("hide");
      //error
      $("#successReport").hide();
      $("#errorReport").show();

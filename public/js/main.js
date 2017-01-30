@@ -1,5 +1,5 @@
 var GFSHCPMap =  function(){
-
+  var Format = d3.format(",");
   // the map settings
   var MAP = {
     div         : "GF-SHCP-map",
@@ -33,7 +33,7 @@ var GFSHCPMap =  function(){
   //[ la maroma que aparece al pasar el mouse sobre un punto]
   //
   //
-  point_popup = _.template("<%=name%>");
+  point_popup = _.template("<%=name%> <div class='amount_label'> <div class='row'><div class='col-sm-6'><h5>Monto total de inversión</h5>  $<%=monto_total%> <h5>Monto ejercido</h5> $<%=ejercido%></div><div class='col-sm-6'><h5>Avance</h5> <%=avance%>% <div class='bar'><span class='bar inside total' style='width:<%=avance%>%'></span></div></div></div></div> <a href='/ficha#<%=cveppi%>' class='btn more info'>Más información</a>");
   
   /*
    * [ D A T A   P A N E L S   C O N S T R U C T O R S ]
@@ -191,12 +191,15 @@ var GFSHCPMap =  function(){
       this.points = L.geoJson(d, {
         pointToLayer : function(feature, latlng){
           var p = L.circleMarker(latlng, that.style.points),
-
               content = {
                 //nombre : feature.properties["Nombre"],
-                name : feature.properties.name//"Hola",//feature.properties["Estado"],
+                name : feature.properties.name,//"Hola",//feature.properties["Estado"],
                 //municipio : feature.properties["Municipio"],
                 //destino : feature.properties["Destino 1"]
+                cveppi : feature.properties.cvePPI,
+                ejercido : Format(feature.properties.ejercido),
+                monto_total : Format(feature.properties.monto_total),
+                avance : feature.properties.avance
               };
 
               p.on("click", function(e){
@@ -244,10 +247,13 @@ var GFSHCPMap =  function(){
             properties : {
               //"Municipio" : "Aguascalientes", 
               //"Estado"    : "Aguascalientes", 
-              "Long"      : d.lng, 
-              "Lat"       : d.lat,
-              "cvePPI" : d.key,
-              "name"   : d.name
+              "Long"      	: d.lng, 
+              "Lat"       	: d.lat,
+              "cvePPI" 		: d.key,
+              "name"   		: d.name,
+              "avance"		: d.advance,
+              "ejercido" 	: d.ejercido,
+              "monto_total" : d.monto_total_inversion
             },
             geometry : {
               "type": "Point", 
