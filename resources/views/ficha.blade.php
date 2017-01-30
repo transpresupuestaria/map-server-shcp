@@ -480,6 +480,14 @@
 					<li><a class="complete"></a></li>
 					<li><a class="active"></a></li>
 				</ul>
+        <div>
+          <label>¿Deseas que tu denuncia sea reportada como anónima?<span class="alert">*</span></label>
+          <select id="anonymous">
+            <option value="0">No</option>
+            <option value="1">Sí</option>
+          </select>
+        </div>
+        <div id = "noAnonymous">
 				<p>Para dar seguimiento a tu solicitud necesitamos que nos proporciones tu información de contacto básica.
 				<span class="small"><span class="alert">*</span> Información necesaria </span></p>
 				<div class="row">
@@ -510,6 +518,9 @@
 						<label>Contraseña <span class="alert">*</span></label>
 						<input id="password" type="text" name="password">
 					</div>
+          </div>
+          </div>
+          <div class="row">
 					<div class="col-sm-3 col-sm-offset-1">
 						<a class="btn more back" @click="step2">&lt; Regresar</a>
 					</div>
@@ -829,8 +840,7 @@ var svg = d3.select("#graph").append("svg")
   <script>
   /****** API **********/
   var appKey  = '5825343BB68F29D2A881B2E8D205B98846C95558';
-  //Por el momento todos los reportes son anonimos
-  var anonimo = true;
+
   var estadosList = get_stateList();
   $(document).ready(function(){
     $('#reportForm').on('keyup keypress', function(e) {
@@ -840,7 +850,16 @@ var svg = d3.select("#graph").append("svg")
         return false;
       }
     });
-   //Reporte por inconsistencia en avance físico
+    //Reporte anonomimo
+    $(document).on("change","#anonymous", function(){
+      if($("#anonymous").val() == 1){
+        $("#noAnonymous").hide();
+      }else{
+        $("#noAnonymous").show();
+      }
+
+    });
+   //Reporte general
    $(document).on("click", ".rpt-advance", function () {
      event.preventDefault();
      estados = estadosList.responseJSON.estado;
@@ -853,6 +872,7 @@ var svg = d3.select("#graph").append("svg")
          motivo    = $("#motivoReporte").val(),
          asunto    = $("#asuntoReporte").val(),
          estadoId = "",
+         anonimo  = $("#anonymous").val(),
          paisId="2";
          testado = RemoveAccents(entidad.toLowerCase());
          for (var i = 0; i < estados.length; i++) {
@@ -874,7 +894,7 @@ var svg = d3.select("#graph").append("svg")
         pass    = $("#password").val(),
         genero  = $("#gender").val();
 
-    if(!anonimo){
+    if(anonimo == 0){
       var ciudadanoAPI = {"anonimo":false,"genero":genero,"nombre":name,"paterno":paterno,"email":email,"contrasenia":pass};
     }else{
       var ciudadanoAPI = {"anonimo":true};
