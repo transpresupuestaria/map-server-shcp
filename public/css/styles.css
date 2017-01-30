@@ -1657,6 +1657,15 @@ section {
   font-weight: 700;
   padding: 10px 20px;
   transition: background 500ms; }
+  .btn.more.info {
+    background: #f49d51;
+    font-size: 10px;
+    display: block;
+    margin: 10px 0 0;
+    padding: 5px;
+    text-align: center; }
+    .btn.more.info:hover {
+      background: #f18221; }
   .btn.more:hover {
     background: #158a6b;
     color: white;
