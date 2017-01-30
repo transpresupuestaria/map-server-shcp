@@ -390,9 +390,9 @@
 	  <modal v-if="showModal" @close="showModal = false">
 	  <!-- content-->
 	  <h2 slot="header">Reporta esta obra</h2>
-	  
+
 	  <div class="dialog-container" slot="body">
-		
+
 		<div id="reporte_step0">
 		  <p slot="header">Realiza tu reporte ciudadano para este proyecto:</p>
      	<div class="row">
@@ -456,7 +456,7 @@
       </ul>
 		<a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
 		</div>
-		
+
 		<form id = "reportForm">
 			<fieldset id="reporte_step1" class="hide">
 				<h3>Paso 1 de 2</h3>
@@ -483,7 +483,7 @@
 				<p>Para dar seguimiento a tu solicitud necesitamos que nos proporciones tu información de contacto básica.
 				<span class="small"><span class="alert">*</span> Información necesaria </span></p>
 				<div class="row">
-					<div class="col-sm-5 col-sm-offset-1"> 
+					<div class="col-sm-5 col-sm-offset-1">
 						<label>Nombre(s) <span class="alert">*</span></label>
 						<input id="name" type="text" name="name">
 					</div>
@@ -514,13 +514,13 @@
 						<a class="btn more back" @click="step2">&lt; Regresar</a>
 					</div>
 					<div class="col-sm-4">
-						<input id="rpt-advance" type="submit" value="Enviar Reporte &gt;">
+						<input class="rpt-advance" type="submit" value="Enviar Reporte &gt;">
 					</div>
 				</div>
 			</fieldset>
 		</form>
 
-							
+
 
 		<div id="respuesta_reporte" class="hide">
 			<div class="row">
