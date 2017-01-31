@@ -458,6 +458,7 @@
 		</div>
 
 		<form id = "reportForm">
+			<!-- paso 1-->
 			<fieldset id="reporte_step1" class="hide">
 				<h3>Paso 1 de 2</h3>
 				<ul class="step_n">
@@ -474,53 +475,59 @@
 					</div>
 				</div>
 			</fieldset>
+			
+			<!-- paso 2-->
 			<fieldset id="reporte_step2" class="hide">
 				<h3>Paso 2 de 2</h3>
 				<ul class="step_n">
 					<li><a class="complete"></a></li>
 					<li><a class="active"></a></li>
 				</ul>
-        <div>
-          <label>¿Deseas que tu denuncia sea reportada como anónima?<span class="alert">*</span></label>
-          <select id="anonymous">
-            <option value="0">No</option>
-            <option value="1">Sí</option>
-          </select>
-        </div>
-        <div id = "noAnonymous">
-				<p>Para dar seguimiento a tu solicitud necesitamos que nos proporciones tu información de contacto básica.
-				<span class="small"><span class="alert">*</span> Información necesaria </span></p>
 				<div class="row">
-					<div class="col-sm-5 col-sm-offset-1">
-						<label>Nombre(s) <span class="alert">*</span></label>
-						<input id="name" type="text" name="name">
-					</div>
-					<div class="col-sm-5">
-						<label>Paterno <span class="alert">*</span></label>
-						<input id="surname"  type="text" name="surname">
-					</div>
-					<div class="col-sm-5 col-sm-offset-1">
-						<label>Materno</label>
-						<input id="lastname"  type="text" name="lastname">
-					</div>
-					<div class="col-sm-5">
-						<label>Género <span class="alert">*</span></label>
-						<select id="gender">
-						  <option value="MUJER">Femenino</option>
-						  <option value="HOMBRE">Masculino</option>
+					<div class="col-sm-10 col-sm-offset-1">
+						<h3>Tu denuncia puede ser anónima o puedes proporcionar tu información de contacto básica
+							para dar seguimiento a tu solicitud.</h3>
+							<p class="center"><span class="small"><span class="alert">*</span> Información necesaria </span></p>
+						<label>¿Deseas que tu denuncia sea reportada como anónima?<span class="alert">*</span></label>
+						<select id="anonymous">
+						  <option value="0">No</option>
+						  <option value="1">Sí</option>
 						</select>
 					</div>
-					<div class="col-sm-5 col-sm-offset-1">
-						<label>Correo <span class="alert">*</span></label>
-						<input id="email" type="text" name="email">
+				</div>
+				<div id = "noAnonymous">
+					<div class="row">
+						
+						<div class="col-sm-5 col-sm-offset-1">
+							<label>Nombre(s) <span class="alert">*</span></label>
+							<input id="name" type="text" name="name">
+						</div>
+						<div class="col-sm-5">
+							<label>Paterno <span class="alert">*</span></label>
+							<input id="surname"  type="text" name="surname">
+						</div>
+						<div class="col-sm-5 col-sm-offset-1">
+							<label>Materno</label>
+							<input id="lastname"  type="text" name="lastname">
+						</div>
+						<div class="col-sm-5">
+							<label>Género <span class="alert">*</span></label>
+							<select id="gender">
+							  <option value="MUJER">Femenino</option>
+							  <option value="HOMBRE">Masculino</option>
+							</select>
+						</div>
+						<div class="col-sm-5 col-sm-offset-1">
+							<label>Correo <span class="alert">*</span></label>
+							<input id="email" type="text" name="email">
+						</div>
+						<div class="col-sm-5">
+							<label>Contraseña <span class="alert">*</span></label>
+							<input id="password" type="text" name="password">
+						</div>
 					</div>
-					<div class="col-sm-5">
-						<label>Contraseña <span class="alert">*</span></label>
-						<input id="password" type="text" name="password">
-					</div>
-          </div>
-          </div>
-          <div class="row">
+          		</div>
+		  		<div class="row">
 					<div class="col-sm-3 col-sm-offset-1">
 						<a class="btn more back" @click="step2">&lt; Regresar</a>
 					</div>
@@ -538,8 +545,8 @@
 				<div class="col-sm-10 col-sm-offset-1">
 					<div id ="successReport">
 							<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
-							<p>id de reporte : <span id="folio"></span></p>
-							<p>contraseña reporte: <span id="passfolio"></span></p>
+							<p>ID de reporte : <span id="folio"></span></p>
+							<p>Contraseña reporte: <span id="passfolio"></span></p>
 					</div>
 					<div id ="errorReport" style= "display:none;">
 					  <h3>Ocurrió un error al enviar tu reporte, intentálo más tarde</h3>
