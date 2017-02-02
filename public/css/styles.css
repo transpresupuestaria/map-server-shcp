@@ -1569,12 +1569,46 @@ h1 {
     margin-right: 5px;
     vertical-align: bottom;
     width: 25px; }
-    .record p.fichas_ramo b.pemex {
-      background-image: url("../img/logos_ramo/pemex.gif"); }
+    .record p.fichas_ramo b.ramo4 {
+      background-image: url("../img/logos_ramo/segob.gif"); }
+    .record p.fichas_ramo b.ramo5 {
+      background-image: url("../img/logos_ramo/sre.gif"); }
+    .record p.fichas_ramo b.ramo6 {
+      background-image: url("../img/logos_ramo/shcp.gif"); }
+    .record p.fichas_ramo b.ramo7 {
+      background-image: url("../img/logos_ramo/sedena.gif"); }
+    .record p.fichas_ramo b.ramo8 {
+      background-image: url("../img/logos_ramo/sagarpa.gif"); }
     .record p.fichas_ramo b.ramo9 {
       background-image: url("../img/logos_ramo/sct.gif"); }
+    .record p.fichas_ramo b.ramo10 {
+      background-image: url("../img/logos_ramo/se.gif"); }
+    .record p.fichas_ramo b.ramo11 {
+      background-image: url("../img/logos_ramo/sep.gif"); }
+    .record p.fichas_ramo b.ramo12 {
+      background-image: url("../img/logos_ramo/salud.gif"); }
+    .record p.fichas_ramo b.ramo13 {
+      background-image: url("../img/logos_ramo/semar.gif"); }
+    .record p.fichas_ramo b.ramo16 {
+      background-image: url("../img/logos_ramo/semarnat.gif"); }
+    .record p.fichas_ramo b.ramo18 {
+      background-image: url("../img/logos_ramo/sener.gif"); }
+    .record p.fichas_ramo b.ramo20 {
+      background-image: url("../img/logos_ramo/sedesol.gif"); }
+    .record p.fichas_ramo b.ramo21 {
+      background-image: url("../img/logos_ramo/sectur.gif"); }
+    .record p.fichas_ramo b.ramo27 {
+      background-image: url("../img/logos_ramo/sfp.gif"); }
+    .record p.fichas_ramo b.ramo38 {
+      background-image: url("../img/logos_ramo/conacyt.gif"); }
     .record p.fichas_ramo b.ramo50 {
       background-image: url("../img/logos_ramo/imss.gif"); }
+    .record p.fichas_ramo b.ramo51 {
+      background-image: url("../img/logos_ramo/issste.gif"); }
+    .record p.fichas_ramo b.ramo52 {
+      background-image: url("../img/logos_ramo/pemex.gif"); }
+    .record p.fichas_ramo b.ramo53 {
+      background-image: url("../img/logos_ramo/cfe.gif"); }
   .record .update {
     margin-bottom: 40px; }
 
