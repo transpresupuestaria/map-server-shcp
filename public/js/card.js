@@ -51,6 +51,11 @@ d3.json(DatosGobMxURL)
           tipo_ppi : res["tipo-ppi"],
           total_gasto_no_consid : res["total-gasto-no-consid"],
           total_gasto_operacion_he : res["total-gasto-operacion-he"],
+          ////otras fuentes de financiamiento
+          recursos_estatales : res["recursos-estatales"],
+          recursos_municipales : res["recursos-municipales"],
+          privados	: res["privados"],
+          fideicomiso : res["fideicomiso"]
 
           // valores extra
           presupuesto_style : "width:" + ((res["aprobado"] * 100) / res["costo-total-ppi"]) + "%",
