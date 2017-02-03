@@ -112,6 +112,26 @@
         <option value="52">Petróleos Mexicanos</option>
         <option value="53">Comisión Federal de Electricidad</option>
       </select>
+
+      <h3>Ejecutor</h3>
+      <select id="GF-SHCP-exec-selector">
+        <option value="all">todos</option>
+        @foreach($execs as $exec)
+        <option>{{$exec->desc_unidad}}</option>
+        @endforeach
+      </select>
+
+      <h3>Avance físico</h3>
+      <select id="GF-SHCP-advance-selector">
+        <!-- avance_fisico -->
+        <option value="all">todos</option>
+        <option value="1">&lt; 1%</option>
+        <option value="2">1 a 20%</option>
+        <option value="3">20 a 40%</option>
+        <option value="4">40 a 60%</option>
+        <option value="5">60 a 80%</option>
+        <option value="6">80 a 100%</option>
+      </select>
       
       <h3>Clasificación</h3>
       <select id="GF-SHCP-class-selector">

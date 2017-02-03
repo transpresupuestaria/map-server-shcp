@@ -28,6 +28,7 @@ Route::get("/data", function(Request $request){
     //"ent_fed as state_name",
     "nombre as name",
     "ciclo",
+    "desc_unidad as unidad",
     "ramo",
     "monto_total_inversion",
     "ejercido",
