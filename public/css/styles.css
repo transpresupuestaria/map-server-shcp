@@ -619,7 +619,7 @@ text {
   color: #462b5f !important;
   cursor: pointer;
   font-weight: 700;
-  z-index: 2;
+  z-index: 1;
   position: relative;
   display: inline-block;
   -webkit-transition: background-color 0.3s, color 0.3s, -webkit-transform 0.3s;
@@ -644,7 +644,8 @@ h2 .tooltip:hover .tooltip-item {
 .tooltip:hover .tooltip-item {
   color: #fff !important;
   -webkit-transform: translate3d(0, -0.5em, 0);
-  transform: translate3d(0, -0.5em, 0); }
+  transform: translate3d(0, -0.5em, 0);
+  z-index: 6; }
   .tooltip:hover .tooltip-item b {
     background: #158a6b; }
 
@@ -666,7 +667,7 @@ h2 .tooltip:hover .tooltip-item {
   pointer-events: none;
   width: 360px;
   text-align: left;
-  z-index: 1;
+  z-index: 2;
   -webkit-transform: translate3d(0, -0.5em, 0);
   transform: translate3d(0, -0.5em, 0);
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;

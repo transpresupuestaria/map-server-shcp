@@ -299,17 +299,41 @@
       <!--gastos-->
       <div class="col-sm-3">
         <p class="amount">$<strong>@{{Format(total_gasto_operacion_he)}}</strong></p>
-        <p class="lead">Gastos estimados totales de mantenimiento y operación del activo en el horizonte de evaluación </p>
+        <p class="lead">Gastos estimados totales de mantenimiento y operación del activo en el horizonte de evaluación 
+	      <!--tooltip-->
+          <span class="tooltip">
+            <span class="tooltip-item"><b>?</b></span>
+            <span class="tooltip-content clearfix">
+              <span class="tooltip-text">Monto estimado global de recursos que se requerirán para el funcionamiento adecuado de los activos derivados de un programa o proyecto de inversión</span>
+            </span>
+          </span>
+        </p>
       </div>
       <!--otros costos-->
       <div class="col-sm-3">
         <p class="amount">$@{{Format(total_gasto_no_consid)}}</p>
-        <p class="lead">Otros costos y gastos asociados al PPI que no forman parte del gasto de inversión ni de los gastos de operación y mantenimiento </p>
+        <p class="lead">Otros costos y gastos asociados al PPI que no forman parte del gasto de inversión ni de los gastos de operación y mantenimiento 
+	      <!--tooltip-->
+          <span class="tooltip">
+            <span class="tooltip-item"><b>?</b></span>
+            <span class="tooltip-content clearfix">
+              <span class="tooltip-text">Monto estimado de recursos asociados a la ejecución del programa o proyecto de inversión distintos a los gastos de inversión, operación y mantenimiento</span>
+            </span>
+          </span>
+        </p>
       </div>
       <!--costo total-->
       <div class="col-sm-3">
         <p class="amount">$<strong>@{{Format(costo_total_ppi)}}</strong></p>
-        <p class="lead">Costo Total del PPI  </p>
+        <p class="lead">Costo Total del PPI  
+	        <!--tooltip-->
+          <span class="tooltip">
+            <span class="tooltip-item"><b>?</b></span>
+            <span class="tooltip-content clearfix">
+              <span class="tooltip-text">La suma del monto total de inversión, los gastos estimados de operación y mantenimiento, y los otros costos y gastos asociados</span>
+            </span>
+          </span>
+        </p>
       </div>
     </div>
   </section>
