@@ -55,7 +55,7 @@ d3.json(DatosGobMxURL)
           recursos_estatales : res["recursos-estatales"],
           recursos_municipales : res["recursos-municipales"],
           privados	: res["privados"],
-          fideicomiso : res["fideicomiso"]
+          fideicomiso : res["fideicomiso"],
 
           // valores extra
           presupuesto_style : "width:" + ((res["aprobado"] * 100) / res["costo-total-ppi"]) + "%",
