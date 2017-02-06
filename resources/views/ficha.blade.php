@@ -193,14 +193,15 @@
       <!--total-->
       <div class="col-sm-4">
         <h3>Monto total de inversión:</h3>
-        <p>@{{monto_total_inversion}}</p>
+        <p>$@{{Format(monto_total_inversion)}}</p>
       </div>
-      <!--gráfica-->
+      <!--gráfica-
       <div class="col-sm-9">
         <div id="graph" class="graph">
         </div>
       </div>
-      <!--tabla-->
+      ->
+      <!--tabla
       <div class="col-sm-3 side">
         <table class="table">
           <thead>
@@ -238,6 +239,7 @@
           </tbody>
         </table>
       </div>
+      -->
     </div>
   </section>
 
