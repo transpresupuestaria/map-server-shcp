@@ -158,9 +158,56 @@
     <header class="top title_side">
       <h1>Obra Pública Abierta: <span>Todo México</span></h1>
     </header>
-    
+  
   </div>
-
+  
+  
+  <!--aviso-->
+  <div class="col-sm-4 col-sm-offset-3">
+	  <div class="note_opa">
+	  	<p>En este mapa se despliegan aquéllos <strong>proyectos de inversión física</strong> que pueden ser ubicados geográficamente.</p>
+	  </div>
+  </div>
+  
+  <div class="col-sm-3 col-sm-offset-2">
+	<!--buscador-->
+  	<div class="module_box">
+  		<input type="text" placeholder="Buscar palabra clave, dirección o CP">
+  		<button>b</button>
+  		<div class="clearfix"></div>
+  	</div>
+  	<!--gasto total-->
+  	<div class="module_box">
+	  	<h3>Gasto total de inversión 2016</h3>
+  		<p class="amount">$738,868.79 <span>MDP MXN</span></p>
+  		<div class="separator"></div> 
+  		<!--gráfica gasto inversión-->
+  		<div class="bar_graph">
+	  		<div class="col-sm-4">
+	  			<div class="container_bar">
+		  			<div class="bbar" style="height: 100%"></div>
+	  			</div>
+	  			<p>Física</p>
+	  		</div>
+	  		<div class="col-sm-4">
+	  			<div class="container_bar">
+		  			<div class="bbar" style="height: 25%"></div>
+	  			</div>
+	  			<p>Subsidios</p>
+	  		</div>
+	  		<div class="col-sm-4">
+	  			<div class="container_bar">
+		  			<div class="bbar" style="height: 5%"></div>
+	  			</div>
+	  			<p>Financiera</p>
+	  		</div>
+	  		<div class="clearfix"></div>
+  		</div>
+  	</div>
+  	
+  </div>
+  
+  
   <!-- http://localhost:8000/api/data -->
 <script src="js/bower_components/d3/d3.min.js"></script>
 <script src="js/bower_components/leaflet/dist/leaflet.js"></script>
