@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Opa;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +13,8 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+  $execs = Opa::select("desc_unidad")->groupBy("desc_unidad")->orderBy("desc_unidad", "asc")->get();
+    return view('home')->with(["execs" => $execs]);
 });
 
 Route::get('/ficha', function () {

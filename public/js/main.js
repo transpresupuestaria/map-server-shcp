@@ -125,6 +125,12 @@ var GFSHCPMap =  function(){
       this.branchSelector = document.getElementById("GF-SHCP-branch-selector");
       this.branchSelector.addEventListener("change", this.updateMap);
 
+      this.branchSelector = document.getElementById("GF-SHCP-exec-selector");
+      this.branchSelector.addEventListener("change", this.updateMap);
+
+      this.branchSelector = document.getElementById("GF-SHCP-advance-selector");
+      this.branchSelector.addEventListener("change", this.updateMap);
+
       this.drawMap();
       this.getData();
     },
@@ -138,29 +144,34 @@ var GFSHCPMap =  function(){
 
       d3.json(this.settings.data, function(error, d){
         that.data    = d.slice(0);
-        //that.current = d.slice(0);
+        that._mapAdvance();
         that._points = that.makeGeojson(d);
         that.drawPoints(that._points);
       });
     },
 
     filterData : function(){
-      var that   = this,
-          data   = this.data.slice(0),
-          year   = document.getElementById("GF-SHCP-year-selector").value,
-          branch = document.getElementById("GF-SHCP-branch-selector").value,
-          state  = document.getElementById("GF-SHCP-state-selector").value,
-          filter = {},
+      var that    = this,
+          data    = this.data.slice(0),
+          year    = document.getElementById("GF-SHCP-year-selector").value,
+          branch  = document.getElementById("GF-SHCP-branch-selector").value,
+          state   = document.getElementById("GF-SHCP-state-selector").value,
+          unit    = document.getElementById("GF-SHCP-exec-selector").value,
+          advance = document.getElementById("GF-SHCP-advance-selector").value,
+          filter  = {},
           classification = document.getElementById("GF-SHCP-class-selector").value;
 
       if(year !== "all") filter.ciclo = year;
       if(branch !== "all") filter.ramo = +branch;
       if(state !== "all") filter.state = +state;
       if(classification !== "all") filter.classification = classification;
+      if(unit !== "all") filter.unidad = unit;
+      if(advance !== "all") filter.avance = advance;
 
 
       data = _.where(data, filter);
 
+      console.log(data.length);
       return data;
     },
 
@@ -262,6 +273,33 @@ var GFSHCPMap =  function(){
           }
         })
       }
+    },
+
+    _mapAdvance : function(){
+      this.data.forEach(function(d){
+        if(+d.advance < 1){
+          d.avance = "1";
+        }
+        else if(+d.advance <= 20){
+          d.avance = "2";
+        }
+
+        else if(+d.advance <= 40){
+          d.avance = "3";
+        }
+
+        else if(+d.advance <= 60){
+          d.avance = "4";
+        }
+
+        else if(+d.advance <= 80){
+          d.avance = "5";
+        }
+
+        else{
+          d.avance = "6";
+        }
+      });
     },
   }
 
