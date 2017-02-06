@@ -246,7 +246,31 @@
     <div class="row">
       <div class="col-sm-12">
         <h2>Otras fuentes de financiamiento</h2>
-        <p>No se ha reportado información sobre otras fuentes de financiamiento de este PPI.</p>
+       <!--<p>No se ha reportado información sobre otras fuentes de financiamiento de este PPI.</p>-->
+      </div>
+      <!--recursos estatales-->
+      <div class="col-sm-3">
+	      <h3>Recursos Estatales</h3>
+		  <p class="amount" v-if="recursos_estatales">$<strong>@{{Format(recursos_estatales)}}</strong></p>
+		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
+      </div> 
+      <!--recursos municipales-->
+      <div class="col-sm-3">
+	      <h3>Recursos Municipales</h3>
+		  <p class="amount" v-if="recursos_municipales">$<strong>@{{Format(recursos_municipales)}}</strong></p>
+		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
+      </div> 
+	  <!--privados-->
+      <div class="col-sm-3">
+	      <h3>Recursos Privados</h3>
+		  <p class="amount" v-if="privados">$<strong>@{{Format(privados)}}</strong></p>
+		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
+      </div> 
+	  <!--fideicomiso-->
+      <div class="col-sm-3">
+	      <h3>Fideicomiso</h3>
+		  <p class="amount" v-if="fideicomiso">$<strong>@{{Format(fideicomiso)}}</strong></p>
+		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
       </div>
     </div>
   </section>
