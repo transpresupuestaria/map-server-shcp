@@ -11,8 +11,6 @@
 </head>
 <body>
   <div id="map"> 
-    <!--<iframe width="100%" height="100%" frameborder="0" scrolling="no" src="http://www.openstreetmap.org/export/embed.html?bbox=-129.94628906250003%2C7.100892668623654%2C-78.26660156250001%2C36.94989178681327&amp;layer=mapnik"></iframe>-->
-    <!--<div id="GF-SHCP-map" style="width: 500px; height: 500px; background: black"></div>-->
     <div id="GF-SHCP-map" style="width:100%; height:100%; frameborder:0; scrolling:no;"></div>
   </div>
   
@@ -172,7 +170,9 @@
   <div class="col-sm-3 col-sm-offset-2">
 	<!--buscador-->
   	<div class="module_box">
-  		<input type="text" placeholder="Buscar palabra clave, dirección o CP">
+      <form id="GF-SHCP-geocoder">
+  		  <input id="GF-SHCP-geocoder-input" type="text" placeholder="Buscar palabra clave, dirección o CP">
+      </form>
   		<button>b</button>
   		<div class="clearfix"></div>
   	</div>
@@ -212,6 +212,7 @@
 <script src="js/bower_components/d3/d3.min.js"></script>
 <script src="js/bower_components/leaflet/dist/leaflet.js"></script>
 <script src="js/bower_components/underscore/underscore.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="js/main.js"></script>
   
 </body>

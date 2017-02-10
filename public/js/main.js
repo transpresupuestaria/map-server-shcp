@@ -34,7 +34,7 @@ var GFSHCPMap =  function(){
   //
   //
   point_popup = _.template("<%=name%> <div class='amount_label'> <div class='row'><div class='col-sm-6'><h5>Monto total de inversión</h5>  $<%=monto_total%> <h5>Monto ejercido</h5> $<%=ejercido%></div><div class='col-sm-6'><h5>Avance</h5> <%=avance%>% <div class='bar'><span class='bar inside total' style='width:<%=avance%>%'></span></div></div></div></div> <a href='/ficha#<%=cveppi%>' class='btn more info'>Más información</a>");
-  
+
   /*
    * [ D A T A   P A N E L S   C O N S T R U C T O R S ]
    * --------------------------------------------------------------------------------
@@ -110,7 +110,10 @@ var GFSHCPMap =  function(){
       this._points  = null;
       this.points   = null;
       this.style    = Object.create(STYLE);
-      this.updateMap = this.updateMap.bind(this);
+      this.updateMap    = this.updateMap.bind(this);
+      this.callGeocoder = this.callGeocoder.bind(this);
+      this.geocodingSucces = this.geocodingSucces.bind(this);
+      this.geocoder     = new google.maps.Geocoder();
 
       // SET THE UI FILTERS
       this.yearSelector = document.getElementById("GF-SHCP-year-selector");
@@ -130,6 +133,10 @@ var GFSHCPMap =  function(){
 
       this.branchSelector = document.getElementById("GF-SHCP-advance-selector");
       this.branchSelector.addEventListener("change", this.updateMap);
+
+      this.geocoderForm  = document.querySelector("#GF-SHCP-geocoder"),
+      this.geocoderInput = document.querySelector("#GF-SHCP-geocoder-input"),
+      this.geocoderForm.addEventListener("submit", this.callGeocoder);
 
       this.drawMap();
       this.getData();
@@ -301,10 +308,34 @@ var GFSHCPMap =  function(){
         }
       });
     },
+
+    callGeocoder : function(e){
+      e.preventDefault();
+
+      var location = this.geocoderInput.value;
+      this.geocoder.geocode({address : location}, this.geocodingSucces);
+    },
+
+    geocodingSucces : function(results, status){
+      if(status == google.maps.GeocoderStatus.OK){
+        var lat = results[0].geometry.location.lat(),
+            lng = results[0].geometry.location.lng();
+        console.log(lat, lng, this);
+        this.map.setView(L.latLng(lat, lng), 12);
+      }
+      else{
+        console.log("fail fail fail");
+      }
+    }
   }
 
   return app;
 };
 
 var _App = new GFSHCPMap();
-_App.initialize();
+
+
+window.onload = function(e){
+  _App.initialize();
+};
+
