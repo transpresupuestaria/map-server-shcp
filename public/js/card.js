@@ -78,6 +78,11 @@ d3.json(DatosGobMxURL)
         var fun = [],
             els = document.querySelectorAll(".GF-card");
 		
+    var head = new Vue({
+              el  : "head",
+              data : data,
+            });
+    
 		for(let i = 0; i < els.length; i++){
           fun.push(new Vue({
           		el  : els[i],
