@@ -10,3 +10,6 @@ Homestead.yaml
 public/js/bower_components
 public/css/src_sass
 public/css/fonts
+
+data/__ef2016.csv
+data/_ef2016.csv
