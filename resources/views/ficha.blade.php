@@ -433,7 +433,7 @@
         <p class="update right">Información actualizada al primer trimestre de 2016</p>
       </div>
       <div class="col-sm-12">
-        <a id="red" class="btn report large trigger" data-dialog="somedialog">Reporta esta Obra</a>
+        <a id="red" class="btn report large trigger" @click="showModal = true" data-dialog="somedialog">Reporta esta Obra</a>
       </div>
     </div>
     <!-- modal -->
