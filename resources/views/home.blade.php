@@ -215,8 +215,8 @@
 <script src="js/bower_components/d3/d3.min.js"></script>
 <script src="js/bower_components/leaflet/dist/leaflet.js"></script>
 <script src="js/bower_components/underscore/underscore.js"></script>
-<!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
-<script src="http://maps.google.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZXX_dqYAZ9oLxA28sN5ztg3qNBArk80I"></script>
+<!--<script src="http://maps.google.com/maps/api/js?v=3.exp&sensor=false"></script>-->
 <script src="js/main.js"></script>
   
 </body>
