@@ -110,20 +110,24 @@ var GFSHCPMap =  function(){
       this._points  = null;
       this.points   = null;
       this.style    = Object.create(STYLE);
-      this.updateMap    = this.updateMap.bind(this);
-      this.callGeocoder = this.callGeocoder.bind(this);
+      this.updateMap       = this.updateMap.bind(this);
+      this.callGeocoder    = this.callGeocoder.bind(this);
       this.geocodingSucces = this.geocodingSucces.bind(this);
-      this.geocoder     = new google.maps.Geocoder();
+      this.geocoder        = new google.maps.Geocoder();
 
       // SET THE UI FILTERS
+      /*
       this.yearSelector = document.getElementById("GF-SHCP-year-selector");
       this.yearSelector.addEventListener("change", this.updateMap);
+      */
 
       this.stateSelector = document.getElementById("GF-SHCP-state-selector");
       this.stateSelector.addEventListener("change", this.updateMap);
 
+      /*
       this.classSelector = document.getElementById("GF-SHCP-class-selector");
       this.classSelector.addEventListener("change", this.updateMap);
+      */
 
       this.branchSelector = document.getElementById("GF-SHCP-branch-selector");
       this.branchSelector.addEventListener("change", this.updateMap);
@@ -160,25 +164,23 @@ var GFSHCPMap =  function(){
     filterData : function(){
       var that    = this,
           data    = this.data.slice(0),
-          year    = document.getElementById("GF-SHCP-year-selector").value,
+          //year    = document.getElementById("GF-SHCP-year-selector").value,
           branch  = document.getElementById("GF-SHCP-branch-selector").value,
           state   = document.getElementById("GF-SHCP-state-selector").value,
           unit    = document.getElementById("GF-SHCP-exec-selector").value,
           advance = document.getElementById("GF-SHCP-advance-selector").value,
-          filter  = {},
-          classification = document.getElementById("GF-SHCP-class-selector").value;
+          //classification = document.getElementById("GF-SHCP-class-selector").value,
+          filter  = {};
 
-      if(year !== "all") filter.ciclo = year;
+      //if(year !== "all") filter.ciclo = year;
       if(branch !== "all") filter.ramo = +branch;
       if(state !== "all") filter.state = +state;
-      if(classification !== "all") filter.classification = classification;
+      //if(classification !== "all") filter.classification = classification;
       if(unit !== "all") filter.unidad = unit;
       if(advance !== "all") filter.avance = advance;
 
 
       data = _.where(data, filter);
-
-      console.log(data.length);
       return data;
     },
 

@@ -29,6 +29,7 @@
     </div>
     <div class="col-sm-10 filter_container">
       <!--year-->
+      <!--
       <h3>Año</h3>
       <select id="GF-SHCP-year-selector">
         <option value="all">Todos</option>
@@ -39,6 +40,7 @@
         <option value="2013">2013</option>
         <option value="2012">2012</option>
       </select>
+      -->
       <!--state-->
       <h3>Entidad Federativa</h3>
       <select id="GF-SHCP-state-selector">
@@ -51,7 +53,7 @@
         <option value="6">Colima</option>
         <option value="7">Chiapas</option>
         <option value="8">Chihuahua</option>
-        <option value="9">Distrito Federal</option>
+        <option value="9">Ciudad de México</option>
         <option value="10">Durango</option>
         <option value="11">Guanajuato</option>
         <option value="12">Guerrero</option>
@@ -131,6 +133,7 @@
         <option value="6">80 a 100%</option>
       </select>
       
+      <!--
       <h3>Clasificación</h3>
       <select id="GF-SHCP-class-selector">
         <option value="all">Todas</option>
@@ -146,8 +149,8 @@
         <option value="Salud">Salud</option>
         <option value="Seguridad">Seguridad</option>
         <option value="Turismo">Turismo</option>
-        <!--<option value="">Sin clasificación</option>-->
       </select>
+      -->
       
     </div>
     <div class="clearfix"></div>
