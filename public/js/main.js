@@ -1,46 +1,52 @@
-var GFSHCPMap =  function(){
-  var Format = d3.format(",");
-  // the map settings
-  var MAP = {
-    div         : "GF-SHCP-map",
-    lat         : 22.442167,
-    lng         : -100.110350,
-    zoom        : 5,
-    maxZoom     : 18,
-    baseURL     : 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    attribution : 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-    data        : "api/data"
-  },
+(function(win){
 
-  STYLE = {
-    // el estilo para las comercializadoras
-    points : {
-      radius      : 2,
-      fillColor   : "#334D5C", //1cb68d
-      color       : "white",
-      weight      : 1,
-      opacity     : 0.3,
-      fillOpacity : 0.9
+  // DEfine the function constructor
+  var GFSHCPMap =  function(){
+    // the string format for the money
+    var Format = d3.format(",");
+    
+    // the map settings
+    var MAP = {
+      div         : "GF-SHCP-map",
+      lat         : 22.442167,
+      lng         : -100.110350,
+      zoom        : 5,
+      maxZoom     : 18,
+      baseURL     : 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      attribution : 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+      data        : "api/data"
     },
 
-    // la posición del panel de opciones
-    selectorPanel : {
-      position : 'topright'
-    }
-  },
+    // the map style
+    STYLE = {
+      // the points
+      points : {
+        radius      : 2,
+        fillColor   : "#334D5C", //1cb68d
+        color       : "white",
+        weight      : 1,
+        opacity     : 0.3,
+        fillOpacity : 0.9
+      },
 
-  //
-  //[ la maroma que aparece al pasar el mouse sobre un punto]
-  //
-  //
-  point_popup = _.template("<%=name%> <div class='amount_label'> <div class='row'><div class='col-sm-6'><h5>Monto total de inversión</h5>  $<%=monto_total%> <h5>Monto ejercido</h5> $<%=ejercido%></div><div class='col-sm-6'><h5>Avance</h5> <%=avance%>% <div class='bar'><span class='bar inside total' style='width:<%=avance%>%'></span></div></div></div></div> <a href='/ficha#<%=cveppi%>' class='btn more info'>Más información</a>");
+      // the info panel position
+      selectorPanel : {
+        position : 'topright'
+      }
+    },
 
-  /*
-   * [ D A T A   P A N E L S   C O N S T R U C T O R S ]
-   * --------------------------------------------------------------------------------
-   *
-   *
-   */
+    //
+    // the info panel template
+    //
+    //
+    point_popup = _.template("<%=name%> <div class='amount_label'> <div class='row'><div class='col-sm-6'><h5>Monto total de inversión</h5>  $<%=monto_total%> <h5>Monto ejercido</h5> $<%=ejercido%></div><div class='col-sm-6'><h5>Avance</h5> <%=avance%>% <div class='bar'><span class='bar inside total' style='width:<%=avance%>%'></span></div></div></div></div> <a href='/ficha#<%=cveppi%>' class='btn more info'>Más información</a>");
+
+    /*
+     * [ D A T A   P A N E L S   C O N S T R U C T O R S ]
+     * --------------------------------------------------------------------------------
+     *
+     *
+     */
 
   //
   // [ define el constructor para el diplay de los datos por municipio ]
@@ -267,12 +273,12 @@ var GFSHCPMap =  function(){
             properties : {
               //"Municipio" : "Aguascalientes", 
               //"Estado"    : "Aguascalientes", 
-              "Long"      	: d.lng, 
-              "Lat"       	: d.lat,
-              "cvePPI" 		: d.key,
-              "name"   		: d.name,
-              "avance"		: d.advance,
-              "ejercido" 	: d.ejercido,
+              "Long"        : d.lng, 
+              "Lat"         : d.lat,
+              "cvePPI"    : d.key,
+              "name"      : d.name,
+              "avance"    : d.advance,
+              "ejercido"  : d.ejercido,
               "monto_total" : d.monto_total_inversion
             },
             geometry : {
@@ -322,11 +328,9 @@ var GFSHCPMap =  function(){
       if(status == google.maps.GeocoderStatus.OK){
         var lat = results[0].geometry.location.lat(),
             lng = results[0].geometry.location.lng();
-        console.log(lat, lng, this);
         this.map.setView(L.latLng(lat, lng), 12);
       }
       else{
-        console.log("fail fail fail");
       }
     }
   }
@@ -334,10 +338,12 @@ var GFSHCPMap =  function(){
   return app;
 };
 
-var _App = new GFSHCPMap();
+win.GFSHCPMap = new GFSHCPMap();
 
-
-window.onload = function(e){
-  _App.initialize();
+win.onload = function(e){
+  win.GFSHCPMap.initialize();
 };
+
+})(window);
+
 
