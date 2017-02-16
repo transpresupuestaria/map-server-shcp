@@ -309,6 +309,9 @@ select {
     border-color: #F4F2F2 !important;
     color: white; }
 
+.module_box form {
+  margin: 0; }
+
 table {
   border-spacing: 0;
   border-collapse: collapse; }
