@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('home')->with(["execs" => $execs]);
 });
 
+Route::get('/mapa2', function () {
+  $execs = Opa::select("desc_unidad")->groupBy("desc_unidad")->orderBy("desc_unidad", "asc")->get();
+    return view('home2')->with(["execs" => $execs]);
+});
+
 Route::get('/ficha', function () {
     return view('ficha');
 });
