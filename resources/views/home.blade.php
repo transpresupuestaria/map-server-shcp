@@ -175,8 +175,8 @@
   	<div class="module_box">
       <form id="GF-SHCP-geocoder">
   		  <input id="GF-SHCP-geocoder-input" type="text" placeholder="Buscar palabra clave, dirección o CP">
-      </form>
   		<button>b</button>
+      </form>
   		<div class="clearfix"></div>
   	</div>
   	<!--gasto total-->
@@ -184,7 +184,7 @@
 	  	<h3>Gasto total de inversión 2016</h3>
   		<p class="amount">$738,868.79 <span>MDP MXN</span></p>
   		<div class="separator"></div> 
-  		<!--gráfica gasto inversión-->
+  		<!--gráfica gasto inversión
   		<div class="bar_graph">
 	  		<div class="col-sm-4">
 	  			<div class="container_bar">
@@ -203,7 +203,7 @@
 		  			<div class="bbar" style="height: 5%"></div>
 	  			</div>
 	  			<p>Financiera</p>
-	  		</div>
+	  		</div>-->
 	  		<div class="clearfix"></div>
   		</div>
   	</div>
