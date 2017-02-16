@@ -1450,10 +1450,15 @@ h1 {
     height: 40px;
     width: 88.4%; }
   .module_box button {
-    background: #462b5f;
+    background: #462b5f url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxMDRweCIgaGVpZ2h0PSI3NnB4IiB2aWV3Qm94PSIwIDAgMTA0IDc2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDQgNzYiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxnPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik03NS4zMjgsNTYuNzc0TDY0LjQ4NCw0NS40OThjMi43ODktMy4zMTcsNC4zMTYtNy40ODksNC4zMTYtMTEuODMyYzAtMTAuMTQ1LTguMjU0LTE4LjM5OS0xOC40MDMtMTguMzk5QzQwLjI1NCwxNS4yNjcsMzIsMjMuNTIxLDMyLDMzLjY2NmMwLDEwLjE0Nyw4LjI1NCwxOC40MDEsMTguMzk4LDE4LjQwMWMzLjgwOSwwLDcuNDQyLTEuMTQ3LDEwLjU0My0zLjMzMmwxMC45MywxMS4zNjdjMC40NTcsMC40NzgsMS4wNywwLjczOCwxLjczLDAuNzM4YzAuNjIxLDAsMS4yMTEtMC4yMzgsMS42Ni0wLjY3MUM3Ni4yMTksNTkuMjUyLDc2LjI0Niw1Ny43MzEsNzUuMzI4LDU2Ljc3NEw3NS4zMjgsNTYuNzc0eiBNNTAuMzk4LDIwLjA2OGM3LjUsMCwxMy42MDIsNi4xMDIsMTMuNjAyLDEzLjU5OGMwLDcuNS02LjEwMiwxMy42MDEtMTMuNjAyLDEzLjYwMWMtNy40OTYsMC0xMy41OTctNi4xMDEtMTMuNTk3LTEzLjYwMUMzNi44MDEsMjYuMTcsNDIuOTAyLDIwLjA2OCw1MC4zOTgsMjAuMDY4TDUwLjM5OCwyMC4wNjh6IE01MC4zOTgsMjAuMDY4Ii8+PC9nPjwvZz48L3N2Zz4=") no-repeat;
+    background-position: 50%;
+    background-size: 45px;
     border: 0;
     width: 10%;
-    height: 40px; }
+    height: 40px;
+    cursor: pointer; }
+    .module_box button:hover {
+      background-color: #39234d; }
   .module_box h3,
   .module_box p {
     font-family: "soberana_sans", Helvetica, Arial, sans-serif;
