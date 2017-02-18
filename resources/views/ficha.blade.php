@@ -19,7 +19,7 @@
   </div>
   <div class="col-sm-9 zero">
     <header class="top title_side">
-      <a href="index.html" class="link_back">&lt; Ir a Mapa de Obra Pública</a>
+      <a href="http://www.transparenciapresupuestaria.gob.mx/en/PTP/Obra_Publica_Abierta" class="link_back">&lt; Ir a Mapa de Obra Pública</a>
     </header>
   </div>
   <div class="clearfix"></div>
