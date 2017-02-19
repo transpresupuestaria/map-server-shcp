@@ -1892,6 +1892,32 @@ a.email {
 
 /* =Media queries
 -------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+  section:first-child {
+    padding: 40px 0 0; }
+  .record h1 {
+    font-size: 23px;
+    line-height: 1.2; }
+  .record h3 {
+    margin-bottom: 5px;
+    text-align: center; }
+  .record svg {
+    display: block;
+    margin: 0 auto; }
+  .record .amount {
+    font-size: 18px; }
+    .record .amount.big {
+      font-size: 18px; }
+  .record .bar {
+    margin-bottom: 20px; }
+  .record table.table {
+    display: block;
+    overflow: scroll; }
+  .side {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 10px; } }
+
 @media screen and (min-width: 481px) and (max-width: 767px) {
   .record h1 {
     font-size: 30px;
