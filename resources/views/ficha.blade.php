@@ -28,7 +28,7 @@
   <section class="GF-card">
     <!--titles -->
     <div class="row">
-      <div class="col-sm-10">
+      <div class="col-md-10 col-sm-9">
         <div class="row">
           <div class="col-sm-6">
             <h3>Programa o Proyecto de Inversión
@@ -48,25 +48,26 @@
         </div>
         <h1 id ="nameReport">@{{nombre}}</h1>
         <div class="row">
-          <div class="col-sm-10">
+          <div class="col-md-10 col-sm-9">
             <p>@{{desc_ppi}}</p>
           </div>
-          <div class="col-sm-2">
+          <div class="col-md-2 col-sm-3">
             <h3 class="right">Fase: <span class="active">Vigente</span></h3>
           </div>
         </div>
       </div>
-      <div id="arc_side" class="col-sm-2 side">
+      <!--avance fisico-->
+      <div id="arc_side" class="col-md-2 col-sm-3 side">
         <h3>Avance Físico</h3>
       </div>
     </div>
 
     <!--mapa y montos-->
     <div class="row">
-      <div class="col-sm-9">
+      <div class="col-md-9 col-sm-8">
         <div class="row">
           <!-- Ramo-->
-          <div class="col-sm-4">
+          <div class="col-md-4 col-sm-7">
             <h3 class="title line">
               <!--tooltip-->
               <span class="tooltip">
@@ -81,12 +82,12 @@
             <p class="fichas_ramo"><b v-bind:class="['ramo' + id_ramo,]"></b>@{{id_ramo}} - @{{desc_ramo}}</p>
           </div>
           <!-- Ejecutor-->
-          <div class="col-sm-4">
+          <div class="col-md-4 col-sm-5">
             <h3 class="title line">Ejecutor del Proyecto</h3>
             <p id = "ejecutorReport">@{{id_ur}} - @{{desc_ur}}</p>
           </div>
           <!-- Tipo de proyecto-->
-          <div class="col-sm-4">
+          <div class="col-md-4 col-sm-12">
             <h3 class="title line">
               <!--tooltip-->
               <span class="tooltip">
@@ -106,17 +107,17 @@
 
         <div class="info location">
           <div class="row">
-            <div class="col-sm-4">
+          	<div class="col-md-4 col-sm-12">
               <h3 class="title">Programa Presupuestario</h3>
               <p><a href="#" title="Conoce su desempeño" id ="programaReport">11S243 – Programa Nacional de Petróleo</a></p>
             </div>
             <!---entidad-->
-            <div class="col-sm-4">
+          	<div class="col-md-4 col-sm-6">
               <h3 class="title">Entidad Federativa</h3>
               <p id="entidadReport">	@{{entidad_federativa}}</p>
             </div>
             <!---coordenadas---->
-            <div class="col-sm-4">
+          	<div class="col-md-4 col-sm-6">
               <h3 class="title">Coordenadas Geográficas</h3>
               <p>Latitud: @{{latitud_inicial}} <br> Longitud: @{{longitud_inicial}}</p>
             </div>
@@ -125,7 +126,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-3 side">
+      <div class="col-md-3 col-sm-4 side">
         <!-- monto total-->
         <h3>
           <!--tooltip-->

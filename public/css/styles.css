@@ -1892,5 +1892,17 @@ a.email {
 
 /* =Media queries
 -------------------------------------------------------------- */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .record h1 {
+    font-size: 30px;
+    line-height: 1.2; } }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .record h1 {
+    font-size: 30px;
+    line-height: 1.2; }
+  .record .amount.big {
+    font-size: 23px; } }
+
 /* =Print
 ----------------------------------------------- */
