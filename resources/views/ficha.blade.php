@@ -645,6 +645,8 @@
           <div class="col-sm-4 right">
             <h3>Última actualización:</h3>
              <p class="data">Jueves 1 de diciembre de 2016 a las 14:25 hrs.</p>
+             <p class="right"><a href="http://www.hacienda.gob.mx" class="shcp">Secretaría de Hacienda y Crédito Público</a><span class="clearfix"></span></p>
+
           </div>
         </div>
       </div>
@@ -656,10 +658,10 @@
             <p class="data"><a href="http://www.transparenciapresupuestaria.gob.mx/" class="tp">Transparencia Presupuestaria</a> <a href="#" class="linksfoot">Términos y Condiciones del uso de la información.</a></p>
           </div>
           <div class="col-sm-4">
-            <p class="data center"><a href="http://www.gobiernofacil.com" class="gobiernofacil" title="Ir a Gobierno Fácil">Gobierno Fácil</a></p>
+            <p class="data center">Forjado artesanalmente por <a href="http://www.gobiernofacil.com" class="gobiernofacil" title="Ir a Gobierno Fácil">Gobierno Fácil</a></p>
           </div>
           <div class="col-sm-4">
-            <p class="data right"><a href="http://www.hacienda.gob.mx" class="shcp">Secretaría de Hacienda y Crédito Público</a><span class="clearfix"></span></p>
+            <p class="data right"><span class="usaid">USAID</span></p>
 
           </div>
         </div>
