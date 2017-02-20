@@ -18,6 +18,7 @@
     
     
     <div class="col-sm-12 filter_container">
+    <div class="row">
       <!--year-->
       <!--
       <h3>Año</h3>
@@ -32,6 +33,7 @@
       </select>
       -->
       <!--state-->
+      <div class="col-sm-12 col-xs-6">
       <h3>Entidad Federativa</h3>
       <select id="GF-SHCP-state-selector">
         <option value="all">Todas</option>
@@ -68,9 +70,11 @@
         <option value="31">Yucatán</option>
         <option value="32">Zacatecas</option>
       </select>
+      </div>
+      
       <!--branch-->
+      <div class="col-sm-12 col-xs-6">
       <h3>Ramo</h3>
-
       <select id="GF-SHCP-branch-selector">
         <option value="all">todos</option>
         <option value="2">Oficina de la Presidencia de la República</option>
@@ -102,7 +106,9 @@
         <option value="52">Petróleos Mexicanos</option>
         <option value="53">Comisión Federal de Electricidad</option>
       </select>
+      </div>
 
+      <div class="col-sm-12 col-xs-6">
       <h3>Ejecutor</h3>
       <select id="GF-SHCP-exec-selector">
         <option value="all">todos</option>
@@ -110,7 +116,9 @@
         <option>{{$exec->desc_unidad}}</option>
         @endforeach
       </select>
+      </div>
 
+      <div class="col-sm-12 col-xs-6">
       <h3>Avance físico</h3>
       <select id="GF-SHCP-advance-selector">
         <!-- avance_fisico -->
@@ -122,7 +130,8 @@
         <option value="5">60 a 80%</option>
         <option value="6">80 a 100%</option>
       </select>
-      
+      </div>
+      <div class="clearfix"></div>
       <!--
       <h3>Clasificación</h3>
       <select id="GF-SHCP-class-selector">
@@ -143,7 +152,7 @@
       -->
       
     </div>
-    <div class="clearfix"></div>
+    </div>
   </div>
   
   
@@ -153,7 +162,7 @@
 	  
   </div>
   
-  <div class="col-sm-3 col-sm-offset-2">
+  <div class="col-sm-3 col-sm-offset-2 col-xs-11 col-xs-offset-1">
 	<!--buscador-->
   	<div class="module_box">
       <form id="GF-SHCP-geocoder">
@@ -163,7 +172,7 @@
   		<div class="clearfix"></div>
   	</div>
   	<!--gasto total-->
-  	<div class="module_box">
+  	<div class="module_box mobile">
 	  	<h3>Gasto total de inversión 2016</h3>
   		<p class="amount">$738,868.79 <span>MDP MXN</span></p>
   		<div class="separator"></div> 

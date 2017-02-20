@@ -1548,10 +1548,6 @@ h1 {
     border-top: 1px solid rgba(53, 53, 51, 0.1);
     margin-top: 18px;
     padding-top: 15px; }
-    .sidebar h3:first-child {
-      margin: 0;
-      border: 0;
-      padding-top: 0; }
 
 .main_nav {
   margin: 0; }
@@ -1912,6 +1908,8 @@ a.email {
 /* =Media queries
 -------------------------------------------------------------- */
 @media screen and (max-width: 480px) {
+  .mobile {
+    display: none; }
   section:first-child {
     padding: 40px 0 0; }
   .record h1 {
@@ -1943,19 +1941,55 @@ a.email {
     margin: 0 auto; }
   .usaid {
     float: none;
-    text-align: center; } }
+    text-align: center; }
+  .sidebar {
+    bottom: 0;
+    height: 140px;
+    top: inherit; }
+    .sidebar h3 {
+      font-size: 11px;
+      margin-top: 0;
+      padding-top: 5px; }
+    .sidebar select {
+      line-height: 25px;
+      height: 25px;
+      margin: 5px 0; }
+  .module_box input {
+    width: 87.4%; } }
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
+  .mobile {
+    display: none; }
   .record h1 {
     font-size: 30px;
-    line-height: 1.2; } }
+    line-height: 1.2; }
+  .sidebar {
+    bottom: 0;
+    height: 140px;
+    top: inherit; }
+    .sidebar h3 {
+      font-size: 11px;
+      margin-top: 0;
+      padding-top: 5px; }
+    .sidebar select {
+      line-height: 25px;
+      height: 25px;
+      margin: 5px 0; }
+  .module_box input {
+    width: 87.4%; } }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .record h1 {
     font-size: 30px;
     line-height: 1.2; }
   .record .amount.big {
-    font-size: 23px; } }
+    font-size: 23px; }
+  .module_box input {
+    width: 86.4%; } }
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .module_box input {
+    width: 87.4%; } }
 
 /* =Print
 ----------------------------------------------- */
