@@ -6,6 +6,16 @@ var Format = d3.format(",");
 
 d3.json(DatosGobMxURL)
   .get(function(e, d){
+
+    // die if must to
+    if(e || !d.results.length){
+      document.querySelector("#chupar-faros").style.display = "block";
+      [].slice.call(document.querySelectorAll(".GF-card")).forEach(function(g){
+        g.style.display = "none";
+      });
+      return;
+    }
+
     var res  = d.results[0],
         data = {
 
