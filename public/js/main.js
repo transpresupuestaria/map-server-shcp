@@ -328,7 +328,7 @@
       if(status == google.maps.GeocoderStatus.OK){
         var lat = results[0].geometry.location.lat(),
             lng = results[0].geometry.location.lng();
-        this.map.setView(L.latLng(lat, lng), 12);
+        this.map.setView(L.latLng(lat, lng), 14);
       }
       else{
       }
