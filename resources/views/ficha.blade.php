@@ -29,7 +29,7 @@
 	  <section>
   	<div class="row">
 	  	<div class="col-sm-10 col-sm-offset-1">
-	  		<h1>Lo sentimos algo falló en nuestro sitio</h1>
+	  		<h1>Lo sentimos, algo falló en nuestro sitio</h1>
 	  		<h2>¿Qué pudo fallar?</h2>
 	  		<ol>
 		  		<li>Algo técnico falló</li>
