@@ -22,6 +22,7 @@
       // the points
       points : {
         radius      : 2,
+        radius2     : 5,
         fillColor   : "#334D5C", //1cb68d
         color       : "white",
         weight      : 1,
@@ -195,6 +196,7 @@
     //
     //
     drawMap : function(){
+      var that = this;
       this.map = L.map(this.settings.div).setView([this.settings.lat, this.settings.lng], this.settings.zoom);
 
       L.tileLayer(this.settings.baseURL, {
@@ -204,6 +206,17 @@
       }).addTo(this.map);
 
       this.map.attributionControl.addAttribution('SHCP');
+
+      this.map.on("zoomend", function(e){
+        var currentZoom = that.map.getZoom();
+
+        if(currentZoom >= 9){
+          that.points.setStyle(function(d){return {radius : STYLE.points.radius2}});
+        }
+        else{
+          that.points.setStyle(function(d){return {radius : STYLE.points.radius}});
+        }
+      });
 
       return this.map;
     },
