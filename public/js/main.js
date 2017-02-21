@@ -12,8 +12,8 @@
       lng         : -100.110350,
       zoom        : 5,
       maxZoom     : 18,
-      baseURL     : 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      attribution : 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+      baseURL     : 'http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', //'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      attribution : '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>', //'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
       data        : "api/data"
     },
 
@@ -23,8 +23,8 @@
       points : {
         radius      : 2,
         radius2     : 5,
-        fillColor   : "#334D5C", //1cb68d
-        color       : "white",
+        fillColor   : "rgb(244, 157, 81)", //#334D5C", //1cb68d
+        color       : "rgb(214, 103, 6)",
         weight      : 1,
         opacity     : 0.3,
         fillOpacity : 0.9
