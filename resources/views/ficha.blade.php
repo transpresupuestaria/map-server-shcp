@@ -25,7 +25,24 @@
   <div class="clearfix"></div>
 <div class="container">
   <!--content-->
-  <p id="chupar-faros" style="display: none;">morimos</p>
+  <div id="chupar-faros" style="display: none;">
+	  <section>
+  	<div class="row">
+	  	<div class="col-sm-10 col-sm-offset-1">
+	  		<h1>Lo sentimos algo falló en nuestro sitio</h1>
+	  		<h2>¿Qué pudo fallar?</h2>
+	  		<ol>
+		  		<li>Algo técnico falló</li>
+		  		<li>El enlace pudo ser viejo y no se encuentra en el sitio</li>
+		  		<li>Accidentalmente escribiste mal la dirección URL </li>
+	  		</ol>
+	  		<h2>¿Qué puedes hacer?</h2>
+	  		<p>Puedes consultar esta página más tarde, o intentar escribir la URL otra vez.</p> 
+	  		<p>O puedes regresar al mapa de <a href="http://www.transparenciapresupuestaria.gob.mx/en/PTP/Obra_Publica_Abierta" class="link_back">Obra Pública</a>.</p>
+	  	</div>
+  	</div>
+	  </section>
+  </div>
   <section class="GF-card">
     <!--titles -->
     <div class="row">
