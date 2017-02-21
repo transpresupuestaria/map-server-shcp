@@ -125,12 +125,18 @@
 
         <div class="info location">
           <div class="row">
+	        <!--programa-->
           	<div class="col-md-4 col-sm-12">
               <h3 class="title">Programa Presupuestario</h3>
               <p><a href="#" title="Conoce su desempeño" id ="programaReport">11S243 – Programa Nacional de Petróleo</a></p>
             </div>
+             <!--localizacion-->
+            <div class="col-md-8 col-sm-12">
+              <h3 class="title">Localización</h3>
+              <p>@{{localizacion}}</p>
+            </div>
             <!---entidad-->
-          	<div class="col-md-4 col-sm-6">
+          	<div class="col-md-4 col-md-offset-4 col-sm-6">
               <h3 class="title">Entidad Federativa</h3>
               <p id="entidadReport">	@{{entidad_federativa}}</p>
             </div>
