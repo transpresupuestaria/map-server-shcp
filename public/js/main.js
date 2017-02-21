@@ -160,7 +160,8 @@
     getData : function(){
       var that = this;
 
-      d3.json(this.settings.data, function(error, d){
+      d3.csv("csv/opa.csv", function(error, d){
+      //d3.json(this.settings.data, function(error, d){
         that.data    = d.slice(0);
         that._mapAdvance();
         that._points = that.makeGeojson(d);
