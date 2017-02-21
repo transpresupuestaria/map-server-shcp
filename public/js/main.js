@@ -230,6 +230,7 @@
       var that = this;
       this.points = L.geoJson(d, {
         pointToLayer : function(feature, latlng){
+          //console.log(feature.properties.monto_total);
           var p = L.circleMarker(latlng, that.style.points),
               content = {
                 //nombre : feature.properties["Nombre"],
