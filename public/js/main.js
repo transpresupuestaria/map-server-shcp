@@ -181,8 +181,8 @@
           filter  = {};
 
       //if(year !== "all") filter.ciclo = year;
-      if(branch !== "all") filter.ramo = +branch;
-      if(state !== "all") filter.state = +state;
+      if(branch !== "all") filter.ramo = branch;
+      if(state !== "all") filter.state = state;
       //if(classification !== "all") filter.classification = classification;
       if(unit !== "all") filter.unidad = unit;
       if(advance !== "all") filter.avance = advance;
