@@ -12,8 +12,8 @@
       lng         : -100.110350,
       zoom        : 5,
       maxZoom     : 18,
-      baseURL     : 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      attribution : 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+      baseURL     : 'http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', //'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      attribution : '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>', //'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
       data        : "api/data"
     },
 
@@ -22,8 +22,9 @@
       // the points
       points : {
         radius      : 2,
-        fillColor   : "#334D5C", //1cb68d
-        color       : "white",
+        radius2     : 5,
+        fillColor   : "rgb(244, 157, 81)", //#334D5C", //1cb68d
+        color       : "rgb(214, 103, 6)",
         weight      : 1,
         opacity     : 0.3,
         fillOpacity : 0.9
@@ -39,7 +40,7 @@
     // the info panel template
     //
     //
-    point_popup = _.template("<%=name%> <div class='amount_label'> <div class='row'><div class='col-sm-6'><h5>Monto total de inversión</h5>  $<%=monto_total%> <h5>Monto ejercido</h5> $<%=ejercido%></div><div class='col-sm-6'><h5>Avance</h5> <%=avance%>% <div class='bar'><span class='bar inside total' style='width:<%=avance%>%'></span></div></div></div></div> <a href='/ficha#<%=cveppi%>' class='btn more info'>Más información</a>");
+    point_popup = _.template("<%=name%> <div class='amount_label'> <div class='row'><div class='col-sm-6'><h5>Monto total de inversión</h5>  $<%=monto_total%> <h5>Monto ejercido</h5> $<%=ejercido%></div><div class='col-sm-6'><h5>Avance</h5> <%=avance%>% <div class='bar'><span class='bar inside total' style='width:<%=avance%>%'></span></div></div></div></div> <a href='" + (GF_SCHP_BASE_URL || "/ficha") + "#<%=cveppi%>' target='_blank' class='btn more info'>Más información</a>");
 
     /*
      * [ D A T A   P A N E L S   C O N S T R U C T O R S ]
@@ -159,8 +160,12 @@
     getData : function(){
       var that = this;
 
-      d3.json(this.settings.data, function(error, d){
+      d3.csv("csv/opa.csv", function(error, d){
+      //d3.json(this.settings.data, function(error, d){
         that.data    = d.slice(0);
+        that.data.forEach(function(r){
+          r.key = r.key.replace("'", "");
+        });
         that._mapAdvance();
         that._points = that.makeGeojson(d);
         that.drawPoints(that._points);
@@ -179,8 +184,8 @@
           filter  = {};
 
       //if(year !== "all") filter.ciclo = year;
-      if(branch !== "all") filter.ramo = +branch;
-      if(state !== "all") filter.state = +state;
+      if(branch !== "all") filter.ramo = branch;
+      if(state !== "all") filter.state = state;
       //if(classification !== "all") filter.classification = classification;
       if(unit !== "all") filter.unidad = unit;
       if(advance !== "all") filter.avance = advance;
@@ -195,6 +200,7 @@
     //
     //
     drawMap : function(){
+      var that = this;
       this.map = L.map(this.settings.div).setView([this.settings.lat, this.settings.lng], this.settings.zoom);
 
       L.tileLayer(this.settings.baseURL, {
@@ -204,6 +210,17 @@
       }).addTo(this.map);
 
       this.map.attributionControl.addAttribution('SHCP');
+
+      this.map.on("zoomend", function(e){
+        var currentZoom = that.map.getZoom();
+
+        if(currentZoom >= 9){
+          that.points.setStyle(function(d){return {radius : STYLE.points.radius2}});
+        }
+        else{
+          that.points.setStyle(function(d){return {radius : STYLE.points.radius}});
+        }
+      });
 
       return this.map;
     },
@@ -216,6 +233,7 @@
       var that = this;
       this.points = L.geoJson(d, {
         pointToLayer : function(feature, latlng){
+          //console.log(feature.properties.monto_total);
           var p = L.circleMarker(latlng, that.style.points),
               content = {
                 //nombre : feature.properties["Nombre"],
@@ -230,7 +248,8 @@
 
               p.on("click", function(e){
                 //alert(feature.properties.cvePPI);
-                window.open('/ficha#' + feature.properties.cvePPI, '_blank');
+                console.log(GF_SCHP_BASE_URL);
+                window.open( (GF_SCHP_BASE_URL || "/ficha") + '#' + feature.properties.cvePPI, '_blank');
                 // window.location.href = "";
               });
 
@@ -328,7 +347,7 @@
       if(status == google.maps.GeocoderStatus.OK){
         var lat = results[0].geometry.location.lat(),
             lng = results[0].geometry.location.lng();
-        this.map.setView(L.latLng(lat, lng), 12);
+        this.map.setView(L.latLng(lat, lng), 14);
       }
       else{
       }
