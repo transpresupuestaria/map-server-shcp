@@ -163,6 +163,9 @@
       d3.csv("csv/opa.csv", function(error, d){
       //d3.json(this.settings.data, function(error, d){
         that.data    = d.slice(0);
+        that.data.forEach(function(r){
+          r.key = r.key.replace("'", "");
+        });
         that._mapAdvance();
         that._points = that.makeGeojson(d);
         that.drawPoints(that._points);

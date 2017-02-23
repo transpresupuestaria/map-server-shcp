@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>@{{nombre}}</title>
+  <title>{{nombre}}</title>
   <meta name="description" v-bind:content="desc_ppi">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/styles.css"/>
-  <link rel="stylesheet" type="text/css" href="js/bower_components/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" type="text/css" href="css/leaflet.css">
   <script src="js/modernizr.custom.js"></script>
 </head>
 <body class="record">
@@ -26,22 +26,22 @@
 <div class="container">
   <!--content-->
   <div id="chupar-faros" style="display: none;">
-	  <section>
-  	<div class="row">
-	  	<div class="col-sm-10 col-sm-offset-1">
-	  		<h1>Lo sentimos, algo falló en nuestro sitio</h1>
-	  		<h2>¿Qué pudo fallar?</h2>
-	  		<ol>
-		  		<li>Algo técnico falló</li>
-		  		<li>El enlace pudo ser viejo y no se encuentra en el sitio</li>
-		  		<li>Accidentalmente escribiste mal la dirección URL </li>
-	  		</ol>
-	  		<h2>¿Qué puedes hacer?</h2>
-	  		<p>Puedes consultar esta página más tarde, o intentar escribir la URL otra vez.</p> 
-	  		<p>O puedes regresar al mapa de <a href="http://www.transparenciapresupuestaria.gob.mx/en/PTP/Obra_Publica_Abierta" class="link_back">Obra Pública</a>.</p>
-	  	</div>
-  	</div>
-	  </section>
+    <section>
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h1>Lo sentimos, algo falló en nuestro sitio</h1>
+        <h2>¿Qué pudo fallar?</h2>
+        <ol>
+          <li>Algo técnico falló</li>
+          <li>El enlace pudo ser viejo y no se encuentra en el sitio</li>
+          <li>Accidentalmente escribiste mal la dirección URL </li>
+        </ol>
+        <h2>¿Qué puedes hacer?</h2>
+        <p>Puedes consultar esta página más tarde, o intentar escribir la URL otra vez.</p> 
+        <p>O puedes regresar al mapa de <a href="http://www.transparenciapresupuestaria.gob.mx/en/PTP/Obra_Publica_Abierta" class="link_back">Obra Pública</a>.</p>
+      </div>
+    </div>
+    </section>
   </div>
   <section class="GF-card">
     <!--titles -->
@@ -61,13 +61,13 @@
           </div>
           <!--- clave de cartera-->
           <div class="col-sm-6">
-            <h3 class="right">Clave de Cartera: <span id="cveReport">@{{cve_ppi}}</span></h3>
+            <h3 class="right">Clave de Cartera: <span id="cveReport">{{cve_ppi}}</span></h3>
           </div>
         </div>
-        <h1 id ="nameReport">@{{nombre}}</h1>
+        <h1 id ="nameReport">{{nombre}}</h1>
         <div class="row">
           <div class="col-md-10 col-sm-9">
-            <p>@{{desc_ppi}}</p>
+            <p>{{desc_ppi}}</p>
           </div>
           <div class="col-md-2 col-sm-3">
             <h3 class="right">Fase: <span class="active">Vigente</span></h3>
@@ -97,12 +97,12 @@
 
 
             </h3>
-            <p class="fichas_ramo"><b v-bind:class="['ramo' + id_ramo,]"></b>@{{id_ramo}} - @{{desc_ramo}}</p>
+            <p class="fichas_ramo"><b v-bind:class="['ramo' + id_ramo,]"></b>{{id_ramo}} - {{desc_ramo}}</p>
           </div>
           <!-- Ejecutor-->
           <div class="col-md-4 col-sm-5">
             <h3 class="title line">Ejecutor del Proyecto</h3>
-            <p id = "ejecutorReport">@{{id_ur}} - @{{desc_ur}}</p>
+            <p id = "ejecutorReport">{{id_ur}} - {{desc_ur}}</p>
           </div>
           <!-- Tipo de proyecto-->
           <div class="col-md-4 col-sm-12">
@@ -115,7 +115,7 @@
                 </span>
               </span>
             </h3>
-            <p>@{{ tipo_ppi }}</p>
+            <p>{{ tipo_ppi }}</p>
           </div>
         </div>
 
@@ -125,25 +125,25 @@
 
         <div class="info location">
           <div class="row">
-	        <!--programa-->
-          	<div class="col-md-4 col-sm-12">
+          <!--programa-->
+            <div class="col-md-4 col-sm-12">
               <h3 class="title">Programa Presupuestario</h3>
               <p><a href="#" title="Conoce su desempeño" id ="programaReport">11S243 – Programa Nacional de Petróleo</a></p>
             </div>
              <!--localizacion-->
             <div class="col-md-8 col-sm-12">
               <h3 class="title">Localización</h3>
-              <p>@{{localizacion}}</p>
+              <p>{{localizacion}}</p>
             </div>
             <!---entidad-->
-          	<div class="col-md-4 col-md-offset-4 col-sm-6">
+            <div class="col-md-4 col-md-offset-4 col-sm-6">
               <h3 class="title">Entidad Federativa</h3>
-              <p id="entidadReport">	@{{entidad_federativa}}</p>
+              <p id="entidadReport">  {{entidad_federativa}}</p>
             </div>
             <!---coordenadas---->
-          	<div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6">
               <h3 class="title">Coordenadas Geográficas</h3>
-              <p>Latitud: @{{latitud_inicial}} <br> Longitud: @{{longitud_inicial}}</p>
+              <p>Latitud: {{latitud_inicial}} <br> Longitud: {{longitud_inicial}}</p>
             </div>
 
 
@@ -161,26 +161,26 @@
             </span>
           </span>
         </h3>
-        <p class="amount big right">$<strong>@{{Format(monto_total_inversion)}}</strong> <span>MXN</span></p>
+        <p class="amount big right">$<strong>{{Format(monto_total_inversion)}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside total"></span>
         </div>
         <!-- pef-->
         <h3>Presupuesto aprobado en el PEF 2016</h3>
-        <p class="amount right">$<strong>@{{Format(aprobado)}}</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>{{Format(aprobado)}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside pef" v-bind:style="presupuesto_style"></span>
         </div>
         <!-- ejercido-->
         <h3>Monto ejercido 2016</h3>
-        <p class="amount right">$<strong>@{{Format(ejercido)}}</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>{{Format(ejercido)}}</strong> <span>MXN</span></p>
         <div class="bar">
         <span class="bar inside ejercido" v-bind:style="total_ejercido_style"></span>
 
         </div>
         <!-- modificado-->
         <h3>Presupuesto modificado</h3>
-        <p class="amount right">$<strong>@{{Format(modificado)}}</strong> <span>MXN</span></p>
+        <p class="amount right">$<strong>{{Format(modificado)}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside modificado" v-bind:style="modificado_style"></span>
         </div>
@@ -208,17 +208,17 @@
       <!--inicio-->
       <div class="col-sm-4">
         <h3>Fecha de inicio de inversión:</h3>
-        <p>@{{fecha_ini_cal_fiscal}}</p>
+        <p>{{fecha_ini_cal_fiscal}}</p>
       </div>
       <!--término-->
       <div class="col-sm-4">
         <h3>Fecha de término de inversión:</h3>
-        <p>@{{fecha_fin_cal_fiscal}}</p>
+        <p>{{fecha_fin_cal_fiscal}}</p>
       </div>
       <!--total-->
       <div class="col-sm-4">
         <h3>Monto total de inversión:</h3>
-        <p>$@{{Format(monto_total_inversion)}}</p>
+        <p>${{Format(monto_total_inversion)}}</p>
       </div>
       <!--gráfica-
       <div class="col-sm-9">
@@ -277,27 +277,27 @@
       </div>
       <!--recursos estatales-->
       <div class="col-sm-3">
-	      <h3>Recursos Estatales</h3>
-		  <p class="amount" v-if="recursos_estatales">$<strong>@{{Format(recursos_estatales)}}</strong></p>
-		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
+        <h3>Recursos Estatales</h3>
+      <p class="amount" v-if="recursos_estatales">$<strong>{{Format(recursos_estatales)}}</strong></p>
+      <p class="amount" v-else>$<strong>{{Format(0)}}</strong></p>
       </div> 
       <!--recursos municipales-->
       <div class="col-sm-3">
-	      <h3>Recursos Municipales</h3>
-		  <p class="amount" v-if="recursos_municipales">$<strong>@{{Format(recursos_municipales)}}</strong></p>
-		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
+        <h3>Recursos Municipales</h3>
+      <p class="amount" v-if="recursos_municipales">$<strong>{{Format(recursos_municipales)}}</strong></p>
+      <p class="amount" v-else>$<strong>{{Format(0)}}</strong></p>
       </div> 
-	  <!--privados-->
+    <!--privados-->
       <div class="col-sm-3">
-	      <h3>Recursos Privados</h3>
-		  <p class="amount" v-if="privados">$<strong>@{{Format(privados)}}</strong></p>
-		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
+        <h3>Recursos Privados</h3>
+      <p class="amount" v-if="privados">$<strong>{{Format(privados)}}</strong></p>
+      <p class="amount" v-else>$<strong>{{Format(0)}}</strong></p>
       </div> 
-	  <!--fideicomiso-->
+    <!--fideicomiso-->
       <div class="col-sm-3">
-	      <h3>Fideicomiso</h3>
-		  <p class="amount" v-if="fideicomiso">$<strong>@{{Format(fideicomiso)}}</strong></p>
-		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
+        <h3>Fideicomiso</h3>
+      <p class="amount" v-if="fideicomiso">$<strong>{{Format(fideicomiso)}}</strong></p>
+      <p class="amount" v-else>$<strong>{{Format(0)}}</strong></p>
       </div>
     </div>
   </section>
@@ -310,7 +310,7 @@
       </div>
       <!--años-->
       <div class="col-sm-3">
-        <p class="amount"><strong>@{{anios_he}}</strong> años</p>
+        <p class="amount"><strong>{{anios_he}}</strong> años</p>
         <p class="lead">Número estimado de años de operación en el horizonte de evaluación
           <!--tooltip-->
           <span class="tooltip">
@@ -323,9 +323,9 @@
       </div>
       <!--gastos-->
       <div class="col-sm-3">
-        <p class="amount">$<strong>@{{Format(total_gasto_operacion_he)}}</strong></p>
+        <p class="amount">$<strong>{{Format(total_gasto_operacion_he)}}</strong></p>
         <p class="lead">Gastos estimados totales de mantenimiento y operación del activo en el horizonte de evaluación 
-	      <!--tooltip-->
+        <!--tooltip-->
           <span class="tooltip">
             <span class="tooltip-item"><b>?</b></span>
             <span class="tooltip-content clearfix">
@@ -336,9 +336,9 @@
       </div>
       <!--otros costos-->
       <div class="col-sm-3">
-        <p class="amount">$@{{Format(total_gasto_no_consid)}}</p>
+        <p class="amount">${{Format(total_gasto_no_consid)}}</p>
         <p class="lead">Otros costos y gastos asociados al PPI que no forman parte del gasto de inversión ni de los gastos de operación y mantenimiento 
-	      <!--tooltip-->
+        <!--tooltip-->
           <span class="tooltip">
             <span class="tooltip-item"><b>?</b></span>
             <span class="tooltip-content clearfix">
@@ -349,9 +349,9 @@
       </div>
       <!--costo total-->
       <div class="col-sm-3">
-        <p class="amount">$<strong>@{{Format(costo_total_ppi)}}</strong></p>
+        <p class="amount">$<strong>{{Format(costo_total_ppi)}}</strong></p>
         <p class="lead">Costo Total del PPI  
-	        <!--tooltip-->
+          <!--tooltip-->
           <span class="tooltip">
             <span class="tooltip-item"><b>?</b></span>
             <span class="tooltip-content clearfix">
@@ -380,7 +380,7 @@
             </span>
           </span>
         </h3>
-        <p>@{{meta_fisica}}</p>
+        <p>{{meta_fisica}}</p>
       </div>
       <!--física-->
       <div class="col-sm-6">
@@ -390,7 +390,7 @@
           <span class="tooltip">
             <span class="tooltip-item">Beneficios esperados del PPI <b>?</b></span>
             <span class="tooltip-content clearfix">
-              <span class="tooltip-text">@{{meta_beneficios}}</span>
+              <span class="tooltip-text">{{meta_beneficios}}</span>
             </span>
           </span>
         </h3>
@@ -415,12 +415,12 @@
           </thead>
           <tbody>
             <tr>
-              <td>@{{nombre_admin}}              </td>
-              <td>@{{ap_paterno_admin}}            </td>
-              <td>@{{ap_materno_admin}}               </td>
-              <td>@{{cargo_admin}}             </td>
-              <td><a v-bind:href="mail_to_admin">@{{mail_admin}}</a></td>
-              <td>@{{telefono_admin}}</td>
+              <td>{{nombre_admin}}              </td>
+              <td>{{ap_paterno_admin}}            </td>
+              <td>{{ap_materno_admin}}               </td>
+              <td>{{cargo_admin}}             </td>
+              <td><a v-bind:href="mail_to_admin">{{mail_admin}}</a></td>
+              <td>{{telefono_admin}}</td>
             </tr>
           </tbody>
         </table>
@@ -462,36 +462,36 @@
       </div>
     </div>
     <!-- modal -->
-	  <modal v-if="showModal" @close="showModal = false">
-	  <!-- content-->
-	  <h2 slot="header">Reporta esta obra</h2>
+    <modal v-if="showModal" @close="showModal = false">
+    <!-- content-->
+    <h2 slot="header">Reporta esta obra</h2>
 
-	  <div class="dialog-container" slot="body">
+    <div class="dialog-container" slot="body">
 
-		<div id="reporte_step0">
-		  <p slot="header">Realiza tu reporte ciudadano para este proyecto:</p>
-     	<div class="row">
-        	<div class="col-sm-4">
-        	  <a class="btn_type" @click="step1">
-        	    <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
-        	    <span class="btn-symbol">Reportar</span>
-        	  </a>
-        	</div>
-        	<div class="col-sm-4">
-        	  <a class="btn_type" @click="step1">
-        	    <span class="btn-content">La obra ha sido abandonada</span>
-        	    <span class="btn-symbol">Reportar</span>
-        	  </a>
-        	</div>
-        	<div class="col-sm-4">
-        	  <a class="btn_type" @click="step1">
-        	    <span class="btn-content">Existe un error en la localización</span>
-        	    <span class="btn-symbol">Reportar</span>
-        	  </a>
-        	</div>
+    <div id="reporte_step0">
+      <p slot="header">Realiza tu reporte ciudadano para este proyecto:</p>
+      <div class="row">
+          <div class="col-sm-4">
+            <a class="btn_type" @click="step1">
+              <span class="btn-content">No coincide el avance físico  que aparece en el PTP con el que ves en la obra</span>
+              <span class="btn-symbol">Reportar</span>
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a class="btn_type" @click="step1">
+              <span class="btn-content">La obra ha sido abandonada</span>
+              <span class="btn-symbol">Reportar</span>
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a class="btn_type" @click="step1">
+              <span class="btn-content">Existe un error en la localización</span>
+              <span class="btn-symbol">Reportar</span>
+            </a>
+          </div>
         </div>
-		<h3>Preguntas Frecuentes</h3>
-		<ul id="toggle-view">
+    <h3>Preguntas Frecuentes</h3>
+    <ul id="toggle-view">
         <li @click="listfaqs">
           <h4>¿Qué es un reporte ciudadano?</h4>
           <span>+</span>
@@ -499,12 +499,12 @@
           Aviso que realiza cualquier interesado, a través de medios electrónicos, sobre posibles observaciones relacionadas con la ubicación, avances físicos y financieros o condiciones físicas de los programas y proyectos de inversión registrados en la Cartera de Inversión y en proceso de ejecución, susceptibles de ser georreferenciados.</div>
         </li>
         <li @click="listfaqs">
-        	<h4>¿Puedo presentar una queja o denuncia sobre algún funcionario público en particular a través de la plataforma?</h4>
+          <h4>¿Puedo presentar una queja o denuncia sobre algún funcionario público en particular a través de la plataforma?</h4>
           <span>+</span>
           <div class="panel">Para ello, la Secretaría de la Función Pública pone a disposición de los ciudadanos distintos mecanismos que se pueden consultar a través de la página <a href="http://www.funcionpublica.gob.mx/index.php/temas/quejas-y-denuncias.html">http://www.funcionpublica.gob.mx/index.php/temas/quejas-y-denuncias.html</a></div>
         </li>
         <li @click="listfaqs">
-        	<h4>¿Qué es la Cartera de Inversión?</h4>
+          <h4>¿Qué es la Cartera de Inversión?</h4>
           <span>+</span>
           <div class="panel">La Cartera es un sistema electrónico que contiene la información de todos los programas y proyectos de inversión que las dependencias y entidades de la Administración Pública Federal registraron y que demostraron tener beneficios para la población (rentables socioeconómicamente).</div>
         </li>
@@ -514,7 +514,7 @@
           <div class="panel">El proceso comienza con la identificación de necesidades de la población por parte de las dependencias y entidades de la Administración Pública Federal, las cuales analizan, evalúan y formulan proyectos o programas de inversión con el fin de satisfacer dichas necesidades. La solicitud de registro, la cual debe cumplir con la normatividad vigente, la realizan las dependencias y entidades mediante los sistemas informáticos de la Secretaría de Hacienda y Crédito Público (SHCP). Posteriormente, la solicitud es revisada por la Unidad de Inversiones de la SHCP y una vez que el proyecto demuestra que tiene beneficios para la población, se le otorga el registro en la Cartera de Inversión.</div>
         </li>
         <li @click="listfaqs">
-        	<h4>¿Por qué no se ha aprobado mi proyecto?</h4>
+          <h4>¿Por qué no se ha aprobado mi proyecto?</h4>
           <span>+</span>
           <div class="panel">Sólo los programas y proyectos que las dependencias y entidades de la Administración Pública Federal registran en los sistemas informáticos de la SHCP son susceptibles de registro en la Cartera. Para que los proyectos puedan ser aprobados, deben cumplir los requisitos establecidos en la normatividad vigente, por lo que son revisados estrictamente para poder ser autorizados.</div>
         </li>
@@ -529,108 +529,108 @@
           <div class="panel">Para llevar a cabo el registro de un programa o proyecto de inversión se debe cumplir lo establecido en los Lineamientos para el registro en la cartera de programas y proyectos de inversión, los cuales se encuentran disponibles en la página de la SHCP: <a href="http://www.shcp.gob.mx/LASHCP/MarcoJuridico/ProgramasYProyectosDeInversion/Paginas/lineamientos.aspx">http://www.shcp.gob.mx/LASHCP/MarcoJuridico/ProgramasYProyectosDeInversion/Paginas/lineamientos.aspx</a></div>
         </li>
       </ul>
-		<a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
-		</div>
+    <a href="http://transparenciapresupuestaria.gob.mx/es/PTP/PreguntasFrecuentes" class="btn more">Más preguntas frecuentes</a>
+    </div>
 
-		<form id = "reportForm">
-			<!-- paso 1-->
-			<fieldset id="reporte_step1" class="hide">
-				<h3>Paso 1 de 2</h3>
-				<ul class="step_n">
-					<li><a class="active"></a></li>
-					<li><a></a></li>
-				</ul>
-				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
-						<label>Asunto del reporte</label>
-						<textarea id="asuntoReporte"></textarea>
-						<label>Narre el motivo de su reporte</label>
-						<textarea id="motivoReporte"></textarea>
-						<a class="btn more" @click="step2">Continuar &gt;</a>
-					</div>
-				</div>
-			</fieldset>
-			
-			<!-- paso 2-->
-			<fieldset id="reporte_step2" class="hide">
-				<h3>Paso 2 de 2</h3>
-				<ul class="step_n">
-					<li><a class="complete"></a></li>
-					<li><a class="active"></a></li>
-				</ul>
-				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
-						<h3>Tu denuncia puede ser anónima o puedes proporcionar tu información de contacto básica
-							para dar seguimiento a tu solicitud.</h3>
-							<p class="center"><span class="small"><span class="alert">*</span> Información necesaria </span></p>
-						<label>¿Deseas que tu denuncia sea reportada como anónima?<span class="alert">*</span></label>
-						<select id="anonymous">
-						  <option value="0">No</option>
-						  <option value="1">Sí</option>
-						</select>
-					</div>
-				</div>
-				<div id = "noAnonymous">
-					<div class="row">
-						
-						<div class="col-sm-5 col-sm-offset-1">
-							<label>Nombre(s) <span class="alert">*</span></label>
-							<input id="name" type="text" name="name">
-						</div>
-						<div class="col-sm-5">
-							<label>Paterno <span class="alert">*</span></label>
-							<input id="surname"  type="text" name="surname">
-						</div>
-						<div class="col-sm-5 col-sm-offset-1">
-							<label>Materno</label>
-							<input id="lastname"  type="text" name="lastname">
-						</div>
-						<div class="col-sm-5">
-							<label>Género <span class="alert">*</span></label>
-							<select id="gender">
-							  <option value="MUJER">Femenino</option>
-							  <option value="HOMBRE">Masculino</option>
-							</select>
-						</div>
-						<div class="col-sm-5 col-sm-offset-1">
-							<label>Correo <span class="alert">*</span></label>
-							<input id="email" type="text" name="email">
-						</div>
-						<div class="col-sm-5">
-							<label>Contraseña <span class="alert">*</span></label>
-							<input id="password" type="text" name="password">
-						</div>
-					</div>
-          		</div>
-		  		<div class="row">
-					<div class="col-sm-3 col-sm-offset-1">
-						<a class="btn more back" @click="step2">&lt; Regresar</a>
-					</div>
-					<div class="col-sm-4">
-						<input class="rpt-advance" type="submit" value="Enviar Reporte &gt;">
-					</div>
-				</div>
-			</fieldset>
-		</form>
+    <form id = "reportForm">
+      <!-- paso 1-->
+      <fieldset id="reporte_step1" class="hide">
+        <h3>Paso 1 de 2</h3>
+        <ul class="step_n">
+          <li><a class="active"></a></li>
+          <li><a></a></li>
+        </ul>
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <label>Asunto del reporte</label>
+            <textarea id="asuntoReporte"></textarea>
+            <label>Narre el motivo de su reporte</label>
+            <textarea id="motivoReporte"></textarea>
+            <a class="btn more" @click="step2">Continuar &gt;</a>
+          </div>
+        </div>
+      </fieldset>
+      
+      <!-- paso 2-->
+      <fieldset id="reporte_step2" class="hide">
+        <h3>Paso 2 de 2</h3>
+        <ul class="step_n">
+          <li><a class="complete"></a></li>
+          <li><a class="active"></a></li>
+        </ul>
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <h3>Tu denuncia puede ser anónima o puedes proporcionar tu información de contacto básica
+              para dar seguimiento a tu solicitud.</h3>
+              <p class="center"><span class="small"><span class="alert">*</span> Información necesaria </span></p>
+            <label>¿Deseas que tu denuncia sea reportada como anónima?<span class="alert">*</span></label>
+            <select id="anonymous">
+              <option value="0">No</option>
+              <option value="1">Sí</option>
+            </select>
+          </div>
+        </div>
+        <div id = "noAnonymous">
+          <div class="row">
+            
+            <div class="col-sm-5 col-sm-offset-1">
+              <label>Nombre(s) <span class="alert">*</span></label>
+              <input id="name" type="text" name="name">
+            </div>
+            <div class="col-sm-5">
+              <label>Paterno <span class="alert">*</span></label>
+              <input id="surname"  type="text" name="surname">
+            </div>
+            <div class="col-sm-5 col-sm-offset-1">
+              <label>Materno</label>
+              <input id="lastname"  type="text" name="lastname">
+            </div>
+            <div class="col-sm-5">
+              <label>Género <span class="alert">*</span></label>
+              <select id="gender">
+                <option value="MUJER">Femenino</option>
+                <option value="HOMBRE">Masculino</option>
+              </select>
+            </div>
+            <div class="col-sm-5 col-sm-offset-1">
+              <label>Correo <span class="alert">*</span></label>
+              <input id="email" type="text" name="email">
+            </div>
+            <div class="col-sm-5">
+              <label>Contraseña <span class="alert">*</span></label>
+              <input id="password" type="text" name="password">
+            </div>
+          </div>
+              </div>
+          <div class="row">
+          <div class="col-sm-3 col-sm-offset-1">
+            <a class="btn more back" @click="step2">&lt; Regresar</a>
+          </div>
+          <div class="col-sm-4">
+            <input class="rpt-advance" type="submit" value="Enviar Reporte &gt;">
+          </div>
+        </div>
+      </fieldset>
+    </form>
 
 
 
-		<div id="respuesta_reporte" class="hide">
-			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
-					<div id ="successReport">
-							<h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
-							<p>ID de reporte : <span id="folio"></span></p>
-							<p>Contraseña reporte: <span id="passfolio"></span></p>
-					</div>
-					<div id ="errorReport" style= "display:none;">
-					  <h3>Ocurrió un error al enviar tu reporte, intentálo más tarde</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	  </div>
-	  </modal>
+    <div id="respuesta_reporte" class="hide">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div id ="successReport">
+              <h3>Recibimos tu reporte, en breve le daremos seguimiento</h3>
+              <p>ID de reporte : <span id="folio"></span></p>
+              <p>Contraseña reporte: <span id="passfolio"></span></p>
+          </div>
+          <div id ="errorReport" style= "display:none;">
+            <h3>Ocurrió un error al enviar tu reporte, intentálo más tarde</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </modal>
 
   </section>
 
@@ -717,7 +717,7 @@
             </slot>
           </div>
 
-		 <!--
+     <!--
           <div class="modal-footer">
             <slot name="footer">
               default footer
@@ -734,8 +734,8 @@
 <!-- libraries -->
 <script src="js/d3.v3.min.js"></script>
 <script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/bower_components/vue/dist/vue.min.js"></script>
-<script src="js/bower_components/leaflet/dist/leaflet.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/leaflet.js"></script>
 
 <!-- config -->
 <script>
