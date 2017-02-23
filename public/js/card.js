@@ -33,7 +33,7 @@ d3.json(DatosGobMxURL)
           costo_total_ppi : res["costo-total-ppi"],
           cve_ppi : res["cve-ppi"],
           date_insert : res["date_insert"],
-          desc_ppi : res["desc-ppi"],
+          desc_ppi : res["descripcion"],
           desc_ramo : res["desc-ramo"],
           desc_ur : res["desc-unidad"],
           ejercido : res["ejercido"],
