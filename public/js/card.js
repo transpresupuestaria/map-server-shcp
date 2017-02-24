@@ -1,9 +1,37 @@
 (function(win){
 
 //var DatosGobMxURL = "http://localhost:8000/api/test";
-var hash = window.location.hash.replace("#", "");
-var DatosGobMxURL = "http://api.datos.gob.mx/v1/proyectos-opa?" + encodeURIComponent("cve-ppi") + "='" + hash;
-//console.log(window.location.hash);
+var hash          = window.location.hash.replace("#", "");
+var DatosGobMxURL = GFAPIBaseURL + "?" + encodeURIComponent("cve-ppi") + "='" + hash;
+
+
+function printLinks(errors, links){
+  var id  = window.location.hash.replace("#", ""),
+      ref = links.filter(function(fill){
+        return fill.ID_PPI.replace("'", "") == id;
+      });
+
+  if(ref.length){
+    ref.forEach(function(ref){
+      document.querySelector("#GF-SHCP-links").innerHTML = "<li><a href='" + GFLinksBaseURL + ref.ID_PP + "'>" + ref.DESC_PP+ "</a></li>";
+    });
+  }
+
+}
+
+function printComments(errors, comments){
+  var id  = window.location.hash.replace("#", ""),
+      ref = comments.filter(function(comment){
+        return comment.CVE_PPI.replace("'", "") == id;
+      });
+      
+  if(ref.length){
+    ref.forEach(function(ref){
+      document.querySelector("#GF-SHCP-comments").innerHTML = "<li>" + ref.Nota + "</li>";
+    });
+  }
+    
+}
 
 d3.json(DatosGobMxURL)
   .get(function(e, d){
@@ -16,6 +44,10 @@ d3.json(DatosGobMxURL)
       });
       return;
     }
+
+
+    d3.csv(GFNotesFile, printComments);
+    d3.csv(GFLinksFile, printLinks);
 
     var res  = d.results[0],
         data = {

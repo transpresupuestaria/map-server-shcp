@@ -694,6 +694,8 @@
   </footer>
 
 
+  <ul id="GF-SHCP-comments"></ul>
+  <ul id="GF-SHCP-links"></ul>
 
 
 <!-- template for the modal component -->
@@ -739,7 +741,11 @@
 
 <!-- config -->
 <script>
-  var Format = d3.format(",");
+  var Format         = d3.format(","),
+      GFLinksBaseURL = "http://nptp.hacienda.gob.mx/programas/jsp/programas/fichaPrograma.jsp?id=",
+      GFAPIBaseURL   = "http://api.datos.gob.mx/v1/proyectos-opa",
+      GFNotesFile    = "csv/notas.csv",
+      GFLinksFile    = "csv/ppi-links.csv";   
 </script>
 
 <!-- code -->
