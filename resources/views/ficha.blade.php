@@ -128,24 +128,27 @@
 	        <!--programa-->
           	<div class="col-md-4 col-sm-12">
               <h3 class="title">Programa Presupuestario</h3>
-              <p><a href="#" title="Conoce su desempeño" id ="programaReport">11S243 – Programa Nacional de Petróleo</a></p>
+              <ol id="GF-SHCP-links"></ol>
             </div>
              <!--localizacion-->
             <div class="col-md-8 col-sm-12">
               <h3 class="title">Localización</h3>
               <p>@{{localizacion}}</p>
             </div>
-            <!---entidad-->
-          	<div class="col-md-4 col-md-offset-4 col-sm-6">
-              <h3 class="title">Entidad Federativa</h3>
-              <p id="entidadReport">	@{{entidad_federativa}}</p>
+            <div class="col-md-8 col-md-offset-4 col-sm-12">
+            	<div class="row">
+            	<!---entidad-->
+          		<div class="col-md-6 col-sm-12">
+            	  <h3 class="title">Entidad Federativa</h3>
+            	  <p id="entidadReport">	@{{entidad_federativa}}</p>
+            	</div>
+            	<!---coordenadas---->
+          		<div class="col-md-6 col-sm-12">
+            	  <h3 class="title">Coordenadas Geográficas</h3>
+            	  <p>Latitud: @{{latitud_inicial}} <br> Longitud: @{{longitud_inicial}}</p>
+            	</div>
+            	</div>
             </div>
-            <!---coordenadas---->
-          	<div class="col-md-4 col-sm-6">
-              <h3 class="title">Coordenadas Geográficas</h3>
-              <p>Latitud: @{{latitud_inicial}} <br> Longitud: @{{longitud_inicial}}</p>
-            </div>
-
 
           </div>
         </div>
@@ -398,6 +401,16 @@
       </div>
     </div>
   </section>
+  <!--responsable---------->
+  <section class="GF-card">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Comentarios</h2>
+		<ul id="GF-SHCP-comments"></ul>
+      </div>
+    </div>
+  </section>
+				
 
   <!--responsable---------->
   <section class="GF-card">
@@ -692,10 +705,6 @@
       </div>
     </div>
   </footer>
-
-
-  <ul id="GF-SHCP-comments"></ul>
-  <ul id="GF-SHCP-links"></ul>
 
 
 <!-- template for the modal component -->
