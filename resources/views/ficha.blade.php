@@ -401,8 +401,8 @@
       </div>
     </div>
   </section>
-  <!--responsable---------->
-  <section class="GF-card">
+  <!--Comentarios---------->
+  <section id="gf-commentarios" class="GF-card">
     <div class="row">
       <div class="col-sm-12">
         <h2>Comentarios</h2>
