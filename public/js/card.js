@@ -58,6 +58,7 @@ d3.json(DatosGobMxURL)
           ap_materno_admin : res["ap-materno-admin"],
           ap_paterno_admin : res["ap-paterno-admin"],
           aprobado         : res["aprobado"],
+          aprobado2017	   : res["aprobado-pef-2017"],
           avance_fisico : res["avance-fisico"],
           calendario_fiscal_del_ciclo : res["calendario-fiscal-del-ciclo"],
           cargo_admin : res["cargo-admin"],
@@ -101,8 +102,9 @@ d3.json(DatosGobMxURL)
           fideicomiso : res["fideicomiso"],
 
           // valores extra
-          presupuesto_style : "width:" + ((res["aprobado"] * 100) / res["costo-total-ppi"]) + "%",
-          total_ejercido_style : "width:" + ((res["ejercido"] * 100) / res["costo-total-ppi"]) + "%",
+          presupuesto_style 	: "width:" + ((res["aprobado"] * 100) / res["costo-total-ppi"]) + "%",
+          presupuesto2017_style : "width:" + ((res["aprobado-pef-2017"] * 100) / res["costo-total-ppi"]) + "%",
+          total_ejercido_style  : "width:" + ((res["ejercido"] * 100) / res["costo-total-ppi"]) + "%",
           modificado_style : "width:" + ((res["modificado"] * 100) / res["costo-total-ppi"]) + "%",
           map_src		  : "http://www.openstreetmap.org/export/embed.html?bbox="+ res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"%2C"+res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"&amp;layer=mapnik",
           /// modal

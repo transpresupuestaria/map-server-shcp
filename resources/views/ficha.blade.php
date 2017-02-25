@@ -168,6 +168,16 @@
         <div class="bar">
           <span class="bar inside total"></span>
         </div>
+        
+        <div v-if="aprobado2017 != 0">
+	        <!-- pef2017-->
+	        <h3>Presupuesto aprobado en el PEF 2017</h3>
+	        <p class="amount right">$<strong>@{{Format(aprobado2017)}}</strong> <span>MXN</span></p>
+			<div class="bar">
+			<span class="bar inside pef" v-bind:style="presupuesto_style"></span>
+			</div>
+		</div>
+        
         <!-- pef-->
         <h3>Presupuesto aprobado en el PEF 2016</h3>
         <p class="amount right">$<strong>@{{Format(aprobado)}}</strong> <span>MXN</span></p>
