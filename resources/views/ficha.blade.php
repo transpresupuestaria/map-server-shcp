@@ -182,7 +182,7 @@
 
         </div>
         <!-- modificado-->
-        <h3>Presupuesto modificado</h3>
+        <h3>Presupuesto modificado 2016</h3>
         <p class="amount right">$<strong>@{{Format(modificado)}}</strong> <span>MXN</span></p>
         <div class="bar">
           <span class="bar inside modificado" v-bind:style="modificado_style"></span>
