@@ -193,7 +193,104 @@
       </div>
     </div>
   </section>
+  
+   <!--operación-->
+  <section class="GF-card">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Datos sobre la etapa de operación</h2>
+      </div>
+      <!--años-->
+      <div class="col-sm-3">
+        <p class="amount"><strong>@{{anios_he}}</strong> años</p>
+        <p class="lead">Número estimado de años de operación en el horizonte de evaluación
+          <!--tooltip-->
+          <span class="tooltip">
+            <span class="tooltip-item"><b>?</b></span>
+            <span class="tooltip-content clearfix">
+              <span class="tooltip-text">Período que comprende tanto la etapa de ejecución como de operación de un programa o proyecto de inversión</span>
+            </span>
+          </span>
+        </p>
+      </div>
+      <!--gastos-->
+      <div class="col-sm-3">
+        <p class="amount">$<strong>@{{Format(total_gasto_operacion_he)}}</strong></p>
+        <p class="lead">Gastos estimados totales de mantenimiento y operación del activo en el horizonte de evaluación 
+	      <!--tooltip-->
+          <span class="tooltip">
+            <span class="tooltip-item"><b>?</b></span>
+            <span class="tooltip-content clearfix">
+              <span class="tooltip-text">Monto estimado global de recursos que se requerirán para el funcionamiento adecuado de los activos derivados de un programa o proyecto de inversión</span>
+            </span>
+          </span>
+        </p>
+      </div>
+      <!--otros costos-->
+      <div class="col-sm-3">
+        <p class="amount">$@{{Format(total_gasto_no_consid)}}</p>
+        <p class="lead">Otros costos y gastos asociados al PPI que no forman parte del gasto de inversión ni de los gastos de operación y mantenimiento 
+	      <!--tooltip-->
+          <span class="tooltip">
+            <span class="tooltip-item"><b>?</b></span>
+            <span class="tooltip-content clearfix">
+              <span class="tooltip-text">Monto estimado de recursos asociados a la ejecución del programa o proyecto de inversión distintos a los gastos de inversión, operación y mantenimiento</span>
+            </span>
+          </span>
+        </p>
+      </div>
+      <!--costo total-->
+      <div class="col-sm-3">
+        <p class="amount">$<strong>@{{Format(costo_total_ppi)}}</strong></p>
+        <p class="lead">Costo Total del PPI  
+	        <!--tooltip-->
+          <span class="tooltip">
+            <span class="tooltip-item"><b>?</b></span>
+            <span class="tooltip-content clearfix">
+              <span class="tooltip-text">La suma del monto total de inversión, los gastos estimados de operación y mantenimiento, y los otros costos y gastos asociados</span>
+            </span>
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!--metas -->
+  <section class="GF-card">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Metas</h2>
+      </div>
+      <!--física-->
+      <div class="col-sm-6">
+        <h3 class="title">
+          <!--tooltip-->
+          <span class="tooltip">
+            <span class="tooltip-item">Meta Física <b>?</b></span>
+            <span class="tooltip-content clearfix">
+              <span class="tooltip-text">La producción de bienes y servicios que se pretenden alcanzar con el programa o proyecto de inversión</span>
+            </span>
+          </span>
+        </h3>
+        <p>@{{meta_fisica}}</p>
+      </div>
+      <!--física-->
+      <div class="col-sm-6">
+        <h3 class="title">
 
+          <!--tooltip-->
+          <span class="tooltip">
+            <span class="tooltip-item">Beneficios esperados del PPI <b>?</b></span>
+            <span class="tooltip-content clearfix">
+              <span class="tooltip-text">@{{meta_beneficios}}</span>
+            </span>
+          </span>
+        </h3>
+        <p>Reducir el gasto de operación por concepto del flete en el suministro de combustibles a la TAR Tapachula desde Salina Cruz, para asegurar el abasto en la zona.</p>
+      </div>
+    </div>
+  </section>
+  
   <!--calendario fiscal-->
   <section class="GF-card">
     <div class="row">
@@ -304,103 +401,7 @@
       </div>
     </div>
   </section>
-
-  <!--operación-->
-  <section class="GF-card">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2>Datos sobre la etapa de operación</h2>
-      </div>
-      <!--años-->
-      <div class="col-sm-3">
-        <p class="amount"><strong>@{{anios_he}}</strong> años</p>
-        <p class="lead">Número estimado de años de operación en el horizonte de evaluación
-          <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item"><b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">Período que comprende tanto la etapa de ejecución como de operación de un programa o proyecto de inversión</span>
-            </span>
-          </span>
-        </p>
-      </div>
-      <!--gastos-->
-      <div class="col-sm-3">
-        <p class="amount">$<strong>@{{Format(total_gasto_operacion_he)}}</strong></p>
-        <p class="lead">Gastos estimados totales de mantenimiento y operación del activo en el horizonte de evaluación 
-	      <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item"><b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">Monto estimado global de recursos que se requerirán para el funcionamiento adecuado de los activos derivados de un programa o proyecto de inversión</span>
-            </span>
-          </span>
-        </p>
-      </div>
-      <!--otros costos-->
-      <div class="col-sm-3">
-        <p class="amount">$@{{Format(total_gasto_no_consid)}}</p>
-        <p class="lead">Otros costos y gastos asociados al PPI que no forman parte del gasto de inversión ni de los gastos de operación y mantenimiento 
-	      <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item"><b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">Monto estimado de recursos asociados a la ejecución del programa o proyecto de inversión distintos a los gastos de inversión, operación y mantenimiento</span>
-            </span>
-          </span>
-        </p>
-      </div>
-      <!--costo total-->
-      <div class="col-sm-3">
-        <p class="amount">$<strong>@{{Format(costo_total_ppi)}}</strong></p>
-        <p class="lead">Costo Total del PPI  
-	        <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item"><b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">La suma del monto total de inversión, los gastos estimados de operación y mantenimiento, y los otros costos y gastos asociados</span>
-            </span>
-          </span>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!--metas -->
-  <section class="GF-card">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2>Metas</h2>
-      </div>
-      <!--física-->
-      <div class="col-sm-6">
-        <h3 class="title">
-          <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item">Meta Física <b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">La producción de bienes y servicios que se pretenden alcanzar con el programa o proyecto de inversión</span>
-            </span>
-          </span>
-        </h3>
-        <p>@{{meta_fisica}}</p>
-      </div>
-      <!--física-->
-      <div class="col-sm-6">
-        <h3 class="title">
-
-          <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item">Beneficios esperados del PPI <b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">@{{meta_beneficios}}</span>
-            </span>
-          </span>
-        </h3>
-        <p>Reducir el gasto de operación por concepto del flete en el suministro de combustibles a la TAR Tapachula desde Salina Cruz, para asegurar el abasto en la zona.</p>
-      </div>
-    </div>
-  </section>
+  
   <!--Comentarios---------->
   <section id="gf-commentarios" class="GF-card">
     <div class="row">
