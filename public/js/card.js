@@ -13,7 +13,7 @@ function printLinks(errors, links){
 
   if(ref.length){
     ref.forEach(function(ref){
-      document.querySelector("#GF-SHCP-links").innerHTML = "<li><a href='" + GFLinksBaseURL + ref.ID_PP + "'>" + ref.DESC_PP+ "</a></li>";
+      document.querySelector("#GF-SHCP-links").innerHTML = "<li><a href='" + GFLinksBaseURL + ref.ID_PP + "'>" + "<strong>" + ref.ID_PP + "</strong> - " +ref.DESC_PP+ "</a></li>";
     });
   }
 

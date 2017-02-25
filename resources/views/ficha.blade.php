@@ -128,15 +128,16 @@
 	        <!--programa-->
           	<div class="col-md-4 col-sm-12">
               <h3 class="title">Programa Presupuestario</h3>
-              <ol id="GF-SHCP-links"></ol>
+              <ul id="GF-SHCP-links"></ul>
             </div>
-             <!--localizacion-->
-            <div class="col-md-8 col-sm-12">
-              <h3 class="title">Localización</h3>
-              <p>@{{localizacion}}</p>
-            </div>
-            <div class="col-md-8 col-md-offset-4 col-sm-12">
+            <div class="col-md-8  col-sm-12">
             	<div class="row">
+			    <!--localizacion-->
+			   <div class="col-sm-12">
+			     <h3 class="title">Localización</h3>
+			     <p>@{{localizacion}}</p>
+			   </div>
+            
             	<!---entidad-->
           		<div class="col-md-6 col-sm-12">
             	  <h3 class="title">Entidad Federativa</h3>
@@ -416,7 +417,7 @@
   <section id="gf-commentarios" class="GF-card">
     <div class="row">
       <div class="col-sm-12">
-        <h2>Comentarios</h2>
+        <h2>Notas</h2>
 		<ul id="GF-SHCP-comments"></ul>
       </div>
     </div>
