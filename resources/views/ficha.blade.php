@@ -432,8 +432,8 @@
         <table class="table">
           <thead>
             <th>Nombre</th>
-            <th>Apellido Materno</th>
-            <th>Apellido Paterno  </th>
+            <th>Apellido Paterno</th>
+            <th>Apellido  Materno </th>
             <th>Cargo       </th>
             <th>Correo electrónico  </th>
             <th>Teléfono      </th>
