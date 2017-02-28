@@ -30,6 +30,10 @@ function printComments(errors, comments){
       document.querySelector("#GF-SHCP-comments").innerHTML = "<li>" + ref.Nota + "</li>";
     });
   }
+
+  else{
+    document.querySelector("#gf-commentarios").style.display = "none";
+  }
     
 }
 
