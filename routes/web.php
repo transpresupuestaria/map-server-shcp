@@ -25,3 +25,5 @@ Route::get('/mapa2', function () {
 Route::get('/ficha', function () {
     return view('ficha');
 });
+
+Route::post('denuncia/guardar', 'Complaints@save');

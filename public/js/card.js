@@ -24,7 +24,7 @@ function printComments(errors, comments){
       ref = comments.filter(function(comment){
         return comment.CVE_PPI.replace("'", "") == id;
       });
-      
+
   if(ref.length){
     ref.forEach(function(ref){
       document.querySelector("#GF-SHCP-comments").innerHTML = "<li>" + ref.Nota + "</li>";
@@ -34,7 +34,7 @@ function printComments(errors, comments){
   else{
     document.querySelector("#gf-commentarios").style.display = "none";
   }
-    
+
 }
 
 d3.json(DatosGobMxURL)
@@ -113,51 +113,51 @@ d3.json(DatosGobMxURL)
           map_src		  : "http://www.openstreetmap.org/export/embed.html?bbox="+ res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"%2C"+res["longitud-inicial"]+"%2C"+res["latitud-inicial"]+"&amp;layer=mapnik",
           /// modal
           showModal: false,
-        
+
 
         };
-		
+
 		// register modal component
 		Vue.component('modal', {
 		  template: '#modal-template'
 		})
-		
+
 		avance_GF_donitas(data.avance_fisico);
-		
+
         var fun = [],
             els = document.querySelectorAll(".GF-card");
-		
+
     var head = new Vue({
               el  : "head",
               data : data,
             });
-    
+
 		for(let i = 0; i < els.length; i++){
           fun.push(new Vue({
           		el  : els[i],
           		data : data,
           		// define methods under the `methods` object
 		  		methods: {
-    	  		  // lista de faqs en modal 
+    	  		  // lista de faqs en modal
 		  		  listfaqs : function(e) {
 			  		e.currentTarget.classList.toggle("active");
-    	  		  },	
+    	  		  },
     	  		  // modal formulario paso 1
     	  		  step1	: function(e) {
 	    	  		  var divstep0 = document.getElementById("reporte_step0");
 	    	  		  var divstep1 = document.getElementById("reporte_step1");
-			  		 
-			  		  divstep0.classList.toggle("hide");	    	  		  
+
+			  		  divstep0.classList.toggle("hide");
 			  		  divstep1.classList.toggle("hide");
     	  		  },
     	  		  // modal formulario paso 2
     	  		  step2	: function(e) {
 	    	  		  var divstep1 = document.getElementById("reporte_step1");
 	    	  	  	  var divstep2 = document.getElementById("reporte_step2");
-			  		 
-			  		  divstep2.classList.toggle("hide");	    	  		  
+
+			  		  divstep2.classList.toggle("hide");
 			  		  divstep1.classList.toggle("hide");
-    	  		  }    	  		    
+    	  		  }
     			}
             })
           );
@@ -427,13 +427,14 @@ var svg = d3.select("#graph").append("svg")
         genero  = $("#gender").val();
 
     if(anonimo == 0){
-      var ciudadanoAPI = {"anonimo":false,"genero":genero,"nombre":name,"paterno":paterno,"email":email,"contrasenia":pass};
+      var ciudadanoAPI = {"anonimo":false,"genero":genero,"nombre":name,"paterno":paterno,"materno":materno,"email":email,"contrasenia":pass};
     }else{
       var ciudadanoAPI = {"anonimo":true};
     }
     var dataAPI = {"ciudadano":ciudadanoAPI,"dependencia":dependencia,"estado":estadoID,"motivoPeticion":motivo,"otroPais":null,"pais":paisId,"motivoId":7,"queSolicitaron":null,"solictaronDinero":false};
     if(estadoID){
-       $.ajax({
+      //Request API
+    /*   $.ajax({
          beforeSend: function(xhrObj){
                    xhrObj.setRequestHeader("app-key",appKey);
            },
@@ -460,7 +461,32 @@ var svg = d3.select("#graph").append("svg")
                $("#errorReport").show();
              }
            }
-       });
+       });*/
+    //Salvar en db
+    $.ajaxSetup({headers:{'X-CSRF-Token': $('input[name="_token"]').val()}});
+    $.ajax({
+          type: "POST",
+          url: '../denuncia/guardar',
+          data: {"anonimo":anonimo,"genero":genero,"nombre":name,"paterno":paterno,"materno":materno,"email":email,"contrasenia":pass,"dependencia":dependencia,"estado":estadoID,"motivoPeticion":motivo,motivoId:"7"},
+          dataType: 'json',
+          success: function(dataRe){
+            console.log(dataRe);
+            if(dataRe){
+              $("#respuesta_reporte").toggleClass("hide");
+              $("#reporte_step2").toggleClass("hide");
+              $("#folio").text(dataRe.folio);
+              $("#passfolio").text(dataRe.passFolio);
+              $("#successReport").show();
+              $("#errorReport").hide();
+            }else{
+              $("#respuesta_reporte").toggleClass("hide");
+              $("#reporte_step2").toggleClass("hide");
+              $("#successReport").hide();
+              $("#errorReport").show();
+            }
+          }
+          });
+
    }else{
      $("#respuesta_reporte").toggleClass("hide");
      $("#reporte_step2").toggleClass("hide");
