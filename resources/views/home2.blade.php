@@ -171,13 +171,13 @@
       </form>
   		<div class="clearfix"></div>
   	</div>
-  	<!--gasto total-->
+  	<!--gasto total
   	<div class="module_box mobile">
 	  	<h3>Gasto total de inversión 2016</h3>
   		<p class="amount">$738,868.79 <span>MDP MXN</span></p>
-  		<div class="separator"></div> 
-  		<!--gráfica gasto inversión
-  		<div class="bar_graph">
+  		<div class="separator"></div> -->
+  		<!--gráfica gasto inversión-->
+  			<!--<div class="bar_graph">
 	  		<div class="col-sm-4">
 	  			<div class="container_bar">
 		  			<div class="bbar" style="height: 100%"></div>
@@ -197,9 +197,9 @@
 	  			<p>Financiera</p>
 	  		</div>
 	  		<div class="clearfix"></div>
-	  		-->
+	  		
   		</div>
-  	</div>
+  	</div>-->
   	
   </div>
   
