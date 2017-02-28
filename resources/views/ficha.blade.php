@@ -37,7 +37,7 @@
 		  		<li>Accidentalmente escribiste mal la dirección URL </li>
 	  		</ol>
 	  		<h2>¿Qué puedes hacer?</h2>
-	  		<p>Puedes consultar esta página más tarde, o intentar escribir la URL otra vez.</p> 
+	  		<p>Puedes consultar esta página más tarde, o intentar escribir la URL otra vez.</p>
 	  		<p>O puedes regresar al mapa de <a href="http://www.transparenciapresupuestaria.gob.mx/en/PTP/Obra_Publica_Abierta" class="link_back">Obra Pública</a>.</p>
 	  	</div>
   	</div>
@@ -137,7 +137,7 @@
 			     <h3 class="title">Localización</h3>
 			     <p>@{{localizacion}}</p>
 			   </div>
-            
+
             	<!---entidad-->
           		<div class="col-md-6 col-sm-12">
             	  <h3 class="title">Entidad Federativa</h3>
@@ -169,7 +169,7 @@
         <div class="bar">
           <span class="bar inside total"></span>
         </div>
-        
+
         <div v-if="aprobado2017 != 0">
 	        <!-- pef2017-->
 	        <h3>Presupuesto aprobado en el PEF 2017</h3>
@@ -178,7 +178,7 @@
 			<span class="bar inside pef" v-bind:style="presupuesto_style"></span>
 			</div>
 		</div>
-        
+
         <!-- pef-->
         <h3>Presupuesto aprobado en el PEF 2016</h3>
         <p class="amount right">$<strong>@{{Format(aprobado)}}</strong> <span>MXN</span></p>
@@ -204,7 +204,7 @@
       </div>
     </div>
   </section>
-  
+
    <!--operación-->
   <section class="GF-card">
     <div class="row">
@@ -227,7 +227,7 @@
       <!--gastos-->
       <div class="col-sm-3">
         <p class="amount">$<strong>@{{Format(total_gasto_operacion_he)}}</strong></p>
-        <p class="lead">Gastos estimados totales de mantenimiento y operación del activo en el horizonte de evaluación 
+        <p class="lead">Gastos estimados totales de mantenimiento y operación del activo en el horizonte de evaluación
 	      <!--tooltip-->
           <span class="tooltip">
             <span class="tooltip-item"><b>?</b></span>
@@ -240,7 +240,7 @@
       <!--otros costos-->
       <div class="col-sm-3">
         <p class="amount">$@{{Format(total_gasto_no_consid)}}</p>
-        <p class="lead">Otros costos y gastos asociados al PPI que no forman parte del gasto de inversión ni de los gastos de operación y mantenimiento 
+        <p class="lead">Otros costos y gastos asociados al PPI que no forman parte del gasto de inversión ni de los gastos de operación y mantenimiento
 	      <!--tooltip-->
           <span class="tooltip">
             <span class="tooltip-item"><b>?</b></span>
@@ -253,7 +253,7 @@
       <!--costo total-->
       <div class="col-sm-3">
         <p class="amount">$<strong>@{{Format(costo_total_ppi)}}</strong></p>
-        <p class="lead">Costo Total del PPI  
+        <p class="lead">Costo Total del PPI
 	        <!--tooltip-->
           <span class="tooltip">
             <span class="tooltip-item"><b>?</b></span>
@@ -265,7 +265,7 @@
       </div>
     </div>
   </section>
-  
+
   <!--metas -->
   <section class="GF-card">
     <div class="row">
@@ -301,7 +301,7 @@
       </div>
     </div>
   </section>
-  
+
   <!--calendario fiscal-->
   <section class="GF-card">
     <div class="row">
@@ -391,19 +391,19 @@
 	      <h3>Recursos Estatales</h3>
 		  <p class="amount" v-if="recursos_estatales">$<strong>@{{Format(recursos_estatales)}}</strong></p>
 		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
-      </div> 
+      </div>
       <!--recursos municipales-->
       <div class="col-sm-3">
 	      <h3>Recursos Municipales</h3>
 		  <p class="amount" v-if="recursos_municipales">$<strong>@{{Format(recursos_municipales)}}</strong></p>
 		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
-      </div> 
+      </div>
 	  <!--privados-->
       <div class="col-sm-3">
 	      <h3>Recursos Privados</h3>
 		  <p class="amount" v-if="privados">$<strong>@{{Format(privados)}}</strong></p>
 		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
-      </div> 
+      </div>
 	  <!--fideicomiso-->
       <div class="col-sm-3">
 	      <h3>Fideicomiso</h3>
@@ -412,7 +412,7 @@
       </div>
     </div>
   </section>
-  
+
   <!--Comentarios---------->
   <section id="gf-commentarios" class="GF-card">
     <div class="row">
@@ -422,7 +422,7 @@
       </div>
     </div>
   </section>
-				
+
 
   <!--responsable---------->
   <section class="GF-card">
@@ -575,7 +575,7 @@
 					</div>
 				</div>
 			</fieldset>
-			
+
 			<!-- paso 2-->
 			<fieldset id="reporte_step2" class="hide">
 				<h3>Paso 2 de 2</h3>
@@ -589,6 +589,7 @@
 							para dar seguimiento a tu solicitud.</h3>
 							<p class="center"><span class="small"><span class="alert">*</span> Información necesaria </span></p>
 						<label>¿Deseas que tu denuncia sea reportada como anónima?<span class="alert">*</span></label>
+              {{ csrf_field() }}
 						<select id="anonymous">
 						  <option value="0">No</option>
 						  <option value="1">Sí</option>
@@ -597,7 +598,7 @@
 				</div>
 				<div id = "noAnonymous">
 					<div class="row">
-						
+
 						<div class="col-sm-5 col-sm-offset-1">
 							<label>Nombre(s) <span class="alert">*</span></label>
 							<input id="name" type="text" name="name">
@@ -766,7 +767,7 @@
       GFLinksBaseURL = "http://nptp.hacienda.gob.mx/programas/jsp/programas/fichaPrograma.jsp?id=",
       GFAPIBaseURL   = "http://api.datos.gob.mx/v1/proyectos-opa",
       GFNotesFile    = "csv/notas.csv",
-      GFLinksFile    = "csv/ppi-links.csv";   
+      GFLinksFile    = "csv/ppi-links.csv";
 </script>
 
 <!-- code -->
