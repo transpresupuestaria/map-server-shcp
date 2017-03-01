@@ -650,7 +650,7 @@
 							<p>Contraseña reporte: <span id="passfolio"></span></p>
 					</div>
 					<div id ="errorReport" style= "display:none;">
-					  <h3>Ocurrió un error al enviar tu reporte, intentálo más tarde</h3>
+					  <h3>Ocurrió un error al enviar tu reporte, inténtalo más tarde</h3>
 					</div>
 				</div>
 			</div>
