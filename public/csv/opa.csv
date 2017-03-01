@@ -878,7 +878,6 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '0618TZZ0004,Conversión de Residuales de la Refinería de Salamanca,52,Pemex Transformación Industrial,11,20.580263,-101.189532,4.99,52918119337,2017,Energía,723376491
 '153890K0001,PROGRAMA DE ADQUISICIONES DE EQUIPO CIENTIFICO PARA MANTENER Y FORTALECER LAS CAPACIDADES ESTRATEGICAS DEL CIDETEQ 2016,38,"Centro de Investigación y Desarrollo Tecnológico en Electroquímica, S.C.",22,0,0,100,25828533,2016,Desarrollo económico,25000000
 '1518T0O0003,"PROGRAMA DE ADQUISICIÓN DE BIENES PARA EL ÁREA DE SERVICIOS, 2016",18,Instituto Mexicano del Petróleo,9,0,0,8.49,45655411,2016,Desarrollo económico,961600
-'09096350016,"Chapa de Mota, Tr. San Francisco de Las Tablas del Km. 0+000 al Km. 2+580.",9,Centro SCT México,15,1,11,,32271110,2017,Comunicaciones y Transportes,
 '1218TOQ0015,ESTUDIOS DE PREINVERSIÓN PARA PROYECTOS DE ENERGÍA SOLAR GPG 2012-2014,53,Comisión Federal de Electricidad,35,0,0,,81975788,2017,Energía,
 '16092100005,Liberación del derecho de vía 2017,9,Dirección General de Carreteras,35,0,0,,2469517852,2017,Comunicaciones y Transportes,
 '12096360002,Etucuaro - Parritas.,9,Centro SCT Michoacán,16,19.418117,-101.213536,,30363596,2017,Comunicaciones y Transportes,
@@ -2572,7 +2571,6 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1218TOQ0073,CONSTRUCCIÓN Y AMPLIACIÓN DE LÍNEAS Y SUBESTACIONES DE 13 DIVISIONES DE DISTRIBUCIÓN 2013-2015,53,Comisión Federal de Electricidad,35,0,0,6.14,7015270373,2017,Energía,90082326
 '1218TOQ0076,ADQUISICIÓN DE EQUIPO DE MANIOBRA DE LA SUBDIRECCIÓN DE TRANSMISIÓN 2013-2015,53,Comisión Federal de Electricidad,35,0,0,6.46,344163365,2017,Energía,726717
 '1418T4M0054,"Identificación y evaluación de agentes, así como factores de riesgo en las instalaciones del Sistema Nacional de Refinerías, para determinar la inversión capitalizable en la administración de los riesgos detectados.",52,Pemex Transformación Industrial,35,0,0,0.1,63741236,2017,Energía,18135764
-'12096360043,El Pedregoso - Las Latas,9,Centro SCT Michoacán,0,0,11,,31227278,2017,Comunicaciones y Transportes,
 '11096350008,Pueblo Nuevo-El Rodeo,9,Centro SCT México,15,0,0,,17197419,2017,Comunicaciones y Transportes,
 '1318T4O0007,Mantenimiento de las plantas Preparadoras de Carga del Complejo Petroquímico Cangrejera,52,Pemex Transformación Industrial,30,18.053449,-94.213526,21.99,514584344,2017,Energía,18313579
 '1518TOQ0006,ESTUDIO DE PREINVERSIÓN PARA LA ACTUALIZACIÓN DEL SIMULADOR DE FACTORES HUMANOS DEL CENTRO DE ENTRENAMIENTO DE LA GERENCIA DE CENTRALES NUCLEOELÉCTRICAS 2015,53,Comisión Federal de Electricidad,30,0,0,0,2131371,2017,,0
@@ -3907,4 +3905,4 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '15132160004,Adquisición de Terminales Satelitales en Banda L para la Modernización de la Red Institucional Satelital.,13,Dirección General de Servicios,9,0,0,100,154958092,2016,Seguridad,57640753
 '1416B000053,Estudios de Preinversión para las acciones de obra del Sistema Cutzamala y PAI,16,Comisión Nacional del Agua,35,0,0,7.71,276581834,2016,Desarrollo Social,4721267
 '1416B000055,"Rehabilitación y Mantenimiento de los Ríos, Presas y Canales del Sistema Hidrológico en la Zona Poniente, Estado de México.",16,Comisión Nacional del Agua,35,0,0,21.67,153332853,2017,,32239629
-'15116000003,Programa de Formación de Recursos Humanos Basada en Competencias (PROFORHCOM). Adquisición de Equipamiento 2016. Bienes Informáticos.,11,Subsecretaría de Educación Media Superior,35,0,0,0,55012812,2016,Educación,0
+
