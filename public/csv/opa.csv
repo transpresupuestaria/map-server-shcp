@@ -1585,7 +1585,7 @@ key,name,ramo,unidad,lat,lng,advance,monto_total_inversion,ciclo,classification,
 '11096310020,"Puente Antonio Madrazo y José Ma. Morelos, León",9,Centro SCT Guanajuato,21.1613,-101.6465,100.00,408984842,2015,Comunicaciones y Transportes,892848.00
 '1316B000035,"Programa de estudios de manejo integrado del agua en acuíferos sobrexplotados o en riesgo de sobrexplotación de los estados de Aguascalientes, Baja California, Jalisco Oaxaca, Querétaro y Sonora.",16,Comisión Nacional del Agua,0,0,11.43,28010356,2016,,0.00
 '1616B000088,Estudios básicos para la remodelación del Centro de Orientación y Asistencia a Usuarios y Contribuyentes en el Organismo de Cuenca Valle de México.,16,Comisión Nacional del Agua,0,0,0.00,659144,,,0.00
-'1504K000003,"Proyecto Ejecutivo para la nueva Delegación local y Módulo de Repatriación Humana en Nogales, Sonora.",4,Instituto Nacional de Migración,31.2635954,110.966333,0.00,6180975,2017,,0.00
+'1504K000003,"Proyecto Ejecutivo para la nueva Delegación local y Módulo de Repatriación Humana en Nogales, Sonora.",4,Instituto Nacional de Migración,0,0,0.00,6180975,2017,,0.00
 '13096230002,Las Pocitas - San Evaristo.,9,Centro SCT Baja California Sur,24.391908,-111.107041,0.00,476029288,2017,,0.00
 '15096320014,Pavimentación del E. C. mpio. Tlapa - Marquelia en el tramo de la localidad El Mezón - Loma Bonita.,9,Centro SCT Guerrero,16.764765,-98.73421,0.00,39963199,2017,,0.00
 '0812NBB0006,Construcción de la torre de especialidades del Hospital General Dr. Manuel Gea González. 2008-2016.,12,"Hospital General ""Dr. Manuel Gea González""",19.2935562,-99.1573982,100.00,2329177906,2016,Salud,74426218.00
@@ -2769,7 +2769,7 @@ key,name,ramo,unidad,lat,lng,advance,monto_total_inversion,ciclo,classification,
 '1651GYN0020,"Ampliación y remodelación de la Clínica de Medicina Familiar de Valle de Aragón, Estado de México.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,19.4918901,-99.0648348,0.00,48863353,2017,,0.00
 '15312000003,Video Proyectores,31,Tribunales Unitarios Agrarios,0,0,0.00,1180609,2016,,748200.00
 '15071100021,ADQUISICIÓN DE EMBARCACIONES.,7,Dirección General de Administración,0,0,0.00,3729896,2016,,0.00
-'1604I000004,Sustitución de tableros eléctricos e interruptores,4,Centro de Investigación y Seguridad Nacional,19.181432,99.140959,0.00,4998619,,,0.00
+'1604I000004,Sustitución de tableros eléctricos e interruptores,4,Centro de Investigación y Seguridad Nacional,0,0,0.00,4998619,,,0.00
 '16171440001,Adquisición de un sistema de secuenciación masiva,17,Dirección General de Laboratorios Criminalísticos,0,0,0.00,8781701,,Seguridad,0.00
 '1612NCA0003,Programa Anual de Adquisiciones de Equipo Médico para el INCar. 2016,12,Instituto Nacional de Cardiología Ignacio Chávez,0,0,100.00,60881296,,,6915474.00
 '1607HXA0040,"Mantenimiento y Rehabilitación de las UU.HH.NN. Cabo San Lucas,  I-B y I-C, B.C.S.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,0,0,99.99,5196170,,,3466962.00
@@ -2980,7 +2980,7 @@ key,name,ramo,unidad,lat,lng,advance,monto_total_inversion,ciclo,classification,
 '1318TOQ0003,PROYECTO DE AMPLIACIÓN DE REDES DE DISTRIBUCIÓN DEL VALLE DE MÉXICO 2013-2015,53,Comisión Federal de Electricidad,0,0,31.43,12332617894,2017,Energía,2028258364.00
 '1318TOQ0030,Construcción de Líneas de Transmisión y Subestaciones del Sistema Norte,53,Comisión Federal de Electricidad,0,0,51.93,239945605,2017,Energía,58566073.00
 '1318T4N0041,Confiabilidad operacional en los activos de la Subdirección de Ductos,52,Pemex Logística,0,0,11.20,614195516,2017,,0.00
-'12096360022,El Bejuco - La Mesa de Terrenates,9,Centro SCT Michoacán,1,11,,111273996,2017,Comunicaciones y Transportes,
+'12096360022,El Bejuco - La Mesa de Terrenates,9,Centro SCT Michoacán,0,0,,111273996,2017,Comunicaciones y Transportes,
 '1650GYR0060,"Construcción de la Unidad de Medicina Familiar con 10 consultorios y atención médica continua, en el municipio de Nacajuca, en la delegación de Tabasco.",50,Instituto Mexicano del Seguro Social,18.25310599,-92.55595879,8.00,64054763,2017,Salud,4999175.00
 '1550GYR0059,"Construcción de la Unidad de Medicina Familiar (UMF) nueva de 10 consultorios con AMC en Torreón, Coahuila",50,Instituto Mexicano del Seguro Social,25.534718,-103.422032,0.00,80951260,2017,Salud,0.00
 '15071200014,"Adquisición de calderas, generadores de vapor y equipos de lavandería.",7,Comandancia I Región Militar,0,0,52.48,128301755,2016,,21644410.00
@@ -3004,7 +3004,7 @@ key,name,ramo,unidad,lat,lng,advance,monto_total_inversion,ciclo,classification,
 '1218T4L0001,Adquisición de 2 Equipos Modulares de Perforación,52,Pemex Perforación y Servicios,0,0,18.81,4169577701,2017,Energía,0.00
 '15096520001,Zapoqui El Salitre.,9,Centro SCT Zacatecas,22.156536,-102.847252,26.79,21053354,2017,Comunicaciones y Transportes,5818007.00
 '1607HXA0026,"Demolición de  la U.H.M. Campeche II, Camp.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,19.826956,-90.558639,,2897490,2017,Desarrollo Social,
-'12096520049,E.C. (Huejuquilla - Valparaíso) - El Astillero.,9,Centro SCT Zacatecas,1,1,,22129566,2017,Comunicaciones y Transportes,
+'12096520049,E.C. (Huejuquilla - Valparaíso) - El Astillero.,9,Centro SCT Zacatecas,0,0,,22129566,2017,Comunicaciones y Transportes,
 '1607HXA0028,"Mantenimiento y Rehabilitación de la U.H.M. San Diego I, D.F.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,0,0,,13233305,2017,Desarrollo Social,
 '1518TOQ0005,AMPLIAR LA CAPACIDAD DE ALMACENAMIENTO DE DESECHOS SÓLIDOS EN LA CNLV 2015-2017,53,Comisión Federal de Electricidad,19.43,-96.23,6.12,231677877,2017,Energía,13713268.00
 '1650GYR0006,"Ampliación y remodelación de la Unidad de Medicina Familiar 21 en Paraíso, Tabasco (2 consultorios)",50,Instituto Mexicano del Seguro Social,18.3991,-93.2081,0.00,32524151,2017,Salud,0.00
