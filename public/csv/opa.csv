@@ -2572,8 +2572,8 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1218TOQ0073,CONSTRUCCIÓN Y AMPLIACIÓN DE LÍNEAS Y SUBESTACIONES DE 13 DIVISIONES DE DISTRIBUCIÓN 2013-2015,53,Comisión Federal de Electricidad,35,0,0,6.14,7015270373,2017,Energía,90082326
 '1218TOQ0076,ADQUISICIÓN DE EQUIPO DE MANIOBRA DE LA SUBDIRECCIÓN DE TRANSMISIÓN 2013-2015,53,Comisión Federal de Electricidad,35,0,0,6.46,344163365,2017,Energía,726717
 '1418T4M0054,"Identificación y evaluación de agentes, así como factores de riesgo en las instalaciones del Sistema Nacional de Refinerías, para determinar la inversión capitalizable en la administración de los riesgos detectados.",52,Pemex Transformación Industrial,35,0,0,0.1,63741236,2017,Energía,18135764
-'12096360043,El Pedregoso - Las Latas,9,Centro SCT Michoacán,16,1,11,,31227278,2017,Comunicaciones y Transportes,
-'11096350008,Pueblo Nuevo-El Rodeo,9,Centro SCT México,15,1,1,,17197419,2017,Comunicaciones y Transportes,
+'12096360043,El Pedregoso - Las Latas,9,Centro SCT Michoacán,0,0,11,,31227278,2017,Comunicaciones y Transportes,
+'11096350008,Pueblo Nuevo-El Rodeo,9,Centro SCT México,15,0,0,,17197419,2017,Comunicaciones y Transportes,
 '1318T4O0007,Mantenimiento de las plantas Preparadoras de Carga del Complejo Petroquímico Cangrejera,52,Pemex Transformación Industrial,30,18.053449,-94.213526,21.99,514584344,2017,Energía,18313579
 '1518TOQ0006,ESTUDIO DE PREINVERSIÓN PARA LA ACTUALIZACIÓN DEL SIMULADOR DE FACTORES HUMANOS DEL CENTRO DE ENTRENAMIENTO DE LA GERENCIA DE CENTRALES NUCLEOELÉCTRICAS 2015,53,Comisión Federal de Electricidad,30,0,0,0,2131371,2017,,0
 '1418TOQ0005,PROYECTO DE ELECTRIFICACIÓN PARA LOCALIDADES SIN SERVICIO ELECTRICO (SISTEMA CONVENCIONAL) 13 DIVISIONES DE DISTRIBUCIÓN 2014-2016,53,Comisión Federal de Electricidad,35,0,0,23.19,4359292260,2017,Energía,139347314
