@@ -293,11 +293,11 @@
           <span class="tooltip">
             <span class="tooltip-item">Beneficios esperados del PPI <b>?</b></span>
             <span class="tooltip-content clearfix">
-              <span class="tooltip-text">@{{meta_beneficios}}</span>
+              <span class="tooltip-text">Efectos favorables que se generarían sobre la población o para el país como resultado del programa o proyecto de inversión</span>
             </span>
           </span>
         </h3>
-        <p>Reducir el gasto de operación por concepto del flete en el suministro de combustibles a la TAR Tapachula desde Salina Cruz, para asegurar el abasto en la zona.</p>
+        <p>@{{meta_beneficios}}</p>
       </div>
     </div>
   </section>
@@ -650,7 +650,7 @@
 							<p>Contraseña reporte: <span id="passfolio"></span></p>
 					</div>
 					<div id ="errorReport" style= "display:none;">
-					  <h3>Ocurrió un error al enviar tu reporte, intentálo más tarde</h3>
+					  <h3>Ocurrió un error al enviar tu reporte, inténtalo más tarde</h3>
 					</div>
 				</div>
 			</div>

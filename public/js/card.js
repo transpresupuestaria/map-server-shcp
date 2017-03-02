@@ -181,7 +181,6 @@ d3.json(DatosGobMxURL)
  *
  */
 
-
 // la dona del avance
 function avance_GF_donitas(elvalor){
   var width = 160,
@@ -360,6 +359,7 @@ var svg = d3.select("#graph").append("svg")
       .attr("d", line);
 
 
+
 /*
  * LO DE CARLOS
  *
@@ -397,6 +397,8 @@ var svg = d3.select("#graph").append("svg")
      event.preventDefault();
      anonimo  = $("#anonymous").val();
      estados = estadosList.responseJSON.estado;
+
+
      //informacion de proyecto
      var carteraId = $("#cveReport").text(),
          dependencia  = $("#ejecutorReport").text(),
@@ -426,12 +428,20 @@ var svg = d3.select("#graph").append("svg")
         pass    = $("#password").val(),
         genero  = $("#gender").val();
 
+
     if(anonimo == 0){
       var ciudadanoAPI = {"anonimo":false,"genero":genero,"nombre":name,"paterno":paterno,"materno":materno,"email":email,"contrasenia":pass};
     }else{
       var ciudadanoAPI = {"anonimo":true};
     }
+
+
     var dataAPI = {"ciudadano":ciudadanoAPI,"dependencia":dependencia,"estado":estadoID,"motivoPeticion":motivo,"otroPais":null,"pais":paisId,"motivoId":7,"queSolicitaron":null,"solictaronDinero":false};
+    
+    //console.log(estadoID, estado, estados);
+
+    if(!estadoID) estadoID = 40;
+    
     if(estadoID){
       //Request API
     /*   $.ajax({
