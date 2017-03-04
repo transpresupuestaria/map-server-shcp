@@ -19,5 +19,6 @@ class Complaint extends Model
       "genero",
       "email",
       "contrasenia",
+      "pass"
     ];
 }

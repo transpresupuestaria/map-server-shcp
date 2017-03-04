@@ -23,15 +23,16 @@ class Complaints extends Controller
      */
     public function save(Request $request)
     {
-      $data            = $request->except('_token');
+      $data  = $request->except('_token');
+      $pass  =  uniqid() . "GF";
       if($request->contrasenia){
 
         $data['contrasenia'] = Hash::make($request->contrasenia);
+        $data['pass']        = Hash::make($pass);
       }
       $complaint           = new Complaint($data);
       $complaint->save();
-      $folio =  uniqid() . "GF";
-      $pass  =  uniqid() . "GF";
+      $folio =  "OPA-" . $complaint->id;//uniqid() . "GF";
       return response()->json(["folio" => $folio,"passFolio"=>$pass]);
     }
 

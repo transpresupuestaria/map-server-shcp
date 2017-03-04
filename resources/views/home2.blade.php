@@ -76,7 +76,7 @@
       <div class="col-sm-12 col-xs-6">
       <h3>Ramo</h3>
       <select id="GF-SHCP-branch-selector">
-        <option value="all">todos</option>
+        <option value="all">Todos</option>
         <option value="2">Oficina de la Presidencia de la República</option>
         <option value="4">Gobernación</option>
         <option value="5">Relaciones Exteriores</option>
@@ -111,7 +111,7 @@
       <div class="col-sm-12 col-xs-6">
       <h3>Ejecutor</h3>
       <select id="GF-SHCP-exec-selector">
-        <option value="all">todos</option>
+        <option value="all">Todos</option>
         @foreach($execs as $exec)
         <option>{{$exec->desc_unidad}}</option>
         @endforeach
@@ -122,7 +122,7 @@
       <h3>Avance físico</h3>
       <select id="GF-SHCP-advance-selector">
         <!-- avance_fisico -->
-        <option value="all">todos</option>
+        <option value="all">Todos</option>
         <option value="1">&lt; 1%</option>
         <option value="2">1 a 20%</option>
         <option value="3">20 a 40%</option>
