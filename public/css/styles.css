@@ -1823,6 +1823,8 @@ section {
     letter-spacing: 0;
     text-transform: uppercase;
     text-align: left; }
+  .amount_label .bar {
+    margin-bottom: 5px; }
 
 .leaflet-popup-content {
   font-family: "soberana_sans", Helvetica, Arial, sans-serif; }
