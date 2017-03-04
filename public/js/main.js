@@ -1,4 +1,14 @@
 (function(win){
+  /*
+  d3.json("js/states.json", function(e,d){
+    console.log(d);
+  });
+  */
+
+  d3.json("js/cities_min.json", function(e,d){
+    //console.log(d.features);
+    console.log(d.features);
+  });
 
   // DEfine the function constructor
   var GFSHCPMap =  function(){
