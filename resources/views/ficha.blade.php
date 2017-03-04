@@ -76,7 +76,7 @@
       </div>
       <!--avance fisico-->
       <div id="arc_side" class="col-md-2 col-sm-3 side">
-        <h3>Avance Físico</h3>
+        <h3>Avance Físico Total</h3>
       </div>
     </div>
 
