@@ -90,11 +90,16 @@
     // the info panel template
     //
     //
-    point_popup = _.template("<%=name%>" + 
-        "<div class='amount_label'> <div class='row'><div class='col-sm-6'>" +
-        "<h5>Monto total de inversión</h5>  $<%=monto_total%>" +
-        "<h5>Monto ejercido</h5> $<%=ejercido%></div><div class='col-sm-6'>" +
-        "<h5>Avance Físico</h5> <%=avance%>% <div class='bar'><span class='bar inside total' style='width:<%=avance%>%'></span></div></div></div></div> <a href='/ficha#<%=cveppi%>' target='_blank' class='btn more info'>Más información</a>");
+
+    point_popup = _.template("<%=name%>" +
+    	"<div class='amount_label'>"+
+    	"<div class='row'>" + 
+    	"<div class='col-sm-6'><h5>Monto total de inversión</h5>  $<%=monto_total%>"+
+    	"<h5>Monto ejercido</h5> $<%=ejercido%></div>"+
+    	"<div class='col-sm-6'>"+
+    	"<h5>Avance Físico</h5> <%=avance%>% <div class='bar'><span class='bar inside total' style='width:<%=avance%>%'></span>"+
+    	"<h5>Año</h5> <%=ciclo%></div>"+
+    	"</div></div> <a href='/ficha#<%=cveppi%>' target='_blank' class='btn more info'>Más información</a>");
 
     /*
      * [ D A T A   P A N E L S   C O N S T R U C T O R S ]
@@ -344,7 +349,8 @@
                 cveppi : feature.properties.cvePPI,
                 ejercido : Format(feature.properties.ejercido),
                 monto_total : Format(feature.properties.monto_total),
-                avance : feature.properties.avance
+                avance : feature.properties.avance,
+                ciclo : feature.properties.ciclo
               };
 
               p.on("click", function(e){
@@ -398,7 +404,8 @@
               "name"      : d.name,
               "avance"    : d.advance,
               "ejercido"  : d.ejercido,
-              "monto_total" : d.monto_total_inversion
+              "monto_total" : d.monto_total_inversion,
+              "ciclo" : d.ciclo
             },
             geometry : {
               "type": "Point", 
