@@ -76,7 +76,7 @@
       <div class="col-sm-12 col-xs-6">
       <h3>Ramo</h3>
       <select id="GF-SHCP-branch-selector">
-        <option value="all">todos</option>
+        <option value="all">Todos</option>
         <option value="2">Oficina de la Presidencia de la República</option>
         <option value="4">Gobernación</option>
         <option value="5">Relaciones Exteriores</option>
@@ -111,7 +111,7 @@
       <div class="col-sm-12 col-xs-6">
       <h3>Ejecutor</h3>
       <select id="GF-SHCP-exec-selector">
-        <option value="all">todos</option>
+        <option value="all">Todos</option>
         @foreach($execs as $exec)
         <option>{{$exec->desc_unidad}}</option>
         @endforeach
@@ -122,7 +122,7 @@
       <h3>Avance físico</h3>
       <select id="GF-SHCP-advance-selector">
         <!-- avance_fisico -->
-        <option value="all">todos</option>
+        <option value="all">Todos</option>
         <option value="1">&lt; 1%</option>
         <option value="2">1 a 20%</option>
         <option value="3">20 a 40%</option>
@@ -208,9 +208,19 @@
 <script src="js/bower_components/d3/d3.min.js"></script>
 <script src="js/bower_components/leaflet/dist/leaflet.js"></script>
 <script src="js/bower_components/underscore/underscore.js"></script>
+<script src="js/classybrew.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZXX_dqYAZ9oLxA28sN5ztg3qNBArk80I"></script>
 <!--<script src="http://maps.google.com/maps/api/js?v=3.exp&sensor=false"></script>-->
 <script src="js/main.js"></script>
-  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45473222-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>

@@ -1,7 +1,57 @@
 (function(win){
+  /*
+  d3.json("js/states.json", function(e,d){
+    console.log(d);
+  });
+  */
+
+  /*
+  d3.json("js/cities_min.json", function(e,d){
+    d3.json("js/gas_data.json", function(e, dd){
+      console.log(dd[6]);
+      console.log(d.features[3].properties);
+      d.features.forEach(function(feature){
+        //feature.properties
+        let r = _.find(dd, {city_id : feature.properties.city, state_id : feature.properties.state});
+        if(r){
+          feature.properties.magna   = r.magna;
+          feature.properties.diesel  = r.diesel;
+          feature.properties.premium = r.premium;
+
+          feature.properties.state = r.state;
+          feature.properties.city  = r.city;
+        }
+        else{
+          feature.properties.magna    = null;
+          feature.properties.diesel  = null;
+          feature.properties.premium = null;
+
+          feature.properties.state = null;
+          feature.properties.city  = null;
+        }
+      });
+
+      full = d;
+      console.log(":D");
+    });
+  });
+  */
+
+
+  
 
   // DEfine the function constructor
-  var GFSHCPMap =  function(){
+  var BREW_COLORS = ["OrRd", "PuBu", "BuPu", "Oranges", 
+"BuGn", "YlOrBr", "YlGn", "Reds", 
+"RdPu", "Greens", "YlGnBu", "Purples", 
+"GnBu", "Greys", "YlOrRd", "PuRd", "Blues", 
+"PuBuGn", "Spectral", "RdYlGn", "RdBu", 
+"PiYG", "PRGn", "RdYlBu", "BrBG", 
+"RdGy", "PuOr", "Set2", "Accent", 
+"Set1", "Set3", "Dark2", "Paired", 
+"Pastel2", "Pastel1"],
+
+  GFSHCPMap =  function(){
     // the string format for the money
     var Format = d3.format(",");
     
@@ -40,7 +90,16 @@
     // the info panel template
     //
     //
-    point_popup = _.template("<%=name%> <div class='amount_label'> <div class='row'><div class='col-sm-6'><h5>Monto total de inversión</h5>  $<%=monto_total%> <h5>Monto ejercido</h5> $<%=ejercido%></div><div class='col-sm-6'><h5>Avance</h5> <%=avance%>% <div class='bar'><span class='bar inside total' style='width:<%=avance%>%'></span></div></div></div></div> <a href='/ficha#<%=cveppi%>' target='_blank' class='btn more info'>Más información</a>");
+
+    point_popup = _.template("<%=name%>" +
+    	"<div class='amount_label'>"+
+    	"<div class='row'>" + 
+    	"<div class='col-sm-6'><h5>Monto total de inversión</h5>  $<%=monto_total%>"+
+    	"<h5>Monto ejercido</h5> $<%=ejercido%></div>"+
+    	"<div class='col-sm-6'>"+
+    	"<h5>Avance Físico</h5> <%=avance%>% <div class='bar'><span class='bar inside total' style='width:<%=avance%>%'></span>"+
+    	"<h5>Año</h5> <%=ciclo%></div>"+
+    	"</div></div> <a href='/ficha#<%=cveppi%>' target='_blank' class='btn more info'>Más información</a>");
 
     /*
      * [ D A T A   P A N E L S   C O N S T R U C T O R S ]
@@ -122,6 +181,8 @@
       this.geocodingSucces = this.geocodingSucces.bind(this);
       this.geocoder        = new google.maps.Geocoder();
 
+      //this.brew = new classyBrew();
+
       // SET THE UI FILTERS
       /*
       this.yearSelector = document.getElementById("GF-SHCP-year-selector");
@@ -151,6 +212,8 @@
 
       this.drawMap();
       this.getData();
+
+      //this.drawCities();
     },
 
     updateMap : function(e){
@@ -226,6 +289,49 @@
     },
 
     //
+    //
+    //
+    drawCities : function(){
+      var that = this;
+      d3.json("js/gas.json", function(e, d){
+
+        console.log(d.features);
+
+        var _data = d.features.map(
+          function(_d){
+          return _d.properties.premium ? +_d.properties.premium : null;
+          }
+        );
+
+        console.log(_data);
+        
+        that.brew.setSeries(_data);
+        that.brew.setNumClasses(5);
+        that.brew.setColorCode("BuGn");
+        that.brew.classify('jenks');
+        
+// getColorInRange
+        that.base_map = L.geoJson(d, {
+          style : function(d){
+            return {
+            weight      : .4,
+            opacity     : .6,
+            color       : 'black',
+            dashArray   : '',
+            fillOpacity : 0.7,
+            fillColor   : that.brew.getColorInRange(+d.properties.premium)//"#fff"
+          }
+          },
+        }).addTo(that.map);
+      });
+      /*
+      this.base_map = L.geoJson(cities, {
+        style : style,
+      }).addTo(map);
+      */
+    },
+
+    //
     // [ comentar otro día n_____n ]
     //
     //
@@ -243,7 +349,8 @@
                 cveppi : feature.properties.cvePPI,
                 ejercido : Format(feature.properties.ejercido),
                 monto_total : Format(feature.properties.monto_total),
-                avance : feature.properties.avance
+                avance : feature.properties.avance,
+                ciclo : feature.properties.ciclo
               };
 
               p.on("click", function(e){
@@ -297,7 +404,8 @@
               "name"      : d.name,
               "avance"    : d.advance,
               "ejercido"  : d.ejercido,
-              "monto_total" : d.monto_total_inversion
+              "monto_total" : d.monto_total_inversion,
+              "ciclo" : d.ciclo
             },
             geometry : {
               "type": "Point", 

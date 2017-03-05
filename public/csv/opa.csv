@@ -763,7 +763,6 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1409J3F0005,Rehabilitación del cuerpo de la escollera lado Allende.,9,"Administración Portuaria Integral de Coatzacoalcos, S.A. de C.V.",30,18.15981,-94.40758,95,77338432,,Comunicaciones y Transportes,52304868
 '1512NDY0005,"Programa anual de adquisición de tecnologías de la información  y la comunicación para el INSP, 2016.",12,Instituto Nacional de Salud Pública,35,0,0,0,4599714,2016,,0
 '11096500006,Xico-Pocitos,9,Centro SCT Veracruz,30,19.427772,-97.019947,90.03,67687260,2016,Comunicaciones y Transportes,5937931
-'11096320002,Pilcaya - Piedras Negras,9,Centro SCT Guerrero,12,1,11,,45086861,2017,Comunicaciones y Transportes,
 '11096400006,San Felipe Ixtapa - San Agustín Tlacotepec.,9,Centro SCT Oaxaca,20,17.491094,-97.525078,39.6,137833470,2017,,4429258
 '15132120001,Adquisición de equipo especializado  para la protección del medio ambiente marino.,13,Dirección General de Investigación y Desarrollo,9,0,0,0,14849340,2017,,0
 '1511L4J0006,Sistema de Seguridad Contra Incendio en el Nuevo Edificio de Investigación de la Unidad Querétaro del Cinvestav.,11,Centro de Investigación y de Estudios Avanzados del Instituto Politécnico Nacional,22,20.729444,-100.469444,0,6105317,2017,,0
@@ -3904,4 +3903,3 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1611A3Q0024,Programa anual de adquisiciones de bienes informáticos no asociados a la obra pública para los Centros e Institutos de Investigación Científica y Desarrollo Tecnológico Foráneos.,11,Universidad Nacional Autónoma de México,35,0,0,,12188671,2017,Desarrollo económico,
 '15132160004,Adquisición de Terminales Satelitales en Banda L para la Modernización de la Red Institucional Satelital.,13,Dirección General de Servicios,9,0,0,100,154958092,2016,Seguridad,57640753
 '1416B000053,Estudios de Preinversión para las acciones de obra del Sistema Cutzamala y PAI,16,Comisión Nacional del Agua,35,0,0,7.71,276581834,2016,Desarrollo Social,4721267
-'1416B000055,"Rehabilitación y Mantenimiento de los Ríos, Presas y Canales del Sistema Hidrológico en la Zona Poniente, Estado de México.",16,Comisión Nacional del Agua,35,0,0,21.67,153332853,2017,,32239629
