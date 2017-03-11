@@ -32,6 +32,10 @@ define(function(require){
       this.drawMap();
     },
 
+    //
+    // DIBUJA EL MAPA PRINCIPAL
+    //
+    //
     drawMap : function(){
       // inicia el mapa de leaflet con los settings de config.map.json
       this.map = L.map(this.settings.map.div)
