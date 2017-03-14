@@ -8,6 +8,7 @@
 define(function(require){
   // obtiene el archivo de configuración
   var CONFIG  = require("json!config.map.json"),
+      d3      = require("d3"),
       leaflet = require("leaflet");
 
 
@@ -26,10 +27,12 @@ define(function(require){
     initialize : function(){
       // inicia las propiedades a usar
       this.map = null;
+      this.layersConfig = [];
       this.settings = Object.create(CONFIG);
 
       // inicia el mapa
       this.drawMap();
+      this.loadMapsConfig();
     },
 
     //
@@ -50,6 +53,33 @@ define(function(require){
           this.map.attributionControl.addAttribution(attr);
         }, this);
       }
+    },
+
+    //
+    // CARGA LA CONFIGUACIÓN DE LOS MAPAS EXTERNOS
+    //
+    //
+    loadMapsConfig : function(){
+      var that = this;
+      this.settings.maps.maps.forEach(function(url, index){
+        
+        var path = this.settings.maps.basePath + "/" + url;
+
+        d3.json(path, function(error, data){
+          var item = {
+            src    : path, 
+            config : data,
+            index  : index
+          };
+
+          that.layersConfig.push(item);
+        });
+
+      }, this);
+    },
+
+    drawLayer : function(config){
+
     }
   };
 

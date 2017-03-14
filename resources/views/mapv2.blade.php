@@ -6,10 +6,11 @@
   <link rel="stylesheet" type="text/css" href="js/bower_components/leaflet/dist/leaflet.css">
 </head>
 <body>
+  <!-- MAP SELECTOR -->
+  <ul id="GF-SHCP-list"></ul>
+
   <!-- MAIN MAP -->
-  <p>Aquí inicia esto</p>
   <div id="GF-SHCP-map" style="width:500px; height:500px; frameborder:0; scrolling:no;"></div>
-  <p>aquí termina</p>
 
   <!-- Librerías JS -->
   <!-- versión de desarrollo -->

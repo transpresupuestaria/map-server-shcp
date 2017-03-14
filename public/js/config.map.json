@@ -19,5 +19,11 @@
     "weight"      : 1,
     "opacity"     : 0.3,
     "fillOpacity" : 0.9
+  },
+  "maps" : {
+    "basePath" : "/js",
+    "maps"     : ["ramo23.map.json", "opa.map.json"],
+    "extras"   : ["poblacion.map.json"],
+    "current"  : 0
   }
 }
