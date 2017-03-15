@@ -63,7 +63,8 @@ define(function(require){
       var that = this;
       this.settings.maps.maps.forEach(function(url, index){
         
-        var path = this.settings.maps.basePath + "/" + url;
+        var path   = this.settings.maps.basePath + "/" + url,
+            active = this.settings.maps.current; 
 
         d3.json(path, function(error, data){
           var item = {
@@ -73,6 +74,10 @@ define(function(require){
           };
 
           that.layersConfig.push(item);
+
+          if(+index === +active){
+            console.log("render!");
+          }
         });
 
       }, this);

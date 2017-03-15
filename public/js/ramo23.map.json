@@ -1,3 +1,5 @@
 {
-  "type" : "area"
+  "type"  : "area",
+  "level" : "city",
+  "src"   : ""
 }
