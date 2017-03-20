@@ -70,21 +70,22 @@ define(function(require){
           var item = {
             src    : path, 
             config : data,
-            index  : index
+            index  : index,
+            data   : data
           };
 
           that.layersConfig.push(item);
 
           if(+index === +active){
-            console.log("render!");
+            that.getLayer(item);
           }
         });
-
       }, this);
     },
 
-    drawLayer : function(config){
-
+    getLayer : function(item){
+      var conf = item.data;
+      console.log(conf);
     }
   };
 
