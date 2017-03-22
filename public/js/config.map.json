@@ -1,0 +1,29 @@
+{
+  "map" : {
+    "div"         : "GF-SHCP-map",
+    "lat"         : 22.442167,
+    "lng"         : -100.110350,
+    "zoom"        : 5,
+    "tileServer"  : "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "tileServerConfig" : {
+      "maxZoom"     : 18,
+      "attribution" : "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+    },
+    "attributions" : ["SHCP"]
+  },
+  "mapPoints" : {
+    "radius"      : 2,
+    "radius2"     : 5,
+    "fillColor"   : "rgb(244, 157, 81)",
+    "color"       : "rgb(214, 103, 6)",
+    "weight"      : 1,
+    "opacity"     : 0.3,
+    "fillOpacity" : 0.9
+  },
+  "maps" : {
+    "basePath" : "/js",
+    "maps"     : ["ramo23.map.json", "opa.map.json"],
+    "extras"   : ["poblacion.map.json"],
+    "current"  : 0
+  }
+}
