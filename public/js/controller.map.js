@@ -71,7 +71,7 @@ define(function(require){
             src    : path, 
             config : data,
             index  : index,
-            data   : data
+            data   : null
           };
 
           that.layersConfig.push(item);
@@ -83,10 +83,29 @@ define(function(require){
       }, this);
     },
 
+    //
+    // OBTIENE LA INFORMACIÓN DEL LAYER SELECCIONADO
+    //
+    //
     getLayer : function(item){
-      var conf = item.data;
+      var that = this, 
+          conf = item.config;
       console.log(conf);
+
+      // conf.file puede ser CSV, TSV, JSON, etc.
+      d3[conf.file](conf.src, function(error, data){
+        item.data = data;
+      });
+    },
+
+    //
+    // DIBUJA EL LAYER SELECCIONADO
+    //
+    //
+    renderLayer : function(item){
+      
     }
+
   };
 
   return GFSHCPMap;
