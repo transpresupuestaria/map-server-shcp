@@ -86,6 +86,10 @@ define(function(require){
     getLayer : function(item){
       var conf = item.data;
       console.log(conf);
+    },
+
+    drawLayer : function(){
+      
     }
   };
 
