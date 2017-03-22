@@ -103,6 +103,9 @@ define(function(require){
     //
     //
     renderLayer : function(item){
+    },
+
+    drawLayer : function(){
       
     }
 
