@@ -9,7 +9,8 @@ define(function(require){
   // obtiene el archivo de configuración
   var CONFIG  = require("json!config.map.json"),
       d3      = require("d3"),
-      leaflet = require("leaflet");
+      leaflet = require("leaflet"),
+      ESTADOS = require("assets/estados-area");
 
 
   /*
@@ -33,6 +34,34 @@ define(function(require){
       // inicia el mapa
       this.drawMap();
       this.loadMapsConfig();
+
+      ESTADOS.edos.features.forEach(function(estado){
+        estado.properties.CVE_ENT = +estado.properties.CVE_ENT;
+
+        if(estado.properties.CVE_ENT == 31){
+          estado.properties.NOM_ENT = "Yucatán";
+        }
+        if(estado.properties.CVE_ENT == 24){
+          estado.properties.NOM_ENT = "San Luis Potosí";
+        }
+        if(estado.properties.CVE_ENT == 22){
+          estado.properties.NOM_ENT = "Querétaro";
+        }
+        if(estado.properties.CVE_ENT == 19){
+          estado.properties.NOM_ENT = "Nuevo León";
+        }
+        if(estado.properties.CVE_ENT == 16){
+          estado.properties.NOM_ENT = "Michoacán";
+        }
+        if(estado.properties.CVE_ENT == 15){
+          estado.properties.NOM_ENT = "México";
+        }
+        if(estado.properties.CVE_ENT == 9){
+          estado.properties.NOM_ENT = "Ciudad de México";
+        }
+        //console.log(estado.geometry.coordinates);
+
+      });
     },
 
     //
@@ -95,6 +124,7 @@ define(function(require){
       // conf.file puede ser CSV, TSV, JSON, etc.
       d3[conf.file](conf.src, function(error, data){
         item.data = data;
+        that.renderLayer(item);
       });
     },
 
@@ -103,11 +133,33 @@ define(function(require){
     //
     //
     renderLayer : function(item){
+      this.states = L.geoJson(ESTADOS.edos, {
+      style : this._stateStyle,
+    }).addTo(this.map);
     },
 
     drawLayer : function(){
       
-    }
+    },
+
+    /*
+     * F U N C I O N E S   D E   S O P O R T E 
+     * ------------------------------------------------------------
+     */
+
+    _stateStyle : function(feature){
+      console.log(feature);
+      return {
+        weight      : .4,
+        opacity     : 0.1,
+        color       : 'black',
+        dashArray   : '',
+        fillOpacity : 1,
+        fillColor   : "#f2f2f2"
+      }
+    },
+
+
 
   };
 
