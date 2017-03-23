@@ -7,10 +7,13 @@
 
 define(function(require){
   // obtiene el archivo de configuración
-  var CONFIG  = require("json!config.map.json"),
-      d3      = require("d3"),
-      leaflet = require("leaflet"),
-      ESTADOS = require("assets/estados-area");
+  var CONFIG      = require("json!config.map.json"),
+      d3          = require("d3"),
+      leaflet     = require("leaflet"),
+      underscore  = require("underscore"),
+      COLORS      = require("assets/brewer-color-list"),
+      ESTADOS     = require("assets/estados-area"),
+      ESTADOSNAME = require("assets/estados-nombres");
 
 
   /*
@@ -32,36 +35,10 @@ define(function(require){
       this.settings = Object.create(CONFIG);
 
       // inicia el mapa
+      this._setStatesGeometry();
       this.drawMap();
       this.loadMapsConfig();
-
-      ESTADOS.edos.features.forEach(function(estado){
-        estado.properties.CVE_ENT = +estado.properties.CVE_ENT;
-
-        if(estado.properties.CVE_ENT == 31){
-          estado.properties.NOM_ENT = "Yucatán";
-        }
-        if(estado.properties.CVE_ENT == 24){
-          estado.properties.NOM_ENT = "San Luis Potosí";
-        }
-        if(estado.properties.CVE_ENT == 22){
-          estado.properties.NOM_ENT = "Querétaro";
-        }
-        if(estado.properties.CVE_ENT == 19){
-          estado.properties.NOM_ENT = "Nuevo León";
-        }
-        if(estado.properties.CVE_ENT == 16){
-          estado.properties.NOM_ENT = "Michoacán";
-        }
-        if(estado.properties.CVE_ENT == 15){
-          estado.properties.NOM_ENT = "México";
-        }
-        if(estado.properties.CVE_ENT == 9){
-          estado.properties.NOM_ENT = "Ciudad de México";
-        }
-        //console.log(estado.geometry.coordinates);
-
-      });
+      //console.log(estado.geometry.coordinates);
     },
 
     //
@@ -124,6 +101,7 @@ define(function(require){
       // conf.file puede ser CSV, TSV, JSON, etc.
       d3[conf.file](conf.src, function(error, data){
         item.data = data;
+        that._colorMixer(item);
         that.renderLayer(item);
       });
     },
@@ -147,8 +125,15 @@ define(function(require){
      * ------------------------------------------------------------
      */
 
+    //
+    // ESTILO PARA LAS GEOMETRÍAS DE ESTADO
+    // ---------------------------------------------
+    // regresa una función que asigna el estilo para 
+    // las geometrías de estado
+    //
     _stateStyle : function(feature){
-      console.log(feature);
+      //console.log(feature);
+      // type, geometry, properties
       return {
         weight      : .4,
         opacity     : 0.1,
@@ -157,6 +142,62 @@ define(function(require){
         fillOpacity : 1,
         fillColor   : "#f2f2f2"
       }
+    },
+
+    //
+    // GEOMETRY/POINT COLOR FUNCTION
+    // ---------------------------------------------
+    // regresa una función que asigna el color para 
+    // las geometrías o puntos
+    //
+    _colorMixer : function(item){
+      console.log(item);
+
+      var value = item.config.current.value,
+          level = item.config.current.level,
+          data  = null,
+          _data = _.map(item.data, function(d){
+                    return +d[value];
+                  });
+
+      if(["state", "city"].indexOf(level) !== -1){
+
+        console.log("es geometría");
+      }
+      else{
+        console.log("son puntos");
+      }
+      console.log(_data);
+    },
+
+    _setStatesGeometry : function(){
+      ESTADOS.edos.features.forEach(function(estado){
+        estado.properties.CVE_ENT = +estado.properties.CVE_ENT;
+
+        if(estado.properties.CVE_ENT == 31){
+          estado.properties.NOM_ENT = "Yucatán";
+        }
+        if(estado.properties.CVE_ENT == 24){
+          estado.properties.NOM_ENT = "San Luis Potosí";
+        }
+        if(estado.properties.CVE_ENT == 22){
+          estado.properties.NOM_ENT = "Querétaro";
+        }
+        if(estado.properties.CVE_ENT == 19){
+          estado.properties.NOM_ENT = "Nuevo León";
+        }
+        if(estado.properties.CVE_ENT == 16){
+          estado.properties.NOM_ENT = "Michoacán";
+        }
+        if(estado.properties.CVE_ENT == 15){
+          estado.properties.NOM_ENT = "México";
+        }
+        if(estado.properties.CVE_ENT == 9){
+          estado.properties.NOM_ENT = "Ciudad de México";
+        }
+      });
+
+      this.statesGeojson = ESTADOS;
     },
 
 
