@@ -1,0 +1,3 @@
+[submodule "public/js/classybrew"]
+	path = public/js/classybrew
+	url = https://github.com/tannerjt/classybrew.git

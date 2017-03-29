@@ -14,6 +14,7 @@ require.config({
     underscore : "bower_components/underscore/underscore-min",
     text       : 'bower_components/requirejs-plugins/lib/text',
     json       : 'bower_components/requirejs-plugins/src/json',
+    classyBrew : "classybrew/build/classybrew.min"
   }
 });
 
