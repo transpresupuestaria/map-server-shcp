@@ -35,6 +35,11 @@ define(function(require){
       this.layersConfig = [];
       this.settings     = Object.create(CONFIG);
       this.brew         = null;
+      this.currentData  = null;
+      this.currentMap   = null;
+
+      // arregla el scope de algunas funciones
+      this._stateStyle = this._stateStyle.bind(this);
 
       // inicia el mapa
       this._setStatesGeometry();
@@ -97,11 +102,23 @@ define(function(require){
     getLayer : function(item){
       var that = this, 
           conf = item.config;
-      console.log(conf);
 
       // conf.file puede ser CSV, TSV, JSON, etc.
       d3[conf.file](conf.src, function(error, data){
         item.data = data;
+        that.currentMap = item;
+
+        if(item.config.current.level == "state"){
+          that.currentData = that._agregateDataByState(item);
+        }
+        else if(item.config.current.level == "city"){
+          that.currentData = that._agregateDataByCity(item);
+        }
+
+        else{
+          that.currentData = null;
+        }
+
         that._colorMixer(item);
         that.renderLayer(item);
       });
@@ -112,7 +129,6 @@ define(function(require){
     //
     //
     renderLayer : function(item){
-      console.log(item);
       this.states = L.geoJson(ESTADOS.edos, {
       style : this._stateStyle,
     }).addTo(this.map);
@@ -121,6 +137,10 @@ define(function(require){
     drawLayer : function(){
       
     },
+
+
+
+
 
     /*
      * F U N C I O N E S   D E   S O P O R T E 
@@ -136,13 +156,22 @@ define(function(require){
     _stateStyle : function(feature){
       // type, geometry, properties
       // brew.getColorInRange(7.5);
+      var state   = this.currentData.filter(function(d){
+                      return feature.properties.CVE_ENT == d.id
+                    })[0],
+          data    = state.data,
+          current = this.currentMap.config.current.value,
+          value   = ! state.data.length ? 0 : _.pluck(data, current).reduce(function(a, b){
+                      return Number(a) + Number(b);
+                    }, 0);
+
       return {
         weight      : .4,
         opacity     : 0.1,
         color       : 'black',
         dashArray   : '',
         fillOpacity : 1,
-        fillColor   : "#f2f2f2"
+        fillColor   : this.brew.getColorInRange(value) // "#f2f2f2"
       }
     },
 
@@ -153,24 +182,66 @@ define(function(require){
     // las geometrías o puntos
     //
     _colorMixer : function(item){
-
       var value = item.config.current.value,
           level = item.config.current.level,
           data  = null,
-          _data = _.map(item.data, function(d){
-                    return +d[value];
-                  });
+          _data = null;
 
-      if(["state", "city"].indexOf(level) !== -1){
+      if(level == "state"){
+        data  = this.currentData;
+        _data = data.map(function(d){
+                  if(d.data.length){
+                    return _.pluck(d.data, value).reduce(function(a, b){
+                      return Number(a) + Number(b);
+                    }, 0);
+                  }
+                  else{
+                    return 0;
+                  }
+                });
       }
+      else if(level == "city"){
+      }
+
       else{
+
       }
       
       this.brew = new classyBrew();
       this.brew.setSeries(_data);
-      this.brew.setNumClasses(5);
+      this.brew.setNumClasses(7);
       this.brew.setColorCode("BuGn");
+      this.brew.classify('jenks');
       
+    },
+
+    _agregateDataByState : function(item){
+
+      var state  = item.config.location.state,
+          _data  = null;
+
+      this._strToNumber(item.data, state);
+
+      _data = ESTADOSNAME.states.map(function(st){
+        var search    = {};
+        search[state] = st.id;
+        
+        return {
+          id   : st.id,
+          name : st.name,
+          url  : st.url,
+          data : _.where(item.data, search)
+        }
+
+      });
+
+      return _data;
+    },
+
+    _strToNumber : function(data, field){
+      data.forEach(function(el){
+        el[field] = +el[field];
+      });
     },
 
     //
