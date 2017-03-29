@@ -11,6 +11,7 @@ define(function(require){
       d3          = require("d3"),
       leaflet     = require("leaflet"),
       underscore  = require("underscore"),
+      classybrew  = require("classyBrew"),
       COLORS      = require("assets/brewer-color-list"),
       ESTADOS     = require("assets/estados-area"),
       ESTADOSNAME = require("assets/estados-nombres");
@@ -30,9 +31,10 @@ define(function(require){
     //
     initialize : function(){
       // inicia las propiedades a usar
-      this.map = null;
+      this.map          = null;
       this.layersConfig = [];
-      this.settings = Object.create(CONFIG);
+      this.settings     = Object.create(CONFIG);
+      this.brew         = null;
 
       // inicia el mapa
       this._setStatesGeometry();
@@ -111,6 +113,7 @@ define(function(require){
     //
     //
     renderLayer : function(item){
+      console.log(item);
       this.states = L.geoJson(ESTADOS.edos, {
       style : this._stateStyle,
     }).addTo(this.map);
@@ -134,6 +137,7 @@ define(function(require){
     _stateStyle : function(feature){
       //console.log(feature);
       // type, geometry, properties
+      // brew.getColorInRange(7.5);
       return {
         weight      : .4,
         opacity     : 0.1,
@@ -168,8 +172,19 @@ define(function(require){
         console.log("son puntos");
       }
       console.log(_data);
+      
+      this.brew = new classyBrew();
+      this.brew.setSeries(_data);
+      this.brew.setNumClasses(5);
+      this.brew.setColorCode("BuGn");
+      
     },
 
+    //
+    // ARREGLA EL GEOJSON DE ESTADOS
+    // ---------------------------------------------
+    // elimina caracteres raros y nombre nuevo en el geojson de estados
+    //
     _setStatesGeometry : function(){
       ESTADOS.edos.features.forEach(function(estado){
         estado.properties.CVE_ENT = +estado.properties.CVE_ENT;
