@@ -40,7 +40,6 @@ define(function(require){
       this._setStatesGeometry();
       this.drawMap();
       this.loadMapsConfig();
-      //console.log(estado.geometry.coordinates);
     },
 
     //
@@ -135,7 +134,6 @@ define(function(require){
     // las geometrías de estado
     //
     _stateStyle : function(feature){
-      //console.log(feature);
       // type, geometry, properties
       // brew.getColorInRange(7.5);
       return {
@@ -155,7 +153,6 @@ define(function(require){
     // las geometrías o puntos
     //
     _colorMixer : function(item){
-      console.log(item);
 
       var value = item.config.current.value,
           level = item.config.current.level,
@@ -165,13 +162,9 @@ define(function(require){
                   });
 
       if(["state", "city"].indexOf(level) !== -1){
-
-        console.log("es geometría");
       }
       else{
-        console.log("son puntos");
       }
-      console.log(_data);
       
       this.brew = new classyBrew();
       this.brew.setSeries(_data);
