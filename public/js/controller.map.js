@@ -6,15 +6,26 @@
 // @url     : http://gobiernofacil.com
 
 define(function(require){
-  // obtiene el archivo de configuración
+
+  /*
+   * C A R G A   L O S   A R C H I V O S   D E   I N I C I O
+   * ------------------------------------------------------------
+   */
+
+      // obtiene el archivo de configuración
   var CONFIG      = require("json!config.map.json"),
+      // obtiene las librerías necesarias
       d3          = require("d3"),
       leaflet     = require("leaflet"),
       underscore  = require("underscore"),
       classybrew  = require("classyBrew"),
+      // obtiene los conjuntos de datos
       COLORS      = require("assets/brewer-color-list"),
       ESTADOS     = require("assets/estados-area"),
       ESTADOSNAME = require("assets/estados-nombres");
+
+
+
 
 
   /*
@@ -38,12 +49,21 @@ define(function(require){
       this.currentData  = null;
       this.currentMap   = null;
 
+      this.states = null;
+      this.cities = null;
+      this.points = null;
+
+
       // arregla el scope de algunas funciones
       this._stateStyle = this._stateStyle.bind(this);
 
-      // inicia el mapa
+      // arregla algunos datos del geojson
       this._setStatesGeometry();
+      
+      // inicia el mapa de leaflet
       this.drawMap();
+
+      // carga los json de configuración decada mapa
       this.loadMapsConfig();
     },
 
@@ -73,6 +93,9 @@ define(function(require){
     //
     loadMapsConfig : function(){
       var that = this;
+
+      // carga el json de cada mapa, y si es el mapa seleccionado, 
+      // genera unlayer con la información
       this.settings.maps.maps.forEach(function(url, index){
         
         var path   = this.settings.maps.basePath + "/" + url,
@@ -103,24 +126,32 @@ define(function(require){
       var that = this, 
           conf = item.config;
 
-      // conf.file puede ser CSV, TSV, JSON, etc.
+      // carga el archivo con los datos para graficar
       d3[conf.file](conf.src, function(error, data){
         item.data = data;
         that.currentMap = item;
 
+        // renderea un mapa a nivel estatal
         if(item.config.current.level == "state"){
           that.currentData = that._agregateDataByState(item);
+          that.brew = that._colorMixer(item);
+          that.renderStateLayer(item);
         }
+
+        // renderea un mapa a nivel municipal
         else if(item.config.current.level == "city"){
           that.currentData = that._agregateDataByCity(item);
+          that.brew = that._colorMixer(item);
+          that.renderCityLayer(item);
         }
 
+        // renderea un mapa a nivel latitud y longitud
         else{
           that.currentData = null;
+          that.renderPointsLayer(item);
         }
 
-        that._colorMixer(item);
-        that.renderLayer(item);
+        
       });
     },
 
@@ -128,14 +159,23 @@ define(function(require){
     // DIBUJA EL LAYER SELECCIONADO
     //
     //
-    renderLayer : function(item){
+    renderStateLayer : function(item){
       this.states = L.geoJson(ESTADOS.edos, {
-      style : this._stateStyle,
-    }).addTo(this.map);
+                      style : this._stateStyle,
+                    }).addTo(this.map);
     },
 
-    drawLayer : function(){
-      
+    renderPointsLayer : function(item){
+      console.log(item);
+      var that = this;
+
+      return;
+      this.points = L.geoJson(d, {
+        pointToLayer : function(feature, latlng){
+          var p = L.circleMarker(latlng, that.style.points);
+          return p;
+        }
+      });
     },
 
 
@@ -185,7 +225,8 @@ define(function(require){
       var value = item.config.current.value,
           level = item.config.current.level,
           data  = null,
-          _data = null;
+          _data = null,
+          brew  = null;
 
       if(level == "state"){
         data  = this.currentData;
@@ -207,12 +248,13 @@ define(function(require){
 
       }
       
-      this.brew = new classyBrew();
-      this.brew.setSeries(_data);
-      this.brew.setNumClasses(7);
-      this.brew.setColorCode("BuGn");
-      this.brew.classify('jenks');
-      
+      brew = new classyBrew();
+      brew.setSeries(_data);
+      brew.setNumClasses(7);
+      brew.setColorCode("BuGn");
+      brew.classify('jenks');
+
+      return brew;
     },
 
     _agregateDataByState : function(item){
@@ -242,6 +284,43 @@ define(function(require){
       data.forEach(function(el){
         el[field] = +el[field];
       });
+    },
+
+    //
+    // TOMA UN ARRAY DE PUNTOS Y LO CONVIERTE A GEOJSON
+    // -------------------------------------------------------
+    //
+    _makeGeojson : function(data){
+      return{
+        "type":"FeatureCollection",
+        "crs":{
+          "type":"name",
+          "properties":{
+            "name":"urn:ogc:def:crs:EPSG::4019"
+          }
+        },
+        "features" : data.map(function(d){
+          return {
+            type : "Feature",
+            properties : {
+              //"Municipio" : "Aguascalientes", 
+              //"Estado"    : "Aguascalientes", 
+              "Long"        : d.lng, 
+              "Lat"         : d.lat,
+              "cvePPI"    : d.key,
+              "name"      : d.name,
+              "avance"    : d.advance,
+              "ejercido"  : d.ejercido,
+              "monto_total" : d.monto_total_inversion,
+              "ciclo" : d.ciclo
+            },
+            geometry : {
+              "type": "Point", 
+              "coordinates": [ d.lng, d.lat ]
+            }
+          }
+        })
+      }
     },
 
     //

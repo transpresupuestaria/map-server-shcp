@@ -11,7 +11,7 @@
     },
     "attributions" : ["SHCP"]
   },
-  "mapPoints" : {
+  "mapPoint" : {
     "radius"      : 2,
     "radius2"     : 5,
     "fillColor"   : "rgb(244, 157, 81)",
@@ -20,10 +20,17 @@
     "opacity"     : 0.3,
     "fillOpacity" : 0.9
   },
+  "mapGeometry" : {
+    "weight"      : 0.4,
+    "opacity"     : 0.1,
+    "color"       : "black",
+    "dashArray"   : "",
+    "fillOpacity" : 1
+  },
   "maps" : {
     "basePath" : "/js",
     "maps"     : ["ramo23.map.json", "opa.map.json", "tomas.map.json"],
     "extras"   : ["poblacion.map.json"],
-    "current"  : 2
+    "current"  : 1
   }
 }
