@@ -167,15 +167,18 @@ define(function(require){
 
     renderPointsLayer : function(item){
       console.log(item);
-      var that = this;
+      var that   = this,
+          points = this._makeGeojson(item);
 
-      return;
-      this.points = L.geoJson(d, {
+      // return;
+
+
+      this.points = L.geoJson(points, {
         pointToLayer : function(feature, latlng){
-          var p = L.circleMarker(latlng, that.style.points);
+          var p = L.circleMarker(latlng, that.settings.mapPoint);
           return p;
         }
-      });
+      }).addTo(this.map);
     },
 
 
@@ -290,37 +293,38 @@ define(function(require){
     // TOMA UN ARRAY DE PUNTOS Y LO CONVIERTE A GEOJSON
     // -------------------------------------------------------
     //
-    _makeGeojson : function(data){
-      return{
-        "type":"FeatureCollection",
-        "crs":{
-          "type":"name",
-          "properties":{
-            "name":"urn:ogc:def:crs:EPSG::4019"
-          }
-        },
-        "features" : data.map(function(d){
-          return {
-            type : "Feature",
-            properties : {
-              //"Municipio" : "Aguascalientes", 
-              //"Estado"    : "Aguascalientes", 
-              "Long"        : d.lng, 
-              "Lat"         : d.lat,
-              "cvePPI"    : d.key,
-              "name"      : d.name,
-              "avance"    : d.advance,
-              "ejercido"  : d.ejercido,
-              "monto_total" : d.monto_total_inversion,
-              "ciclo" : d.ciclo
-            },
-            geometry : {
-              "type": "Point", 
-              "coordinates": [ d.lng, d.lat ]
-            }
-          }
-        })
-      }
+    _makeGeojson : function(item){
+      console.log(item);
+
+      var geojson = {
+                      "features" : null,
+                      "type" : "FeatureCollection",
+                      "crs"  : {
+                                 "type"       : "name",
+                                 "properties" : { "name" : "urn:ogc:def:crs:EPSG::4019" }
+                                }
+                    },
+          properties = item.config.data,
+          lat        = item.config.location.lat,
+          lng        = item.config.location.lng,
+          features = item.data.map(function(d){
+                       var p = {};
+                       properties.forEach(function(property){
+                        p[property] = d[property];
+                       });
+
+                       return {
+                        type : "Feature",
+                        properties : p,
+                        geometry : {
+                          "type": "Point", 
+                          "coordinates": [ +d[lng], +d[lat] ]
+                        }
+                       }
+                     });
+
+      geojson.features = features;
+      return geojson;
     },
 
     //
