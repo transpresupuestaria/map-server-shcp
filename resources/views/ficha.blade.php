@@ -178,26 +178,34 @@
 			<span class="bar inside pef" v-bind:style="presupuesto_style"></span>
 			</div>
 		</div>
-
-        <!-- pef-->
-        <h3>Presupuesto aprobado en el PEF 2016</h3>
-        <p class="amount right">$<strong>@{{Format(aprobado)}}</strong> <span>MXN</span></p>
-        <div class="bar">
-          <span class="bar inside pef" v-bind:style="presupuesto_style"></span>
+		
+		<div v-if="aprobado != 0">
+       		<!-- pef-->
+       		<h3>Presupuesto aprobado en el PEF 2016</h3>
+       		<p class="amount right">$<strong>@{{Format(aprobado)}}</strong> <span>MXN</span></p>
+       		<div class="bar">
+       		  <span class="bar inside pef" v-bind:style="presupuesto_style"></span>
+       		</div>
+		</div>
+		
+		<div v-if="ejercido != 0">
+        	<!-- ejercido-->
+        	<h3>Monto ejercido 2016</h3>
+        	<p class="amount right">$<strong>@{{Format(ejercido)}}</strong> <span>MXN</span></p>
+        	<div class="bar">
+        	<span class="bar inside ejercido" v-bind:style="total_ejercido_style"></span>
+        	</div>
         </div>
-        <!-- ejercido-->
-        <h3>Monto ejercido 2016</h3>
-        <p class="amount right">$<strong>@{{Format(ejercido)}}</strong> <span>MXN</span></p>
-        <div class="bar">
-        <span class="bar inside ejercido" v-bind:style="total_ejercido_style"></span>
-
-        </div>
-        <!-- modificado-->
-        <h3>Presupuesto modificado 2016</h3>
-        <p class="amount right">$<strong>@{{Format(modificado)}}</strong> <span>MXN</span></p>
-        <div class="bar">
-          <span class="bar inside modificado" v-bind:style="modificado_style"></span>
-        </div>
+		
+		<div v-if="modificado != 0">
+        	<!-- modificado-->
+        	<h3>Presupuesto modificado 2016</h3>
+        	<p class="amount right">$<strong>@{{Format(modificado)}}</strong> <span>MXN</span></p>
+        	<div class="bar">
+        	  <span class="bar inside modificado" v-bind:style="modificado_style"></span>
+        	</div>
+		</div>
+		
         <!-- reporta obra-->
         <button id="show-modal" @click="showModal = true" class="btn report trigger">Reporta esta obra</button>
 
