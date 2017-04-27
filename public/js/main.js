@@ -71,11 +71,11 @@
     STYLE = {
       // the points
       points : {
-        radius      : 2,
+        radius      : 2.5,
         radius2     : 5,
         fillColor   : "rgb(244, 157, 81)", //#334D5C", //1cb68d
         color       : "rgb(214, 103, 6)",
-        weight      : 1,
+        weight      : 1.5,
         opacity     : 0.3,
         fillOpacity : 0.9
       },
