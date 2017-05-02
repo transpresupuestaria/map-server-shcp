@@ -72,7 +72,7 @@ d3.json(DatosGobMxURL)
           date_insert : res["date_insert"],
           desc_ppi : res["desc-ppi"],
           desc_ramo : res["desc-ramo"],
-          desc_ur : res["desc-unidad"],
+          desc_ur : res["desc-ur"],
           ejercido : res["ejercido"],
           entidad_federativa : res["entidad-federativa"],
           fase	: res ["fase"],
