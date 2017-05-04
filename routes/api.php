@@ -14,6 +14,8 @@ use App\Models\Opa;
 |
 */
 
+Route::get('sfu/state/{row}', "MapsApi@sfuState");
+
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');

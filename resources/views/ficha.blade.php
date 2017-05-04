@@ -70,7 +70,12 @@
             <p>@{{desc_ppi}}</p>
           </div>
           <div class="col-md-2 col-sm-3">
-            <h3 class="right">Fase: <span class="active">Vigente</span></h3>
+	        <div v-if="fase == 'Vigente'">
+           	 <h3 class="right">Fase: <span class="active">@{{fase}}</span></h3>
+	        </div>
+            <div v-else>
+	            <h3 class="right">Fase: <span class="disabled">@{{fase}}</span></h3>
+            </div>
           </div>
         </div>
       </div>
@@ -170,7 +175,7 @@
           <span class="bar inside total"></span>
         </div>
 
-        <div v-if="aprobado2017 != 0">
+        <div v-if="aprobado2017 != null">
 	        <!-- pef2017-->
 	        <h3>Presupuesto aprobado en el PEF 2017</h3>
 	        <p class="amount right">$<strong>@{{Format(aprobado2017)}}</strong> <span>MXN</span></p>
@@ -178,26 +183,34 @@
 			<span class="bar inside pef" v-bind:style="presupuesto_style"></span>
 			</div>
 		</div>
-
-        <!-- pef-->
-        <h3>Presupuesto aprobado en el PEF 2016</h3>
-        <p class="amount right">$<strong>@{{Format(aprobado)}}</strong> <span>MXN</span></p>
-        <div class="bar">
-          <span class="bar inside pef" v-bind:style="presupuesto_style"></span>
+		
+		<div v-if="aprobado != null">
+       		<!-- pef-->
+       		<h3>Presupuesto aprobado en el PEF 2016</h3>
+       		<p class="amount right">$<strong>@{{Format(aprobado)}}</strong> <span>MXN</span></p>
+       		<div class="bar">
+       		  <span class="bar inside pef" v-bind:style="presupuesto_style"></span>
+       		</div>
+		</div>
+		
+		<div v-if="ejercido != null">
+        	<!-- ejercido-->
+        	<h3>Monto ejercido 2016</h3>
+        	<p class="amount right">$<strong>@{{Format(ejercido)}}</strong> <span>MXN</span></p>
+        	<div class="bar">
+        	<span class="bar inside ejercido" v-bind:style="total_ejercido_style"></span>
+        	</div>
         </div>
-        <!-- ejercido-->
-        <h3>Monto ejercido 2016</h3>
-        <p class="amount right">$<strong>@{{Format(ejercido)}}</strong> <span>MXN</span></p>
-        <div class="bar">
-        <span class="bar inside ejercido" v-bind:style="total_ejercido_style"></span>
-
-        </div>
-        <!-- modificado-->
-        <h3>Presupuesto modificado 2016</h3>
-        <p class="amount right">$<strong>@{{Format(modificado)}}</strong> <span>MXN</span></p>
-        <div class="bar">
-          <span class="bar inside modificado" v-bind:style="modificado_style"></span>
-        </div>
+		
+		<div v-if="modificado != null">
+        	<!-- modificado-->
+        	<h3>Presupuesto modificado 2016</h3>
+        	<p class="amount right">$<strong>@{{Format(modificado)}}</strong> <span>MXN</span></p>
+        	<div class="bar">
+        	  <span class="bar inside modificado" v-bind:style="modificado_style"></span>
+        	</div>
+		</div>
+		
         <!-- reporta obra-->
         <button id="show-modal" @click="showModal = true" class="btn report trigger">Reporta esta obra</button>
 
@@ -765,7 +778,7 @@
 <script>
   var Format         = d3.format(","),
       GFLinksBaseURL = "http://nptp.hacienda.gob.mx/programas/jsp/programas/fichaPrograma.jsp?id=",
-      GFAPIBaseURL   = "http://api.datos.gob.mx/v1/proyectos-opa",
+      GFAPIBaseURL   = "https://datos.gob.mx/api/buda/v1/proyectos-opa",//"http://api.datos.gob.mx/v1/proyectos-opa",
       GFNotesFile    = "csv/notas.csv",
       GFLinksFile    = "csv/ppi-links.csv";
 </script>
