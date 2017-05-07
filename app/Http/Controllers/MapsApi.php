@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\ProyectosSuspendidosSfu;
+use App\Consolidado2015;
 
 use DB;
 
 class MapsApi extends Controller
 {
+  const PAGE_SIZE = 100;
   public function sfuState(Request $request, $row = "COMPROMETIDO_PER"){
     //$value = $request->input("value");
 
@@ -18,5 +20,41 @@ class MapsApi extends Controller
                 ->get();
 
     return response()->json($response)->header("Access-Control-Allow-Origin", "*");
+  }
+
+  public function consolidado2015(Request $request, $page = 1){
+    $branch = $request->input("branch");
+    $state  = $request->input("state");
+    $year   = $request->input("year");
+    $_page  = (int)$page >0 ? (int)$page - 1 : 0; 
+
+    $response = Consolidado2015::where("LONGITUD","!=", "")->where("LATITUD", "!=", "");
+    $total    = Consolidado2015::where("LONGITUD","!=", "")->where("LATITUD", "!=", "");
+
+    if($branch){
+      $response = $response->where("ID_RAMO", $branch);
+      $total    = $total->where("ID_RAMO", $branch);
+    }
+
+    if($state){
+      $response = $response->where("ID_ENTIDAD_FEDERATIVA", $state);
+      $total    = $total->where("ID_ENTIDAD_FEDERATIVA", $state);
+    }
+
+    if($year){
+      $response = $response->where("CICLO", $year);
+      $total    = $total->where("CICLO", $year);
+    }
+
+    $response = $response->take(self::PAGE_SIZE)->skip($_page * self::PAGE_SIZE)->get();
+    $total    = $total->count();
+    $_response = [
+      "total"    => $total,
+      "results"  => $response,
+      "page"     => $_page + 1,
+      "pageSize" => self::PAGE_SIZE
+    ];
+
+    return response()->json($_response)->header("Access-Control-Allow-Origin", "*");
   }
 }
