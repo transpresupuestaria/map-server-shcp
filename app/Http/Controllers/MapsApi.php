@@ -11,7 +11,7 @@ use DB;
 
 class MapsApi extends Controller
 {
-  const PAGE_SIZE = 100;
+  const PAGE_SIZE = 10;
   public function sfuState(Request $request, $row = "COMPROMETIDO_PER"){
     //$value = $request->input("value");
 
@@ -52,7 +52,8 @@ class MapsApi extends Controller
       "total"    => $total,
       "results"  => $response,
       "page"     => $_page + 1,
-      "pageSize" => self::PAGE_SIZE
+      "pageSize" => self::PAGE_SIZE,
+      "pages"    => ceil($total/self::PAGE_SIZE)
     ];
 
     return response()->json($_response)->header("Access-Control-Allow-Origin", "*");
