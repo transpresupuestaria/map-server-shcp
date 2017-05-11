@@ -53,7 +53,16 @@ d3.json(DatosGobMxURL)
     d3.csv(GFNotesFile, printComments);
     d3.csv(GFLinksFile, printLinks);
 
-    var res  = d.results[0],
+    /*
+    lat         : 22.442167,
+      lng         : -100.110350,
+      zoom        : 5,
+    */
+    var res    = d.results[0],
+        __lat  = 22.442167,
+        __lng  = -100.110350,
+        empty  = +res["latitud-inicial"] && +res["longitud-inicial"],
+        __zoom = empty ? 13 : 5,
         data = {
 
 
@@ -85,9 +94,9 @@ d3.json(DatosGobMxURL)
           id_ppi : res["id-ppi"],
           id_ramo : res["id-ramo"],
           id_ur : res["id-ur"],
-          latitud_inicial : res["latitud-inicial"],
+          latitud_inicial : +res["latitud-inicial"] ? res["latitud-inicial"] : __lat,
           localizacion : res["localizacion"],
-          longitud_inicial : res["longitud-inicial"],
+          longitud_inicial : +res["longitud-inicial"] ? res["longitud-inicial"] : __lng,
           mail_admin : res["mail-admin"],
           mail_to_admin : "mailto:"+res["mail-admin"],
           meta_beneficios : res["meta-beneficios"],
@@ -166,13 +175,15 @@ d3.json(DatosGobMxURL)
 
 
     // GF-SHCP-map
-    var mymap = L.map('GF-SHCP-map').setView([data.latitud_inicial, data.longitud_inicial], 13);
+    var mymap = L.map('GF-SHCP-map').setView([data.latitud_inicial, data.longitud_inicial], __zoom);
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
       maxZoom: 18,
     }).addTo(mymap);
 
-    var marker = L.marker([data.latitud_inicial, data.longitud_inicial]).addTo(mymap);
+    if(empty){
+      var marker = L.marker([data.latitud_inicial, data.longitud_inicial]).addTo(mymap);
+    }
   });
 
 
