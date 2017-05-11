@@ -174,19 +174,19 @@
         <div class="bar">
           <span class="bar inside total"></span>
         </div>
-
+		
+		<!-- pef2017
         <div v-if="aprobado2017 != null">
-	        <!-- pef2017-->
 	        <h3>Presupuesto aprobado en el PEF 2017</h3>
 	        <p class="amount right">$<strong>@{{Format(aprobado2017)}}</strong> <span>MXN</span></p>
 			<div class="bar">
 			<span class="bar inside pef" v-bind:style="presupuesto_style"></span>
 			</div>
 		</div>
-		
+		-->
 		<div v-if="aprobado != null">
        		<!-- pef-->
-       		<h3>Presupuesto aprobado en el PEF 2016</h3>
+       		<h3>Presupuesto aprobado en el PEF 2017</h3>
        		<p class="amount right">$<strong>@{{Format(aprobado)}}</strong> <span>MXN</span></p>
        		<div class="bar">
        		  <span class="bar inside pef" v-bind:style="presupuesto_style"></span>
@@ -195,7 +195,7 @@
 		
 		<div v-if="ejercido != null">
         	<!-- ejercido-->
-        	<h3>Monto ejercido 2016</h3>
+        	<h3>Monto ejercido 2017</h3>
         	<p class="amount right">$<strong>@{{Format(ejercido)}}</strong> <span>MXN</span></p>
         	<div class="bar">
         	<span class="bar inside ejercido" v-bind:style="total_ejercido_style"></span>
@@ -204,7 +204,7 @@
 		
 		<div v-if="modificado != null">
         	<!-- modificado-->
-        	<h3>Presupuesto modificado 2016</h3>
+        	<h3>Presupuesto modificado 2017</h3>
         	<p class="amount right">$<strong>@{{Format(modificado)}}</strong> <span>MXN</span></p>
         	<div class="bar">
         	  <span class="bar inside modificado" v-bind:style="modificado_style"></span>
