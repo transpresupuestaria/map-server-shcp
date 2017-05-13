@@ -516,7 +516,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1311I000001,Programa Anual de Inversión del Instituto Nacional del Derecho de Autor.,11,,9,0,0,,320217,2015,,
 '1309J3A0001,Programa de adquisiciones 2014,9,"Administración Portuaria Integral de Lázaro Cárdenas, S.A. de C.V.",16,0,0,,10829379,2014,,
 '1311A3Q0013,Programa de Mantenimiento para las Escuelas y Colegios de Educación Media Superior,11,Universidad Nacional Autónoma de México,35,0,0,,162757941,2014,,
-'1309JZL0009,Modernizar el Aeropuerto de Chetumal,9,Aeropuertos y Servicios Auxiliares,23,1,1,,11248396,2014,,
+'1309JZL0009,Modernizar el Aeropuerto de Chetumal,9,Aeropuertos y Servicios Auxiliares,23,0,0,,11248396,2014,,
 '1318TXS0001,Programa de adquisiciones de vehículos,18,,35,0,0,,2281576,2014,,
 '133890E0003,Acreditación NADCAP para atracción de proyectos especializados de la industria aeroespacial,38,"Centro de Investigación en Materiales Avanzados, S.C.",8,0,0,,5718235,2014,,
 '1320VSS0007,Equipamiento de Tiendas y CABEs,20,"Diconsa, S.A. de C.V.",35,0,0,,37986045,2015,,
@@ -1177,8 +1177,8 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1504K000002,"SUMINISTRO, COLOCACIÓN Y PUESTA EN MARCHA DE NUEVOS ELEVADORES  EN EL INMUEBLE DE HOMERO, EN LA CIUDAD DE MEXICO.",4,Instituto Nacional de Migración,9,0,0,0,10656853,2017,,0
 '1616B000073,Estudios Geofisicos en los 5 municipios para determinar nuevas fuentes de agua potable en el estado de Baja California Sur.,16,Comisión Nacional del Agua,3,0,0,0,5165707,2017,,0
 '1621W3N0002,Mantenimiento del Centro Integralmente Planeado y PTI Caribe 2017,21,Fondo Nacional de Fomento al Turismo,23,0,0,13.57,195955670,2017,,20306494
-'1653TVV0001,Museo Nacional de Energía y Tecnología,53,Comisión Federal de Electricidad,9,19.41435833,-99.19429722,0,1323000000,2017,,0
-'1653TVV0001,Museo Nacional de Energía y Tecnología,21,Fondo Nacional de Fomento al Turismo,9,19.41435833,-99.19429722,0,1323000000,2017,,0
+'1653TVV0001 (Ramo 53),Museo Nacional de Energía y Tecnología,53,Comisión Federal de Electricidad,9,19.41435833,-99.19439722,0,1323000000,2017,,0
+'1653TVV0001 (Ramo 21),Museo Nacional de Energía y Tecnología,21,Fondo Nacional de Fomento al Turismo,9,19.41435833,-99.19429722,0,1323000000,2017,,0
 '16132160019,Construcción de Inmuebles complementarios para incrementar la funcionalidad de las Instalaciones,13,Dirección General de Servicios,30,19.06,-95.99,0,49800000,2017,,0
 '0418T4M0012,Tren energético de la Refinería de Cadereyta.,52,Pemex Transformación Industrial,19,25.59005833,-99.94276389,88.01,2356576408,2017,,6448580
 '1609J2W0002,Dragado de Mantenimiento del Canal Principal de Navegación,9,"Administración Portuaria Integral de Topolobampo, S.A. de C.V.",25,0,0,0,66750000,2017,,0
@@ -2203,7 +2203,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '05096320013,Lucerito - Tlacoapa.,9,Centro SCT Guerrero,12,17.406086,-98.846819,80.75,194599828,2017,,4874950
 '1611A3Q0019,"Programa anual de adquisiciones de bienes no asociados a la obra pública destinados a Recintos, Entidades y Centros de Difusión Cultural.",11,Universidad Nacional Autónoma de México,35,0,0,0,37862674,2017,,0
 '1507HXA0014,"Construcción de la U.H.N. Cd. Madero II, Tamps.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,28,22.277999,-97.80041,98.2,86439684,2017,,31760593
-'1707HXA0001,"Construcción de la UHM Zapopan V, Jal.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,14,-103.452813,20.737811,0,69132634,2017,,0
+'1707HXA0001,"Construcción de la UHM Zapopan V, Jal.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,0,0,20.737811,0,69132634,2017,,0
 '15133120005,"Modernización, renovación y actualización de maquinaria para la Fabrica de Vestuario y Equipo",13,Dirección General de Administración y Finanzas,9,0,0,0,9096749,2017,,0
 '1610K2N0013,Adquisición de mobiliario y equipo administrativo e industrial,10,"Exportadora de Sal, S.A. de C.V.",3,0,0,0,1505500,2017,,0
 '16071120005,LINEA DE ESTUDIO PARA EL DESARROLLO DE COMPONENTES MECÁNICOS CON ACEROS ESPECIALES.,7,Dirección General de Industria Militar,15,0,0,90,58492239,2017,,0
@@ -2959,7 +2959,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1521W3N0002,Mantenimiento y Operación de los Centros Integralmente Planeados de la Península 2016,21,Fondo Nacional de Fomento al Turismo,3,0,0,99,64637419,2017,,1859085
 '1606HHN0001,Sustitución de mobiliario en oficinas administrativas del Instituto para la Protección al Ahorro Bancario,6,Instituto para la Protección al Ahorro Bancario,9,0,0,0,5506768,2017,,0
 '1512U000011,Aguascalientes. Construcción y Equipamiento del Nuevo Hospital Hidalgo.- Fideicomisos 2015 - 2017.,12,Comisión Nacional de Protección Social en Salud,1,21.89425473,-102.2827287,98.62,1011389417,2017,,0
-'1707HXA0002,"Construcción de obras de urbanización para la U.H.M. Campeche IV, Camp.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,4,19.82695,90.558627,0.92,10175999,2017,,3013444
+'1707HXA0002,"Construcción de obras de urbanización para la U.H.M. Campeche IV, Camp.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,4,0,0,0.92,10175999,2017,,3013444
 '1550GYR0030,Adquisición de equipos de imagenología para Unidades Médicas de segundo y tercer nivel de atención.,50,Instituto Mexicano del Seguro Social,35,0,0,0,153456109,2017,,0
 '1516RHQ0006,"Segunda Etapa del Centro Regional de Manejo de Fuego Región Noreste de la CONAFOR, en Saltillo, Coahuila.",16,Comisión Nacional Forestal,5,0,0,0,20146256,2017,,0
 '1650GYR0107,"Ampliación y Remodelación de diversos servicios del HGZ No.17 en el municipio de Monterrey, Nuevo León.",50,Instituto Mexicano del Seguro Social,19,25.7012,-100.337,0,197991155,2017,,0
@@ -3023,8 +3023,8 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '14096520003,Chichimequillas - Charco Blanco,9,Centro SCT Zacatecas,32,23.241413,-102.571317,99.9,50247536,2017,,8842
 '14096520014,Capulin De Los Ruíz - Cienega De Room,9,Centro SCT Zacatecas,32,22.388189,-103.416369,100,28649911,2017,,0
 '1418T4I0003,Programa de adquisición y actualización de paquetes y programas de informática para soportar las operaciones de los procesos productivos de PEMEX,52,Pemex Corporativo,35,0,0,35.03,4024369254,2017,,84953528
-1409JZL0005,Nuevo Aeropuerto Internacional de la Ciudad de México,16,Comisión Nacional del Agua,15,19.487397,-99.010366,17.4,"$186,092,191,142.00",2017,,"$211,926,806.00"
-'1409JZL0005,Nuevo Aeropuerto Internacional de la Ciudad de México,9,"Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.",15,19.487397,-99.010366,0,"$186,092,191,142.00",2017,,0
+'1409JZL0005 (Ramo 16),Nuevo Aeropuerto Internacional de la Ciudad de México,16,Comisión Nacional del Agua,15,19.487397,-99.010500,17.4,"$186,092,191,142.00",2017,,"$211,926,806.00"
+'1409JZL0005 (Ramo 9),Nuevo Aeropuerto Internacional de la Ciudad de México,9,"Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.",15,19.487397,-99.010366,0,"$186,092,191,142.00",2017,,0
 '1418T4N0007,Mantenimiento mayor a la planta criogénica Pajaritos del complejo procesador de gas área Coatzacoalcos,52,Pemex Transformación Industrial,30,0,0,16.4,211770101,2017,,0
 '1416B000026,"Estudios Básicos para detectar los trabajos de mantenimiento que se requieren en  el  Río Cuautitlán, Estado  de  México",16,Comisión Nacional del Agua,15,0,0,93.37,10752216,2017,,0
 '14093110008,"Estudios de Pre-inversión para la construcción del Libramiento Ferroviario de  Irapuato, Guanajuato y la Reubicación del Patio.",9,Dirección General de Desarrollo Ferroviario y Multimodal,9,0,0,0,12782268,2017,,0
@@ -3091,7 +3091,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1118T4L0002,Proyecto de Exploración Campeche Oriente,52,Pemex Exploración y Producción,4,22.36,-91.61,51.87,32734514167,2017,,13679309
 '1118TOQ0036,"Construcción de Líneas de Transmisión y Subestaciones de las Áreas  Occidental, Oriental  y Peninsular",53,Comisión Federal de Electricidad,35,0,0,71.87,284381168,2017,,13072783
 '1118T4I0016,"Construcción de un Centro de Desarrollo Infantil en Agua Dulce, Veracruz",52,Pemex Corporativo,30,18.131357,-94.145504,7.06,95860073,2017,,0
-'11096320002,Pilcaya - Piedras Negras,9,Centro SCT Guerrero,12,1,11,7.13,45086861,2017,,0
+'11096320002,Pilcaya - Piedras Negras,9,Centro SCT Guerrero,12,0,0,7.13,45086861,2017,,0
 '1216B000069,"Construcción de Infraestuctura de Protección a Centros de Población del Río La Sabana, Municipio de Acapulco, Guerrero.",16,Comisión Nacional del Agua,12,16.5106,-99.5435,14.28,1157042169,2017,,0
 '11096270031,San Vicente - Santuario Dos - Santuario - Embarcadero.,9,Centro SCT Chiapas,7,16.196919,-92.339767,26.9,103579921,2017,,0
 '11096420005,E.C. (Amealco  Santiago Mexquititlán) San Ildefonso Tultepec.,9,Centro SCT Querétaro,22,20.095163,-100.079383,100,104171401,2017,,0
