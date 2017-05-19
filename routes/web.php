@@ -26,4 +26,11 @@ Route::get('/ficha', function () {
     return view('ficha');
 });
 
+Route::get('/fichav2', function () {
+    return view('fichav2');
+});
+Route::get('/carrusel', function () {
+    return view('carrusel');
+});
+
 Route::post('denuncia/guardar', 'Complaints@save');
