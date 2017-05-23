@@ -33,6 +33,9 @@ Route::get('/fichapre', function () {
 Route::get('/ficha_ef', function () {
     return view('ficha_ef');
 });
+Route::get('/ficha_escuelas', function () {
+    return view('ficha_escuelas');
+});
 
 Route::get('/carrusel', function () {
     return view('carrusel');
