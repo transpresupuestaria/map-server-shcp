@@ -26,8 +26,8 @@ Route::get('/ficha', function () {
     return view('ficha');
 });
 
-Route::get('/fichav2', function () {
-    return view('fichav2');
+Route::get('/fichapre', function () {
+    return view('fichapre');
 });
 Route::get('/carrusel', function () {
     return view('carrusel');
