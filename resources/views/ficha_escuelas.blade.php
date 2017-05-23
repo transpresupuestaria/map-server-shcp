@@ -305,11 +305,6 @@
   </section>
 
 
-
-
-
-
-
   <!-- reportar-->
   <section class="GF-card">
     <div class="row">
