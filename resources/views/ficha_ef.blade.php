@@ -316,7 +316,6 @@
               <td>@{{id_contrato}}              </td>
               <td>@{{razon_social_contratista}}            </td>
               <td>@{{unidad_compradora}}               </td>
-              <td>@{{cargo_admin}}             </td>
               <td>@{{liga_contrato}}</td>
             </tr>
           </tbody>
