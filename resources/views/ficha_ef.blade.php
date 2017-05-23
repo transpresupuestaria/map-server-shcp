@@ -299,7 +299,7 @@
     </div>
   </section>
   
-   <!--galeria de imagenes-->
+   <!--contratos-->
   <section class="GF-card">
     <div class="row">
       <div class="col-sm-12">
@@ -371,14 +371,8 @@
 	      <h3 class="title">Tipo de Recurso</h3>
 		 <p>@{{recurso}}</p>
       </div>
- 
-
     </div>
   </section>
-
-
-
-
 
 
 
