@@ -19,7 +19,7 @@
   </div>
   <div class="col-sm-9 zero">
     <header class="top title_side">
-      <a href="http://www.transparenciapresupuestaria.gob.mx/en/PTP/Obra_Publica_Abierta" class="link_back">&lt; Ir a Mapa de Obra Pública</a>
+      <a href="#" class="link_back">&lt; Ir a Mapa</a>
     </header>
   </div>
   <div class="clearfix"></div>
@@ -61,20 +61,30 @@
           </div>
           <!--- clave de cartera-->
           <div class="col-sm-6">
-            <h3 class="right">Clave de Cartera: <span id="cveReport">@{{cve_ppi}}</span></h3>
+            <h3 class="right">Identificador: <span id="cveReport">@{{clavecentrotrabajo}}</span></h3>
           </div>
         </div>
-        <h1 id ="nameReport">@{{nombre}}</h1>
+        <h1 id ="nameReport">@{{nombrect}}</h1>
         <div class="row">
           <div class="col-md-10 col-sm-9">
-            <p>@{{desc_ppi}}</p>
+	          <div class="row">
+			  	<div class="col-sm-6">
+				  	<h3>Matricula</h3>
+				  	<p>@{{matricula_plantel}}</p>
+			  	</div>
+			  	<div class="col-sm-6">
+				  	<h3>Nivel</h3>
+				  	<p>@{{nivel}}</p>
+			  	</div>
+			  	
+	          </div>
           </div>
           <div class="col-md-2 col-sm-3">
-	        <div v-if="fase == 'Vigente'">
-           	 <h3 class="right">Fase: <span class="active">@{{fase}}</span></h3>
+	        <div v-if="desc_estatus == 'Vigente'">
+           	 <h3 class="right">Fase: <span class="active">@{{desc_estatus}}</span></h3>
 	        </div>
             <div v-else>
-	            <h3 class="right">Fase: <span class="disabled">@{{fase}}</span></h3>
+	            <h3 class="right">Fase: <span class="disabled">@{{desc_estatus}}</span></h3>
             </div>
           </div>
         </div>
@@ -102,26 +112,14 @@
 
 
             </h3>
-            <p class="fichas_ramo"><b v-bind:class="['ramo' + id_ramo,]"></b>@{{id_ramo}} - @{{desc_ramo}}</p>
+            <p class="fichas_ramo"><b v-bind:class="['ramo' + id_ramo,]"></b>@{{id_ramo}} - @{{ramo}}</p>
           </div>
           <!-- Ejecutor-->
           <div class="col-md-4 col-sm-5">
             <h3 class="title line">Ejecutor del Proyecto</h3>
-            <p id = "ejecutorReport">@{{id_ur}} - @{{desc_ur}}</p>
+            <p id = "ejecutorReport">@{{institucion_ejecutora}}</p>
           </div>
-          <!-- Tipo de proyecto-->
-          <div class="col-md-4 col-sm-12">
-            <h3 class="title line">
-              <!--tooltip-->
-              <span class="tooltip">
-                <span class="tooltip-item">Tipo de Proyecto <b>?</b></span>
-                <span class="tooltip-content clearfix">
-                  <span class="tooltip-text">Descripción del tipo de programa o proyecto de inversión a ejecutar, de acuerdo con su finalidad y función</span>
-                </span>
-              </span>
-            </h3>
-            <p>@{{ tipo_ppi }}</p>
-          </div>
+         
         </div>
 
         <!--mapa-->
@@ -139,19 +137,29 @@
             	<div class="row">
 			    <!--localizacion-->
 			   <div class="col-sm-12">
-			     <h3 class="title">Localización</h3>
-			     <p>@{{localizacion}}</p>
+			     <h3 class="title">Dirección</h3>
+			     <p>@{{direccion}}</p>
 			   </div>
 
             	<!---entidad-->
           		<div class="col-md-6 col-sm-12">
             	  <h3 class="title">Entidad Federativa</h3>
-            	  <p id="entidadReport">	@{{entidad_federativa}}</p>
+            	  <p id="entidadReport">	@{{entidad}}</p>
+            	</div>
+            	<!---municipio-->
+          		<div class="col-md-6 col-sm-12">
+            	  <h3 class="title">Municipio</h3>
+            	  <p id="entidadReport">	@{{municipio}}</p>
+            	</div>
+            	<!---localidad-->
+          		<div class="col-md-6 col-sm-12">
+            	  <h3 class="title">Localidad</h3>
+            	  <p id="entidadReport">	@{{localidad}}</p>
             	</div>
             	<!---coordenadas---->
           		<div class="col-md-6 col-sm-12">
             	  <h3 class="title">Coordenadas Geográficas</h3>
-            	  <p>Latitud: @{{latitud_inicial}} <br> Longitud: @{{longitud_inicial}}</p>
+            	  <p>Latitud: @{{latitud}} <br> Longitud: @{{longitud}}</p>
             	</div>
             	</div>
             </div>
@@ -160,56 +168,25 @@
         </div>
       </div>
       <div class="col-md-3 col-sm-4 side">
-        <!-- monto total-->
-        <h3>
-          <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item">Monto total de inversión <b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">La suma de la totalidad de recursos destinados a la ejecución de un programa o proyecto de inversión, incluyendo los recursos fiscales y los recursos que se obtienen de otras fuentes de financiamiento</span>
-            </span>
-          </span>
-        </h3>
-        <p class="amount big right">$<strong>@{{Format(monto_total_inversion)}}</strong> <span>MXN</span></p>
-        <div class="bar">
-          <span class="bar inside total"></span>
-        </div>
+        
 		
-		<!-- pef2017
-        <div v-if="aprobado2017 != null">
-	        <h3>Presupuesto aprobado en el PEF 2017</h3>
-	        <p class="amount right">$<strong>@{{Format(aprobado2017)}}</strong> <span>MXN</span></p>
-			<div class="bar">
-			<span class="bar inside pef" v-bind:style="presupuesto_style"></span>
-			</div>
-		</div>
-		-->
-		<div v-if="aprobado != null">
-       		<!-- pef-->
-       		<h3>Presupuesto aprobado en el PEF 2017</h3>
-       		<p class="amount right">$<strong>@{{Format(aprobado)}}</strong> <span>MXN</span></p>
+		<div v-if="monto_asignado != null">
+       		<!-- aprobado-->
+       		<h3>Monto aprobado</h3>
+       		<p class="amount right">$<strong>@{{Format(monto_asignado)}}</strong> <span>MXN</span></p>
        		<div class="bar">
        		  <span class="bar inside pef" v-bind:style="presupuesto_style"></span>
        		</div>
 		</div>
-		
-		<div v-if="ejercido != null">
-        	<!-- ejercido-->
-        	<h3>Monto ejercido 2017</h3>
-        	<p class="amount right">$<strong>@{{Format(ejercido)}}</strong> <span>MXN</span></p>
+		<div v-if="avance_financiero != null">
+        	<!-- entregado-->
+        	<h3>Monto ejercido</h3>
+        	<p class="amount right">$<strong>@{{Format(avance_financiero)}}</strong> <span>MXN</span></p>
         	<div class="bar">
-        	<span class="bar inside ejercido" v-bind:style="total_ejercido_style"></span>
-        	</div>
-        </div>
-		
-		<div v-if="modificado != null">
-        	<!-- modificado-->
-        	<h3>Presupuesto modificado 2017</h3>
-        	<p class="amount right">$<strong>@{{Format(modificado)}}</strong> <span>MXN</span></p>
-        	<div class="bar">
-        	  <span class="bar inside modificado" v-bind:style="modificado_style"></span>
+        	  <span class="bar inside modificado" v-bind:style="total_ejercido_style"></span>
         	</div>
 		</div>
+		
 		
         <!-- reporta obra-->
         <button id="show-modal" @click="showModal = true" class="btn report trigger">Reporta esta obra</button>
@@ -218,66 +195,6 @@
     </div>
   </section>
 
-   <!--operación-->
-  <section class="GF-card">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2>Datos sobre la etapa de operación</h2>
-      </div>
-      <!--años-->
-      <div class="col-sm-3">
-        <p class="amount"><strong>@{{anios_he}}</strong> años</p>
-        <p class="lead">Número estimado de años de operación en el horizonte de evaluación
-          <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item"><b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">Período que comprende tanto la etapa de ejecución como de operación de un programa o proyecto de inversión</span>
-            </span>
-          </span>
-        </p>
-      </div>
-      <!--gastos-->
-      <div class="col-sm-3">
-        <p class="amount">$<strong>@{{Format(total_gasto_operacion_he)}}</strong></p>
-        <p class="lead">Gastos estimados totales de mantenimiento y operación del activo en el horizonte de evaluación
-	      <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item"><b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">Monto estimado global de recursos que se requerirán para el funcionamiento adecuado de los activos derivados de un programa o proyecto de inversión</span>
-            </span>
-          </span>
-        </p>
-      </div>
-      <!--otros costos-->
-      <div class="col-sm-3">
-        <p class="amount">$@{{Format(total_gasto_no_consid)}}</p>
-        <p class="lead">Otros costos y gastos asociados al PPI que no forman parte del gasto de inversión ni de los gastos de operación y mantenimiento
-	      <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item"><b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">Monto estimado de recursos asociados a la ejecución del programa o proyecto de inversión distintos a los gastos de inversión, operación y mantenimiento</span>
-            </span>
-          </span>
-        </p>
-      </div>
-      <!--costo total-->
-      <div class="col-sm-3">
-        <p class="amount">$<strong>@{{Format(costo_total_ppi)}}</strong></p>
-        <p class="lead">Costo Total del PPI
-	        <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item"><b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">La suma del monto total de inversión, los gastos estimados de operación y mantenimiento, y los otros costos y gastos asociados</span>
-            </span>
-          </span>
-        </p>
-      </div>
-    </div>
-  </section>
 
   <!--metas -->
   <section class="GF-card">
@@ -285,210 +202,109 @@
       <div class="col-sm-12">
         <h2>Metas</h2>
       </div>
-      <!--física-->
+      <!--acciones_comp1_16-->
       <div class="col-sm-6">
-        <h3 class="title">
-          <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item">Meta Física <b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">La producción de bienes y servicios que se pretenden alcanzar con el programa o proyecto de inversión</span>
-            </span>
-          </span>
-        </h3>
-        <p>@{{meta_fisica}}</p>
+        <h3 class="title">Acciones del Componente 1</h3>
+        <p>@{{acciones_comp1_16}}</p>
       </div>
-      <!--física-->
+      <!--AVANCE_COMP1_16-->
       <div class="col-sm-6">
-        <h3 class="title">
-
-          <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item">Beneficios esperados del PPI <b>?</b></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">Efectos favorables que se generarían sobre la población o para el país como resultado del programa o proyecto de inversión</span>
-            </span>
-          </span>
-        </h3>
-        <p>@{{meta_beneficios}}</p>
+        <h3 class="title">Porcentaje de Avance del Componente 1</h3>
+        <p>@{{avance_comp1_16}}</p>
+      </div>
+      <!--acciones_comp2_16-->
+      <div class="col-sm-6">
+        <h3 class="title">Acciones del Componente 2</h3>
+        <p>@{{acciones_comp2_16}}</p>
+      </div>
+      <!--AVANCE_COMP2_16-->
+      <div class="col-sm-6">
+        <h3 class="title">Porcentaje de Avance del Componente 2</h3>
+        <p>@{{avance_comp2_16}}</p>
+      </div>
+      <!--componentes a atender-->
+      <div class="col-sm-6">
+        <h3 class="title">Componentes a atender</h3>
+        <p>@{{componentesaatender}}</p>
+      </div>
+      <!--avances del componente-->
+      <div class="col-sm-6">
+        <h3 class="title">Avances del componente</h3>
+        <p>@{{avancexcomponente}}</p>
       </div>
     </div>
   </section>
-
-  <!--calendario fiscal-->
+  
+    <!--contratos-->
   <section class="GF-card">
     <div class="row">
       <div class="col-sm-12">
-        <h2>Calendario Fiscal
-          <!--tooltip-->
-          <span class="tooltip">
-            <span class="tooltip-item"> <b>?</b> <span class="h2title">Calendario Fiscal</span></span>
-            <span class="tooltip-content clearfix">
-              <span class="tooltip-text">Monto máximo de recursos programados por la dependencia para ejercer durante el año. Se diferencia del aprobado porque no depende de sus capacidades de pago sino de estimaciones propias de la dependencia.</span>
-            </span>
-          </span>
-        </h2>
-      </div>
-      <!--inicio-->
-      <div class="col-sm-4">
-        <h3>Fecha de inicio de inversión:</h3>
-        <p>@{{fecha_ini_cal_fiscal}}</p>
-      </div>
-      <!--término-->
-      <div class="col-sm-4">
-        <h3>Fecha de término de inversión:</h3>
-        <p>@{{fecha_fin_cal_fiscal}}</p>
-      </div>
-      <!--total-->
-      <div class="col-sm-4">
-        <h3>Monto total de inversión:</h3>
-        <p>$@{{Format(monto_total_inversion)}}</p>
-      </div>
-      <!--gráfica-
-      <div class="col-sm-9">
-        <div id="graph" class="graph">
-        </div>
-      </div>
-      ->
-      <!--tabla
-      <div class="col-sm-3 side">
-        <table class="table">
+	      <h2>Contratos</h2>
+	      <table class="table">
           <thead>
-            <tr>
-              <th>Año de Inversión</th>
-              <th>Monto</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>2017</td>
-            <td class="right"><strong>$109,814,311</strong></td></tr>
-            <tr><td>2016</td>
-            <td class="right"><strong>$101,313,120</strong></td></tr>
-            <tr><td>2015</td>
-            <td class="right"><strong>$208,539,823</strong> </td></tr>
-            <tr><td>2014</td>
-            <td class="right"><strong>$54,564,412 </strong>  </td></tr>
-            <tr><td>2013</td>
-            <td class="right"><strong>$300,157,683</strong> </td></tr>
-            <tr><td>2012</td>
-            <td class="right"><strong>$215,044,846</strong> </td></tr>
-            <tr><td>2011</td>
-            <td class="right"><strong>$25,873,394 </strong>  </td></tr>
-            <tr><td>2010</td>
-            <td class="right"><strong>$25,741,318 </strong>  </td></tr>
-            <tr><td>2009</td>
-            <td class="right"><strong>$12,287,059 </strong>  </td></tr>
-            <tr><td>2008</td>
-            <td class="right"><strong>$4,337,408  </strong>  </td></tr>
-            <tr><td>2007</td>
-            <td class="right"><strong>$0      </strong>  </td></tr>
-            <tr><td>2006</td>
-            <td class="right"><strong>$2,385    </strong>  </td></tr>
-
-          </tbody>
-        </table>
-      </div>
-      -->
-    </div>
-  </section>
-
-  <!--otras fuentes-->
-  <section class="GF-card">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2>Otras fuentes de financiamiento</h2>
-       <!--<p>No se ha reportado información sobre otras fuentes de financiamiento de este PPI.</p>-->
-      </div>
-      <!--recursos estatales-->
-      <div class="col-sm-3">
-	      <h3>Recursos Estatales</h3>
-		  <p class="amount" v-if="recursos_estatales">$<strong>@{{Format(recursos_estatales)}}</strong></p>
-		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
-      </div>
-      <!--recursos municipales-->
-      <div class="col-sm-3">
-	      <h3>Recursos Municipales</h3>
-		  <p class="amount" v-if="recursos_municipales">$<strong>@{{Format(recursos_municipales)}}</strong></p>
-		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
-      </div>
-	  <!--privados-->
-      <div class="col-sm-3">
-	      <h3>Recursos Privados</h3>
-		  <p class="amount" v-if="privados">$<strong>@{{Format(privados)}}</strong></p>
-		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
-      </div>
-	  <!--fideicomiso-->
-      <div class="col-sm-3">
-	      <h3>Fideicomiso</h3>
-		  <p class="amount" v-if="fideicomiso">$<strong>@{{Format(fideicomiso)}}</strong></p>
-		  <p class="amount" v-else>$<strong>@{{Format(0)}}</strong></p>
-      </div>
-    </div>
-  </section>
-
-  <!--Comentarios---------->
-  <section id="gf-commentarios" class="GF-card">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2>Notas</h2>
-		<ul id="GF-SHCP-comments"></ul>
-      </div>
-    </div>
-  </section>
-
-
-  <!--responsable---------->
-  <section class="GF-card">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2>Responsable</h2>
-        <table class="table">
-          <thead>
-            <th>Nombre</th>
-            <th>Apellido Paterno</th>
-            <th>Apellido  Materno </th>
-            <th>Cargo       </th>
-            <th>Correo electrónico  </th>
-            <th>Teléfono      </th>
+            <th>Proveedor</th>
+            <th>Comité de Mejoramiento</th>
+            <th>Tipo de contratación</th>
+            <th>Supervisor       </th>
           </thead>
           <tbody>
             <tr>
-              <td>@{{nombre_admin}}              </td>
-              <td>@{{ap_paterno_admin}}            </td>
-              <td>@{{ap_materno_admin}}               </td>
-              <td>@{{cargo_admin}}             </td>
-              <td><a v-bind:href="mail_to_admin">@{{mail_admin}}</a></td>
-              <td>@{{telefono_admin}}</td>
+              <td>@{{contratista}}              </td>
+              <td>@{{comite_mejoramiento}}            </td>
+              <td>@{{tipo_contratacion}}               </td>
+              <td>@{{supervisor_inifed}}             </td>
             </tr>
           </tbody>
         </table>
+
+      </div>
+    </div>
+  
+    <!--galeria de imagenes-->
+  <section class="GF-card">
+    <div class="row">
+      <div class="col-sm-12">
+	      <h2>Galería de imágenes</h2>
+      </div>
+      <div class="col-sm-4">
+	      <h3 class="title">Antes</h3>
+      </div>
+      <div class="col-sm-4">
+	      <h3 class="title">Durante</h3>
+      </div>
+      <div class="col-sm-4">
+	      <h3 class="title">Después</h3>
       </div>
     </div>
   </section>
 
-  <!--documentos adjuntos-
+
+<!--otras fuentes-->
   <section class="GF-card">
     <div class="row">
       <div class="col-sm-12">
-        <h2>Documentos Adjuntos</h2>
-        <table class="table">
-          <thead>
-            <th>Nombre</th>
-            <th>Tipo de Documento</th>
-            <th>Fecha</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="#" download>12 0518T4M0007 TAPACHULA CMYA pib.pdf</a></td>
-              <td>Análisis Costo y Beneficio</td>
-              <td>30-06-2015 18:16:01</td>
-            </tr>
-          </tbody>
-        </table>
+        <h2>Datos Adicionales</h2>
+      </div>
+      
+      <!--Fecha de inicio-->
+      <div class="col-sm-3">
+	      <h3 class="title">Fecha de inicio</h3>
+		 <p>@{{fecha_inicio}}</p>
+      </div>
+      <!--Agua-->
+      <div class="col-sm-3">
+	      <h3 class="title">Fecha de término</h3>
+		 <p>@{{fecha_termino}}</p>
+      </div>
+      <!--Sillas-->
+      <div class="col-sm-3">
+	      <h3 class="title">Fecha de avance</h3>
+		 <p>@{{fecha_avance}}</p>
       </div>
     </div>
   </section>
---------->
+
+
   <!-- reportar-->
   <section class="GF-card">
     <div class="row">
@@ -772,6 +588,7 @@
 <script src="js/d3.v3.min.js"></script>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bower_components/vue/dist/vue.min.js"></script>
+<script src="js/vue-images.js"></script>
 <script src="js/bower_components/leaflet/dist/leaflet.js"></script>
 
 <!-- config -->
@@ -783,8 +600,75 @@
       GFLinksFile    = "csv/ppi-links.csv";
 </script>
 
+
+
+
 <!-- code -->
  <script src="js/card.js"></script>
+ 
+ <script>
+new Vue({
+  el: '#demo',
+  data () {
+    return {
+      images: [
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1454991727061-be514eae86f7?dpr=2&auto=format&w=1024',
+          caption: '<a href="#">Photo by 1</a>'
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1455717974081-0436a066bb96?dpr=2&auto=format&w=1024',
+          caption: 'Photo by 2'
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1460899960812-f6ee1ecaf117?dpr=2&auto=format&w=1024',
+          caption: 'Photo by 3'
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1456926631375-92c8ce872def?dpr=2&auto=format&w=1024',
+          caption: 'Photo by 4'
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1452274381522-521513015433?dpr=2&auto=format&w=1024',
+          caption: 'Photo by 5'
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1471145653077-54c6f0aae511?dpr=2&auto=format&w=1024',
+          caption: 'Photo by 6'
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1471005197911-88e9d4a7834d?dpr=2&auto=format&w=1024',
+          caption: 'Photo by 7'
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1470583190240-bd6bbde8a569?dpr=2&auto=format&w=1024',
+          caption: 'Photo by 8'
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1470688090067-6d429c0b2600?dpr=2&auto=format&w=1024',
+          caption: 'Photo by 9'
+        },
+        {
+          imageUrl: 'https://images.unsplash.com/photo-1470742292565-de43c4b02b57?dpr=2&auto=format&w=1024',
+          caption: 'Photo by 10'
+        }
+      ],
+      modalclose: true,
+      keyinput: true,
+      mousescroll: true,
+      showclosebutton: true,
+      showcaption: true,
+      imagecountseparator: 'of',
+      showimagecount: true,
+      showthumbnails: true
+    }
+  },
+  components: {
+    vueImages: vueImages.default
+  }
+})
+</script>
+ 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

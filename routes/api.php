@@ -15,6 +15,7 @@ use App\Models\Opa;
 */
 
 Route::get('sfu/state/{row}', "MapsApi@sfuState");
+Route::get('consolidado2015/{page?}', "MapsApi@consolidado2015");
 
 Route::get('/user', function (Request $request) {
     return $request->user();
