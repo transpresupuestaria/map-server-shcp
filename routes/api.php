@@ -39,6 +39,7 @@ Route::get("/data", function(Request $request){
     ->header('Access-Control-Allow-Origin', '*');
 });
 
+
 Route::get("/data/ramo", function(Request $request){
   return response(Opa::select("ramo", "desc_ramo")->groupBy("ramo", "desc_ramo")->get())
     ->header('Access-Control-Allow-Origin', '*');
@@ -65,3 +66,5 @@ Route::get("/test", function(Request $request){
   return response(Opa::first())
     ->header('Access-Control-Allow-Origin', '*');
 });
+
+Route::get("consulta/consolidado2015/{consolidado2015single}", "MapsApi@consolidado2015single");

@@ -22,6 +22,18 @@ class MapsApi extends Controller
     return response()->json($response)->header("Access-Control-Allow-Origin", "*");
   }
 
+  public function consolidado2015single(Request $request, $magic_num){
+    $response = Consolidado2015::find($magic_num);
+
+    if(!$response){
+      abort(404);
+    }
+
+    return response()
+           ->json($response)
+           ->header("Access-Control-Allow-Origin", "*");
+  }
+
   public function consolidado2015(Request $request, $page = 1){
     $branch = $request->input("branch");
     $state  = $request->input("state");
