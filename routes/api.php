@@ -29,6 +29,7 @@ Route::get("/data", function(Request $request){
     "avance_fisico as advance",
     "cve_ppi as key", 
     //"ent_fed as state_name",
+    "unidad as id_unidad",
     "nombre as name",
     "ciclo",
     "desc_unidad as unidad",
