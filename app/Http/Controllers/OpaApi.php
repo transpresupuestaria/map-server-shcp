@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Opa;
+use App\Models\Escuelas;
 
 class OpaApi extends Controller
 {
@@ -21,5 +22,14 @@ class OpaApi extends Controller
     $response["total"]      = $res->count();
     $response["resultados"] = $res;
     return response()->json($response)->header("Access-Control-Allow-Origin", "*");
+  }
+
+  public function escuelas($id){
+    $_res = Escuelas::where("CLAVECENTROTRABAJO", $id)->get();
+
+    $res = [];
+    $res["total"]      = $_res->count();
+    $res["resultados"] = $_res;
+    return response()->json($res)->header("Access-Control-Allow-Origin", "*");
   }
 }

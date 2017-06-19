@@ -70,3 +70,5 @@ Route::get("/test", function(Request $request){
 Route::get("consulta/consolidado2015/{consolidado2015single}", "MapsApi@consolidado2015single");
 
 Route::get("consulta/opa/{id}", "OpaApi@index");
+
+Route::get("consulta/escuelas/{id}", "OpaApi@escuelas");
