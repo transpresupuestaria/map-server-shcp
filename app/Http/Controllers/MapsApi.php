@@ -6,12 +6,13 @@ use Illuminate\Http\Request;
 
 use App\Models\ProyectosSuspendidosSfu;
 use App\Consolidado2015;
+use App\Models\entidades2017;
 
 use DB;
 
 class MapsApi extends Controller
 {
-  const PAGE_SIZE = 10;
+  const PAGE_SIZE = 500;
   public function sfuState(Request $request, $row = "COMPROMETIDO_PER"){
     //$value = $request->input("value");
 
@@ -56,6 +57,50 @@ class MapsApi extends Controller
     if($year){
       $response = $response->where("CICLO", $year);
       $total    = $total->where("CICLO", $year);
+    }
+
+    $response = $response->take(self::PAGE_SIZE)->skip($_page * self::PAGE_SIZE)->get();
+    $total    = $total->count();
+    $_response = [
+      "total"    => $total,
+      "results"  => $response,
+      "page"     => $_page + 1,
+      "pageSize" => self::PAGE_SIZE,
+      "pages"    => ceil($total/self::PAGE_SIZE)
+    ];
+
+    return response()->json($_response)->header("Access-Control-Allow-Origin", "*");
+  }
+
+  public function entidades(Request $request, $page = 1){
+    $branch = $request->input("branch");
+    $state  = $request->input("state");
+    $year   = $request->input("year");
+    $city   = $request->input("city");
+    $_page  = (int)$page >0 ? (int)$page - 1 : 0; 
+
+    $response = entidades2017::where("LONGITUD","!=", "")->where("LATITUD", "!=", "");
+
+    $total    = entidades2017::where("LONGITUD","!=", "")->where("LATITUD", "!=", "");
+
+    if($branch){
+      $response = $response->where("ID_RAMO", $branch);
+      $total    = $total->where("ID_RAMO", $branch);
+    }
+
+    if($state){
+      $response = $response->where("ID_ENTIDAD_FEDERATIVA", $state);
+      $total    = $total->where("ID_ENTIDAD_FEDERATIVA", $state);
+    }
+
+    if($year){
+      $response = $response->where("CICLO_RECURSO", $year);
+      $total    = $total->where("CICLO_RECURSO", $year);
+    }
+
+    if($city){
+      $response = $response->where("ID_MUNICIPIO", $city);
+      $total    = $total->where("ID_MUNICIPIO", $city);
     }
 
     $response = $response->take(self::PAGE_SIZE)->skip($_page * self::PAGE_SIZE)->get();

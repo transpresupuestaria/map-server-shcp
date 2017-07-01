@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Models\Opa;
 use App\Models\Escuelas;
+use App\Models\entidades2017;
+use App\Models\EntidadesContratos2017;
+
 
 class OpaApi extends Controller
 {
@@ -26,6 +29,15 @@ class OpaApi extends Controller
 
   public function escuelas($id){
     $_res = Escuelas::where("CLAVECENTROTRABAJO", $id)->get();
+
+    $res = [];
+    $res["total"]      = $_res->count();
+    $res["resultados"] = $_res;
+    return response()->json($res)->header("Access-Control-Allow-Origin", "*");
+  }
+
+  public function entidades($folio){
+    $_res = entidades2017::where("FOLIO", $folio)->get();
 
     $res = [];
     $res["total"]      = $_res->count();

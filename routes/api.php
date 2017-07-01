@@ -17,6 +17,9 @@ use App\Models\Opa;
 Route::get('sfu/state/{row}', "MapsApi@sfuState");
 Route::get('consolidado2015/{page?}', "MapsApi@consolidado2015");
 
+Route::get('entidades/{page?}', "MapsApi@entidades");
+
+
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
@@ -73,3 +76,5 @@ Route::get("consulta/consolidado2015/{consolidado2015single}", "MapsApi@consolid
 Route::get("consulta/opa/{id}", "OpaApi@index");
 
 Route::get("consulta/escuelas/{id}", "OpaApi@escuelas");
+
+Route::get("consulta/entidades/{folio}", "OpaApi@entidades");
