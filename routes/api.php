@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Models\Opa;
+use App\Models\Mexmin;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ Route::get('sfu/state/{row}', "MapsApi@sfuState");
 Route::get('consolidado2015/{page?}', "MapsApi@consolidado2015");
 
 Route::get('entidades/{page?}', "MapsApi@entidades");
+Route::get('entidadesv2', "MapsApi@entidadesv2");
 
 
 Route::get('/user', function (Request $request) {
@@ -57,6 +59,11 @@ Route::get("/data/clasificacion", function(Request $request){
 
 Route::get("/data/ejecutor", function(Request $request){
   return response(Opa::select("unidad", "desc_unidad")->groupBy("unidad", "desc_unidad")->get())
+    ->header('Access-Control-Allow-Origin', '*');
+});
+
+Route::get("/data/mexmin", function(Request $request){
+  return response(Mexmin::all())
     ->header('Access-Control-Allow-Origin', '*');
 });
 
