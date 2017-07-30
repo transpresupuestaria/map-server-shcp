@@ -124,62 +124,82 @@ class MapsApi extends Controller
   }
 
   public function entidadesv2(Request $request){
-    /*
-    {"type" : "search", "field" : "NOMBRE_PROYECTO"},
-    {"type" : "state", "field" : "ID_ENTIDAD_FEDERATIVA"},
-    {"type" : "city", "field" : "ID_MUNICIPIO"},
-    {"type" : "branch", "field" : "ID_RAMO"},
-    {"type" : "year", "field" : "CICLO_RECURSO"}
-    */
     $name   = $request->input("NOMBRE_PROYECTO");
     $state  = $request->input("ID_ENTIDAD_FEDERATIVA");
-    $city   = $request->input("ID_MUNICIPIO");
+    $city   = $request->input("GFSHCPCityId");
     $branch = $request->input("ID_RAMO");
     $year   = $request->input("CICLO_RECURSO");
-    $page   = $request->input("page") >= 0 ? $request->input("page") : 0; 
+    $page   = $request->input("page") >= 0 ? $request->input("page") : 0;
+    $size   = $request->input("pageSize") ? $request->input("pageSize") : self::PAGE_SIZE;
 
-//  ->whereIn('id', [1, 2, 3])
     $response = entidades2017::where("LONGITUD","!=", "")->where("LATITUD", "!=", "");
-
-    $total    = entidades2017::where("LONGITUD","!=", "")->where("LATITUD", "!=", "");
 
     if($branch){
       $branch   = explode("|", $branch);
       $response = $response->whereIn("ID_RAMO", $branch);
-      $total    = $total->whereIn("ID_RAMO", $branch);
     }
 
-    if($state){
+    if($state && $city){
+
+    }
+
+    else if($state){
       $state   = explode("|", $state);
       $response = $response->whereIn("ID_ENTIDAD_FEDERATIVA", $state);
-      $total    = $total->whereIn("ID_ENTIDAD_FEDERATIVA", $state);
+    }
+
+    else if($city){
+      $cityArray = explode("|", $city);
+
+      $response = $response->where(function($query) use($cityArray){
+        $first = array_shift($cityArray);
+
+
+        $query->where(function($q) use($first){
+          $cityStr = str_pad($first, 5, "0", STR_PAD_LEFT);
+          $city    = (int)substr($cityStr, -3);
+          $state   = (int)substr($cityStr, 0, 2);
+          $q->where("ID_ENTIDAD_FEDERATIVA", "=", $state)
+            ->where("ID_MUNICIPIO", "=", $city);
+        });
+        
+
+        
+        foreach($cityArray as $cityComp){
+          $query->orWhere(function($q) use($cityComp){
+            $cityStr = str_pad($cityComp, 5, "0", STR_PAD_LEFT);
+            $city    = (int)substr($cityStr, -3);
+            $state   = (int)substr($cityStr, 0, 2);
+            $q->where("ID_ENTIDAD_FEDERATIVA", "=", $state);
+            $q->where("ID_MUNICIPIO", "=", $city);
+          });
+        }
+        
+      });
+
+      
+
     }
 
     if($year){
       $year   = explode("|", $year);
       $response = $response->whereIn("CICLO_RECURSO", $year);
-      $total    = $total->whereIn("CICLO_RECURSO", $year);
-    }
-
-    if($city){
-      $city     = explode("|", $city);
-      $response = $response->whereIn("ID_MUNICIPIO", $city);
-      $total    = $total->whereIn("ID_MUNICIPIO", $city);
     }
 
     if($name){
       $response = $response->where("NOMBRE_PROYECTO", "like", "%$name%");
-      $total    = $total->where("NOMBRE_PROYECTO", "like", "%$name%");
     }
 
-    $response = $response->take(self::PAGE_SIZE)->skip($page * self::PAGE_SIZE)->get();
+    $total = clone $response;
+    $response = $response->take($size)->skip($page * $size)->get();
+
     $total    = $total->count();
     $_response = [
       "total"    => $total,
       "results"  => $response,
       "page"     => $page,
-      "pageSize" => self::PAGE_SIZE,
-      "pages"    => ceil($total/self::PAGE_SIZE)
+      "pageSize" => $size,
+      "pages"    => ceil($total/$size)
     ];
 
     return response()->json($_response)->header("Access-Control-Allow-Origin", "*");
