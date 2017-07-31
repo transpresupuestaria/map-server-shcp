@@ -140,6 +140,55 @@ class MapsApi extends Controller
     }
 
     if($state && $city){
+      $states = explode("|", $state);
+      $cities = explode("|", $city);
+      $states2 = [];
+      $states3 = [];
+
+      foreach($cities as $city){
+        $cityStr  = str_pad($city, 5, "0", STR_PAD_LEFT);
+        //$city   = (int)substr($cityStr, -3);
+        $state    = (int)substr($cityStr, 0, 2);
+        $states2[] = $state;
+      }
+
+      foreach($states as $st){
+        if(!in_array($st, $states2)){
+          $states3[] = $st;
+        }
+      }
+
+
+
+      $response = $response->where(function($query) use($cities, $states3){
+        $first = array_shift($cities);
+
+
+        $query->where(function($q) use($first){
+          $cityStr = str_pad($first, 5, "0", STR_PAD_LEFT);
+          $city    = (int)substr($cityStr, -3);
+          $state   = (int)substr($cityStr, 0, 2);
+          $q->where("ID_ENTIDAD_FEDERATIVA", "=", $state)
+            ->where("ID_MUNICIPIO", "=", $city);
+        });
+        
+
+        
+        foreach($cities as $cityComp){
+          $query->orWhere(function($q) use($cityComp){
+            $cityStr = str_pad($cityComp, 5, "0", STR_PAD_LEFT);
+            $city    = (int)substr($cityStr, -3);
+            $state   = (int)substr($cityStr, 0, 2);
+            $q->where("ID_ENTIDAD_FEDERATIVA", "=", $state);
+            $q->where("ID_MUNICIPIO", "=", $city);
+          });
+        }
+
+        if(!empty($states3)){
+          $query->orWhereIn("ID_ENTIDAD_FEDERATIVA", $states3);
+        }
+        
+      });
 
     }
 
