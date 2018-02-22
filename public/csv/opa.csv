@@ -324,7 +324,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1409J3D0006,Construcción bodegas 14 y 15,9,"Administración Portuaria Integral de Tampico, S.A. de C.V.",28,22,-98,100,51618398,2017,,0
 '1409J3E0006,Programa de Adquisiciones 2015,9,"Administración Portuaria Integral de Veracruz, S.A. de C.V.",30,0,0,100,2260016,2015,,
 '1409J3F0004,Construcción de edificio de Capitanía.,9,"Administración Portuaria Integral de Coatzacoalcos, S.A. de C.V.",30,18,-94,100,16192186,2015,,
-'1409J3F0005,Rehabilitación del cuerpo de la escollera lado Allende.,9,"Administración Portuaria Integral de Coatzacoalcos, S.A. de C.V.",30,18,-94,100,81040833,#N/A,,0
+'1409J3F0005,Rehabilitación del cuerpo de la escollera lado Allende.,9,"Administración Portuaria Integral de Coatzacoalcos, S.A. de C.V.",30,18,-94,100,81040833,,,0
 '1409J3F0011,Dragado de Mantenimiento en el puerto de Coatzacoalcos,9,"Administración Portuaria Integral de Coatzacoalcos, S.A. de C.V.",30,0,0,100,97153121,2015,,
 '1409J3G0002,Mantenimiento de Señales Marítimas,9,"Administración Portuaria Integral de Salina Cruz, S.A. de C.V.",20,0,0,100,577337,2014,,
 '1409J3G0008,Reparación de zonas de hundimiento por socavaciones en el ante muelle de contenedores y reparación de trincheras en muelle I,9,"Administración Portuaria Integral de Salina Cruz, S.A. de C.V.",20,0,0,100,3663238,2014,,
@@ -648,7 +648,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1704H000003,Adquisición e instalación de elevadores en las instalaciones del CENAPRED para brindar accesibilidad a las Personas con Discapacidad (PcD).,4,Centro Nacional de Prevención de Desastres,9,0,0,100,1257447,2017,,1119881
 '17067150001,Adquisiciones para la Dirección General de Promoción Cultural y Acervo Patrimonial 2017,6,Dirección General de Promoción Cultural y Acervo Patrimonial,9,0,0,100,471543,2017,,342200
 '1707HXA0002,"Construcción de obras de urbanización para la U.H.M. Campeche IV, Camp.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,4,20,-91,100,10678870,2017,,10186294
-'1709J3F0002,Adquisición en materia de tecnologías de la información,9,"Administración Portuaria Integral de Coatzacoalcos, S.A. de C.V.",30,0,0,100,1277651,#N/A,,1126765
+'1709J3F0002,Adquisición en materia de tecnologías de la información,9,"Administración Portuaria Integral de Coatzacoalcos, S.A. de C.V.",30,0,0,100,1277651,,,1126765
 '1709JZL0005,Programa de Adquisición de Vehículos para la Seguridad Operacional 2017,9,Aeropuertos y Servicios Auxiliares,35,0,0,100,22487349,2017,,18241333
 '1711L5X0002,"Adquisición de equipos de circuito cerrado de televisión para 33 Planteles, la Unidad de Capacitación en Informática y Oficinas Nacionales del CONALEP 2017",11,Colegio Nacional de Educación Profesional Técnica,35,0,0,100,1257447,2017,,897934
 '17132160001,Estancia Naval para Cadetes y Familiares,13,Dirección General de Servicios,30,19,-96,100,36756466,2017,,18017908
@@ -659,11 +659,11 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '17133120002,Adquisición de Equipos de Administración para Unidades y Establecimientos Navales,13,Dirección General de Administración y Finanzas,35,0,0,100,123700952,2017,,47553684
 '17133120003,Adquisición de Perros de Trabajo,13,Dirección General de Administración y Finanzas,9,0,0,100,509431,2017,,486156
 '1750GYR0010,"Adquisición y sustitución de mobiliario en los cuatro Centros Vacacionales del IMSS, 2017.",50,Instituto Mexicano del Seguro Social,35,0,0,100,13140868,2017,,8579562
-'1750GYR0033,"Adquisición de un Sistema UPS para el Tomógrafo del HGZ No. 3 en el municipio de San Juan del Río, Querétaro.",50,Instituto Mexicano del Seguro Social,22,0,0,100,4278157,#N/A,,3466000
-'001 02 001,Proyecto Aceite Terciario del Golfo,52,Pemex Exploración y Producción,35,0,0,68,4.03789E+11,2017,,4053580984
-'018 01 016,Integral Jujo-Tecominoacán,52,Pemex Exploración y Producción,35,0,0,91,1.06484E+11,2017,,1387664135
-'020 96 020,Cantarell,52,Pemex Exploración y Producción,35,0,0,75,1.34225E+12,2017,,16798898422
-'021 96 021,Burgos,52,Pemex Exploración y Producción,35,0,0,90,5.52155E+11,2017,,3307368389
+'1750GYR0033,"Adquisición de un Sistema UPS para el Tomógrafo del HGZ No. 3 en el municipio de San Juan del Río, Querétaro.",50,Instituto Mexicano del Seguro Social,22,0,0,100,4278157,,,3466000
+'001 02 001,Proyecto Aceite Terciario del Golfo,52,Pemex Exploración y Producción,35,0,0,68,4.04E+11,2017,,4053580984
+'018 01 016,Integral Jujo-Tecominoacán,52,Pemex Exploración y Producción,35,0,0,91,1.06E+11,2017,,1387664135
+'020 96 020,Cantarell,52,Pemex Exploración y Producción,35,0,0,75,1.34E+12,2017,,16798898422
+'021 96 021,Burgos,52,Pemex Exploración y Producción,35,0,0,90,5.52E+11,2017,,3307368389
 '0218T0O0001,"Construccion de edificio del IMP en Villahermosa, Tab.",18,Instituto Mexicano del Petróleo,27,18,-93,98,389662046,2017,,0
 '0218T4L0039,Proyecto Tamaulipas Constituciones,52,Pemex Exploración y Producción,35,0,0,78,58080230630,2017,,969859961
 '02204120009,ARRENDAMIENTO FINANCIERO DEL INMUEBLE UBICADO EN AVENIDA PASEO DE LA REFORMA NUM. 51,20,Dirección General de Recursos Materiales,9,19,-99,93,785477128,2017,,1445355
@@ -683,8 +683,8 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '0321W3N0129,Programas de obras y servicios de Escalera Náutica,21,Fondo Nacional de Fomento al Turismo,35,0,0,0,2517955984,2017,,1469880
 '0321W3N0149,Adquisición de edificio por medio de arrendamiento financiero,21,Fondo Nacional de Fomento al Turismo,9,19,-99,42,392956159,2017,,13494238
 '0321W3N0157,Programa de obras y servicios del CIP Nayarit.,21,Fondo Nacional de Fomento al Turismo,18,21,-105,38,4633486381,2017,,0
-'038 98 038,Delta del Grijalva,52,Pemex Exploración y Producción,35,0,0,99,1.03975E+11,2017,,2433105110
-'039 98 039,Integral Ku-Maloob-Zaap,52,Pemex Exploración y Producción,35,0,0,71,8.52134E+11,2017,,36150720780
+'038 98 038,Delta del Grijalva,52,Pemex Exploración y Producción,35,0,0,99,1.04E+11,2017,,2433105110
+'039 98 039,Integral Ku-Maloob-Zaap,52,Pemex Exploración y Producción,35,0,0,71,8.52E+11,2017,,36150720780
 '04096500001,Acceso al Puerto de Veracruz,9,Centro SCT Veracruz,30,19,-96,78,1493310449,2017,,10075415
 '0418T4M0012,Tren energético de la Refinería de Cadereyta.,52,Pemex Transformación Industrial,19,26,-100,88,2469392128,2017,,-6441344
 '0418T4O0002,Eficientización del Almacenamiento y Distribución I,52,Pemex Fertilizantes,35,0,0,89,1291402677,2017,,37683231
@@ -702,33 +702,33 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '05096330026,"Huehuetla - San Lorenzo - Lim. Ixhuatlán de Madero, Puebla",9,Centro SCT Hidalgo,13,20,-98,80,521794959,2017,,0
 '05096340009,El Grullo-Zenzontla-Tuxcacuesco.,9,Centro SCT Jalisco,14,20,-104,95,136408250,2017,,7767274
 '05096350001,Modernización de la carretera Santa Barbara-Izucar de Matamoros Tramo: Chalco-Cuautla Subtramo: Km. 6+000 Al Km. 64+000,9,Centro SCT México,15,19,-99,100,5392559073,2014,,0
-'05096350006,Carretera Federal MEX 055 Toluca - PalmillasTramo: Km 62+000 al 132+000,9,Centro SCT México,15,20,-100,100,3346591445,2014,,5107400
-'05096390002,Monterrey-Reynosa. Tramo: Cadereyta-La Sierrita.,9,Centro SCT Nuevo León,19,26,-100,72,1763530151,2018,,0
-'05096390016,Zaragoza - Tepozanes - El Refugio.,9,Centro SCT Nuevo León,19,24,-100,0,123998741,2016,,0
-'05096400010,San Idelfonso - Santa Cruz Zenzontepec.,9,Centro SCT Oaxaca,20,17,-97,73,379258248,2018,,272903
-'05096400011,Miahuatlán-San Carlos Yautepec.,9,Centro SCT Oaxaca,20,17,-97,60,336968381,2015,,189957
-'05096400014,Miahuatlán- San Pablo Coatlán-San Jerónimo Coatlán-Piedra Larga-La Palma,9,Centro SCT Oaxaca,20,16,-97,32,617637182,2018,,0
-'05096400019,Tezoatlán de Segura y Luna - Santos Reyes Tepejillo - San Juan Mixtepec - San Martín Itunyoso E.C. (Yucuda-Pinotepa Nacional),9,Centro SCT Oaxaca,20,18,-98,57,616201010,2018,,96964
-'05096400027,Acayucan - Ent. La Ventosa,9,Centro SCT Oaxaca,20,18,-95,73,3977224961,2018,,204448390
-'05096400030,Boca del Perro - San Juan Teita.,9,Centro SCT Oaxaca,20,17,-98,76,234394339,2018,,0
-'05096400032,Nochixtlan - San Miguel Piedras.,9,Centro SCT Oaxaca,20,17,-97,34,417516881,2015,,0
-'05096420011,Tolimán - Peñamiller,9,Centro SCT Querétaro,22,21,-100,88,162451881,2018,,0
-'05096450004,Badiraguato-Santiago de los Caballeros,9,Centro SCT Sinaloa,25,25,-108,76,1000689573,2018,,0
-'05096480002,Manuel-Aldama-Soto La Marina-Rayones,9,Centro SCT Tamaulipas,28,23,-98,77,2514351134,2015,,65898436
-'05096520006,Guadalajarita - Yahualica Tr. Guadalajarita - Lim. Edos. Zac. / Jal.,9,Centro SCT Zacatecas,32,21,-103,89,186869203,2018,,5986124
-'05096520011,Apozol - Rancho de Ayo - Col. Juárez - E.C. (Nochistlán - Tlachichila).,9,Centro SCT Zacatecas,32,21,-103,100,189780257,2018,,0
-'0512S000001,ADQUISICION DEL EDIFICIO CENTRAL DE LA COFEPRIS,12,Comisión Federal para la Protección contra Riesgos Sanitarios,9,19,-99,63,330573400,2018,,6365876
-'0516B000103,"Construcción de la presa de almacenamiento El Carrizo y zona de riego, municipio de Tamazula de Gordiano, Jal.",16,Comisión Nacional del Agua,14,20,-103,100,1277874288,2018,,0
-'0518T0O0007,"Construcción del edificio del IMP en Poza Rica, Ver.",18,Instituto Mexicano del Petróleo,30,21,-97,0,388140016,2016,,0
-'0518T4M0006,Reemplazo de las reformadoras BTX y NP-1,52,Pemex Transformación Industrial,30,18,-95,29,5327700372,2018,,6744
-'0518T4M0007,Terminal de Almacenamiento y Reparto Tapachula,52,Pemex Transformación Industrial,7,15,-92,93,1188320841,2018,,6156192
-'0518T4M0010,Optimización de la Reconfiguración de la Refinería Francisco I. Madero,52,Pemex Transformación Industrial,28,22,-98,47,1937485681,2016,,79036877
-'0518T4Q0002,Sostenimiento de la capacidad de producción de derivados del etano II,52,Pemex Etileno,30,0,0,25,1609414272,2018,,0
-'0518T4Q0004,Sostenimiento de la Capacidad de Producción de Servicios Auxiliares II,52,Pemex Etileno,30,0,0,43,630301064,2015,,15656855
-'0518TZZ0001,Calidad de los Combustibles,52,Pemex Transformación Industrial,35,0,0,95,54113574507,2015,,993445664
-'06056130001,Adquisición mediante arrendamiento financiero de un edificio para las oficinas de la Cancillería,5,Dirección General de Bienes Inmuebles y Recursos Materiales,9,19,-99,100,1952699888,2018,,120457839
-'06096220004,(San Felipe-Laguna Chapala)  Puertecitos - Laguna Chapala,9,Centro SCT Baja California,2,31,-115,76,1932824394,2015,,122750743
-'06096230003,Punta Eugenia E.C. (Vizcaíno - Bahía Tortugas).,9,Centro SCT Baja California Sur,3,27,-114,100,350876997,2016,,700000
+'05096350006,Carretera Federal MEX 055 Toluca - PalmillasTramo: Km 62+000 al 132+000,9,Centro SCT México,15,20,-100,100,3346591445,2017,,5107400
+'05096390002,Monterrey-Reynosa. Tramo: Cadereyta-La Sierrita.,9,Centro SCT Nuevo León,19,26,-100,72,1763530151,2017,,0
+'05096390016,Zaragoza - Tepozanes - El Refugio.,9,Centro SCT Nuevo León,19,24,-100,0,123998741,2017,,0
+'05096400010,San Idelfonso - Santa Cruz Zenzontepec.,9,Centro SCT Oaxaca,20,17,-97,73,379258248,2017,,272903
+'05096400011,Miahuatlán-San Carlos Yautepec.,9,Centro SCT Oaxaca,20,17,-97,60,336968381,2017,,189957
+'05096400014,Miahuatlán- San Pablo Coatlán-San Jerónimo Coatlán-Piedra Larga-La Palma,9,Centro SCT Oaxaca,20,16,-97,32,617637182,2017,,0
+'05096400019,Tezoatlán de Segura y Luna - Santos Reyes Tepejillo - San Juan Mixtepec - San Martín Itunyoso E.C. (Yucuda-Pinotepa Nacional),9,Centro SCT Oaxaca,20,18,-98,57,616201010,2017,,96964
+'05096400027,Acayucan - Ent. La Ventosa,9,Centro SCT Oaxaca,20,18,-95,73,3977224961,2017,,204448390
+'05096400030,Boca del Perro - San Juan Teita.,9,Centro SCT Oaxaca,20,17,-98,76,234394339,2017,,0
+'05096400032,Nochixtlan - San Miguel Piedras.,9,Centro SCT Oaxaca,20,17,-97,34,417516881,2017,,0
+'05096420011,Tolimán - Peñamiller,9,Centro SCT Querétaro,22,21,-100,88,162451881,2017,,0
+'05096450004,Badiraguato-Santiago de los Caballeros,9,Centro SCT Sinaloa,25,25,-108,76,1000689573,2017,,0
+'05096480002,Manuel-Aldama-Soto La Marina-Rayones,9,Centro SCT Tamaulipas,28,23,-98,77,2514351134,2017,,65898436
+'05096520006,Guadalajarita - Yahualica Tr. Guadalajarita - Lim. Edos. Zac. / Jal.,9,Centro SCT Zacatecas,32,21,-103,89,186869203,2017,,5986124
+'05096520011,Apozol - Rancho de Ayo - Col. Juárez - E.C. (Nochistlán - Tlachichila).,9,Centro SCT Zacatecas,32,21,-103,100,189780257,2017,,0
+'0512S000001,ADQUISICION DEL EDIFICIO CENTRAL DE LA COFEPRIS,12,Comisión Federal para la Protección contra Riesgos Sanitarios,9,19,-99,63,330573400,2017,,6365876
+'0516B000103,"Construcción de la presa de almacenamiento El Carrizo y zona de riego, municipio de Tamazula de Gordiano, Jal.",16,Comisión Nacional del Agua,14,20,-103,100,1277874288,2017,,0
+'0518T0O0007,"Construcción del edificio del IMP en Poza Rica, Ver.",18,Instituto Mexicano del Petróleo,30,21,-97,0,388140016,2017,,0
+'0518T4M0006,Reemplazo de las reformadoras BTX y NP-1,52,Pemex Transformación Industrial,30,18,-95,29,5327700372,2017,,6744
+'0518T4M0007,Terminal de Almacenamiento y Reparto Tapachula,52,Pemex Transformación Industrial,7,15,-92,93,1188320841,2017,,6156192
+'0518T4M0010,Optimización de la Reconfiguración de la Refinería Francisco I. Madero,52,Pemex Transformación Industrial,28,22,-98,47,1937485681,2017,,79036877
+'0518T4Q0002,Sostenimiento de la capacidad de producción de derivados del etano II,52,Pemex Etileno,30,0,0,25,1609414272,2017,,0
+'0518T4Q0004,Sostenimiento de la Capacidad de Producción de Servicios Auxiliares II,52,Pemex Etileno,30,0,0,43,630301064,2017,,15656855
+'0518TZZ0001,Calidad de los Combustibles,52,Pemex Transformación Industrial,35,0,0,95,54113574507,2017,,993445664
+'06056130001,Adquisición mediante arrendamiento financiero de un edificio para las oficinas de la Cancillería,5,Dirección General de Bienes Inmuebles y Recursos Materiales,9,19,-99,100,1952699888,2017,,120457839
+'06096220004,(San Felipe-Laguna Chapala)  Puertecitos - Laguna Chapala,9,Centro SCT Baja California,2,31,-115,76,1932824394,2017,,122750743
+'06096230003,Punta Eugenia E.C. (Vizcaíno - Bahía Tortugas).,9,Centro SCT Baja California Sur,3,27,-114,100,350876997,2017,,700000
 '06096270013,Libramiento Sur de Tuxtla Gutiérrez,9,Centro SCT Chiapas,7,17,-93,26,1571809077,2017,,174728351
 '06096270014,Villa Flores - Tonala,9,Centro SCT Chiapas,7,16,-93,10,405402300,2017,,0
 '06096280001,"Modernización de la Carretera Palomas-Parral, del Km. 92+000 al Km. al Km. 180+000.",9,Centro SCT Chihuahua,8,28,-106,94,1001496363,2017,,68682521
@@ -757,7 +757,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '0618T4O0002,Sostenimiento de la Capacidad de Produccion de Derivados del Etano III,52,Pemex Etileno,30,18,-94,24,941819656,2017,,0
 '0618TZZ0004,Conversión de Residuales de la Refinería de Salamanca,52,Pemex Transformación Industrial,11,21,-101,5,55451453581,2017,,768258303
 '06321100002,Adquisición mediante arrendamiento financiero del edificio ubicado en Insurgentes Sur 881.,32,Tribunal Federal de Justicia Administrativa con sede en la Ciudad de México,9,19,-99,55,450442628,2017,,31987705
-'069 98 069,Integral Complejo Antonio J. Bermudez,52,Pemex Exploración y Producción,35,0,0,91,2.58125E+11,2017,,4020949449
+'069 98 069,Integral Complejo Antonio J. Bermudez,52,Pemex Exploración y Producción,35,0,0,91,2.58E+11,2017,,4020949449
 '0706G2T0001,Modernización del proceso productivo y de comercialización de Casa de Moneda de México,6,Casa de Moneda de México,24,0,0,99,562009248,2017,,32078716
 '07071320002,ADQUISICIÓN DE UN SISTEMA DE RADARES PARA LA VIGILANCIA Y CONTROL DEL ESPACIO AÉREO NACIONAL MEDIANTE ARRENDAMIENTO FINANCIERO,7,Comandancia de la Fuerza Aérea Mexicana,35,0,0,100,3390441612,2017,,277428800
 '07096220005,Libramiento de Ensenada,9,Centro SCT Baja California,2,32,-117,36,1771728964,2017,,193795530
@@ -967,7 +967,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '0950GYR0018,"Construcción del Hospital General Regional (HGR) de 216 camas en la localidad de Tlajomulco de Zúñiga, en el Estado de Jalisco.",50,Instituto Mexicano del Seguro Social,14,21,-103,99,1357092628,2017,,466526
 '0950GYR0024,"Construcción de Hospital General de Sub Zona (HGS) nuevo de 34 camas en Cabo San Lucas, Delegación Baja California Sur.",50,Instituto Mexicano del Seguro Social,3,23,-110,98,394588279,2017,,0
 '0951GYN0003,"Construcción del Hospital General Tampico, Tamps.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,28,22,-98,2,918653097,2017,,5791291
-'097 01 095,Integral Bellota-Chinchorro,52,Pemex Exploración y Producción,35,0,0,90,1.13257E+11,2017,,1586362522
+'097 01 095,Integral Bellota-Chinchorro,52,Pemex Exploración y Producción,35,0,0,90,1.13E+11,2017,,1586362522
 '098 01 096,Integral Cactus Sitio-Grande,52,Pemex Exploración y Producción,35,0,0,88,67315901716,2017,,1568907212
 '10071320003,"ADQUISICIÓN DE 6 HELICÓPTEROS EC-725 PARA OPERACIONES DE ALTO IMPACTO, A TRAVÉS DE ARRENDAMIENTO FINANCIERO",7,Comandancia de la Fuerza Aérea Mexicana,15,0,0,100,9120895013,2017,,297502070
 '1008B000001,Construcción de la Planta de Cría y Esterilización de machos de la Mosca del Mediterráneo cepa TSL y su equipamiento,8,"Servicio Nacional de Sanidad, Inocuidad y Calidad Agroalimentaria",7,15,-92,98,1421577613,2017,,250693181
@@ -1023,7 +1023,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '10096500023,Ojite-San Miguel,9,Centro SCT Veracruz,30,21,-98,100,40055813,2017,,0
 '10096500027,Ñape - Mazoco - Garza Blanca.,9,Centro SCT Veracruz,30,18,-96,54,33107239,2017,,0
 '10096500053,Plan de Arroyos-Las Truchas,9,Centro SCT Veracruz,30,20,-97,16,113771489,2017,,0
-'101 01 099,Integral Chuc,52,Pemex Exploración y Producción,35,0,0,69,3.32717E+11,2017,,16493567821
+'101 01 099,Integral Chuc,52,Pemex Exploración y Producción,35,0,0,69,3.33E+11,2017,,16493567821
 '1010K2N0002,Rediseño y Adquisicion de Cosechadoras,10,"Exportadora de Sal, S.A. de C.V.",3,0,0,92,131346330,2017,,22824797
 '1010K2N0004,Construcción de oficinas administrativas,10,"Exportadora de Sal, S.A. de C.V.",3,28,-114,86,70597469,2017,,0
 '1012NBD0003,"Construcción y equipamiento del edificio de la Torre Médica A, Unidad de Trasplantes, Quirófanos, Cirugía General, Terapia Médico-Quirúrgica y Gastroenterología,  del Hospital General de México Dr. Eduardo Liceaga. 2011-2018",12,"Hospital General de México ""Dr. Eduardo Liceaga""",9,19,-99,100,889417372,2017,,0
@@ -1054,10 +1054,10 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1018TOQ0058,Modernización de la SE Valle de México y Construcción de la LT Victoria - Nochistongo,53,CFE Consolidado,35,0,0,96,602483829,2017,,67308565
 '1018TOQ0075,MODERNIZACIÓN Y CONFIABILIDAD DE LA RED DE FIBRA ÓPTICA EN EL AREA CENTRAL,53,CFE Consolidado,35,0,0,23,1150643183,2017,,225450
 '1018TOQ0076,PROYECTO DE REDUCCIÓN DE PÉRDIDAS EN DISTRIBUCIÓN ZONA ACAPULCO A TRAVÉS DE MEDICIÓN CENTRALIZADA,53,CFE Consolidado,12,17,-100,28,3154525313,2017,,0
-'102 01 100,Integral Ek-Balam,52,Pemex Exploración y Producción,35,0,0,44,1.18223E+11,2017,,1384874259
+'102 01 100,Integral Ek-Balam,52,Pemex Exploración y Producción,35,0,0,44,1.18E+11,2017,,1384874259
 '103 01 101,Integral El Golpe-Puerto Ceiba,52,Pemex Exploración y Producción,27,18,-93,100,56008992329,2017,,499384666
 '1036E000003,"Rehabilitación y construcción de estancias de baja, mediana y alta peligrosidad del CEFERESO de Huimanguillo, Tab.",4,Prevención y Readaptación Social,27,18,-93,61,2710360128,2017,,0
-'109 01 107,Integral Yaxche,52,Pemex Exploración y Producción,35,0,0,59,1.10845E+11,2017,,11014608087
+'109 01 107,Integral Yaxche,52,Pemex Exploración y Producción,35,0,0,59,1.11E+11,2017,,11014608087
 '11092110001,Programa Contratos Plurianuales de Conservación de Carreteras en el Estado de Michoacán (CPCC Michoacán),9,Dirección General de Conservación de Carreteras,35,0,0,37,5104616699,2017,,443349521
 '11092110007,PROGRAMA CONTRATOS PLURIANUALES DE CONSERVACION DE CARRETERAS EN EL ESTADO DE SINALOA NORTE.,9,Dirección General de Conservación de Carreteras,35,0,0,9,5721079254,2017,,65000000
 '11092110011,PROGRAMA CONTRATOS PLURIANUALES DE CONSERVACION DE CARRETERAS EN EL ESTADO DE SONORA.,9,Dirección General de Conservación de Carreteras,35,0,0,34,4149504996,2017,,60983092
@@ -1399,11 +1399,11 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1218T4L0013,Proyecto de Exploración Chalabil,52,Pemex Exploración y Producción,35,0,0,65,40334863768,2017,,6379665015
 '1218T4L0014,Proyecto de Exploración Holok,52,Pemex Exploración y Producción,35,0,0,94,20764249901,2017,,264326822
 '1218T4L0015,Proyecto de Exploración Han,52,Pemex Exploración y Producción,35,0,0,33,15961024062,2017,,111607096
-'1218T4L0017,Proyecto Tsimin Xux,52,Pemex Exploración y Producción,35,0,0,55,1.42925E+11,2017,,6046605033
+'1218T4L0017,Proyecto Tsimin Xux,52,Pemex Exploración y Producción,35,0,0,55,1.43E+11,2017,,6046605033
 '1218T4L0018,Proyecto Ogarrio - Sánchez Magallanes,52,Pemex Exploración y Producción,35,0,0,65,61554935440,2017,,2741252601
 '1218T4L0019,Proyecto de recuperación mejorada en los yacimientos de Cantarell,52,Pemex Exploración y Producción,4,0,0,34,648008442,2017,,0
 '1218T4L0020,"Proyecto de administración del área de Planeación y Evaluación, 2da. Etapa",52,Pemex Exploración y Producción,35,0,0,99,1283598826,2017,,16153298
-'1218T4L0021,Proyecto Crudo Ligero Marino,52,Pemex Exploración y Producción,35,0,0,60,1.37846E+11,2017,,6446347900
+'1218T4L0021,Proyecto Crudo Ligero Marino,52,Pemex Exploración y Producción,35,0,0,60,1.38E+11,2017,,6446347900
 '1218T4L0022,Proyecto Integral Cuenca de Macuspana,52,Pemex Exploración y Producción,35,0,0,65,8412003147,2017,,510366599
 '1218T4L0023,Proyecto Soporte Región Marina Suroeste 3ra. Etapa,52,Pemex Exploración y Producción,35,0,0,60,228361795,2017,,0
 '1218T4L0024,Proyecto Lankahuasa,52,Pemex Exploración y Producción,35,0,0,55,3959938799,2017,,40223977
@@ -1578,7 +1578,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '13132160016,Adquisición de Aeronaves versión Búsqueda y Rescate,13,Dirección General de Servicios,9,0,0,99,3772643954,2017,,593909755
 '13132160020,Construcción de instalaciones para las Unidades y Brigadas de Construcción,13,Dirección General de Servicios,34,0,0,0,55831559,2017,,0
 '13165120002,Sustentabilidad e Integralidad Operativa de la SEMARNAT.,16,"Dirección General de Recursos Materiales, Inmuebles y Servicios",9,19,-99,17,3225079171,2017,,213959164
-'1316B000003,"Obra civil para la reubicación de la estación de radiosondeo viento, en el Municipio de Apodaca N.L.",16,Comisión Nacional del Agua,19,25,-100,87,2019404,#N/A,,0
+'1316B000003,"Obra civil para la reubicación de la estación de radiosondeo viento, en el Municipio de Apodaca N.L.",16,Comisión Nacional del Agua,19,25,-100,87,2019404,2017,,0
 '1316B000022,"Batería de unidades de bombeo para el aprovechamiento de la Cuenca Baja del Rio San Nicolás, Municipio de Tomatlán,  Jal",16,Comisión Nacional del Agua,14,20,-105,0,642502723,2017,,0
 '1316B000023,"Programa de estudios especializados a presas de almacenamiento, derivadoras y bordos, en alto riesgo, para atender el Compromiso 51 del Pacto por México.",16,Comisión Nacional del Agua,35,0,0,41,359518888,2017,,4996765
 '1316B000043,"Estudio del diagnóstico para el Manejo Integral de las subcuencas Tuxpan, El Bosque, Ixtapan del Oro, Valle de Bravo, Colorines-Chilesdo y Villa Victoria pertenecientes al sistema Cutzamala.",16,Comisión Nacional del Agua,35,0,0,50,75053650,2017,,0
@@ -1968,8 +1968,8 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1409J9E0002,programa de mantenimiento de oficinas postales para el ejercicio  2014,9,Servicio Postal Mexicano,9,0,0,18,35794817,2017,,1181034
 '1409J9E0003,Programa de inversión de adquisición de equipo 2014,9,Servicio Postal Mexicano,9,0,0,28,34755151,2017,,0
 '1409J9E0006,Programa de mantenimiento del Palacio Postal 2015,9,Servicio Postal Mexicano,9,0,0,21,33501077,2017,,0
-1409JZL0005,Nuevo Aeropuerto Internacional de la Ciudad de México,9,"Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.",15,19,-99,18,1.95001E+11,2018,,0
-1409JZL0005,Nuevo Aeropuerto Internacional de la Ciudad de México,16,Comisión Nacional del Agua,15,19,-99,18,1.95001E+11,2018,,1543036627
+1409JZL0005,Nuevo Aeropuerto Internacional de la Ciudad de México,9,"Grupo Aeroportuario de la Ciudad de México, S.A. de C.V.",15,19,-99,18,1.95E+11,2018,,0
+1409JZL0005,Nuevo Aeropuerto Internacional de la Ciudad de México,16,Comisión Nacional del Agua,15,19,-99,18,1.95E+11,2018,,1543036627
 '1409JZL0021,Construir un aeropuerto en la región del Istmo (Ixtepec).,9,Aeropuertos y Servicios Auxiliares,20,16,-95,100,410762861,2017,,12126553
 '1409JZL0022,Aeropuerto Internacional de Chetumal,9,Aeropuertos y Servicios Auxiliares,23,19,-88,74,333223524,2017,,19824308
 '1409KCZ0002,"Sistema para registro y control de asistencia en el Organismo a nivel nacional, credencialización y digitalización de expedientes",9,Telecomunicaciones de México,35,0,0,0,1582425,2017,,0
@@ -1979,7 +1979,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1410K2N0001,Reposición de Defensas de Muelle de Descarga de Barcazas Isla de Cedros,10,"Exportadora de Sal, S.A. de C.V.",2,0,0,0,29034265,2017,,0
 '1410K2N0002,Reparación de Muelle de Carga de Barcazas Puerto El Chaparrito,10,"Exportadora de Sal, S.A. de C.V.",3,0,0,0,50809966,2017,,0
 '1410K2N0006,Reposición de Planta Lavadora de Sal Industrial,10,"Exportadora de Sal, S.A. de C.V.",3,0,0,0,391718536,2017,,0
-'14117120001,Adquisición de bienes muebles diversos,11,Dirección General de Recursos Materiales y Servicios,9,0,0,78,1081188,#N/A,,0
+'14117120001,Adquisición de bienes muebles diversos,11,Dirección General de Recursos Materiales y Servicios,9,0,0,78,1081188,2017,,0
 '1411B000002,"PROGRAMA DE ACTUALIZACIÓN Y FORTALECIMIENTO AL NIVEL MEDIO SUPERIOR EN LAS AREAS DE FORMACIÓN PROFESIONAL EN: TECNICO EN ECOLOGÍA, TECNICO EN ENFERMERÍA Y TECNICO EN ALIMENTOS.",11,Instituto Politécnico Nacional,35,0,0,0,11274318,2017,,0
 '1411B000008,PROGRAMA DE ACTUALIZACION Y FORTALECIMIENTO AL NIVEL MEDIO SUPERIOR EN LAS AREAS DE FORMACIÓN PROFESIONAL EN: TECNICO EN SISTEMAS DE CONTROL ELÉCTRICO Y TECNICO EN AUTOMATIZACION Y CONTROL ELECTRICO INDUSTRIAL.,11,Instituto Politécnico Nacional,35,0,0,0,55173902,2017,,0
 '1411B000010,PROGRAMA DE ACTUALIZACIÓN Y FORTALECIMIENTO AL NIVEL MEDIO SUPERIOR EN LAS AREAS DE FORMACIÓN PROFESIONAL EN LABORATORISTA CLÍNICO.,11,Instituto Politécnico Nacional,9,0,0,0,35969990,2017,,0
@@ -2448,7 +2448,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1510LAU0009,Exploración y Evaluación de Minerales Radiactivos,10,Servicio Geológico Mexicano,35,0,0,67,134495272,2017,,26345645
 '1510LAU0011,Exploración y evaluación de yacimientos minerales para el sector público y privado,10,Servicio Geológico Mexicano,35,0,0,66,333638686,2017,,94500120
 '1510LAU0012,Generación de información geofísica del territorio nacional,10,Servicio Geológico Mexicano,35,0,0,64,228352332,2017,,61344938
-'15116000011,"Programa de Equipamiento de Espacios Educativos, Mobiliario y equipo de administración.",11,Subsecretaría de Educación Media Superior,35,0,0,2,59164679,#N/A,,1409297
+'15116000011,"Programa de Equipamiento de Espacios Educativos, Mobiliario y equipo de administración.",11,Subsecretaría de Educación Media Superior,35,0,0,2,59164679,2017,,1409297
 '1511D000002,Adquisición por la vía de compraventa de un predio ubicado en la Zona Arqueológica El Cerrito.,48,Instituto Nacional de Antropología e Historia,22,21,-100,100,13654267,2017,,0
 '1511D000003,Adquisicion por la via de compraventa de un predio ubicado dentro del Sitio Arqueologico de Tzintzuntzan,48,Instituto Nacional de Antropología e Historia,16,20,-102,100,4106625,2017,,0
 '1511L3P0005,Proyecto de rehabilitación del Plantel Colomos_Protección Civil,11,Centro de Enseñanza Técnica Industrial,14,0,0,6,16888570,2017,,0
@@ -2655,7 +2655,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1606G1H0003,Proyecto para la Adquisición para Reemplazo y Renovación de Bienes 2017,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",35,0,0,61,136852177,2017,,79784105
 '1606G1H0004,Proyecto de Renovación del Parque Vehicular 2017,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",35,0,0,87,7678436,2017,,6392810
 '1606G1H0005,Programa de Red de Sucursales 2017,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",35,0,0,74,160324526,2017,,113459239
-'1606G2T0002,Proyecto para el reforzamiento del área de seguridad en CMM,6,Casa de Moneda de México,24,0,0,20,12301670,#N/A,,0
+'1606G2T0002,Proyecto para el reforzamiento del área de seguridad en CMM,6,Casa de Moneda de México,24,0,0,20,12301670,2017,,0
 '1606G2T0004,Sistema Integral de Información de Servicios Personales y la Integración de la Nomina para Casa de Moneda de México,6,Casa de Moneda de México,24,0,0,50,6885643,2017,,4548000
 '1606GSA0001,Adquisición de Mobiliario y Equipo de Administración,6,"Agroasemex, S.A.",22,0,0,26,5001553,2017,,109202
 '1606HAN0001,PROGRAMA GENERAL DE MANTENIMIENTO PARA LOS INMUEBLES PROPIOS DE LA FND PARA LA COLOCACION DE CREDITO,6,"Financiera Nacional de Desarrollo Agropecuario, Rural, Forestal y Pesquero",35,0,0,100,27695905,2017,,18973959
@@ -2873,7 +2873,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1609J3F0001,Dragado de Mantenimiento en el Puerto de Coatzacoalcos 2017,9,"Administración Portuaria Integral de Coatzacoalcos, S.A. de C.V.",30,0,0,100,73351090,2017,,47425633
 '1609J4V0001,AMPLIACIÓN DE COMEDORES EN LAS ESCUELAS NÁUTICAS MERCANTES 2016.,9,Fideicomiso de Formación y Capacitación para el Personal de la Marina Mercante Nacional,35,0,0,100,12521654,2017,,9876985
 '1609JZL0001,Estudios de preinversión- Estudios de caracterización-2016-2018,9,Aeropuertos y Servicios Auxiliares,35,0,0,92,70433063,2017,,8670197
-'1609JZL0008,Programa de adquisición de equipos de seguridad  2017,9,Aeropuertos y Servicios Auxiliares,35,0,0,0,25674353,#N/A,,0
+'1609JZL0008,Programa de adquisición de equipos de seguridad  2017,9,Aeropuertos y Servicios Auxiliares,35,0,0,0,25674353,2017,,0
 '1609KDN0004,Rehabilitación de Vialidades,9,"Aeropuerto Internacional de la Ciudad de México, S.A. de C.V.",9,0,0,4,52582647,2017,,1406619
 '1609KDN0005,Rehabilitación de Pista 05R-23L,9,"Aeropuerto Internacional de la Ciudad de México, S.A. de C.V.",9,0,0,100,130994674,2017,,89532333
 '1610B000001,Programa de inversión de mobiliario y equipo de administración 2017,10,Comisión Federal de Mejora Regulatoria,9,0,0,0,265414,2017,,0
@@ -3353,7 +3353,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1704L000001,Adquisición de Vehículos para la Gendarmería Ambiental,4,Policía Federal,9,0,0,0,87441683,2017,,0
 '1704L000002,"Adecuación y rehabilitación de espacios que alojaran al Centro de Atención Psicológico y Estrés Postraumático y Atención a Derechos Humanos, en el Centro de Mando de la Policía Federal en Iztapalapa.",4,Policía Federal,9,19,-99,0,15142196,2017,,0
 '17067130001,Adquisición de máquinas y equipo para actualizar la infraestructura productiva de los Talleres de Impresión de Estampillas y Valores.,6,Dirección General de Talleres de Impresión de Estampillas y Valores,9,0,0,0,4725990,2017,,0
-'1706A000001,Balanceo y aceleración de aplicaciones,6,Instituto de Administración y Avalúos de Bienes Nacionales,9,0,0,0,2460395,#N/A,,0
+'1706A000001,Balanceo y aceleración de aplicaciones,6,Instituto de Administración y Avalúos de Bienes Nacionales,9,0,0,0,2460395,2017,,0
 '1706C000001,PROGRAMA DE ADQUISICIÓN DE MOBILIARIO,6,Comisión Nacional de Seguros y Fianzas,34,0,0,71,17741563,2017,,873380
 '1706E000001,Ampliación del área de vehículos ligeros de Nuevo Laredo II,6,Servicio de Administración Tributaria,28,27,-100,18,343274843,2017,,0
 '1706E000002,Modernización de Reynosa  Pharr,6,Servicio de Administración Tributaria,28,26,-98,45,787742536,2017,,0
@@ -3363,7 +3363,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1706G2T0001,Sistema Información Numismática para Casa de Moneda de México,6,Casa de Moneda de México,24,0,0,0,510524,2017,,0
 '1706HAN0001,"COMPRA Y SUSTITUCIÓN DE MOBILIARIO Y EQUIPO DE ADMINISTRACIÓN A NIVEL NACIONAL, QUE SE ENCUENTRA EN ALTO GRADO DE DETERIORO Y OBSOLESCENCIA.",6,"Financiera Nacional de Desarrollo Agropecuario, Rural, Forestal y Pesquero",35,0,0,81,11998143,2017,,6992185
 '1706HBW0001,Programa de adquisición de licencias de software 2017,6,"Fondo de Garantía y Fomento para la Agricultura, Ganadería y Avicultura",16,0,0,100,1277062,2017,,930005
-'1706HJO0001,Programa de sustitución de mobiliario y equipo,6,"Banco del Ahorro Nacional y Servicios Financieros, S.N.C.",35,0,0,0,27854641,#N/A,,0
+'1706HJO0001,Programa de sustitución de mobiliario y equipo,6,"Banco del Ahorro Nacional y Servicios Financieros, S.N.C.",35,0,0,0,27854641,2017,,0
 '1706HJY0001,Programa de Adquisiciones de Máquinas de Sorteos con Accesorios y Multiset.,6,Pronósticos para la Asistencia Pública,9,0,0,0,48040930,2017,,0
 '1706HJY0002,Programa de Adquisición de un Equipo de Circuito Cerrado de Televisión y Control de Accesos.,6,Pronósticos para la Asistencia Pública,9,0,0,0,4086704,2017,,0
 '1706HKA0001,Adquisición de equipos de Energía Ininterrumpible (UPS) para el edificio sede del SAE,6,Servicio de Administración y Enajenación de Bienes,9,0,0,0,7279534,2017,,0
@@ -3376,7 +3376,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '17071100022,ADQUISICIÓN DE DISPENSADORES DE COMBUSTIBLE PARA TRES GASOLINERAS DEL EJÉRCITO Y FUERZA,7,Dirección General de Administración,35,0,0,10,3925987,2017,,3445200
 '17071100023,ADQUISICIÓN DE EQUIPOS TELEFÓNICOS Y SATELITALES PARA EL CENTRO DE COMUNICACIONES DE LA S.D.N.,7,Dirección General de Administración,9,0,0,30,8073276,2017,,1684655
 '17071100026,"ADQUISICIÓN DE EQUIPO DE ELECTRÓNICO PARA LAS UNIDADES, DEPENDENCIAS E INSTALACIONES DEL EJERCITO 2018.",7,Dirección General de Administración,35,0,0,10,61935213,2018,,1899029
-'17071100031,ADQUISICIÓN DE VEHÍCULOS BLINDADOS CON CARACTERISTICAS CIVILES.,7,Dirección General de Administración,9,0,0,0,35441050,#N/A,,0
+'17071100031,ADQUISICIÓN DE VEHÍCULOS BLINDADOS CON CARACTERISTICAS CIVILES.,7,Dirección General de Administración,9,0,0,0,35441050,2017,,0
 '17071120001,Adquisición de bienes instrumentales y equipos industriales,7,Dirección General de Industria Militar,35,0,0,100,21481391,2017,,8168728
 '17071120002,SUSTITUCION DE MOLDES DE INYECCION DE PLASTICO Y/O ALUMINIO OBSOLETOS,7,Dirección General de Industria Militar,35,0,0,100,50991381,2017,,10713724
 '17071120003,SUSTITUCIÓN DE MAQUINARIA Y EQUIPOS OBSOLETOS DE LA FÁBRICA CENTRAL DE HERRAMIENTAS,7,Dirección General de Industria Militar,35,0,0,0,36709077,2017,,0
@@ -3403,7 +3403,7 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '17071410001,Adquisición de Equipo Instrumental  para atención de las bandas de guerra y grupos musicales de la S.D.N. 2017.,7,Dirección General de Intendencia,35,0,0,15,26196818,2017,,134385
 '17071410002,Adquisición de material y equipo de cocina y comedor para los servicios  de alimentación y cocinas comunitarias de la S.D.N. 2017,7,Dirección General de Intendencia,35,0,0,60,25049387,2017,,1010487
 '17071410003,Adquisición de mobiliario y equipo de oficina para la S.D.N. 2017.,7,Dirección General de Intendencia,9,0,0,65,24101073,2017,,11198239
-'17071410004,Adquisición de Material para gimnasio  para la S.D.N. 2017,7,Dirección General de Intendencia,9,0,0,80,10057850,#N/A,,3034818
+'17071410004,Adquisición de Material para gimnasio  para la S.D.N. 2017,7,Dirección General de Intendencia,9,0,0,80,10057850,2017,,3034818
 '1707HXA0001,"Construcción de la UHM Zapopan V, Jal.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,14,-103,21,100,73200077,2017,,69703781
 '1707HXA0003,"Mantenimiento y Rehabilitación de la U.H.M. Guardias, D.F.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,9,0,0,0,14238178,2017,,0
 '1707HXA0004,"Construcción de la UHM Cancún IV, Q. R.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,23,21,-87,100,35007399,2017,,33338415
@@ -3440,14 +3440,14 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '17096310012,"Pavimentación del Camino de Acceso a Rosa de Camacho, Cuarta etapa",9,Centro SCT Guanajuato,11,20,-102,0,8382982,2017,,0
 '17096310013,"Pavimentación del camino Sarteneja - San Francisco de la Soledad, Municipio de Cueramaro.",9,Centro SCT Guanajuato,11,21,-102,0,11526600,2017,,0
 '17096320001,"Modernización de la carretera Chilpancingo Acapulco, tramo Entronque Libramiento Poniente Paso Limonero, en el Estado de Guerrero",9,Centro SCT Guerrero,12,17,-100,0,194849837,2018,,562310
-'17096330001,"Modernización de la Carretera Federal Pachuca-Tempoal, tramo: Tehuetlán- Huejutla de Reyes",9,Centro SCT Hidalgo,13,21,-99,3,729052555,2018,,56650326
-'17096340001,Construcción del Libramiento Vehicular de Puerto Vallarta,9,Centro SCT Jalisco,14,21,-105,0,3519110111,2018,,0
-'17096360001,San Antonio - Las Huertas - Las Pilas,9,Centro SCT Michoacán,16,19,-101,0,5239364,2018,,4999945
+'17096330001,"Modernización de la Carretera Federal Pachuca-Tempoal, tramo: Tehuetlán- Huejutla de Reyes",9,Centro SCT Hidalgo,13,21,-99,3,729052555,2017,,56650326
+'17096340001,Construcción del Libramiento Vehicular de Puerto Vallarta,9,Centro SCT Jalisco,14,21,-105,0,3519110111,2017,,0
+'17096360001,San Antonio - Las Huertas - Las Pilas,9,Centro SCT Michoacán,16,19,-101,0,5239364,2017,,4999945
 '17096360002,Buenos Aires-El Cahulote,9,Centro SCT Michoacán,16,19,-102,0,31933397,2018,,6997962
 '17096360003,La Palma - La Angostura.,9,Centro SCT Michoacán,16,20,-101,0,14670218,2018,,0
-'17096390001,Adecuación vial en el acceso a la Carretera a Pesquería en su entronque con la Carretera Monterrey-Cd. Mier.,9,Centro SCT Nuevo León,19,26,-100,0,37674502,2018,,400000
-'17096390002,"PIV en la Carretera Monterrey-Cd. Victoria y la Calle Miguel Hidalgo (San Pedro de los Salazar) en el Municipio de Santiago, Nuevo León.",9,Centro SCT Nuevo León,19,25,-100,0,158019206,2018,,0
-'17096390005,Libramiento Apodaca-Pesquería-Cadereyta,9,Centro SCT Nuevo León,19,26,-100,0,2693744781,2018,,0
+'17096390001,Adecuación vial en el acceso a la Carretera a Pesquería en su entronque con la Carretera Monterrey-Cd. Mier.,9,Centro SCT Nuevo León,19,26,-100,0,37674502,2017,,400000
+'17096390002,"PIV en la Carretera Monterrey-Cd. Victoria y la Calle Miguel Hidalgo (San Pedro de los Salazar) en el Municipio de Santiago, Nuevo León.",9,Centro SCT Nuevo León,19,25,-100,0,158019206,2017,,0
+'17096390005,Libramiento Apodaca-Pesquería-Cadereyta,9,Centro SCT Nuevo León,19,26,-100,0,2693744781,2017,,0
 '17096400001,Modernización a nivel de pavimento del camino Agua Blanca - El Coquito tramo del Km 0+000 al Km 11+500,9,Centro SCT Oaxaca,20,17,-96,0,53169062,2017,,0
 '17096400002,Modernización a nivel de pavimento del camino E. C. (Mitla Entr. Tehuantepec II) San Juan Lachixila del km 0+000 al km 13+560.,9,Centro SCT Oaxaca,20,17,-96,0,71045771,2017,,191584
 '17096400003,E.C. (Boca del Monte - Santiago Choapam) - San Juan Lalana,9,Centro SCT Oaxaca,20,18,-96,0,25484264,2017,,0
@@ -3467,15 +3467,15 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '17096500003,Tuxpanguillo - Poxcautla - Coxititla,9,Centro SCT Veracruz,30,19,-97,0,65554917,2017,,0
 '17096500004,Xonamanca - Comalapa - Vicente Guerrero,9,Centro SCT Veracruz,30,19,-97,0,71352797,2017,,0
 '17096510002,Modernización de la Carretera Loltún-E.C. (Santa Elena- Bolonchén).,9,Centro SCT Yucatán,31,20,-89,0,139367072,2018,,0
-'1709A000001,Adquisición de equipo especializado para la obtención de información espacial de la costa y perfiles de desgaste en modelos hidrúalicos,9,Instituto Mexicano del Transporte,22,0,0,0,2478219,#N/A,,1225000
-'1709A000002,Instalación y puesta en operación del equipamiento de las instalaciones experimentales de la segunda fase del Laboratorio de Hidráulica Marítima (primera etapa),9,Instituto Mexicano del Transporte,22,0,0,0,51724547,#N/A,,0
+'1709A000001,Adquisición de equipo especializado para la obtención de información espacial de la costa y perfiles de desgaste en modelos hidrúalicos,9,Instituto Mexicano del Transporte,22,0,0,0,2478219,2017,,1225000
+'1709A000002,Instalación y puesta en operación del equipamiento de las instalaciones experimentales de la segunda fase del Laboratorio de Hidráulica Marítima (primera etapa),9,Instituto Mexicano del Transporte,22,0,0,0,51724547,2017,,0
 '1709C000001,"Adquisición de sistemas y equipos para el Aeropuerto Internacional de Cancún, proyecto de aterrizajes y despegues dobles simultáneos.",9,Servicios a la Navegación en el Espacio Aéreo Mexicano,35,0,0,0,456221508,2017,,0
 '1709D000001,Estudios de pre inversión para la integración de las vías cortas Chiapas y Mayab con la  línea Z,9,Agencia Reguladora del Transporte Ferroviario,35,0,0,0,32274480,2017,,0
 '1709J2R0001,"Rehabilitación (mantenimiento correctivo) de los Muelles de Pesca 1 y 2 del Puerto El Sauzal, Baja California",9,"Administración Portuaria Integral de Ensenada, S.A. de C.V.",2,0,0,4,57030723,2017,,27935236
 '1709J2R0002,"Mantenimiento y rehabilitación de la infraestructura portuaria de los Puertos de Ensenada y El Sauzal, B.C.",9,"Administración Portuaria Integral de Ensenada, S.A. de C.V.",2,0,0,99,13125478,2017,,8768083
 '1709J2U0001,"Dragado  y Obras Complementarias en el Puerto de Chabihau , Yucatán (Región Golfo Sureste y Caribe)",9,"Administración Portuaria Integral de Progreso, S.A. de C.V.",31,0,0,0,7921918,2017,,0
 '1709J2V0001,Adquisición de Equipo de Seguridad Marítima,9,"Administración Portuaria Integral de Puerto Vallarta, S.A. de C.V.",14,0,0,0,6399778,2017,,0
-'1709J2V0002,Adquisición sistema automatizado control acceso en la Terminal Marítima.,9,"Administración Portuaria Integral de Puerto Vallarta, S.A. de C.V.",14,0,0,0,1877487,#N/A,,0
+'1709J2V0002,Adquisición sistema automatizado control acceso en la Terminal Marítima.,9,"Administración Portuaria Integral de Puerto Vallarta, S.A. de C.V.",14,0,0,0,1877487,2017,,0
 '1709J2W0001,Programa de Mantenimiento a Infraestructura Portuaria 2017,9,"Administración Portuaria Integral de Topolobampo, S.A. de C.V.",25,0,0,100,12574473,2017,,11524625
 '1709J2X0001,"Construcción de Balizas para el señalamiento marítimo en el Puerto de Tuxpan, Veracruz",9,"Administración Portuaria Integral de Tuxpan, S.A. de C.V.",30,21,-97,13,28291401,2017,,3220096
 '1709J2Y0001,Subestaciones Eléctricas y Lineas de Trasmisión,9,"Administración Portuaria Integral de Altamira, S.A. de C.V.",28,22,-98,26,487890112,2017,,122571687
@@ -3576,236 +3576,236 @@ key,name,ramo,unidad,state,lat,lng,advance,monto_total_inversion,ciclo,classific
 '1716B000015,Remoción de Arsénico en agua suministrada para consumo humano en la Comarca Lagunera mediante filtros a pie de pozo (CG-114),16,Comisión Nacional del Agua,35,0,0,0,415226593,2017,,0
 '1716B000032,"Estudio de factibilidad del proyecto para el reforzamiento del talud de la margen izquierda del río Santa Catarina, desde la descarga del Arroyo el Obispo hasta el Puente Vehicular Gonzalitos.",16,Comisión Nacional del Agua,19,0,0,100,2090716,2017,,1989400
 '1716B000037,"Limpieza y desazolve del rio Sinaloa en el tramo 54+580 al 60+376.39 a la altura de la ciudad de Guasave, Sin.",16,Comisión Nacional del Agua,25,0,0,23,45345423,2018,,9864927
-'1716B000061,"Recarga artificial del Acuífero 1307 Huichapan-Tecozautla mediante pozos de infiltración con agua pluvial. Municipios de Huichapan y Tecozautla, Estado de Hidalgo.",16,Comisión Nacional del Agua,13,0,0,0,29823290,2018,,0
-'1716E000001,Centro Nacional de Control y Protección del Águila Real.,16,Procuraduría Federal de Protección al Ambiente,9,0,0,100,16679735,,,14942990
-'1716RHQ0001,Equipo Técnico para Prevención y Combate de Incendios Forestales.,16,Comisión Nacional Forestal,35,0,0,0,12150329,,,0
-'1716RHQ0003,"Equipamiento del Campo Experimental El Tormento, de la Comisión Nacional Forestal.",16,Comisión Nacional Forestal,4,0,0,75,2046328,,,1484626
-'1716RHQ0004,"Adquisición de Equipo, Mobiliario y Herramienta para proyectos administrativos de la Comisión Nacional Forestal.",16,Comisión Nacional Forestal,35,0,0,85,6066180,,,4919389
-'1716RHQ0005,Adquisición de Autobús Escolar para el Centro de Educación y Capacitación Forestal 03.,16,Comisión Nacional Forestal,5,0,0,0,4925002,,,0
-'1716RHQ0006,Adquisición de vehículos para la atención de proyectos técnicos y administrativos de la Comisión Nacional Forestal.,16,Comisión Nacional Forestal,35,0,0,0,15133378,,,0
-'1716RJE0001,Mobiliario y equipo de oficina para actividades sustantivas del IMTA.,16,Instituto Mexicano de Tecnología del Agua,17,0,0,0,3312500,,,0
-'1716RJE0002,Equipo de laboratorio para investigación y desarrollo tecnológico del IMTA.,16,Instituto Mexicano de Tecnología del Agua,17,0,0,0,36190311,,,0
-'1716RJE0003,"Adquisición de equipo técnico de apoyo a la investigación, generación, divulgación de conocimiento y desarrollo científico y tecnológico del IMTA.",16,Instituto Mexicano de Tecnología del Agua,17,0,0,0,6947599,,,0
-'1716RJE0004,Proyecto de rehabilitación de instalaciones del IMTA derivadas del sismo del 19 de septiembre de 2017.,16,Instituto Mexicano de Tecnología del Agua,17,0,0,0,8720397,,,0
-'1716RJE0005,Equipo de computo para proyectos contratados,16,Instituto Mexicano de Tecnología del Agua,17,0,0,0,4264212,,,0
-'17173000001,Adquisición de equipo para el sistema de información,17,"Subprocuraduría de Control Regional, Procedimientos Penales y Amparo",9,0,0,99,151447,,,144528
-'17178120001,Renovación y equipamiento de bienes muebles del refugio especializado de la FEVIMTRA,17,Dirección General de Recursos Materiales y Servicios Generales,9,0,0,0,3132825,,,0
-'17178120002,Servicios relacionados con obras públicas para desarrollar 20 proyectos ejecutivos en inmuebles de las delegaciones estatales de la Procuraduría General de la República,17,Dirección General de Recursos Materiales y Servicios Generales,35,0,0,0,22669377,,,0
-'17178120003,"Programa de mantenimiento mayor del inmueble propiedad de la Procuraduría General de la República ubicado en la colonia San José de la Escalera, segunda etapa",17,Dirección General de Recursos Materiales y Servicios Generales,9,0,0,0,24297549,,,0
-'17178150001,Adquisición de equipos para realizar las inspecciones de mantenimiento a las aeronaves de la Procuraduría General de la República,17,Dirección General de Servicios Aéreos,14,0,0,0,6601598,,,0
-'17178160001,"Adquisición de activos para proporcionar seguridad, segunda etapa",17,Dirección General de Seguridad Institucional,9,0,0,25,65177683,,,15415173
-'1718T0Q0001,Adquisición de polipasto para izaje de contenedor de recarga en el Irradiador JS-6500,18,Instituto Nacional de Investigaciones Nucleares,15,0,0,0,230758,,,0
-'1718T0Q0002,Adquisición de equipo de laboratorio para desarrollo del proyecto Laboratorio Nacional de Investigación y Desarrollo de Radiofármacos,18,Instituto Nacional de Investigaciones Nucleares,15,0,0,0,6446282,,,0
-'1718T0Q0003,Adquisición de equipo para Laboratorio Nacional de Investigaciones en Forense Nuclear (LANAFONU,18,Instituto Nacional de Investigaciones Nucleares,15,0,0,0,1580516,,,0
-'1718TON0001,Rehabilitación y mantenimiento de infraestructura de ductos a nivel nacional del CENAGAS.,18,Centro Nacional de Control del Gas Natural,35,0,0,0,404939933,,,15733906
-'1718TON0002,"Mantenimiento integral de los sistemas de ductos para gas natural, etapa II del Cenagas.",18,Centro Nacional de Control del Gas Natural,35,0,0,0,1098935557,,,256242
-'1718TON0003,"Modernización de los sistemas de monitoreo, control y supervisión del transporte por ducto, etapa II del CENAGAS",18,Centro Nacional de Control del Gas Natural,35,0,0,0,1210656777,,,0
-'17212100001,NUEVO ACUARIO DE MAZATLAN SINALOA,21,Fondo Nacional de Fomento al Turismo,25,23,-106,1,1366126777,,,0
-'1721W3N0006,Parque Público Kilómetro 0.,21,Fondo Nacional de Fomento al Turismo,23,21,-87,0,41917633,,,19117965
-'1721W3N0007,Parque Público Rufino Tamayo.,21,Fondo Nacional de Fomento al Turismo,20,16,-96,0,49117620,,,0
-'17271160001,Programa de modernización tecnológica del equipo para actividades de comunicación social,27,Dirección General de Comunicación Social,9,0,0,65,1222043,,,762686
-'17272080001,Construcción del Laboratorio de Calidad de Materiales de Construcción de la Secretaría de la Función Pública,27,Unidad de Control y Auditoría a Obra Pública,9,0,0,0,1528887,,,0
-'17275100001,Cuarta etapa de Modernización del Equipo de cocina del comedor institucional,27,Dirección General de Recursos Humanos,9,0,0,0,1643409,,,0
-'17275110001,Adquisición de Infraestructura de Telecomunicaciones para la Secretaría de la Función Pública,27,Dirección General de Tecnologías de Información,9,0,0,0,4965450,,,0
-'17311000001,Renovación Tecnológica del Centro de Datos de los Tribunales Agrarios 2017,31,Tribunal Superior Agrario,9,0,0,0,3911892,,,0
-'17312000001,Renovación y Modernización de Tecnología de Computo 2017,31,Tribunales Unitarios Agrarios,35,0,0,0,28783905,,,0
-'17312000002,UPS de 5 KVA,31,Tribunales Unitarios Agrarios,35,0,0,0,7378980,,,0
-'173890E0001,Laboratorios de pruebas acreditadas NADCAP,38,"Centro de Investigación en Materiales Avanzados, S.C.",8,29,-106,3,32478018,,,1037039
-'173890O0001,Reparación estructural de edificios de laboratorios del Centro de Investigaciones Biológicas del Noroeste S.C.,38,"Centro de Investigaciones Biológicas del Noroeste, S.C.",3,0,0,0,30066193,,,0
-'173891A0001,Programa de fortalecimiento del equipamiento de la Dirección de Ingeniería de Materiales y Manufactura 2017,38,"Corporación Mexicana de Investigación en Materiales, S.A. de C.V.",5,0,0,19,13014579,,,2363661
-'173891A0002,Programa de renovación de equipo científico obsoleto para la Dirección de Ingeniería de Materiales y Manufactura 2017,38,"Corporación Mexicana de Investigación en Materiales, S.A. de C.V.",5,0,0,10,12647824,,,1152754
-'1747AYB0001,Equipamiento UPS para el edificio central de la Comisión Nacional para el Desarrollo de los Pueblos Indígenas,47,Comisión Nacional para el Desarrollo de los Pueblos Indígenas,9,0,0,100,3312924,,,0
-'1747AYJ0001,Programa de Inversión para la Adquisición de Mobiliario y Equipo Administrativo para la Instalación de 16 Delegaciones para la CEAV,47,Comisión Ejecutiva de Atención a Víctimas,35,0,0,0,11054051,,,0
-'1747AYL0001,Mantenimiento preventivo y correctivo de 7 estaciones retransmisoras del SPR.,47,Sistema Público de Radiodifusión del Estado Mexicano,35,0,0,0,2977776,,,0
-'1748D000001,Adquisicion por la via de compraventa de una Finca Rustica ubicada dentro del Sitio Arqueologico de Kuluba,48,Instituto Nacional de Antropología e Historia,31,21,-88,100,7332855,,,0
-'1748D000002,"Adquisicion por la via de expropiacion de una superficie de 139-31-79.63 has pertenecientes a la comunidad de Santa Cruz Xoxocotlan, dentro de la poligonal de la Zona Arqueologica de Monte Alban",48,Instituto Nacional de Antropología e Historia,20,17,-97,0,127607667,,,0
-'1748E000001,Bienes artisticos del INBAL 2017,48,Instituto Nacional de Bellas Artes y Literatura,9,0,0,26,28354759,,,9566388
-'1748MDC0001,Producción de cortometrajes,48,Instituto Mexicano de Cinematografía,9,0,0,100,15718091,,,9986327
-'1750GYR0001,"Ampliación y remodelación de los servicios de admisión continua, hospitalización, unidad de trasplante y residencias médicas del Hospital de Especialidades de la UMAE en Puebla.",50,Instituto Mexicano del Seguro Social,21,19,-98,0,42170178,,,0
-'1750GYR0002,"Ampliación del área de hospitalización con gineco obstetricia e incremento de 100 camas en el HGZ No. 20 en Puebla, Puebla",50,Instituto Mexicano del Seguro Social,21,19,-98,0,391034419,,,0
-'1750GYR0003,"Construcción de UMF 14 + 7 + AMCen el municipio de Mérida, Yucatán.",50,Instituto Mexicano del Seguro Social,31,21,-90,0,87610204,,,787409
-'1750GYR0004,Remodelación de los servicios de trasplante de médula ósea y trasplante renal del UMAE CMN La Raza.,50,Instituto Mexicano del Seguro Social,9,19,-99,0,66683714,,,0
-'1750GYR0005,"Ampliación y Remodelación del HGZ No. 47 Vicente Guerrero en el Distrito Federal, para incrementar 80 camas censables así como laremodelación de quirófanos.",50,Instituto Mexicano del Seguro Social,9,19,-99,0,99547908,,,0
-'1750GYR0006,"Ampliación del Hospital General Regional No. 25 (HGR) en Zaragoza, D.F NORTE con 32 camas, UCIA con 6 lugares, UCIN 10 lugares, Urgencias.",50,Instituto Mexicano del Seguro Social,9,19,-99,0,234723489,,,0
-'1750GYR0007,"Demolición del Edificio de Convalecientes del Centro Médico Nacional Siglo XXI, Suroeste de la Cuidad de México.",50,Instituto Mexicano del Seguro Social,9,0,0,0,15718090,,,0
-'1750GYR0008,"Sustitución del Hospital General de Zona No.3 en Tuxtepec, Oaxaca.",50,Instituto Mexicano del Seguro Social,20,18,-96,0,794916244,,,0
-'1750GYR0009,"Construcción de una clínica de detección y diagnóstico del cáncer de mama en la Ciudad de México, Delegación DF. Norte.",50,Instituto Mexicano del Seguro Social,9,19,-99,99,72965028,,,67601418
-'1750GYR0011,"Sustitución de la Subdelegación Ciudad Sahagúnen el Municipio de Tepeapulco, de la Delegación Estatal del IMSS en Hidalgo.",50,Instituto Mexicano del Seguro Social,13,20,-99,96,23243511,,,21962314
-'1750GYR0016,"Sustitución de Unidad de Medicina Familiar 2+1 con AMC (UMF No. 72), en Cocula, Jalisco.",50,Instituto Mexicano del Seguro Social,14,20,-104,42,17795156,,,12870996
-'1750GYR0019,"Sustitución de la Unidad de Terapia Oncológica en el HGZ/MF No. 1 en Durango, Durango.",50,Instituto Mexicano del Seguro Social,10,24,-105,0,82761334,,,0
-'1750GYR0020,"Construcción de la Subdelegación IMSS de Tepatitlán de Morelos, Jalisco",50,Instituto Mexicano del Seguro Social,14,21,-103,39,19455593,,,13501397
-'1750GYR0021,"Adquisición de Equipamiento para la Evaluación de los Riesgos de Trabajo, en el Centro Médico Nacional de Occidente, Jalisco",50,Instituto Mexicano del Seguro Social,14,0,0,80,609480,,,0
-'1750GYR0022,"Construcción de una clínica de detección y diagnóstico del cáncer de mama en la Ciudad de México, Delegación DF. Sur.",50,Instituto Mexicano del Seguro Social,9,19,-99,0,72965028,,,1765035
-'1750GYR0023,"Construcción del Centro de Investigación en Biomedicina Molecular, en Zacatecas.",50,Instituto Mexicano del Seguro Social,32,23,-103,0,102049683,,,0
-'1750GYR0024,"Programa de Emergencia Para Rehabilitación Estructural de los Inmuebles de la Unidad Médica de Alta Especialidad, CMN La Raza (Hospital General, Hospital de Gineco-Obstetricia, Hospital de Especialidades y Consulta Externa).",50,Instituto Mexicano del Seguro Social,9,0,0,0,10478728,,,0
-'1750GYR0025,"Programa de Emergencia para la Rehabilitación de los Inmuebles de la Unidad Médica de Alta Especialidad Siglo XXI (Hospital de Pediatría, Hospital de Cardiología, Hospital de Oncología, Hospital de Especialidades y áreas comunes).",50,Instituto Mexicano del Seguro Social,9,0,0,0,23053200,,,0
-'1750GYR0026,"Programa de emergencia para la rehabilitación estructural del inmueble del Hospital General de Zona No. 5 en la Ciudad de Metepec, municipio de Atlixco, Puebla.",50,Instituto Mexicano del Seguro Social,21,0,0,0,31436181,,,0
-'1750GYR0027,"Programa de emergencia para la rehabilitación estructural de los inmuebles del HGZMF No. 7 en el municipio de Cuautla, el HGRMF No. 1 en el municipio de Cuernavaca y HGZMF No. 5 en Zacatepec, en el Estado de Morelos.",50,Instituto Mexicano del Seguro Social,35,0,0,0,450585269,,,0
-'1750GYR0028,Programa de emergencia para la atención de los daños provocados por el sismo de septiembre en el HGR 25 Zaragoza.,50,Instituto Mexicano del Seguro Social,9,0,0,0,261968179,,,0
-'1750GYR0030,Programa de emergencia para la atención de los daños provocados por el sismo de septiembre en el Hospital General de Zona No. 32 Villa Coapa en la Ciudad de México.,50,Instituto Mexicano del Seguro Social,9,0,0,0,209574543,,,0
-'1750GYR0031,"Programa de emergencia para la atención de los daños provocados por el sismo de septiembre en la Unidad de Medicina Familiar No. 93 en Ecatepec de Morelos, Estado de México.",50,Instituto Mexicano del Seguro Social,15,0,0,0,261968180,,,0
-'1750GYR0032,Programa de emergencia para la atención de los daños provocados por el sismo de septiembre en la Unidad de Medicina Familiar No. 21 en la Ciudad de México.,50,Instituto Mexicano del Seguro Social,9,0,0,0,261968180,,,0
-'1750GYR0034,"Programa nacional de actualización de mobiliario para la mejora en la prestación de servicios de los tres niveles de atención, 2017.",50,Instituto Mexicano del Seguro Social,35,0,0,0,141452335,,,0
-'1750GYR0036,Programa de Emergencia para la Adecuación del Inmueble ubicado en Río Pánuco No. 224.,50,Instituto Mexicano del Seguro Social,9,0,0,90,11442696,,,10607724
-'1750GYR0038,"Programa de Emergencia para la Sustitución del Hospital General Regional con Unidad Médica de Atención Ambulatoria No. 36 en San Alejandro, Puebla.",50,Instituto Mexicano del Seguro Social,21,19,-98,0,2996915976,,,427661780
-'1750GYR0039,"Adquisición de Mobiliario para la Unidad de Control Metabólico (UCM) en la Ciudad Monterrey, Nuevo León.",50,Instituto Mexicano del Seguro Social,19,0,0,91,2843585,,,2485048
-'1750GYR0041,Programa de Emergencia para la reestructuración del inmueble Niño Perdido de la Delegación DF Sur.,50,Instituto Mexicano del Seguro Social,9,0,0,0,42765750,,,0
-'1750GYR0042,Programa de Emergencia para la Reestructuración del Inmueble Cumbres de Acultzingo de la Delegación DF Sur.,50,Instituto Mexicano del Seguro Social,9,0,0,0,31727230,,,0
-'1750GYR0043,Programa de Emergencia para la Rehabilitación Estructural del inmueble ubicado en la Subdelegación de Tuxtla Gutiérrez Chiapas.,50,Instituto Mexicano del Seguro Social,7,0,0,0,14316867,,,0
-'1750GYR0044,Programa de Emergencia para la rehabilitación del Centro Vacacional Oaxtepec.,50,Instituto Mexicano del Seguro Social,17,0,0,0,111680526,,,0
-'1751GYN0001,"Ampliación y remodelación del Hospital General Fray Junípero Serra Tijuana, B.C.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,2,33,-117,2,178107894,,,4122948
-'1751GYN0002,"Ampliación y Remodelación de la Infraestructura del H.G. Presidente Lázaro Cárdenas, Chihuahua, Chih.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,8,29,-106,1,161792513,,,1036559
-'1751GYN0003,"Ampliación y remodelación de la infraestructura del Hospital General La Paz, B.C.S.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,3,19,-99,0,126736157,,,0
-'1751GYN0004,"Ampliación y remodelación del Hospital General de Ciudad Juárez, Chih.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,8,32,-106,1,368408781,,,2274974
-'1751GYN0005,"Proyecto de Sustitución del Hospital General Dr. Francisco Galindo Chávez en Torreón, Coahuila",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,5,26,-103,0,1312550686,,,0
-'1751GYN0006,Ampliación y Remodelación de Unidades Médicas de Primer Nivel.,51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,35,0,0,8,178648393,,,13366386
-'1751GYN0007,"Construcción de Unidad Médica de Segundo Nivel en Chalco, México.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,15,19,-99,0,490929015,,,0
-'1751GYN0008,"Construcción de Unidad de Medicina Familiar en Villa Aldama, Tamaulipas.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,28,23,-98,0,15145518,,,0
-'1751GYN0009,"Ampliación y remodelación de la infraestructura del H.G. Tacuba, CDMX.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,9,19,-99,13,241533103,,,30547008
-'1751GYN0010,"Construcción de Clínica Hospital Cd. Delicias, Chihuahua.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,8,28,-105,1,442380930,,,3511430
-'1751GYN0011,Sustitución del Hospital General Dr. Santiago Ramón y Cajal en Durango,51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,10,24,-104,0,1379609499,,,0
-'1751GYN0025,"Ampliación y Remodelación del Hospital de Alta Especialidad Valentín Gómez Farías, Zapopan, Jal.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,14,21,-103,0,241149543,,,0
-'15092110002,1.- Programa Asociación Público Privada de Conservación Plurianual de la Red Federal de Carreteras (APP Querétaro - San Luís Potosí),9,Dirección General de Conservación de Carreteras,35,0,0,,3794114629,,,
-'16092110011,PROGRAMA ASOCIACIÓN PÚBLICO PRIVADA DE CONSERVACIÓN PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP SALTILLO  MONTERREY  NUEVO LAREDO) PARA EL PERIODO 2017-2027,9,Dirección General de Conservación de Carreteras,35,0,0,,5560246296,,,
-'16092110012,PROGRAMA ASOCIACIÓN PÚBLICO PRIVADA DE CONSERVACIÓN PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP TEXCOCO -ZACATEPEC) PARA EL PERIODO 2017-2027,9,Dirección General de Conservación de Carreteras,35,0,0,,4076221349,,,
-'14096410014,Libramiento de la Carretera La Galarza-Amatitlanes,9,Centro SCT Puebla,21,19,-98,,1071819140,,,
-'1450GYR0052,"Construcción del Hospital Regional (HGR) de 260 Camas en el Municipio de García, Nuevo León.",50,Instituto Mexicano del Seguro Social,19,26,-100,,2043539472,,,
-'15092110003,1.-Programa Asociación Público Privada de Conservación Plurianual de la Red Federal de Carreteras (APP Coatzacoalcos - Villahermosa),9,Dirección General de Conservación de Carreteras,35,0,0,,3582811376,,,
-'1550GYR0006,"Construcción del Hospital General de Zona de 144 camas, en Bahía de Banderas, Nayarit.",50,Instituto Mexicano del Seguro Social,18,21,-105,,1094368491,,,
-'1651GYN0004,"Sustitución del Hospital General Dr. Aquiles Calles Ramírez mediante la construcción de un nuevo Hospital General en Tepic, Nayarit",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,18,21,-105,,1266231561,,,
-'16092110010,PROGRAMA ASOCIACIÓN PÚBLICO PRIVADA DE CONSERVACIÓN PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP PIRÁMIDES-TULANCINGO-PACHUCA) PARA EL PERIODO 2017-2027,9,Dirección General de Conservación de Carreteras,35,0,0,,3194306241,,,
-'1551GYN0001,"Sustitución del Hospital General Dr. Daniel Gurría Urgell en Villahermosa, Tabasco.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,27,18,-93,,1126204670,,,
-'1151GYN0014,"Contrucción del nuevo Hospital General Dr. Gonzalo Castañeda, D.F.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,9,19,-99,,1146140337,,,
-'1451GYN0001,"Construcción de una nueva Clínica Hospital en Mérida, Yucatán.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,31,21,-89,,778392590,,,
-'1550GYR0008,"Construcción del Hospital General Regional de 260 camas en Tepotzotlán, Estado de México. PNI 283",50,Instituto Mexicano del Seguro Social,15,20,-99,,2108403038,,,
-'16092110009,PROGRAMA ASOCIACIÓN PÚBLICO PRIVADA DE CONSERVACIÓN PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP MATEHUALA - SALTILLO) PARA EL PERIODO 2017-2027,9,Dirección General de Conservación de Carreteras,35,0,0,,3640487639,,,
-'0950GYR0005,"Construcción de Hospital General de Zona (HGZ) de 180 camas en la localidad de Tapachula, en el estado de Chiapas.",50,Instituto Mexicano del Seguro Social,7,15,-92,,1455419063,,,
-'1651GYN0005,"Proyecto para la construcción de un nuevo Hospital General en la Delegación Regional Sur, Ciudad de México.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,9,19,-99,,1781212762,,,
-'1118T4M0024,Seguridad Industrial: Adquisición de Paquete de Presión Balanceada GAR Golfo,52,Pemex Logística,30,0,0,,50778880,,,
-'1706HAN0003,PROGRAMA GENERAL DE MANTENIMIENTO PARA  INMUEBLES PROPIOS DE LA FND PARA COLOCACION DE CREDITO,6,"Financiera Nacional de Desarrollo Agropecuario, Rural, Forestal y Pesquero",35,0,0,,27752130,,,
-'1706HAT0002,Programa de adquisición de bienes informáticos.,6,Fondo de Capitalización e Inversión del Sector Rural,9,0,0,,500000,,,
-'1706HKI0002,Programa de adquisición de mobiliario y equipo para Sociedad Hipotecaria Federal 2018,6,"Sociedad Hipotecaria Federal, S.N.C.",9,0,0,,5742000,,,
-'17092110011,PROGRAMA ASOSIACION PUBLICO PRIVADA DE CONSERVACION PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP TAMPICO  - CIUDAD VICTORIA) PARA EL PERIODO 2018-2028.,9,Dirección General de Conservación de Carreteras,35,0,0,,3199638390,,,
-'17092140001,Programa de Liberación del Derecho de Vía para Autopistas a realizarse mediante Concesión o Asociación Público-Privada 2018.,9,Dirección General de Desarrollo Carretero,35,0,0,,2095745438,,,
-'17096240003,Acceso al Puerto Seybaplaya,9,Centro SCT Campeche,4,20,-91,,391171107,,,
-'1711A3Q0001,"Programa anual de adquisiciones de bienes no asociados a obra pública, destinados a la función de difusión cultural y extensión universitaria de la UNAM",11,Universidad Nacional Autónoma de México,35,0,0,,80144063,,,
-'17389ZU0001,Programa de Adquisiciones para el área de Robótica Colaborativa e Inteligente,38,Centro de Ingeniería y Desarrollo Industrial,22,0,0,,20433518,,,
-'1750GYR0012,Programa nacional de adquisición de mastógrafos 2018,50,Instituto Mexicano del Seguro Social,35,0,0,,95356417,,,
-'1750GYR0013,Construcción de la clínica de detección y diagnóstico del cáncer de mama en la Delegación Nuevo León.,50,Instituto Mexicano del Seguro Social,19,26,-100,,82052439,,,
-'12096220027,San Felipe-Puertecitos (Tr: Campo los Olivos - Puertecitos),9,Centro SCT Baja California,2,31,-115,,151382802,,,
-'12096360044,San Antonio de Viña - Loma Ceñida,9,Centro SCT Michoacán,16,19,-101,,71044338,,,
-'14096310009,Camino Del Crucero Chico A La Purísima.,9,Centro SCT Guanajuato,11,21,-101,,45359195,,,
-'163890Q0001,Fortalecimiento de Laboratorios de la Unidad de Ciencias del Agua para investigación aplicada al manejo del Acuifero Península de Yucatán,38,"Centro de Investigación Científica de Yucatán, A.C.",23,21,-87,,11457487,,,
-'1706G1H0004,Sistema de Evacuación Alterno de Edificios,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",9,0,0,,9000000,,,
-'1706G1H0005,Adquisición para Reemplazo y Renovación de Bienes,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",9,0,0,,76000000,,,
-'1707HXA0008,"Mantenimiento y Rehabilitación de la U.H.M. Martínez de la Torre II, Ver.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,30,0,0,,6785225,,,
-'1707HXA0028,Servicios relacionados con las obras públicas militares.,7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,34,0,0,,655500,,,
-'1707HXA0029,Servicios relacionados con las obras públicas navales.,7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,34,0,0,,437000,,,
-'1708JBK0002,ACTUALIZACION Y MODERNIZACION DE MAQUINARIA Y EQUIPOS 2018,8,Productora Nacional de Biológicos Veterinarios,9,0,0,,16000000,,,
-'17092110002,Programa de Atención de Puntos de Conflicto y Seguridad Vial.,9,Dirección General de Conservación de Carreteras,35,0,0,,838298175,,,
-'17096510001,"Entronque a Desnivel Baca km 20+800, de la Carretera: Mérida-Tzimín",9,Centro SCT Yucatán,31,21,-89,,106305105,,,
-'1709JZL0004,Estudios de preinversión de la Red Aeroportuaria 2018,9,Aeropuertos y Servicios Auxiliares,35,0,0,,8178000,,,
-'1711A3Q0005,Programa Anual de Mantenimiento a la Infraestructura Física de Entidades Foráneas de Docencia e Investigación,11,Universidad Nacional Autónoma de México,35,0,0,,78328321,,,
-'1751GYN0012,Fortalecimiento de equipo médico en hospitales de tercer nivel de atención de la salud en el ISSSTE.,51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,35,0,0,,673053724,,,
-'1751GYN0014,Fortalecimiento de equipo médico y de laboratorio en unidades de segundo nivel de atención de la salud 2018.,51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,35,0,0,,156737161,,,
-'11096220002,San Felipe-Puertecitos (Tr: Poblado Ejido Delicias Campo los Olivos).,9,Centro SCT Baja California,2,31,-115,,151382802,,,
-'11096330023,Ferrería de Apulco - San Pedro Vaquerías,9,Centro SCT Hidalgo,13,20,-98,,230620475,,,
-'11096490007,E.C. (Capula- Lázaro Cárdenas)- Atotonilco y Ramal a la Ciénega,9,Centro SCT Tlaxcala,29,20,-98,,148855103,,,
-'12096390006,"Camino Real, Libramiento a Pedreras",9,Centro SCT Nuevo León,19,26,-100,,347492658,,,
-'12096470001,Comalcalco-Chichicapa,9,Centro SCT Tabasco,27,18,-93,,77252204,,,
-'1418T4M0065,Adquisición de vehículos tácticos de reacción rápida,52,Pemex Logística,35,0,0,,150000000,,,
-'1607HXA0013,"Mantenimiento y Rehabilitación de la U.H.M. Huejutla, Hgo.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,13,0,0,,31424673,,,
-'1706G1C0003,"Adquisición y sustitución de mobiliario, equipo y equipamiento de oficinas.",6,"Banco Nacional de Obras y Servicios Públicos, S.N.C.",9,0,0,,6625891,,,
-'1706G1H0008,Apertura y Remodelación de la Red de Sucursales,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",35,0,0,,133612500,,,
-'1706HBW0002,Infraestructura sistema fotovoltaico para interconexión a red de CFE en Oficina Central,6,"Fondo de Garantía y Fomento para la Agricultura, Ganadería y Avicultura",16,0,0,,16000000,,,
-'1707HXA0019,VEHICULOS PARA LA CASA HOGAR PARA MILITARES RETIRADOS,7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,9,0,0,,843222,,,
-'17092110001,Programa de Reconstrucción de Puentes,9,Dirección General de Conservación de Carreteras,35,0,0,,1257447263,,,
-'17092110004,Programa de Conservación Rutinaria de Tramos,9,Dirección General de Conservación de Carreteras,35,0,0,,4715741596,,,
-'17092110007,Programa de Conservación Periódica para el Ejercicio 2018,9,Dirección General de Conservación de Carreteras,35,0,0,,8891554724,,,
-'17092120001,Adquisición de equipo para prueba de materiales utilizadosen la ejecución de las obras de infraestructura carretera que realiza la SCT,9,Dirección General de Servicios Técnicos,9,0,0,,5134576,,,
-'1716B000025,Programa K 111 Rehabilitación y Modernización de presas y estructuras de cabeza Zona Sur.,16,Comisión Nacional del Agua,35,0,0,,156133035,,,
-'1750GYR0014,Construcción de la Clínica de Detección y Diagnóstico del Cáncer de Mama en Veracruz Norte,50,Instituto Mexicano del Seguro Social,30,19,-96,,82008928,,,
-'10096280005,"Aeropuerto Regional Barrancas del Cobre Creel, Municipio de Bocoyna, Chihuahua.",9,Centro SCT Chihuahua,8,28,108,,403004640,,,
-'1704E2D0001,ADQUISICIÓN DE MAQUINARIA Y EQUIPO INDUSTRIAL 2018,4,Talleres Gráficos de México,9,0,0,,61172600,,,
-'1706G1C0001,"Sustitución de equipos de grabación, monitoreo y protección civil.",6,"Banco Nacional de Obras y Servicios Públicos, S.N.C.",9,0,0,,4269457,,,
-'1706G1H0001,Actualización de la Infraestructura de Virtualización,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",35,0,0,,117040000,,,
-'1706G1H0002,Programa de Adquisición para Reemplazo y Renovación de Cajeros Automáticos,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",35,0,0,,28700000,,,
-'1706G1H0006,Programa de Adquisición para la Renovación del Parque Vehicular,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",9,0,0,,6634000,,,
-'1706HBW0003,Programa de adquisición de bienes muebles 2018,6,"Fondo de Garantía y Fomento para la Agricultura, Ganadería y Avicultura",35,0,0,,12223400,,,
-'1706HBW0004,Construcción de barda perimetral y banqueta exterior del Centro de Desarrollo Tecnológico Tezoyuca del ejercicio 2018,6,"Fondo de Garantía y Fomento para la Agricultura, Ganadería y Avicultura",17,19,-99,,1380000,,,
-'1707HXA0021,Programa de adquisición de Bienes Muebles para el equipamiento de  las administraciones de las UU.HH.MM. patrimonio de este Instituto.,7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,35,0,0,,7200000,,,
-'1707HXA0023,"Mantenimiento y rehabilitación de las UU.HH.MM. Guerrero Negro I, II, III y IV, B.C.S.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,3,0,0,,62088727,,,
-'1707HXA0027,"Construcción de la UHM Hermosillo III, Son.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,26,29,-111,,55755757,,,
-'17092110009,PROGRAMA ASOCIACION PUBLICO PRIVADA DE CONSERVACION PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP CAMPECHE - MERIDA) PARA EL PERIODO 2018-2028.,9,Dirección General de Conservación de Carreteras,35,0,0,,3700174830,,,
-'1710K2N0002,Adquisición de equipos y bienes especializados 2018: Módulos de bombeo para la salina,10,"Exportadora de Sal, S.A. de C.V.",3,0,0,,18213076,,,
-'1710K2N0003,Adquisición de Equipo y bienes especializados para Operaciones 2018,10,"Exportadora de Sal, S.A. de C.V.",35,0,0,,46421809,,,
-'1711A3Q0002,"Programa anual de adquisiciones de bienes no asociados a la obra pública, destinados a las actividades de Investigación en la UNAM",11,Universidad Nacional Autónoma de México,35,0,0,,335627386,,,
-'1711A3Q0003,"Programa anual de adquisiciones de bienes no asociados a la obra pública, destinados a la función de docencia en el nivel medio superior, superior y posgrado en la UNAM",11,Universidad Nacional Autónoma de México,35,0,0,,467494378,,,
-'1716B000024,Programa K 111 Rehabilitación y modernización de presas y estructuras de cabeza Zona Centro.,16,Comisión Nacional del Agua,35,0,0,,156133035,,,
-'1721W3N0004,Mantenimiento de los Centros Integralmente Planeados Península 2018,21,Fondo Nacional de Fomento al Turismo,3,0,0,,243712519,,,
-'1750GYR0015,"Construcción de la Clínica de Detección y Diagnóstico del Cáncer de Mama en Guadalajara, Jalisco.",50,Instituto Mexicano del Seguro Social,14,21,-103,,82052439,,,
-'11096300003,"Carretera Durango-Hidalgo del Parral, Durango-Lím. Edos.Tramo: Guadalupe Aguilera-Ent. San Juan del Río del Km. 55+250 al Km. 105+871",9,Centro SCT Durango,10,24,-105,,833751619,,,
-'1318T4M0047,Adquisición de equipo laboratorio la GAR Centro,52,Pemex Logística,35,0,0,,59864761,,,
-'1706G1C0002,Sustitución de vehículos para actividades administrativas.,6,"Banco Nacional de Obras y Servicios Públicos, S.N.C.",9,0,0,,141463,,,
-'1706HHQ0001,Adquisición de ábacos de latón para la preparación de los sorteos.,6,Lotería Nacional para la Asistencia Pública,9,0,0,,951200,,,
-'1707HXA0016,"Mantenimiento y Rehabilitación de la U.H.M. Chetumal I, Q.R.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,23,0,0,,10650629,,,
-'17092100003,Programa de Conservación de Infraestructura de Caminos Rurales y Carreteras 2018.,9,Dirección General de Carreteras,35,0,0,,8500000000,,,
-'1709J0U0003,Mantenimiento Mayor de Puentes,9,Caminos y Puentes Federales de Ingresos y Servicios Conexos,35,0,0,,1036241332,,,
-'1710K2N0001,Adquisición de Equipo y bienes especializados para Mantenimiento 2018,10,"Exportadora de Sal, S.A. de C.V.",35,0,0,,50683006,,,
-'1711A3Q0004,Programa anual de mantenimiento a la infraestructura física de entidades de Difusión Cultural y Extensión Universitaria de la UNAM localizadas en la Ciudad de México y Zona Metropolitana,11,Universidad Nacional Autónoma de México,9,0,0,,97792928,,,
-'1718T0O0001,PROGRAMA DE ADQUISICIONES DE INVESTIGACION 2018,18,Instituto Mexicano del Petróleo,9,0,0,,144753858,,,
-'13096360005,E.C. (Huetamo-Churumuco)-San Jerónimo Cañada de Buenavista.,9,Centro SCT Michoacán,16,19,-101,,20478591,,,
-'14096370006,Tetelilla - E.C. (Jonacatepec-Atotonilco).,9,Centro SCT Morelos,17,19,-99,,38593240,,,
-'1706HAN0002,ADQUISICIÓN Y SUSTITUCIÓN DE MOBILIARIO Y EQUIPO DE ADMINISTRACIÓN PARA LA FND QUE SE ENCUENTRA EN ALTO GRADO DE DETERIORO Y OBSOLESCENCIA,6,"Financiera Nacional de Desarrollo Agropecuario, Rural, Forestal y Pesquero",35,0,0,,11500000,,,
-'1706HIU0001,Adquisición y Sustitución de Bienes Muebles,6,"Nacional Financiera, S.N.C.",9,0,0,,806377,,,
-'1707HXA0009,"Mantenimiento y rehabilitación de la UHM Valladolid, Yuc.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,31,0,0,,30322311,,,
-'1707HXA0012,SUSTITUCIÓN DE BIENES MUEBLES ADHERIDOS A LAS VIVIENDAS 2018,7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,9,0,0,,8577572,,,
-'1707HXA0015,"Mantenimiento y Rehabilitación de la U.H.M. Tepic Fracc. A y B, Nay.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,18,0,0,,13677162,,,
-'1707HXA0024,"Construcción de la U.H.M. Cuernavaca IV, Mor.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,17,19,-99,,85753196,,,
-'1707HXA0030,"Construcción de la U.H.M. Acapulco V, Gro.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,12,17,-100,,86034409,,,
-'17092110006,PROGRAMA DE RECONSTRUCCIÓN DE TRAMOS.,9,Dirección General de Conservación de Carreteras,35,0,0,,907352987,,,
-'17092110008,PROGRAMA ASOCIACION PUBLICO PRIVADA DE CONSERVACION PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP ARRIAGA-TAPACHULA) PARA EL PERIODO 2018-2028.,9,Dirección General de Conservación de Carreteras,35,0,0,,7321645897,,,
-'17092110010,PROGRAMA ASOSIACION PUBLICO PRIVADA DE CONSERVACION PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP SAN LUIS POTOSI  - MATEHUALA) PARA EL PERIODO 2018-2028.,9,Dirección General de Conservación de Carreteras,35,0,0,,4174363215,,,
-'17092120004,"Verificación de calidad de las obras de construcción, modernización y conservación de la Red Carretera Federal a cargo de la SCT en el año 2018",9,Dirección General de Servicios Técnicos,35,0,0,,288164998,,,
-'17092140002,Programa de estudios y proyectos de desarrollo carretero 2018,9,Dirección General de Desarrollo Carretero,35,0,0,,664653091,,,
-'1709J0U0002,Mantenimiento Mayor de Carreteras,9,Caminos y Puentes Federales de Ingresos y Servicios Conexos,35,0,0,,641557976,,,
-'1716B000042,"Mantenimiento y rehabilitación 2018 del Acueducto D.I.M. Lázaro Cárdenas, Michoacán.",16,Comisión Nacional del Agua,16,0,0,,27244691,,,
-'1718T0O0002,PROGRAMA DE AQUISICION DE BIENES PARA EL AREA DE SERVICIOS 2018,18,Instituto Mexicano del Petróleo,9,0,0,,152301207,,,
-'1721W3N0003,Mantenimiento del Centro Integralmente Planeado y Proyecto Turístico Integral del Caribe 2018,21,Fondo Nacional de Fomento al Turismo,23,0,0,,227951963,,,
-'1112M7K0002,"Construcción de la Unidad de Hospitalización Mérida, 2011-2021.",12,"Centros de Integración Juvenil, A.C.",31,21,-90,,33797536,,,
-'12095100008,Home Port  Puerto Peñasco,9,Dirección General de Puertos,26,31,-114,,667794125,,,
-'12096360024,E.C. (El Copetiro - Tancítaro) - Apúndaro - Pareo.,9,Centro SCT Michoacán,16,19,-102,,63511934,,,
-'1307HXA0017,"Construcción de la U.H.M. Valladolid III,  Yuc.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,31,21,-88,,59326974,,,
-'1307HXA0024,"Construcción de la U.H.M. Chihuahua III, Chih.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,8,29,-106,,82376582,,,
-'14096360015,Cuanajo - la Noria.,9,Centro SCT Michoacán,16,19,-102,,29790527,,,
-'1511L3P0002,Proyecto de Rehabilitación del Plantel Tonalá_Protección Civil,11,Centro de Enseñanza Técnica Industrial,14,0,0,,4644356,,,
-'1706G1H0003,Programa de Adquisición para la Renovación Tecnológica,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",9,0,0,,83000000,,,
-'1706HAT0001,Programa de adquisición de mobiliario y equipo de administración.,6,Fondo de Capitalización e Inversión del Sector Rural,9,0,0,,241590,,,
-'1707HXA0010,"Mantenimiento y Rehabilitación de la U.H.M. Culiacán I, Sin.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,25,0,0,,17976645,,,
-'17092100005,Programa de Estudios y Proyectos de Caminos Rurales y Alimentadores 2018.,9,Dirección General de Carreteras,35,0,0,,500000000,,,
-'17092100006,Liberación del derecho de vía 2018,9,Dirección General de Carreteras,35,0,0,,1571809078,,,
-'17092110003,Programa de Estudios y/o Proyectos,9,Dirección General de Conservación de Carreteras,35,0,0,,1152659991,,,
-'17092120003,"Programa Evaluación de los elementos superficiales, estructurales y de seguridad vial de la Red Carretera Federal en 2018, a través de su auscultación con equipos de alto rendimiento.",9,Dirección General de Servicios Técnicos,35,0,0,,250000000,,,
-'17092120005,"Estudios y proyectos que demanda la infraestructura carretera para atender la planeación, construcción, modernización y conservación de la Red Carretera Federal en el ejercicio 2018.",9,Dirección General de Servicios Técnicos,35,0,0,,70941507,,,
-'17096360004,Santa Cruz-Coenembo,9,Centro SCT Michoacán,16,20,-102,,12805005,,,
-'1709J0U0001,Conservación de Puentes,9,Caminos y Puentes Federales de Ingresos y Servicios Conexos,35,0,0,,102590931,,,
-'1710K2N0004,Programa de Mantenimiento Preventivo de Equipos 2018,10,"Exportadora de Sal, S.A. de C.V.",3,0,0,,51012540,,,
-'1711A3Q0006,Programa anual de mantenimiento a la infraestructura física de entidades de docencia e investigación de la UNAM localizadas en la ciudad de México y zona metropolitana,11,Universidad Nacional Autónoma de México,35,0,0,,383103509,,,
-'1716B000026,Programa K 111 Rehabilitación y modernización de presas y estructuras de cabeza Zona Norte.,16,Comisión Nacional del Agua,35,0,0,,156133035,,,
-'1716B000043,Mantenimiento y rehabilitación del Sistema Acueducto Uxpanapa La Cangrejera 2018,16,Comisión Nacional del Agua,30,0,0,,87497372,,,
-'1721W3N0005,Mantenimiento de los Centros Integralmente Planeados Pacífico Norte 2018.,21,Fondo Nacional de Fomento al Turismo,35,0,0,,92023286,,,
-'1418T4M0005,Adquisición de equipo laboratorio la GAR Pacífico,52,Pemex Logística,35,0,0,,48144419,,,
-'1706G1H0007,Construcción y Adecuación de Cabinas,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",35,0,0,,25000000,,,
-'1706HBW0005,Habilitación y ampliación de áreas productivas en el Centro de Desarrollo Tecnológico Salvador Lira López,6,"Fondo de Garantía y Fomento para la Agricultura, Ganadería y Avicultura",16,20,-101,,387000,,,
-'1706HBW0006,Mantenimiento y Habilitación de instalaciones del Centro de Desarrollo Tecnológico Villadiego del ejercicio 2018,6,"Fondo de Garantía y Fomento para la Agricultura, Ganadería y Avicultura",11,0,0,,395000,,,
-'17071160005,PROGRAMA DE ADQUISICIONES 2018 (PRIMERA ETAPA) PARA EL REFORZAMIENTO DE DIVERSOS ESCALONES DEL SERVICIO DE SANIDAD MILITAR.,7,Dirección General de Sanidad,35,0,0,,148251575,,,
-'1707HXA0007,"Mantenimiento y Rehabilitación de la U.H.M. Guadalajara, Jal.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,14,0,0,,25911531,,,
-'1707HXA0014,"Mantenimiento y Rehabilitación de la U.H.M. Zacatecas I, Zac.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,32,0,0,,5781289,,,
-'1707HXA0020,Programa de adquisiciones de equipos para el desarrollo operacional  ISSFAM 2018,7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,9,0,0,,14197693,,,
-'17092100004,PROGRAMA DE ESTUDIOS Y PROYECTOS DE CARRETERAS 2018,9,Dirección General de Carreteras,35,0,0,,1571809078,,,
-'17092110005,Programa de Conservación Rutinaria de Puentes,9,Dirección General de Conservación de Carreteras,35,0,0,,261968180,,,
-'17092120002,"Actualización de normas, manuales técnicos y Tabulador de precios unitarios 2018.",9,Dirección General de Servicios Técnicos,35,0,0,,8697344,,,
-'1710K8V0003,Adquisición para sustitución de la planta enfriadora de agua para el sistema de aire acondicionado en Pedregal,10,Instituto Mexicano de la Propiedad Industrial,9,0,0,,3500000,,,
-'1721W3N0002,Mantenimiento de los Centros Integralmente Planeados del Pacífico Sur 2018,21,Fondo Nacional de Fomento al Turismo,35,0,0,,519018352,,,
-'1750GYR0017,"Programa de Adquisición de Aceleradores Lineales para Unidades Médicas de Segundo y Tercer Nivel de Atención Médica, 2018",50,Instituto Mexicano del Seguro Social,35,0,0,,2212501863,,,
-'1751GYN0013,Fortalecimiento de equipo médico en unidades de primer nivel de atención de la salud 2018.,51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,35,0,0,,157059459,,,
+'1716B000061,"Recarga artificial del Acuífero 1307 Huichapan-Tecozautla mediante pozos de infiltración con agua pluvial. Municipios de Huichapan y Tecozautla, Estado de Hidalgo.",16,Comisión Nacional del Agua,13,0,0,0,29823290,2017,,0
+'1716E000001,Centro Nacional de Control y Protección del Águila Real.,16,Procuraduría Federal de Protección al Ambiente,9,0,0,100,16679735,2017,,14942990
+'1716RHQ0001,Equipo Técnico para Prevención y Combate de Incendios Forestales.,16,Comisión Nacional Forestal,35,0,0,0,12150329,2017,,0
+'1716RHQ0003,"Equipamiento del Campo Experimental El Tormento, de la Comisión Nacional Forestal.",16,Comisión Nacional Forestal,4,0,0,75,2046328,2017,,1484626
+'1716RHQ0004,"Adquisición de Equipo, Mobiliario y Herramienta para proyectos administrativos de la Comisión Nacional Forestal.",16,Comisión Nacional Forestal,35,0,0,85,6066180,2017,,4919389
+'1716RHQ0005,Adquisición de Autobús Escolar para el Centro de Educación y Capacitación Forestal 03.,16,Comisión Nacional Forestal,5,0,0,0,4925002,2017,,0
+'1716RHQ0006,Adquisición de vehículos para la atención de proyectos técnicos y administrativos de la Comisión Nacional Forestal.,16,Comisión Nacional Forestal,35,0,0,0,15133378,2017,,0
+'1716RJE0001,Mobiliario y equipo de oficina para actividades sustantivas del IMTA.,16,Instituto Mexicano de Tecnología del Agua,17,0,0,0,3312500,2017,,0
+'1716RJE0002,Equipo de laboratorio para investigación y desarrollo tecnológico del IMTA.,16,Instituto Mexicano de Tecnología del Agua,17,0,0,0,36190311,2017,,0
+'1716RJE0003,"Adquisición de equipo técnico de apoyo a la investigación, generación, divulgación de conocimiento y desarrollo científico y tecnológico del IMTA.",16,Instituto Mexicano de Tecnología del Agua,17,0,0,0,6947599,2017,,0
+'1716RJE0004,Proyecto de rehabilitación de instalaciones del IMTA derivadas del sismo del 19 de septiembre de 2017.,16,Instituto Mexicano de Tecnología del Agua,17,0,0,0,8720397,2018,,0
+'1716RJE0005,Equipo de computo para proyectos contratados,16,Instituto Mexicano de Tecnología del Agua,17,0,0,0,4264212,2018,,0
+'17173000001,Adquisición de equipo para el sistema de información,17,"Subprocuraduría de Control Regional, Procedimientos Penales y Amparo",9,0,0,99,151447,2017,,144528
+'17178120001,Renovación y equipamiento de bienes muebles del refugio especializado de la FEVIMTRA,17,Dirección General de Recursos Materiales y Servicios Generales,9,0,0,0,3132825,2017,,0
+'17178120002,Servicios relacionados con obras públicas para desarrollar 20 proyectos ejecutivos en inmuebles de las delegaciones estatales de la Procuraduría General de la República,17,Dirección General de Recursos Materiales y Servicios Generales,35,0,0,0,22669377,2017,,0
+'17178120003,"Programa de mantenimiento mayor del inmueble propiedad de la Procuraduría General de la República ubicado en la colonia San José de la Escalera, segunda etapa",17,Dirección General de Recursos Materiales y Servicios Generales,9,0,0,0,24297549,2017,,0
+'17178150001,Adquisición de equipos para realizar las inspecciones de mantenimiento a las aeronaves de la Procuraduría General de la República,17,Dirección General de Servicios Aéreos,14,0,0,0,6601598,2017,,0
+'17178160001,"Adquisición de activos para proporcionar seguridad, segunda etapa",17,Dirección General de Seguridad Institucional,9,0,0,25,65177683,2017,,15415173
+'1718T0Q0001,Adquisición de polipasto para izaje de contenedor de recarga en el Irradiador JS-6500,18,Instituto Nacional de Investigaciones Nucleares,15,0,0,0,230758,2018,,0
+'1718T0Q0002,Adquisición de equipo de laboratorio para desarrollo del proyecto Laboratorio Nacional de Investigación y Desarrollo de Radiofármacos,18,Instituto Nacional de Investigaciones Nucleares,15,0,0,0,6446282,2018,,0
+'1718T0Q0003,Adquisición de equipo para Laboratorio Nacional de Investigaciones en Forense Nuclear (LANAFONU,18,Instituto Nacional de Investigaciones Nucleares,15,0,0,0,1580516,2017,,0
+'1718TON0001,Rehabilitación y mantenimiento de infraestructura de ductos a nivel nacional del CENAGAS.,18,Centro Nacional de Control del Gas Natural,35,0,0,0,404939933,2017,,15733906
+'1718TON0002,"Mantenimiento integral de los sistemas de ductos para gas natural, etapa II del Cenagas.",18,Centro Nacional de Control del Gas Natural,35,0,0,0,1098935557,2017,,256242
+'1718TON0003,"Modernización de los sistemas de monitoreo, control y supervisión del transporte por ducto, etapa II del CENAGAS",18,Centro Nacional de Control del Gas Natural,35,0,0,0,1210656777,2017,,0
+'17212100001,NUEVO ACUARIO DE MAZATLAN SINALOA,21,Fondo Nacional de Fomento al Turismo,25,23,-106,1,1366126777,2017,,0
+'1721W3N0006,Parque Público Kilómetro 0.,21,Fondo Nacional de Fomento al Turismo,23,21,-87,0,41917633,2017,,19117965
+'1721W3N0007,Parque Público Rufino Tamayo.,21,Fondo Nacional de Fomento al Turismo,20,16,-96,0,49117620,2017,,0
+'17271160001,Programa de modernización tecnológica del equipo para actividades de comunicación social,27,Dirección General de Comunicación Social,9,0,0,65,1222043,2017,,762686
+'17272080001,Construcción del Laboratorio de Calidad de Materiales de Construcción de la Secretaría de la Función Pública,27,Unidad de Control y Auditoría a Obra Pública,9,0,0,0,1528887,2017,,0
+'17275100001,Cuarta etapa de Modernización del Equipo de cocina del comedor institucional,27,Dirección General de Recursos Humanos,9,0,0,0,1643409,2018,,0
+'17275110001,Adquisición de Infraestructura de Telecomunicaciones para la Secretaría de la Función Pública,27,Dirección General de Tecnologías de Información,9,0,0,0,4965450,2018,,0
+'17311000001,Renovación Tecnológica del Centro de Datos de los Tribunales Agrarios 2017,31,Tribunal Superior Agrario,9,0,0,0,3911892,2017,,0
+'17312000001,Renovación y Modernización de Tecnología de Computo 2017,31,Tribunales Unitarios Agrarios,35,0,0,0,28783905,2017,,0
+'17312000002,UPS de 5 KVA,31,Tribunales Unitarios Agrarios,35,0,0,0,7378980,2017,,0
+'173890E0001,Laboratorios de pruebas acreditadas NADCAP,38,"Centro de Investigación en Materiales Avanzados, S.C.",8,29,-106,3,32478018,2017,,1037039
+'173890O0001,Reparación estructural de edificios de laboratorios del Centro de Investigaciones Biológicas del Noroeste S.C.,38,"Centro de Investigaciones Biológicas del Noroeste, S.C.",3,0,0,0,30066193,2017,,0
+'173891A0001,Programa de fortalecimiento del equipamiento de la Dirección de Ingeniería de Materiales y Manufactura 2017,38,"Corporación Mexicana de Investigación en Materiales, S.A. de C.V.",5,0,0,19,13014579,2017,,2363661
+'173891A0002,Programa de renovación de equipo científico obsoleto para la Dirección de Ingeniería de Materiales y Manufactura 2017,38,"Corporación Mexicana de Investigación en Materiales, S.A. de C.V.",5,0,0,10,12647824,2017,,1152754
+'1747AYB0001,Equipamiento UPS para el edificio central de la Comisión Nacional para el Desarrollo de los Pueblos Indígenas,47,Comisión Nacional para el Desarrollo de los Pueblos Indígenas,9,0,0,100,3312924,2017,,0
+'1747AYJ0001,Programa de Inversión para la Adquisición de Mobiliario y Equipo Administrativo para la Instalación de 16 Delegaciones para la CEAV,47,Comisión Ejecutiva de Atención a Víctimas,35,0,0,0,11054051,2018,,0
+'1747AYL0001,Mantenimiento preventivo y correctivo de 7 estaciones retransmisoras del SPR.,47,Sistema Público de Radiodifusión del Estado Mexicano,35,0,0,0,2977776,2018,,0
+'1748D000001,Adquisicion por la via de compraventa de una Finca Rustica ubicada dentro del Sitio Arqueologico de Kuluba,48,Instituto Nacional de Antropología e Historia,31,21,-88,100,7332855,2018,,0
+'1748D000002,"Adquisicion por la via de expropiacion de una superficie de 139-31-79.63 has pertenecientes a la comunidad de Santa Cruz Xoxocotlan, dentro de la poligonal de la Zona Arqueologica de Monte Alban",48,Instituto Nacional de Antropología e Historia,20,17,-97,0,127607667,2018,,0
+'1748E000001,Bienes artisticos del INBAL 2017,48,Instituto Nacional de Bellas Artes y Literatura,9,0,0,26,28354759,2017,,9566388
+'1748MDC0001,Producción de cortometrajes,48,Instituto Mexicano de Cinematografía,9,0,0,100,15718091,2017,,9986327
+'1750GYR0001,"Ampliación y remodelación de los servicios de admisión continua, hospitalización, unidad de trasplante y residencias médicas del Hospital de Especialidades de la UMAE en Puebla.",50,Instituto Mexicano del Seguro Social,21,19,-98,0,42170178,2017,,0
+'1750GYR0002,"Ampliación del área de hospitalización con gineco obstetricia e incremento de 100 camas en el HGZ No. 20 en Puebla, Puebla",50,Instituto Mexicano del Seguro Social,21,19,-98,0,391034419,2017,,0
+'1750GYR0003,"Construcción de UMF 14 + 7 + AMCen el municipio de Mérida, Yucatán.",50,Instituto Mexicano del Seguro Social,31,21,-90,0,87610204,2017,,787409
+'1750GYR0004,Remodelación de los servicios de trasplante de médula ósea y trasplante renal del UMAE CMN La Raza.,50,Instituto Mexicano del Seguro Social,9,19,-99,0,66683714,2017,,0
+'1750GYR0005,"Ampliación y Remodelación del HGZ No. 47 Vicente Guerrero en el Distrito Federal, para incrementar 80 camas censables así como laremodelación de quirófanos.",50,Instituto Mexicano del Seguro Social,9,19,-99,0,99547908,2017,,0
+'1750GYR0006,"Ampliación del Hospital General Regional No. 25 (HGR) en Zaragoza, D.F NORTE con 32 camas, UCIA con 6 lugares, UCIN 10 lugares, Urgencias.",50,Instituto Mexicano del Seguro Social,9,19,-99,0,234723489,2017,,0
+'1750GYR0007,"Demolición del Edificio de Convalecientes del Centro Médico Nacional Siglo XXI, Suroeste de la Cuidad de México.",50,Instituto Mexicano del Seguro Social,9,0,0,0,15718090,2017,,0
+'1750GYR0008,"Sustitución del Hospital General de Zona No.3 en Tuxtepec, Oaxaca.",50,Instituto Mexicano del Seguro Social,20,18,-96,0,794916244,2017,,0
+'1750GYR0009,"Construcción de una clínica de detección y diagnóstico del cáncer de mama en la Ciudad de México, Delegación DF. Norte.",50,Instituto Mexicano del Seguro Social,9,19,-99,99,72965028,2017,,67601418
+'1750GYR0011,"Sustitución de la Subdelegación Ciudad Sahagúnen el Municipio de Tepeapulco, de la Delegación Estatal del IMSS en Hidalgo.",50,Instituto Mexicano del Seguro Social,13,20,-99,96,23243511,2017,,21962314
+'1750GYR0016,"Sustitución de Unidad de Medicina Familiar 2+1 con AMC (UMF No. 72), en Cocula, Jalisco.",50,Instituto Mexicano del Seguro Social,14,20,-104,42,17795156,2017,,12870996
+'1750GYR0019,"Sustitución de la Unidad de Terapia Oncológica en el HGZ/MF No. 1 en Durango, Durango.",50,Instituto Mexicano del Seguro Social,10,24,-105,0,82761334,2017,,0
+'1750GYR0020,"Construcción de la Subdelegación IMSS de Tepatitlán de Morelos, Jalisco",50,Instituto Mexicano del Seguro Social,14,21,-103,39,19455593,2017,,13501397
+'1750GYR0021,"Adquisición de Equipamiento para la Evaluación de los Riesgos de Trabajo, en el Centro Médico Nacional de Occidente, Jalisco",50,Instituto Mexicano del Seguro Social,14,0,0,80,609480,2017,,0
+'1750GYR0022,"Construcción de una clínica de detección y diagnóstico del cáncer de mama en la Ciudad de México, Delegación DF. Sur.",50,Instituto Mexicano del Seguro Social,9,19,-99,0,72965028,2017,,1765035
+'1750GYR0023,"Construcción del Centro de Investigación en Biomedicina Molecular, en Zacatecas.",50,Instituto Mexicano del Seguro Social,32,23,-103,0,102049683,2018,,0
+'1750GYR0024,"Programa de Emergencia Para Rehabilitación Estructural de los Inmuebles de la Unidad Médica de Alta Especialidad, CMN La Raza (Hospital General, Hospital de Gineco-Obstetricia, Hospital de Especialidades y Consulta Externa).",50,Instituto Mexicano del Seguro Social,9,0,0,0,10478728,2018,,0
+'1750GYR0025,"Programa de Emergencia para la Rehabilitación de los Inmuebles de la Unidad Médica de Alta Especialidad Siglo XXI (Hospital de Pediatría, Hospital de Cardiología, Hospital de Oncología, Hospital de Especialidades y áreas comunes).",50,Instituto Mexicano del Seguro Social,9,0,0,0,23053200,2018,,0
+'1750GYR0026,"Programa de emergencia para la rehabilitación estructural del inmueble del Hospital General de Zona No. 5 en la Ciudad de Metepec, municipio de Atlixco, Puebla.",50,Instituto Mexicano del Seguro Social,21,0,0,0,31436181,2018,,0
+'1750GYR0027,"Programa de emergencia para la rehabilitación estructural de los inmuebles del HGZMF No. 7 en el municipio de Cuautla, el HGRMF No. 1 en el municipio de Cuernavaca y HGZMF No. 5 en Zacatepec, en el Estado de Morelos.",50,Instituto Mexicano del Seguro Social,35,0,0,0,450585269,2018,,0
+'1750GYR0028,Programa de emergencia para la atención de los daños provocados por el sismo de septiembre en el HGR 25 Zaragoza.,50,Instituto Mexicano del Seguro Social,9,0,0,0,261968179,2018,,0
+'1750GYR0030,Programa de emergencia para la atención de los daños provocados por el sismo de septiembre en el Hospital General de Zona No. 32 Villa Coapa en la Ciudad de México.,50,Instituto Mexicano del Seguro Social,9,0,0,0,209574543,2018,,0
+'1750GYR0031,"Programa de emergencia para la atención de los daños provocados por el sismo de septiembre en la Unidad de Medicina Familiar No. 93 en Ecatepec de Morelos, Estado de México.",50,Instituto Mexicano del Seguro Social,15,0,0,0,261968180,2018,,0
+'1750GYR0032,Programa de emergencia para la atención de los daños provocados por el sismo de septiembre en la Unidad de Medicina Familiar No. 21 en la Ciudad de México.,50,Instituto Mexicano del Seguro Social,9,0,0,0,261968180,2018,,0
+'1750GYR0034,"Programa nacional de actualización de mobiliario para la mejora en la prestación de servicios de los tres niveles de atención, 2017.",50,Instituto Mexicano del Seguro Social,35,0,0,0,141452335,2018,,0
+'1750GYR0036,Programa de Emergencia para la Adecuación del Inmueble ubicado en Río Pánuco No. 224.,50,Instituto Mexicano del Seguro Social,9,0,0,90,11442696,2018,,10607724
+'1750GYR0038,"Programa de Emergencia para la Sustitución del Hospital General Regional con Unidad Médica de Atención Ambulatoria No. 36 en San Alejandro, Puebla.",50,Instituto Mexicano del Seguro Social,21,19,-98,0,2996915976,2018,,427661780
+'1750GYR0039,"Adquisición de Mobiliario para la Unidad de Control Metabólico (UCM) en la Ciudad Monterrey, Nuevo León.",50,Instituto Mexicano del Seguro Social,19,0,0,91,2843585,2018,,2485048
+'1750GYR0041,Programa de Emergencia para la reestructuración del inmueble Niño Perdido de la Delegación DF Sur.,50,Instituto Mexicano del Seguro Social,9,0,0,0,42765750,2018,,0
+'1750GYR0042,Programa de Emergencia para la Reestructuración del Inmueble Cumbres de Acultzingo de la Delegación DF Sur.,50,Instituto Mexicano del Seguro Social,9,0,0,0,31727230,2018,,0
+'1750GYR0043,Programa de Emergencia para la Rehabilitación Estructural del inmueble ubicado en la Subdelegación de Tuxtla Gutiérrez Chiapas.,50,Instituto Mexicano del Seguro Social,7,0,0,0,14316867,2018,,0
+'1750GYR0044,Programa de Emergencia para la rehabilitación del Centro Vacacional Oaxtepec.,50,Instituto Mexicano del Seguro Social,17,0,0,0,111680526,2018,,0
+'1751GYN0001,"Ampliación y remodelación del Hospital General Fray Junípero Serra Tijuana, B.C.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,2,33,-117,2,178107894,2017,,4122948
+'1751GYN0002,"Ampliación y Remodelación de la Infraestructura del H.G. Presidente Lázaro Cárdenas, Chihuahua, Chih.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,8,29,-106,1,161792513,2017,,1036559
+'1751GYN0003,"Ampliación y remodelación de la infraestructura del Hospital General La Paz, B.C.S.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,3,19,-99,0,126736157,2017,,0
+'1751GYN0004,"Ampliación y remodelación del Hospital General de Ciudad Juárez, Chih.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,8,32,-106,1,368408781,2017,,2274974
+'1751GYN0005,"Proyecto de Sustitución del Hospital General Dr. Francisco Galindo Chávez en Torreón, Coahuila",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,5,26,-103,0,1312550686,2017,,0
+'1751GYN0006,Ampliación y Remodelación de Unidades Médicas de Primer Nivel.,51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,35,0,0,8,178648393,2017,,13366386
+'1751GYN0007,"Construcción de Unidad Médica de Segundo Nivel en Chalco, México.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,15,19,-99,0,490929015,2017,,0
+'1751GYN0008,"Construcción de Unidad de Medicina Familiar en Villa Aldama, Tamaulipas.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,28,23,-98,0,15145518,2017,,0
+'1751GYN0009,"Ampliación y remodelación de la infraestructura del H.G. Tacuba, CDMX.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,9,19,-99,13,241533103,2017,,30547008
+'1751GYN0010,"Construcción de Clínica Hospital Cd. Delicias, Chihuahua.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,8,28,-105,1,442380930,2017,,3511430
+'1751GYN0011,Sustitución del Hospital General Dr. Santiago Ramón y Cajal en Durango,51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,10,24,-104,0,1379609499,2017,,0
+'1751GYN0025,"Ampliación y Remodelación del Hospital de Alta Especialidad Valentín Gómez Farías, Zapopan, Jal.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,14,21,-103,0,241149543,2018,,0
+'15092110002,1.- Programa Asociación Público Privada de Conservación Plurianual de la Red Federal de Carreteras (APP Querétaro - San Luís Potosí),9,Dirección General de Conservación de Carreteras,35,0,0,,3794114629,2017,,
+'16092110011,PROGRAMA ASOCIACIÓN PÚBLICO PRIVADA DE CONSERVACIÓN PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP SALTILLO  MONTERREY  NUEVO LAREDO) PARA EL PERIODO 2017-2027,9,Dirección General de Conservación de Carreteras,35,0,0,,5560246296,2017,,
+'16092110012,PROGRAMA ASOCIACIÓN PÚBLICO PRIVADA DE CONSERVACIÓN PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP TEXCOCO -ZACATEPEC) PARA EL PERIODO 2017-2027,9,Dirección General de Conservación de Carreteras,35,0,0,,4076221349,2017,,
+'14096410014,Libramiento de la Carretera La Galarza-Amatitlanes,9,Centro SCT Puebla,21,19,-98,,1071819140,2017,,
+'1450GYR0052,"Construcción del Hospital Regional (HGR) de 260 Camas en el Municipio de García, Nuevo León.",50,Instituto Mexicano del Seguro Social,19,26,-100,,2043539472,2017,,
+'15092110003,1.-Programa Asociación Público Privada de Conservación Plurianual de la Red Federal de Carreteras (APP Coatzacoalcos - Villahermosa),9,Dirección General de Conservación de Carreteras,35,0,0,,3582811376,2017,,
+'1550GYR0006,"Construcción del Hospital General de Zona de 144 camas, en Bahía de Banderas, Nayarit.",50,Instituto Mexicano del Seguro Social,18,21,-105,,1094368491,2017,,
+'1651GYN0004,"Sustitución del Hospital General Dr. Aquiles Calles Ramírez mediante la construcción de un nuevo Hospital General en Tepic, Nayarit",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,18,21,-105,,1266231561,2017,,
+'16092110010,PROGRAMA ASOCIACIÓN PÚBLICO PRIVADA DE CONSERVACIÓN PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP PIRÁMIDES-TULANCINGO-PACHUCA) PARA EL PERIODO 2017-2027,9,Dirección General de Conservación de Carreteras,35,0,0,,3194306241,2017,,
+'1551GYN0001,"Sustitución del Hospital General Dr. Daniel Gurría Urgell en Villahermosa, Tabasco.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,27,18,-93,,1126204670,2017,,
+'1151GYN0014,"Contrucción del nuevo Hospital General Dr. Gonzalo Castañeda, D.F.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,9,19,-99,,1146140337,2017,,
+'1451GYN0001,"Construcción de una nueva Clínica Hospital en Mérida, Yucatán.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,31,21,-89,,778392590,2017,,
+'1550GYR0008,"Construcción del Hospital General Regional de 260 camas en Tepotzotlán, Estado de México. PNI 283",50,Instituto Mexicano del Seguro Social,15,20,-99,,2108403038,2017,,
+'16092110009,PROGRAMA ASOCIACIÓN PÚBLICO PRIVADA DE CONSERVACIÓN PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP MATEHUALA - SALTILLO) PARA EL PERIODO 2017-2027,9,Dirección General de Conservación de Carreteras,35,0,0,,3640487639,2017,,
+'0950GYR0005,"Construcción de Hospital General de Zona (HGZ) de 180 camas en la localidad de Tapachula, en el estado de Chiapas.",50,Instituto Mexicano del Seguro Social,7,15,-92,,1455419063,2017,,
+'1651GYN0005,"Proyecto para la construcción de un nuevo Hospital General en la Delegación Regional Sur, Ciudad de México.",51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,9,19,-99,,1781212762,2017,,
+'1118T4M0024,Seguridad Industrial: Adquisición de Paquete de Presión Balanceada GAR Golfo,52,Pemex Logística,30,0,0,,50778880,2018,,
+'1706HAN0003,PROGRAMA GENERAL DE MANTENIMIENTO PARA  INMUEBLES PROPIOS DE LA FND PARA COLOCACION DE CREDITO,6,"Financiera Nacional de Desarrollo Agropecuario, Rural, Forestal y Pesquero",35,0,0,,27752130,2018,,
+'1706HAT0002,Programa de adquisición de bienes informáticos.,6,Fondo de Capitalización e Inversión del Sector Rural,9,0,0,,500000,2018,,
+'1706HKI0002,Programa de adquisición de mobiliario y equipo para Sociedad Hipotecaria Federal 2018,6,"Sociedad Hipotecaria Federal, S.N.C.",9,0,0,,5742000,2018,,
+'17092110011,PROGRAMA ASOSIACION PUBLICO PRIVADA DE CONSERVACION PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP TAMPICO  - CIUDAD VICTORIA) PARA EL PERIODO 2018-2028.,9,Dirección General de Conservación de Carreteras,35,0,0,,3199638390,2018,,
+'17092140001,Programa de Liberación del Derecho de Vía para Autopistas a realizarse mediante Concesión o Asociación Público-Privada 2018.,9,Dirección General de Desarrollo Carretero,35,0,0,,2095745438,2018,,
+'17096240003,Acceso al Puerto Seybaplaya,9,Centro SCT Campeche,4,20,-91,,391171107,2018,,
+'1711A3Q0001,"Programa anual de adquisiciones de bienes no asociados a obra pública, destinados a la función de difusión cultural y extensión universitaria de la UNAM",11,Universidad Nacional Autónoma de México,35,0,0,,80144063,2018,,
+'17389ZU0001,Programa de Adquisiciones para el área de Robótica Colaborativa e Inteligente,38,Centro de Ingeniería y Desarrollo Industrial,22,0,0,,20433518,2018,,
+'1750GYR0012,Programa nacional de adquisición de mastógrafos 2018,50,Instituto Mexicano del Seguro Social,35,0,0,,95356417,2018,,
+'1750GYR0013,Construcción de la clínica de detección y diagnóstico del cáncer de mama en la Delegación Nuevo León.,50,Instituto Mexicano del Seguro Social,19,26,-100,,82052439,2018,,
+'12096220027,San Felipe-Puertecitos (Tr: Campo los Olivos - Puertecitos),9,Centro SCT Baja California,2,31,-115,,151382802,2018,,
+'12096360044,San Antonio de Viña - Loma Ceñida,9,Centro SCT Michoacán,16,19,-101,,71044338,2018,,
+'14096310009,Camino Del Crucero Chico A La Purísima.,9,Centro SCT Guanajuato,11,21,-101,,45359195,2018,,
+'163890Q0001,Fortalecimiento de Laboratorios de la Unidad de Ciencias del Agua para investigación aplicada al manejo del Acuifero Península de Yucatán,38,"Centro de Investigación Científica de Yucatán, A.C.",23,21,-87,,11457487,2018,,
+'1706G1H0004,Sistema de Evacuación Alterno de Edificios,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",9,0,0,,9000000,2018,,
+'1706G1H0005,Adquisición para Reemplazo y Renovación de Bienes,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",9,0,0,,76000000,2018,,
+'1707HXA0008,"Mantenimiento y Rehabilitación de la U.H.M. Martínez de la Torre II, Ver.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,30,0,0,,6785225,2018,,
+'1707HXA0028,Servicios relacionados con las obras públicas militares.,7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,34,0,0,,655500,2018,,
+'1707HXA0029,Servicios relacionados con las obras públicas navales.,7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,34,0,0,,437000,2018,,
+'1708JBK0002,ACTUALIZACION Y MODERNIZACION DE MAQUINARIA Y EQUIPOS 2018,8,Productora Nacional de Biológicos Veterinarios,9,0,0,,16000000,2018,,
+'17092110002,Programa de Atención de Puntos de Conflicto y Seguridad Vial.,9,Dirección General de Conservación de Carreteras,35,0,0,,838298175,2018,,
+'17096510001,"Entronque a Desnivel Baca km 20+800, de la Carretera: Mérida-Tzimín",9,Centro SCT Yucatán,31,21,-89,,106305105,2018,,
+'1709JZL0004,Estudios de preinversión de la Red Aeroportuaria 2018,9,Aeropuertos y Servicios Auxiliares,35,0,0,,8178000,2018,,
+'1711A3Q0005,Programa Anual de Mantenimiento a la Infraestructura Física de Entidades Foráneas de Docencia e Investigación,11,Universidad Nacional Autónoma de México,35,0,0,,78328321,2018,,
+'1751GYN0012,Fortalecimiento de equipo médico en hospitales de tercer nivel de atención de la salud en el ISSSTE.,51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,35,0,0,,673053724,2018,,
+'1751GYN0014,Fortalecimiento de equipo médico y de laboratorio en unidades de segundo nivel de atención de la salud 2018.,51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,35,0,0,,156737161,2018,,
+'11096220002,San Felipe-Puertecitos (Tr: Poblado Ejido Delicias Campo los Olivos).,9,Centro SCT Baja California,2,31,-115,,151382802,2018,,
+'11096330023,Ferrería de Apulco - San Pedro Vaquerías,9,Centro SCT Hidalgo,13,20,-98,,230620475,2018,,
+'11096490007,E.C. (Capula- Lázaro Cárdenas)- Atotonilco y Ramal a la Ciénega,9,Centro SCT Tlaxcala,29,20,-98,,148855103,2018,,
+'12096390006,"Camino Real, Libramiento a Pedreras",9,Centro SCT Nuevo León,19,26,-100,,347492658,2018,,
+'12096470001,Comalcalco-Chichicapa,9,Centro SCT Tabasco,27,18,-93,,77252204,2018,,
+'1418T4M0065,Adquisición de vehículos tácticos de reacción rápida,52,Pemex Logística,35,0,0,,150000000,2018,,
+'1607HXA0013,"Mantenimiento y Rehabilitación de la U.H.M. Huejutla, Hgo.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,13,0,0,,31424673,2018,,
+'1706G1C0003,"Adquisición y sustitución de mobiliario, equipo y equipamiento de oficinas.",6,"Banco Nacional de Obras y Servicios Públicos, S.N.C.",9,0,0,,6625891,2018,,
+'1706G1H0008,Apertura y Remodelación de la Red de Sucursales,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",35,0,0,,133612500,2018,,
+'1706HBW0002,Infraestructura sistema fotovoltaico para interconexión a red de CFE en Oficina Central,6,"Fondo de Garantía y Fomento para la Agricultura, Ganadería y Avicultura",16,0,0,,16000000,2018,,
+'1707HXA0019,VEHICULOS PARA LA CASA HOGAR PARA MILITARES RETIRADOS,7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,9,0,0,,843222,2018,,
+'17092110001,Programa de Reconstrucción de Puentes,9,Dirección General de Conservación de Carreteras,35,0,0,,1257447263,2018,,
+'17092110004,Programa de Conservación Rutinaria de Tramos,9,Dirección General de Conservación de Carreteras,35,0,0,,4715741596,2018,,
+'17092110007,Programa de Conservación Periódica para el Ejercicio 2018,9,Dirección General de Conservación de Carreteras,35,0,0,,8891554724,2018,,
+'17092120001,Adquisición de equipo para prueba de materiales utilizadosen la ejecución de las obras de infraestructura carretera que realiza la SCT,9,Dirección General de Servicios Técnicos,9,0,0,,5134576,2018,,
+'1716B000025,Programa K 111 Rehabilitación y Modernización de presas y estructuras de cabeza Zona Sur.,16,Comisión Nacional del Agua,35,0,0,,156133035,2018,,
+'1750GYR0014,Construcción de la Clínica de Detección y Diagnóstico del Cáncer de Mama en Veracruz Norte,50,Instituto Mexicano del Seguro Social,30,19,-96,,82008928,2018,,
+'10096280005,"Aeropuerto Regional Barrancas del Cobre Creel, Municipio de Bocoyna, Chihuahua.",9,Centro SCT Chihuahua,8,28,108,,403004640,2018,,
+'1704E2D0001,ADQUISICIÓN DE MAQUINARIA Y EQUIPO INDUSTRIAL 2018,4,Talleres Gráficos de México,9,0,0,,61172600,2018,,
+'1706G1C0001,"Sustitución de equipos de grabación, monitoreo y protección civil.",6,"Banco Nacional de Obras y Servicios Públicos, S.N.C.",9,0,0,,4269457,2018,,
+'1706G1H0001,Actualización de la Infraestructura de Virtualización,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",35,0,0,,117040000,2018,,
+'1706G1H0002,Programa de Adquisición para Reemplazo y Renovación de Cajeros Automáticos,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",35,0,0,,28700000,2018,,
+'1706G1H0006,Programa de Adquisición para la Renovación del Parque Vehicular,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",9,0,0,,6634000,2018,,
+'1706HBW0003,Programa de adquisición de bienes muebles 2018,6,"Fondo de Garantía y Fomento para la Agricultura, Ganadería y Avicultura",35,0,0,,12223400,2018,,
+'1706HBW0004,Construcción de barda perimetral y banqueta exterior del Centro de Desarrollo Tecnológico Tezoyuca del ejercicio 2018,6,"Fondo de Garantía y Fomento para la Agricultura, Ganadería y Avicultura",17,19,-99,,1380000,2018,,
+'1707HXA0021,Programa de adquisición de Bienes Muebles para el equipamiento de  las administraciones de las UU.HH.MM. patrimonio de este Instituto.,7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,35,0,0,,7200000,2018,,
+'1707HXA0023,"Mantenimiento y rehabilitación de las UU.HH.MM. Guerrero Negro I, II, III y IV, B.C.S.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,3,0,0,,62088727,2018,,
+'1707HXA0027,"Construcción de la UHM Hermosillo III, Son.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,26,29,-111,,55755757,2018,,
+'17092110009,PROGRAMA ASOCIACION PUBLICO PRIVADA DE CONSERVACION PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP CAMPECHE - MERIDA) PARA EL PERIODO 2018-2028.,9,Dirección General de Conservación de Carreteras,35,0,0,,3700174830,2018,,
+'1710K2N0002,Adquisición de equipos y bienes especializados 2018: Módulos de bombeo para la salina,10,"Exportadora de Sal, S.A. de C.V.",3,0,0,,18213076,2018,,
+'1710K2N0003,Adquisición de Equipo y bienes especializados para Operaciones 2018,10,"Exportadora de Sal, S.A. de C.V.",35,0,0,,46421809,2018,,
+'1711A3Q0002,"Programa anual de adquisiciones de bienes no asociados a la obra pública, destinados a las actividades de Investigación en la UNAM",11,Universidad Nacional Autónoma de México,35,0,0,,335627386,2018,,
+'1711A3Q0003,"Programa anual de adquisiciones de bienes no asociados a la obra pública, destinados a la función de docencia en el nivel medio superior, superior y posgrado en la UNAM",11,Universidad Nacional Autónoma de México,35,0,0,,467494378,2018,,
+'1716B000024,Programa K 111 Rehabilitación y modernización de presas y estructuras de cabeza Zona Centro.,16,Comisión Nacional del Agua,35,0,0,,156133035,2018,,
+'1721W3N0004,Mantenimiento de los Centros Integralmente Planeados Península 2018,21,Fondo Nacional de Fomento al Turismo,3,0,0,,243712519,2018,,
+'1750GYR0015,"Construcción de la Clínica de Detección y Diagnóstico del Cáncer de Mama en Guadalajara, Jalisco.",50,Instituto Mexicano del Seguro Social,14,21,-103,,82052439,2018,,
+'11096300003,"Carretera Durango-Hidalgo del Parral, Durango-Lím. Edos.Tramo: Guadalupe Aguilera-Ent. San Juan del Río del Km. 55+250 al Km. 105+871",9,Centro SCT Durango,10,24,-105,,833751619,2018,,
+'1318T4M0047,Adquisición de equipo laboratorio la GAR Centro,52,Pemex Logística,35,0,0,,59864761,2018,,
+'1706G1C0002,Sustitución de vehículos para actividades administrativas.,6,"Banco Nacional de Obras y Servicios Públicos, S.N.C.",9,0,0,,141463,2018,,
+'1706HHQ0001,Adquisición de ábacos de latón para la preparación de los sorteos.,6,Lotería Nacional para la Asistencia Pública,9,0,0,,951200,2018,,
+'1707HXA0016,"Mantenimiento y Rehabilitación de la U.H.M. Chetumal I, Q.R.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,23,0,0,,10650629,2018,,
+'17092100003,Programa de Conservación de Infraestructura de Caminos Rurales y Carreteras 2018.,9,Dirección General de Carreteras,35,0,0,,8500000000,2018,,
+'1709J0U0003,Mantenimiento Mayor de Puentes,9,Caminos y Puentes Federales de Ingresos y Servicios Conexos,35,0,0,,1036241332,2018,,
+'1710K2N0001,Adquisición de Equipo y bienes especializados para Mantenimiento 2018,10,"Exportadora de Sal, S.A. de C.V.",35,0,0,,50683006,2018,,
+'1711A3Q0004,Programa anual de mantenimiento a la infraestructura física de entidades de Difusión Cultural y Extensión Universitaria de la UNAM localizadas en la Ciudad de México y Zona Metropolitana,11,Universidad Nacional Autónoma de México,9,0,0,,97792928,2018,,
+'1718T0O0001,PROGRAMA DE ADQUISICIONES DE INVESTIGACION 2018,18,Instituto Mexicano del Petróleo,9,0,0,,144753858,2018,,
+'13096360005,E.C. (Huetamo-Churumuco)-San Jerónimo Cañada de Buenavista.,9,Centro SCT Michoacán,16,19,-101,,20478591,2018,,
+'14096370006,Tetelilla - E.C. (Jonacatepec-Atotonilco).,9,Centro SCT Morelos,17,19,-99,,38593240,2018,,
+'1706HAN0002,ADQUISICIÓN Y SUSTITUCIÓN DE MOBILIARIO Y EQUIPO DE ADMINISTRACIÓN PARA LA FND QUE SE ENCUENTRA EN ALTO GRADO DE DETERIORO Y OBSOLESCENCIA,6,"Financiera Nacional de Desarrollo Agropecuario, Rural, Forestal y Pesquero",35,0,0,,11500000,2018,,
+'1706HIU0001,Adquisición y Sustitución de Bienes Muebles,6,"Nacional Financiera, S.N.C.",9,0,0,,806377,2018,,
+'1707HXA0009,"Mantenimiento y rehabilitación de la UHM Valladolid, Yuc.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,31,0,0,,30322311,2018,,
+'1707HXA0012,SUSTITUCIÓN DE BIENES MUEBLES ADHERIDOS A LAS VIVIENDAS 2018,7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,9,0,0,,8577572,2018,,
+'1707HXA0015,"Mantenimiento y Rehabilitación de la U.H.M. Tepic Fracc. A y B, Nay.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,18,0,0,,13677162,2018,,
+'1707HXA0024,"Construcción de la U.H.M. Cuernavaca IV, Mor.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,17,19,-99,,85753196,2018,,
+'1707HXA0030,"Construcción de la U.H.M. Acapulco V, Gro.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,12,17,-100,,86034409,2018,,
+'17092110006,PROGRAMA DE RECONSTRUCCIÓN DE TRAMOS.,9,Dirección General de Conservación de Carreteras,35,0,0,,907352987,2018,,
+'17092110008,PROGRAMA ASOCIACION PUBLICO PRIVADA DE CONSERVACION PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP ARRIAGA-TAPACHULA) PARA EL PERIODO 2018-2028.,9,Dirección General de Conservación de Carreteras,35,0,0,,7321645897,2018,,
+'17092110010,PROGRAMA ASOSIACION PUBLICO PRIVADA DE CONSERVACION PLURIANUAL DE LA RED FEDERAL DE CARRETERAS (APP SAN LUIS POTOSI  - MATEHUALA) PARA EL PERIODO 2018-2028.,9,Dirección General de Conservación de Carreteras,35,0,0,,4174363215,2018,,
+'17092120004,"Verificación de calidad de las obras de construcción, modernización y conservación de la Red Carretera Federal a cargo de la SCT en el año 2018",9,Dirección General de Servicios Técnicos,35,0,0,,288164998,2018,,
+'17092140002,Programa de estudios y proyectos de desarrollo carretero 2018,9,Dirección General de Desarrollo Carretero,35,0,0,,664653091,2018,,
+'1709J0U0002,Mantenimiento Mayor de Carreteras,9,Caminos y Puentes Federales de Ingresos y Servicios Conexos,35,0,0,,641557976,2018,,
+'1716B000042,"Mantenimiento y rehabilitación 2018 del Acueducto D.I.M. Lázaro Cárdenas, Michoacán.",16,Comisión Nacional del Agua,16,0,0,,27244691,2018,,
+'1718T0O0002,PROGRAMA DE AQUISICION DE BIENES PARA EL AREA DE SERVICIOS 2018,18,Instituto Mexicano del Petróleo,9,0,0,,152301207,2018,,
+'1721W3N0003,Mantenimiento del Centro Integralmente Planeado y Proyecto Turístico Integral del Caribe 2018,21,Fondo Nacional de Fomento al Turismo,23,0,0,,227951963,2018,,
+'1112M7K0002,"Construcción de la Unidad de Hospitalización Mérida, 2011-2021.",12,"Centros de Integración Juvenil, A.C.",31,21,-90,,33797536,2018,,
+'12095100008,Home Port  Puerto Peñasco,9,Dirección General de Puertos,26,31,-114,,667794125,2018,,
+'12096360024,E.C. (El Copetiro - Tancítaro) - Apúndaro - Pareo.,9,Centro SCT Michoacán,16,19,-102,,63511934,2018,,
+'1307HXA0017,"Construcción de la U.H.M. Valladolid III,  Yuc.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,31,21,-88,,59326974,2018,,
+'1307HXA0024,"Construcción de la U.H.M. Chihuahua III, Chih.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,8,29,-106,,82376582,2018,,
+'14096360015,Cuanajo - la Noria.,9,Centro SCT Michoacán,16,19,-102,,29790527,2018,,
+'1511L3P0002,Proyecto de Rehabilitación del Plantel Tonalá_Protección Civil,11,Centro de Enseñanza Técnica Industrial,14,0,0,,4644356,2018,,
+'1706G1H0003,Programa de Adquisición para la Renovación Tecnológica,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",9,0,0,,83000000,2018,,
+'1706HAT0001,Programa de adquisición de mobiliario y equipo de administración.,6,Fondo de Capitalización e Inversión del Sector Rural,9,0,0,,241590,2018,,
+'1707HXA0010,"Mantenimiento y Rehabilitación de la U.H.M. Culiacán I, Sin.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,25,0,0,,17976645,2018,,
+'17092100005,Programa de Estudios y Proyectos de Caminos Rurales y Alimentadores 2018.,9,Dirección General de Carreteras,35,0,0,,500000000,2018,,
+'17092100006,Liberación del derecho de vía 2018,9,Dirección General de Carreteras,35,0,0,,1571809078,2018,,
+'17092110003,Programa de Estudios y/o Proyectos,9,Dirección General de Conservación de Carreteras,35,0,0,,1152659991,2018,,
+'17092120003,"Programa Evaluación de los elementos superficiales, estructurales y de seguridad vial de la Red Carretera Federal en 2018, a través de su auscultación con equipos de alto rendimiento.",9,Dirección General de Servicios Técnicos,35,0,0,,250000000,2018,,
+'17092120005,"Estudios y proyectos que demanda la infraestructura carretera para atender la planeación, construcción, modernización y conservación de la Red Carretera Federal en el ejercicio 2018.",9,Dirección General de Servicios Técnicos,35,0,0,,70941507,2018,,
+'17096360004,Santa Cruz-Coenembo,9,Centro SCT Michoacán,16,20,-102,,12805005,2018,,
+'1709J0U0001,Conservación de Puentes,9,Caminos y Puentes Federales de Ingresos y Servicios Conexos,35,0,0,,102590931,2018,,
+'1710K2N0004,Programa de Mantenimiento Preventivo de Equipos 2018,10,"Exportadora de Sal, S.A. de C.V.",3,0,0,,51012540,2018,,
+'1711A3Q0006,Programa anual de mantenimiento a la infraestructura física de entidades de docencia e investigación de la UNAM localizadas en la ciudad de México y zona metropolitana,11,Universidad Nacional Autónoma de México,35,0,0,,383103509,2018,,
+'1716B000026,Programa K 111 Rehabilitación y modernización de presas y estructuras de cabeza Zona Norte.,16,Comisión Nacional del Agua,35,0,0,,156133035,2018,,
+'1716B000043,Mantenimiento y rehabilitación del Sistema Acueducto Uxpanapa La Cangrejera 2018,16,Comisión Nacional del Agua,30,0,0,,87497372,2018,,
+'1721W3N0005,Mantenimiento de los Centros Integralmente Planeados Pacífico Norte 2018.,21,Fondo Nacional de Fomento al Turismo,35,0,0,,92023286,2018,,
+'1418T4M0005,Adquisición de equipo laboratorio la GAR Pacífico,52,Pemex Logística,35,0,0,,48144419,2018,,
+'1706G1H0007,Construcción y Adecuación de Cabinas,6,"Banco Nacional del Ejército, Fuerza Aérea y Armada, S.N.C.",35,0,0,,25000000,2018,,
+'1706HBW0005,Habilitación y ampliación de áreas productivas en el Centro de Desarrollo Tecnológico Salvador Lira López,6,"Fondo de Garantía y Fomento para la Agricultura, Ganadería y Avicultura",16,20,-101,,387000,2018,,
+'1706HBW0006,Mantenimiento y Habilitación de instalaciones del Centro de Desarrollo Tecnológico Villadiego del ejercicio 2018,6,"Fondo de Garantía y Fomento para la Agricultura, Ganadería y Avicultura",11,0,0,,395000,2018,,
+'17071160005,PROGRAMA DE ADQUISICIONES 2018 (PRIMERA ETAPA) PARA EL REFORZAMIENTO DE DIVERSOS ESCALONES DEL SERVICIO DE SANIDAD MILITAR.,7,Dirección General de Sanidad,35,0,0,,148251575,2018,,
+'1707HXA0007,"Mantenimiento y Rehabilitación de la U.H.M. Guadalajara, Jal.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,14,0,0,,25911531,2018,,
+'1707HXA0014,"Mantenimiento y Rehabilitación de la U.H.M. Zacatecas I, Zac.",7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,32,0,0,,5781289,2018,,
+'1707HXA0020,Programa de adquisiciones de equipos para el desarrollo operacional  ISSFAM 2018,7,Instituto de Seguridad Social para las Fuerzas Armadas Mexicanas,9,0,0,,14197693,2018,,
+'17092100004,PROGRAMA DE ESTUDIOS Y PROYECTOS DE CARRETERAS 2018,9,Dirección General de Carreteras,35,0,0,,1571809078,2018,,
+'17092110005,Programa de Conservación Rutinaria de Puentes,9,Dirección General de Conservación de Carreteras,35,0,0,,261968180,2018,,
+'17092120002,"Actualización de normas, manuales técnicos y Tabulador de precios unitarios 2018.",9,Dirección General de Servicios Técnicos,35,0,0,,8697344,2018,,
+'1710K8V0003,Adquisición para sustitución de la planta enfriadora de agua para el sistema de aire acondicionado en Pedregal,10,Instituto Mexicano de la Propiedad Industrial,9,0,0,,3500000,2018,,
+'1721W3N0002,Mantenimiento de los Centros Integralmente Planeados del Pacífico Sur 2018,21,Fondo Nacional de Fomento al Turismo,35,0,0,,519018352,2018,,
+'1750GYR0017,"Programa de Adquisición de Aceleradores Lineales para Unidades Médicas de Segundo y Tercer Nivel de Atención Médica, 2018",50,Instituto Mexicano del Seguro Social,35,0,0,,2212501863,2018,,
+'1751GYN0013,Fortalecimiento de equipo médico en unidades de primer nivel de atención de la salud 2018.,51,Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado,35,0,0,,157059459,2018,,
